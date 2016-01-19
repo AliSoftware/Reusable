@@ -1,3 +1,10 @@
+# CHANGELOG
+
+## 1.1.0
+
+* Added documentation
+* Fixed generic constraints on the API working with `UICollectionView`'s `SupplementaryView`
+
 ## 1.0.0
 
 * Split protocol in two: `Reusable` and `NibReusable`

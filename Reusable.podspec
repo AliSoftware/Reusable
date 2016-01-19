@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "Reusable"
   s.version      = "1.0.0"
-  s.summary      = "A Swift mixins to deal with reusable UITableView and UICollectionView cells"
+  s.summary      = "A Swift Mixin to deal with reusable UITableView and UICollectionView cells"
 
   s.description  = <<-DESC
                 Reusable is a [Swift Mixin](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/)
