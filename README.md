@@ -1,8 +1,10 @@
 # Reusable
 
+![Reusable](Example/ReusableDemo/Assets.xcassets/AppIcon.appiconset/AppIcon-167.png)
+
 A Swift mixin for `UITableViewCells` and `UICollectionViewCells`.
 
-For more information on how this works, see [my blog post about this technique](git@github.com:AliSoftware/Reusable.git).
+For more information on how this works, see [my blog post about this technique](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/).
 
 # Example usage
 
@@ -25,12 +27,12 @@ class NibBasedCustomCell: UITableViewCell, NibReusable {
 
 Then in your `UIViewControllerDataSource`:
 
-```
+```swift
 class MyTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
-    tableView.registerReusableCell(CodeBasedCustomCell.self) // This will register using the class without using a UINib
-    tableView.registerReusableCell(NibBasedCustomCell.self) // This will register using NibBasedCustomCell.xib
+    tableView.registerReusableCell(CodeBasedCustomCell) // This will register using the class without using a UINib
+    tableView.registerReusableCell(NibBasedCustomCell) // This will register using NibBasedCustomCell.xib
   }
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
