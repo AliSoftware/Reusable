@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionHeaderView" id="jJh-gI-YUb" customClass="CollectionHeaderView" customModule="ReusableDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="469" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lm-mw-hSg">
+                    <rect key="frame" x="20" y="14" width="22" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGA-Zb-h6W">
+                    <rect key="frame" x="213" y="14" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJe-0g-8r9">
+                    <rect key="frame" x="427" y="14" width="22" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.99808394908905029" green="0.91094249486923218" blue="0.72973722219467163" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="0lm-mw-hSg" firstAttribute="leading" secondItem="jJh-gI-YUb" secondAttribute="leading" constant="20" id="1R6-7V-VBK"/>
+                <constraint firstItem="gGA-Zb-h6W" firstAttribute="centerY" secondItem="jJh-gI-YUb" secondAttribute="centerY" id="5lx-0F-obc"/>
+                <constraint firstItem="0lm-mw-hSg" firstAttribute="centerY" secondItem="jJh-gI-YUb" secondAttribute="centerY" id="Gwe-K9-NHm"/>
+                <constraint firstItem="gGA-Zb-h6W" firstAttribute="centerX" secondItem="jJh-gI-YUb" secondAttribute="centerX" id="Shj-V0-LNf"/>
+                <constraint firstItem="XJe-0g-8r9" firstAttribute="centerY" secondItem="jJh-gI-YUb" secondAttribute="centerY" id="lEP-TO-Ssw"/>
+                <constraint firstAttribute="trailing" secondItem="XJe-0g-8r9" secondAttribute="trailing" constant="20" id="u8O-K5-lR4"/>
+            </constraints>
+            <connections>
+                <outlet property="titleLabel" destination="gGA-Zb-h6W" id="Dxi-oV-0Jg"/>
+            </connections>
+            <point key="canvasLocation" x="537.5" y="242"/>
+        </collectionReusableView>
+    </objects>
+</document>

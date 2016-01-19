@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09B3460D1C4ED26F00BA041F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3460C1C4ED26F00BA041F /* AppDelegate.swift */; };
-		09B3460F1C4ED26F00BA041F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3460E1C4ED26F00BA041F /* ViewController.swift */; };
+		09B3460F1C4ED26F00BA041F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3460E1C4ED26F00BA041F /* TableViewController.swift */; };
 		09B346121C4ED26F00BA041F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B346101C4ED26F00BA041F /* Main.storyboard */; };
 		09B346141C4ED26F00BA041F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B346131C4ED26F00BA041F /* Assets.xcassets */; };
 		09B346171C4ED26F00BA041F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B346151C4ED26F00BA041F /* LaunchScreen.storyboard */; };
@@ -20,12 +20,19 @@
 		09B3462B1C4ED6C400BA041F /* MySimpleColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3462A1C4ED6C400BA041F /* MySimpleColorCell.swift */; };
 		09B346341C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346331C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift */; };
 		09B346371C4EF13300BA041F /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3462D1C4ED72B00BA041F /* Reusable.swift */; };
+		09B3463A1C4EF3F900BA041F /* MyColorSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346391C4EF3F900BA041F /* MyColorSquareCell.swift */; };
+		09B3463C1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3463B1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift */; };
+		09B3463E1C4EF4A400BA041F /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3463D1C4EF4A400BA041F /* CollectionViewController.swift */; };
+		09B346411C4EF71900BA041F /* MyXIBIndexSquaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3463F1C4EF71900BA041F /* MyXIBIndexSquaceCell.swift */; };
+		09B346421C4EF71900BA041F /* MyXIBIndexSquaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346401C4EF71900BA041F /* MyXIBIndexSquaceCell.xib */; };
+		09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */; };
+		09B346461C4EF8F600BA041F /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09B346091C4ED26F00BA041F /* ReusableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B3460C1C4ED26F00BA041F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09B3460E1C4ED26F00BA041F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09B3460E1C4ED26F00BA041F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		09B346111C4ED26F00BA041F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09B346131C4ED26F00BA041F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09B346161C4ED26F00BA041F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +48,13 @@
 		09B346301C4ED75400BA041F /* Reusable.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Reusable.podspec; path = ../Reusable.podspec; sourceTree = "<group>"; };
 		09B346331C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryBoardIndexPathCell.swift; sourceTree = "<group>"; };
 		09B346351C4EF12200BA041F /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
+		09B346391C4EF3F900BA041F /* MyColorSquareCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColorSquareCell.swift; sourceTree = "<group>"; };
+		09B3463B1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryboardTextSquareCell.swift; sourceTree = "<group>"; };
+		09B3463D1C4EF4A400BA041F /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		09B3463F1C4EF71900BA041F /* MyXIBIndexSquaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyXIBIndexSquaceCell.swift; sourceTree = "<group>"; };
+		09B346401C4EF71900BA041F /* MyXIBIndexSquaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyXIBIndexSquaceCell.xib; sourceTree = "<group>"; };
+		09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				09B3460C1C4ED26F00BA041F /* AppDelegate.swift */,
-				09B3460E1C4ED26F00BA041F /* ViewController.swift */,
-				09B3461F1C4ED34F00BA041F /* Cells */,
 				09B346101C4ED26F00BA041F /* Main.storyboard */,
+				09B3460E1C4ED26F00BA041F /* TableViewController.swift */,
+				09B3461F1C4ED34F00BA041F /* TableView Cells */,
+				09B3463D1C4EF4A400BA041F /* CollectionViewController.swift */,
+				09B346381C4EF36D00BA041F /* CollectionViewCells */,
 				09B3461E1C4ED33D00BA041F /* SupportingFiles */,
 			);
 			path = ReusableDemo;
@@ -94,7 +110,7 @@
 			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		09B3461F1C4ED34F00BA041F /* Cells */ = {
+		09B3461F1C4ED34F00BA041F /* TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
 				09B346201C4ED39700BA041F /* MyXIBTextCell.swift */,
@@ -104,7 +120,8 @@
 				09B3462A1C4ED6C400BA041F /* MySimpleColorCell.swift */,
 				09B346331C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift */,
 			);
-			path = Cells;
+			name = "TableView Cells";
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		09B3462C1C4ED6F000BA041F /* Reusable */ = {
@@ -117,6 +134,19 @@
 			);
 			name = Reusable;
 			path = ../Sources;
+			sourceTree = "<group>";
+		};
+		09B346381C4EF36D00BA041F /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				09B346391C4EF3F900BA041F /* MyColorSquareCell.swift */,
+				09B3463B1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift */,
+				09B3463F1C4EF71900BA041F /* MyXIBIndexSquaceCell.swift */,
+				09B346401C4EF71900BA041F /* MyXIBIndexSquaceCell.xib */,
+				09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */,
+				09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,10 +208,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				09B346231C4ED39700BA041F /* MyXIBTextCell.xib in Resources */,
+				09B346461C4EF8F600BA041F /* CollectionHeaderView.xib in Resources */,
 				09B346171C4ED26F00BA041F /* LaunchScreen.storyboard in Resources */,
 				09B346141C4ED26F00BA041F /* Assets.xcassets in Resources */,
 				09B346251C4ED4CE00BA041F /* Default-568h@2x.png in Resources */,
 				09B346121C4ED26F00BA041F /* Main.storyboard in Resources */,
+				09B346421C4EF71900BA041F /* MyXIBIndexSquaceCell.xib in Resources */,
 				09B346291C4ED51600BA041F /* MyXIBSwitchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,11 +225,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B3463A1C4EF3F900BA041F /* MyColorSquareCell.swift in Sources */,
+				09B346411C4EF71900BA041F /* MyXIBIndexSquaceCell.swift in Sources */,
 				09B346341C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift in Sources */,
 				09B346221C4ED39700BA041F /* MyXIBTextCell.swift in Sources */,
-				09B3460F1C4ED26F00BA041F /* ViewController.swift in Sources */,
+				09B3463C1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift in Sources */,
+				09B3463E1C4EF4A400BA041F /* CollectionViewController.swift in Sources */,
+				09B3460F1C4ED26F00BA041F /* TableViewController.swift in Sources */,
 				09B3460D1C4ED26F00BA041F /* AppDelegate.swift in Sources */,
 				09B346281C4ED51600BA041F /* MyXIBSwitchCell.swift in Sources */,
+				09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */,
 				09B3462B1C4ED6C400BA041F /* MySimpleColorCell.swift in Sources */,
 				09B346371C4EF13300BA041F /* Reusable.swift in Sources */,
 			);

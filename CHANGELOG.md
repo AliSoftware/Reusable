@@ -4,6 +4,7 @@
 
 * Added documentation
 * Fixed generic constraints on the API working with `UICollectionView`'s `SupplementaryView`
+* Updated Example project to add an UICollectionView with cells from XIB & Code + Header views
 
 ## 1.0.0
 
