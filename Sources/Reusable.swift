@@ -3,23 +3,23 @@ import UIKit
 /// Make your UITableViewCell and UICollectionViewCell subclasses
 /// conform to this protocol when they are *not* NIB-based but only code-based
 /// to be able to dequeue them in a type-safe manner
-protocol Reusable: class {
+public protocol Reusable: class {
   static var reuseIdentifier: String { get }
 }
 
 /// Make your UITableViewCell and UICollectionViewCell subclasses
 /// conform to this protocol when they *are* NIB-based
 /// to be able to dequeue them in a type-safe manner
-protocol NibReusable: Reusable {
+public protocol NibReusable: Reusable {
   static var nib: UINib { get }
 }
 
-extension Reusable {
+public extension Reusable {
   static var reuseIdentifier: String {
     return String(Self)
   }
 }
-extension NibReusable {
+public extension NibReusable {
   static var nib: UINib {
     return UINib(nibName: String(Self), bundle: nil)
   }
@@ -27,7 +27,7 @@ extension NibReusable {
 
 // MARK: - UITableView support for Reusable & NibReusable
 
-extension UITableView {
+public extension UITableView {
   /**
    Register a NIB-Based `UITableViewCell` subclass (conforming to `NibReusable`)
    
@@ -99,7 +99,7 @@ extension UITableView {
 
 // MARK: - UICollectionView support for Reusable & NibReusable
 
-extension UICollectionView {
+public extension UICollectionView {
   /**
    Register a NIB-Based `UICollectionViewCell` subclass (conforming to `NibReusable`)
    
