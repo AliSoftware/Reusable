@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2.0.0
+
+* Fixed missing `public` visibility for the protocols and extensions
+* Improved README documentation
+
 ## 1.1.0
 
 * Added documentation

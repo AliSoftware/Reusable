@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Reusable"
-  s.version      = "1.1.0"
+  s.version      = "2.0.0"
   s.summary      = "A Swift Mixin to deal with reusable UITableView and UICollectionView cells"
 
   s.description  = <<-DESC
