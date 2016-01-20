@@ -7,7 +7,15 @@ A Swift mixin to use `UITableViewCells` and `UICollectionViewCells` in a **type-
 [![Platform](http://cocoapod-badges.herokuapp.com/p/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 [![Version](http://cocoapod-badges.herokuapp.com/v/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 
-For more information on how this works, see [my blog post about this technique](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/).
+The idea might see quite magic but is in fact simple:
+
+* Make your `UITableViewCell` and `UICollectionViewCell` conform to either `Reusable` or `NibReusable`
+* Then simply use `tableView.dequeueReusableCell(indexPath: indexPath) as MyCustomCell` and you'll get a dequeued instance of the expected cell class in return. **No need for you to manipulate `reuseIdentifiers` manually!**
+* The magic is in the fact that Swift's type-inference allows to "retro-inject" the expected return type (`as MyCustomCell`) back into the implementation which then knows which `reuseIdentifier` to use internally.
+
+No more force-casting the returned `UITableViewCell` instance down to your `MyCustomCell` class (`dequeue…(…) as! MyCustomCell`) — which expected you to make sure the `reuseIdentifier` and cell classes were always matching in your code. Now you can have a beautiful code and type-safe cells!
+
+For more information on how this works, see [my dedicated blog post about this technique](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/).
 
 ## Declaring your cell subclasses
 
@@ -16,13 +24,18 @@ First, declare your cells to conform to:
 * the `Reusable` protocol if they don't depend on a NIB (this will use `registerClass(…)` to register the cell)
 * the `NibReusable` protocol if they use a `XIB` file for their content (this will use `registerNib(…)` to register the cell)
 
+### Example with custom `UITableViewCell` subclasses
+
 So for example to create a `UITableViewCell` subclass which doesn't use a XIB (either because it is only created via code, or because it will be registered automatically via a storyboard):
 
 ```swift
 class CodeBasedCustomCell: UITableViewCell, Reusable {
-  // By default this cell will have a reuseIdentifier or "MyCustomCell"
+  // By default this cell will have a reuseIdentifier of "MyCustomCell"
   // unless you provide an alternative implementation of `var reuseIdentifier`
-  // ...
+  
+  // No need to add anything to conform to Reusable. you can just keep your normal cell code
+  @IBOutlet private weak var label: UILabel!
+  func fillWithText(text: String?) { label.text = text }
 }
 ```
 
@@ -30,34 +43,38 @@ And to create a `UITableViewCell` subclass whose content is based on a `XIB`:
 
 ```swift
 class NibBasedCustomCell: UITableViewCell, NibReusable {
-  // Here we provide a nib for this cell class
-  // (which, if we don't override the protocol's default implementation of `nib`,
-  // will use a XIB of the same name as the class)
-  // ...
+  // Here we provide a nib for this cell class (which, if we don't override the protocol's
+  // default implementation of `nib`, will use a XIB of the same name as the class)
+  
+  // No need to add anything to conform to Reusable. you can just keep your normal cell code
+  @IBOutlet private weak var pictureView: UIImageView!
+  func fillWithImage(image: UIImage?) { pictureView.image = image }
 }
 ```
 
 > If you create a XIB-based cell, don't forget to set its _Reuse Identifier_ field in Interface Builder to the same string as the name of the cell class itself.
 
-This works the same for `UICollectionViewCell` subclasses of course:
+### Example with custom  `UICollectionViewCell` subclasses
 
-### Code-based cell:
+This works exactly the same as `UITableViewCell`.
+
+So for a Code-based `UICollectionViewCell` subclass:
 
 ```swift
 // A UICollectionViewCell which doesn't need a XIB to register
 // Either because it's all-code, or because it's registered via Storyboard
 class CodeBasedCollectionViewCell: UICollectionViewCell, Reusable {
-  // ...
+  // The rest of the cell code goes here
 }
 ```
 
-### XIB-based cell:
+And for a XIB-based `UICollectionViewCell` subclass:
 
 ```swift
 // A UICollectionViewCell using a XIB to define it's UI
 // And that will need to register using that XIB
 class NibBasedCollectionViewCell: UICollectionViewCell, NibReusable {
-  // The normal cell code goes here
+  // The rest of the cell code goes here
 }
 ```
 
@@ -88,18 +105,36 @@ extension MyViewController: UITableViewDataSource {
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     if indexPath.section == 0 {
       let cell = tableView.dequeueReusableCell(indexPath: indexPath) as CodeBasedCustomCell
-      // Customize the cell here. You can call any type-specific methods here
-      // without the need for type-casting, as cell is a CodeBasedCustomCell,
-      // not a generic UITableViewCell!
-      cell.fillCodeBasedCellWithValue(…)
+      // Customize the cell here. You can call any type-specific methods here without the need for type-casting
+      cell.fillWithText("Foo")
       return cell
     } else {
       let cell = tableView.dequeueReusableCell(indexPath: indexPath) as NibBasedCustomCell
-      // Customize the cell here. In this case, `cell` is of the specific
-      // type NibBasedCustomCell so no need to downcast here either!
+      // Customize the cell here. no need to downcasting here either!
+      cell.fillWithImage(UIImage(named:"Bar"))
       return cell
     }
   }
+}
+```
+
+## Customization
+
+`Reusable` and `NibReusable` are was is usually called [Mixins](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/), which basically is a Swift protocol with a default implementation provided for all of its methods.
+
+The advantage of such an approach is that all it takes for you is to add `Reusable` or `NibReusable` in your class declaration and you'll have all the additional methods and features for free, without the need to add any code yourself.  
+The code is provided by the default implementation of `reuseIdentifier` and `nib` already, so no need to implement anything to conform to `Reusable`.
+
+But of course, those provided implementations are just _default implementations_. That means that if you need you can still provided your own implementations in case for some reason some of your cells don't follow the classic configuration of using the same name for both the class, the `reuseIdentifier` and the XIB file. In that case, simply provide your own implementation of `reuseIdentifier` and/or `nib` in your custom class to adapt to your specific case, and the rest will continue to work the same.
+
+```swift
+class VeryCustomNibBasedCell: UITableViewCell, NibReusable {
+  // This cell use a non-standard configuration: its reuseIdentifier and XIB file
+  // have a different name as the class itself. So we need to provide a custom implementation or `NibReusable`
+  static var reuseIdentifier: String { return "VeryCustomReuseIdentifier" }
+  static var nib: UINib { return UINib(nibName: "VeryCustomUI", bundle: nil) } // Use VeryCustomUI.xib
+  
+  // Then continue with the rest of your normal cell code 
 }
 ```
 
