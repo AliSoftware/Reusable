@@ -2,7 +2,10 @@
 
 ![Reusable](Example/ReusableDemo/Assets.xcassets/AppIcon.appiconset/AppIcon-167.png)
 
-A Swift mixin for `UITableViewCells` and `UICollectionViewCells`.
+A Swift mixin to use `UITableViewCells` and `UICollectionViewCells` in a **type-safe way**, without the need to manipulate their `String`-typed `reuseIdentifiers`.
+
+[![Platform](http://cocoapod-badges.herokuapp.com/p/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
+[![Version](http://cocoapod-badges.herokuapp.com/v/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 
 For more information on how this works, see [my blog post about this technique](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/).
 
