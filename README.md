@@ -123,8 +123,6 @@ extension MyViewController: UITableViewDataSource {
 
 But of course, those provided implementations are just _default implementations_. That means that if you need **you can still provide your own implementations** in case for some reason some of your cells don't follow the classic configuration of using the same name for both the class, the `reuseIdentifier` and the XIB file.
 
-In that case, simply provide your own implementation of `reuseIdentifier` and/or `nib` in your custom class to adapt to your specific case, and the rest will continue to work the same.
-
 ```swift
 class VeryCustomNibBasedCell: UITableViewCell, NibReusable {
   // This cell use a non-standard configuration: its reuseIdentifier and XIB file
