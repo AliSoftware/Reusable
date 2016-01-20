@@ -7,15 +7,14 @@ A Swift mixin to use `UITableViewCells` and `UICollectionViewCells` in a **type-
 [![Platform](http://cocoapod-badges.herokuapp.com/p/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 [![Version](http://cocoapod-badges.herokuapp.com/v/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 
-The idea might see quite magic but is in fact simple:
+*TL;DR:*
 
 * Make your `UITableViewCell` and `UICollectionViewCell` conform to either `Reusable` or `NibReusable`
 * Then simply use `tableView.dequeueReusableCell(indexPath: indexPath) as MyCustomCell` and you'll get a dequeued instance of the expected cell class in return. **No need for you to manipulate `reuseIdentifiers` manually!**
-* The magic is in the fact that Swift's type-inference allows to "retro-inject" the expected return type (`as MyCustomCell`) back into the implementation which then knows which `reuseIdentifier` to use internally.
 
-No more force-casting the returned `UITableViewCell` instance down to your `MyCustomCell` class (`dequeue…(…) as! MyCustomCell`) — which expected you to make sure the `reuseIdentifier` and cell classes were always matching in your code. Now you can have a beautiful code and type-safe cells!
+No more force-casting the returned `UITableViewCell` instance down to your `MyCustomCell` class, and no more fear that you'll mismatch the `reuseIdentifier` and the class you down-cast to. Now all you have is **a beautiful code and type-safe cells**!
 
-For more information on how this works, see [my dedicated blog post about this technique](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/).
+> For more information on how this works, see [my dedicated blog post about this technique](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/).
 
 ## Declaring your cell subclasses
 
@@ -120,12 +119,11 @@ extension MyViewController: UITableViewDataSource {
 
 ## Customization
 
-`Reusable` and `NibReusable` are was is usually called [Mixins](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/), which basically is a Swift protocol with a default implementation provided for all of its methods.
+`Reusable` and `NibReusable` are was is usually called [Mixins](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/), which basically is a Swift protocol with a default implementation provided for all of its methods. The main benefit is that you don't need to add any code, just conform to `Reusable` or `NibReusable` and you're ready to go.
 
-The advantage of such an approach is that all it takes for you is to add `Reusable` or `NibReusable` in your class declaration and you'll have all the additional methods and features for free, without the need to add any code yourself.  
-The code is provided by the default implementation of `reuseIdentifier` and `nib` already, so no need to implement anything to conform to `Reusable`.
+But of course, those provided implementations are just _default implementations_. That means that if you need **you can still provide your own implementations** in case for some reason some of your cells don't follow the classic configuration of using the same name for both the class, the `reuseIdentifier` and the XIB file.
 
-But of course, those provided implementations are just _default implementations_. That means that if you need you can still provided your own implementations in case for some reason some of your cells don't follow the classic configuration of using the same name for both the class, the `reuseIdentifier` and the XIB file. In that case, simply provide your own implementation of `reuseIdentifier` and/or `nib` in your custom class to adapt to your specific case, and the rest will continue to work the same.
+In that case, simply provide your own implementation of `reuseIdentifier` and/or `nib` in your custom class to adapt to your specific case, and the rest will continue to work the same.
 
 ```swift
 class VeryCustomNibBasedCell: UITableViewCell, NibReusable {
@@ -147,7 +145,7 @@ Note how, in the examples above and when using `Reusable`:
 
   * The simple fact that we wrote `dequeueReusableCell(…) as MyCellType` let the Swift compiler infer that you expect a `MyCellType` and deduce the `reuseIdentifier` to use for that all by itself! ✨
 
-* The code is type-safe, as the `dequeueReusableCell(…)` function will return the type you asked — and not the `UITableViewCell` non-specific superclass
+* The code is type-safe, as the `dequeueReusableCell(…)` function will return the type you asked — and not the `UITableViewCell` non-specific superclass as with Apple APIs
 
   * This way you can call methods even specific to your `MyCellType` return type on that cell next, without the need to cast it!
 
