@@ -119,7 +119,7 @@ extension MyViewController: UITableViewDataSource {
 
 ## Customization
 
-`Reusable` and `NibReusable` are was is usually called [Mixins](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/), which basically is a Swift protocol with a default implementation provided for all of its methods. The main benefit is that you don't need to add any code, just conform to `Reusable` or `NibReusable` and you're ready to go.
+`Reusable` and `NibReusable` are what is usually called [Mixins](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/), which basically is a Swift protocol with a default implementation provided for all of its methods. The main benefit is that you don't need to add any code, just conform to `Reusable` or `NibReusable` and you're ready to go.
 
 But of course, those provided implementations are just _default implementations_. That means that if you need **you can still provide your own implementations** in case for some reason some of your cells don't follow the classic configuration of using the same name for both the class, the `reuseIdentifier` and the XIB file.
 
