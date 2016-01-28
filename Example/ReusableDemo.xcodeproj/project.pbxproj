@@ -27,6 +27,7 @@
 		09B346421C4EF71900BA041F /* MyXIBIndexSquaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346401C4EF71900BA041F /* MyXIBIndexSquaceCell.xib */; };
 		09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */; };
 		09B346461C4EF8F600BA041F /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */; };
+		CD1A4B0A1C5A1BAF00F28455 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A4B091C5A1BAF00F28455 /* NibLoadable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		09B346401C4EF71900BA041F /* MyXIBIndexSquaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyXIBIndexSquaceCell.xib; sourceTree = "<group>"; };
 		09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		CD1A4B091C5A1BAF00F28455 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +77,9 @@
 				09B3460B1C4ED26F00BA041F /* ReusableDemo */,
 				09B3460A1C4ED26F00BA041F /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		09B3460A1C4ED26F00BA041F /* Products */ = {
 			isa = PBXGroup;
@@ -127,6 +131,7 @@
 		09B3462C1C4ED6F000BA041F /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
+				CD1A4B091C5A1BAF00F28455 /* NibLoadable.swift */,
 				09B3462D1C4ED72B00BA041F /* Reusable.swift */,
 				09B3462F1C4ED75400BA041F /* README.md */,
 				09B346351C4EF12200BA041F /* CHANGELOG.md */,
@@ -236,6 +241,7 @@
 				09B346281C4ED51600BA041F /* MyXIBSwitchCell.swift in Sources */,
 				09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */,
 				09B3462B1C4ED6C400BA041F /* MySimpleColorCell.swift in Sources */,
+				CD1A4B0A1C5A1BAF00F28455 /* NibLoadable.swift in Sources */,
 				09B346371C4EF13300BA041F /* Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
