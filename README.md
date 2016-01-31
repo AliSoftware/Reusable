@@ -2,19 +2,21 @@
 
 ![Reusable](Example/ReusableDemo/Assets.xcassets/AppIcon.appiconset/AppIcon-167.png)
 
-A Swift mixin to use `UITableViewCells` and `UICollectionViewCells` in a **type-safe way**, without the need to manipulate their `String`-typed `reuseIdentifiers`.
+A Swift mixin to use `UITableViewCells` and `UICollectionViewCells` in a **type-safe way**, without the need to manipulate their `String`-typed `reuseIdentifiers`. This library also supports arbitrary `UIView` to be loaded via a XIB using a simple call to `loadFromNib()`
 
 [![Platform](http://cocoapod-badges.herokuapp.com/p/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 [![Version](http://cocoapod-badges.herokuapp.com/v/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 
 *TL;DR:*
 
-* Make your `UITableViewCell` and `UICollectionViewCell` conform to either `Reusable` or `NibReusable`
+* Mark your `UITableViewCell` and `UICollectionViewCell` classes to conform to either `Reusable` or `NibReusable` (no additional code to implement!)
 * Then simply use `tableView.dequeueReusableCell(indexPath: indexPath) as MyCustomCell` and you'll get a dequeued instance of the expected cell class in return. **No need for you to manipulate `reuseIdentifiers` manually!**
 
 No more force-casting the returned `UITableViewCell` instance down to your `MyCustomCell` class, and no more fear that you'll mismatch the `reuseIdentifier` and the class you down-cast to. Now all you have is **a beautiful code and type-safe cells**!
 
 > For more information on how this works, see [my dedicated blog post about this technique](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/).
+
+Note: the `Reusable` library can also be used to mark any arbitrary `UIView` as `NibLoadable` and then simply create an instance of that XIB-based view using `MyCustomView.loadFromNib()`.
 
 ## Declaring your cell subclasses
 
@@ -77,6 +79,16 @@ class NibBasedCollectionViewCell: UICollectionViewCell, NibReusable {
 }
 ```
 
+### Example with a XIB-based arbitrary UIView
+
+`Reusable` can also be used to load an arbitrary `UIView` subclass (even a non-reusable, non-cell view) designed in a XIB by simply marking it as `NibLoadable`:
+
+```swift
+class NibBasedRandomView: UIView, NibLoadable {
+  // The rest of the view code goes here
+}
+```
+
 ## Registering your cells by code
 
 Then to use those cells, you'll register them like this, without the need to manipulate any `reuseIdentifier` anywhere in the code:
@@ -117,9 +129,20 @@ extension MyViewController: UITableViewDataSource {
 }
 ```
 
+## Instantiating arbitrary views from XIBs
+
+If you mark an arbitrary (non-cell) `UIView` as `NibLoadable` [as demonstrated above](#example-with-a-xib-based-arbitrary-uiview), you can also instantiate such a view using its Nib by calling `loadFromNib()`:
+
+```swift
+let instance1 = NibBasedRandomView.loadFromNib()
+let instance2 = NibBasedRandomView.loadFromNib()
+let instance3 = NibBasedRandomView.loadFromNib()
+…
+```
+
 ## Customization
 
-`Reusable` and `NibReusable` are what is usually called [Mixins](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/), which basically is a Swift protocol with a default implementation provided for all of its methods. The main benefit is that you don't need to add any code, just conform to `Reusable` or `NibReusable` and you're ready to go.
+`Reusable`, `NibLoadable` and `NibReusable` are what is usually called [Mixins](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/), which basically is a Swift protocol with a default implementation provided for all of its methods. The main benefit is that **you don't need to add any code**: just conform to `Reusable`, `NibLoadable` or `NibReusable` and you're ready to go.
 
 But of course, those provided implementations are just _default implementations_. That means that if you need **you can still provide your own implementations** in case for some reason some of your cells don't follow the classic configuration of using the same name for both the class, the `reuseIdentifier` and the XIB file.
 

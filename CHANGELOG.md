@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2.1.0
+
+* Added support for direct instantiation of arbitrary `UIView` from a nib.  
+  [@jakubvano](https://github.com/jakubvano), [#5](https://github.com/AliSoftware/Reusable/pull/5)
+
+There is now a dedicated `NibLoadable` protocol which can be used on any arbitrary `UIView` (even non-"reusable" views) to load it from a XIB (via the `loadFromNib()` function injected via the protocol extension).
+
+_The `NibReusable` protocol still exists for reusable cells but is now declared just as a combination of both the `Reusable` and `NibLoadable` protocols.
+
 ## 2.0.0
 
 * Fixed missing `public` visibility for the protocols and extensions
