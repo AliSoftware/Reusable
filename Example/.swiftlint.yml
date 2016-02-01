@@ -1,0 +1,8 @@
+opt_in_rules:
+  - empty_count
+  - missing_docs
+
+line_length:
+  warning: 120
+  error: 150
+

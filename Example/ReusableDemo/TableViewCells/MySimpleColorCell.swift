@@ -11,12 +11,12 @@ import UIKit
 class MySimpleColorCell: UITableViewCell, Reusable {
   private lazy var colorView: UIView = {
     let colorView = UIView()
-    colorView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth,UIViewAutoresizing.FlexibleHeight]
+    colorView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
     colorView.frame = self.contentView.bounds.insetBy(dx: 50, dy: 5)
     self.contentView.addSubview(colorView)
     return colorView
   }()
-  
+
   func fill(color: UIColor) {
     self.colorView.backgroundColor = color
   }
