@@ -11,6 +11,8 @@ public protocol NibLoadable: class {
 // MARK: - Default implementation form NibLoadable
 
 public extension NibLoadable {
+  /// By default, use the nib which have the same name as the name of the class,
+  /// and located in the main bundle
   static var nib: UINib {
     return UINib(nibName: String(Self), bundle: nil)
   }
