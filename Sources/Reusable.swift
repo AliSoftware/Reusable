@@ -4,6 +4,7 @@ import UIKit
 /// conform to this protocol when they are *not* NIB-based but only code-based
 /// to be able to dequeue them in a type-safe manner
 public protocol Reusable: class {
+  /// The reuse identifier to use when registering and later dequeuing a reusable cell
   static var reuseIdentifier: String { get }
 }
 

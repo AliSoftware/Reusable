@@ -4,6 +4,7 @@ import UIKit
 /// conform to this protocol when they *are* NIB-based
 /// to be able to instantiate them from NIB in a type-safe manner
 public protocol NibLoadable: class {
+  /// The nib file to use to load a new instance of the View designed in a XIB
   static var nib: UINib { get }
 }
 
