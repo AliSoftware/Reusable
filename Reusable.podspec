@@ -2,16 +2,19 @@ Pod::Spec.new do |s|
 
   s.name         = "Reusable"
   s.version      = "2.1.0"
-  s.summary      = "A Swift Mixin to deal with reusable UITableView and UICollectionView cells"
+  s.summary      = "A Swift Mixin to deal with reusable UITableView & UICollectionView cells and XIB-based views"
 
   s.description  = <<-DESC
                 Reusable is a [Swift Mixin](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/)
                 to easily deal with your reusable UITableViewCell and UICollectionViewCell classes.
 
-                Simply make your `UITableViewCell` or `UICollectionViewCell` sublcasses
-                conform to either `Reusable` or `NibReusable` and you'll be able to
+                Simply mark your `UITableViewCell` or `UICollectionViewCell` sublcasses as
+                conforming to either `Reusable` or `NibReusable` and you'll be able to
                 manipulate them way easier, and without worrying with String-type reuseIdentifiers
                 ever again, and instead use them in a type-safe manner!
+
+                Reusable also support marking any arbitrary `UIView` subclass as `NibLoadable` so that
+                you can then call `loadFromNib()` on the custom view class easily without adding any code.
 
                 For more info, see [my blog post](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/)
                 about this technique.
