@@ -1,0 +1,14 @@
+PODS:
+  - Reusable (2.1.0)
+
+DEPENDENCIES:
+  - Reusable (from `../`)
+
+EXTERNAL SOURCES:
+  Reusable:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Reusable: 57223e54be07f79b8541127e830400f2d05a5755
+
+COCOAPODS: 0.39.0

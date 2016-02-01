@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Reusable
 
 class MyXIBSwitchCell: UITableViewCell, NibReusable {
 

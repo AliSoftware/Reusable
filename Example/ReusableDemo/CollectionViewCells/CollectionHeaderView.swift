@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Reusable
 
 class CollectionHeaderView: UICollectionReusableView, NibReusable {
   @IBOutlet private weak var titleLabel: UILabel! {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Reusable
 
 class MyColorSquareCell: UICollectionViewCell, Reusable {
   private lazy var colorView: UIView = {

@@ -19,7 +19,6 @@
 		09B346291C4ED51600BA041F /* MyXIBSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346271C4ED51600BA041F /* MyXIBSwitchCell.xib */; };
 		09B3462B1C4ED6C400BA041F /* MySimpleColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3462A1C4ED6C400BA041F /* MySimpleColorCell.swift */; };
 		09B346341C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346331C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift */; };
-		09B346371C4EF13300BA041F /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3462D1C4ED72B00BA041F /* Reusable.swift */; };
 		09B3463A1C4EF3F900BA041F /* MyColorSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346391C4EF3F900BA041F /* MyColorSquareCell.swift */; };
 		09B3463C1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3463B1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift */; };
 		09B3463E1C4EF4A400BA041F /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3463D1C4EF4A400BA041F /* CollectionViewController.swift */; };
@@ -27,7 +26,7 @@
 		09B346421C4EF71900BA041F /* MyXIBIndexSquaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346401C4EF71900BA041F /* MyXIBIndexSquaceCell.xib */; };
 		09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */; };
 		09B346461C4EF8F600BA041F /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */; };
-		CD1A4B0A1C5A1BAF00F28455 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A4B091C5A1BAF00F28455 /* NibLoadable.swift */; };
+		1149585143A38AA408C8C457 /* Pods_ReusableDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC88F8AA8F28D6913F033D5E /* Pods_ReusableDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,11 +43,7 @@
 		09B346261C4ED51600BA041F /* MyXIBSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyXIBSwitchCell.swift; sourceTree = "<group>"; };
 		09B346271C4ED51600BA041F /* MyXIBSwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyXIBSwitchCell.xib; sourceTree = "<group>"; };
 		09B3462A1C4ED6C400BA041F /* MySimpleColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySimpleColorCell.swift; sourceTree = "<group>"; };
-		09B3462D1C4ED72B00BA041F /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
-		09B3462F1C4ED75400BA041F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		09B346301C4ED75400BA041F /* Reusable.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Reusable.podspec; path = ../Reusable.podspec; sourceTree = "<group>"; };
 		09B346331C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryBoardIndexPathCell.swift; sourceTree = "<group>"; };
-		09B346351C4EF12200BA041F /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		09B346391C4EF3F900BA041F /* MyColorSquareCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColorSquareCell.swift; sourceTree = "<group>"; };
 		09B3463B1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryboardTextSquareCell.swift; sourceTree = "<group>"; };
 		09B3463D1C4EF4A400BA041F /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +51,9 @@
 		09B346401C4EF71900BA041F /* MyXIBIndexSquaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyXIBIndexSquaceCell.xib; sourceTree = "<group>"; };
 		09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
-		CD1A4B091C5A1BAF00F28455 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		25D9439283FDBED3E9FAC6B0 /* Pods-ReusableDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8F9360FD65142C0DA3C40545 /* Pods-ReusableDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo.release.xcconfig"; sourceTree = "<group>"; };
+		EC88F8AA8F28D6913F033D5E /* Pods_ReusableDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1149585143A38AA408C8C457 /* Pods_ReusableDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,9 +71,10 @@
 		09B346001C4ED26F00BA041F = {
 			isa = PBXGroup;
 			children = (
-				09B3462C1C4ED6F000BA041F /* Reusable */,
 				09B3460B1C4ED26F00BA041F /* ReusableDemo */,
 				09B3460A1C4ED26F00BA041F /* Products */,
+				5B81FC11470E9F454552E168 /* Pods */,
+				0DE5A03BA0BC8C31B2BB65F1 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -128,19 +127,6 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
-		09B3462C1C4ED6F000BA041F /* Reusable */ = {
-			isa = PBXGroup;
-			children = (
-				CD1A4B091C5A1BAF00F28455 /* NibLoadable.swift */,
-				09B3462D1C4ED72B00BA041F /* Reusable.swift */,
-				09B3462F1C4ED75400BA041F /* README.md */,
-				09B346351C4EF12200BA041F /* CHANGELOG.md */,
-				09B346301C4ED75400BA041F /* Reusable.podspec */,
-			);
-			name = Reusable;
-			path = ../Sources;
-			sourceTree = "<group>";
-		};
 		09B346381C4EF36D00BA041F /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +140,23 @@
 			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
+		0DE5A03BA0BC8C31B2BB65F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC88F8AA8F28D6913F033D5E /* Pods_ReusableDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B81FC11470E9F454552E168 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25D9439283FDBED3E9FAC6B0 /* Pods-ReusableDemo.debug.xcconfig */,
+				8F9360FD65142C0DA3C40545 /* Pods-ReusableDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,10 +164,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09B3461B1C4ED26F00BA041F /* Build configuration list for PBXNativeTarget "ReusableDemo" */;
 			buildPhases = (
+				EE285E0C2E7A2C65070A7256 /* Check Pods Manifest.lock */,
 				09B346051C4ED26F00BA041F /* Sources */,
 				091AEA061C5ED6500094EA6C /* $ SwiftLint */,
 				09B346061C4ED26F00BA041F /* Frameworks */,
 				09B346071C4ED26F00BA041F /* Resources */,
+				557629C6ED80D1329D02329B /* Embed Pods Frameworks */,
+				0A6E9BF59310816590CAC427 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,6 +248,51 @@
 			shellScript = "if which swiftlint; then\n  swiftlint\nelse\n  echo \"warning: Install SwiftLint to ensure the coding conventions are respected on this project.\"\nfi";
 			showEnvVarsInLog = 0;
 		};
+		0A6E9BF59310816590CAC427 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		557629C6ED80D1329D02329B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE285E0C2E7A2C65070A7256 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -260,8 +311,6 @@
 				09B346281C4ED51600BA041F /* MyXIBSwitchCell.swift in Sources */,
 				09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */,
 				09B3462B1C4ED6C400BA041F /* MySimpleColorCell.swift in Sources */,
-				CD1A4B0A1C5A1BAF00F28455 /* NibLoadable.swift in Sources */,
-				09B346371C4EF13300BA041F /* Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +421,7 @@
 		};
 		09B3461C1C4ED26F00BA041F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25D9439283FDBED3E9FAC6B0 /* Pods-ReusableDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReusableDemo/Info.plist;
@@ -384,6 +434,7 @@
 		};
 		09B3461D1C4ED26F00BA041F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F9360FD65142C0DA3C40545 /* Pods-ReusableDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReusableDemo/Info.plist;

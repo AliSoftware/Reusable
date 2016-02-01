@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Reusable
 
 class MyXIBIndexSquaceCell: UICollectionViewCell, NibReusable {
   @IBOutlet private weak var sectionLabel: UILabel!

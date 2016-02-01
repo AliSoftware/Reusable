@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:../Sources"
+      name = "Pod Metadata">
+      <FileRef
+         location = "absolute:/Users/olivier/Documents/Dev/GitHub/AliSoftware/Reusable/Sources/../README.md">
+      </FileRef>
+      <FileRef
+         location = "absolute:/Users/olivier/Documents/Dev/GitHub/AliSoftware/Reusable/Sources/../CHANGELOG.md">
+      </FileRef>
+      <FileRef
+         location = "absolute:/Users/olivier/Documents/Dev/GitHub/AliSoftware/Reusable/Sources/../Reusable.podspec">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:ReusableDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
