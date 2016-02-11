@@ -2,10 +2,13 @@
 
 ## 2.1.1
 
-* Fixed bundle location of nibs.
+* Fixed bundle location of nibs.  
   [@chrisamanse](https://github.com/chrisamanse), [#10](https://github.com/AliSoftware/Reusable/pull/10)
 
 By default, `nib: UINib` of `NibLoadable` protocol will use the nib located in the bundle of the conforming class.
+
+* Fixed issue with subclasses of types conforming to `Reusable` — due to the [Swift bug SR-617](https://bugs.swift.org/browse/SR-617).  
+  [@chrisamanse](https://github.com/chrisamanse), [#2](https://github.com/AliSoftware/Reusable/issues/2)
 
 ## 2.1.0
 

@@ -1,5 +1,5 @@
 PODS:
-  - Reusable (2.1.0)
+  - Reusable (2.1.1)
 
 DEPENDENCIES:
   - Reusable (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Reusable: 57223e54be07f79b8541127e830400f2d05a5755
+  Reusable: 5f9eb5841d99b079619b65365494ae45768b3da0
 
 COCOAPODS: 0.39.0
