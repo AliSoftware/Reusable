@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2.1.1
+
+* Fixed bundle location of nibs.
+  [@chrisamanse](https://github.com/chrisamanse), [#10](https://github.com/AliSoftware/Reusable/pull/10)
+
+By default, `nib: UINib` of `NibLoadable` protocol will use the nib located in the bundle of the conforming class.
+
 ## 2.1.0
 
 * Added support for direct instantiation of arbitrary `UIView` from a nib.  
