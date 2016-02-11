@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B4A7E4953B381900250D5868C3B9AC21"
-               BuildableName = "Reusable.framework"
-               BlueprintName = "Reusable"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "09B346081C4ED26F00BA041F"
+               BuildableName = "ReusableDemo.app"
+               BlueprintName = "ReusableDemo"
+               ReferencedContainer = "container:ReusableDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "09B346081C4ED26F00BA041F"
+            BuildableName = "ReusableDemo.app"
+            BlueprintName = "ReusableDemo"
+            ReferencedContainer = "container:ReusableDemo.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B4A7E4953B381900250D5868C3B9AC21"
-            BuildableName = "Reusable.framework"
-            BlueprintName = "Reusable"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "09B346081C4ED26F00BA041F"
+            BuildableName = "ReusableDemo.app"
+            BlueprintName = "ReusableDemo"
+            ReferencedContainer = "container:ReusableDemo.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,6 +70,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "09B346081C4ED26F00BA041F"
+            BuildableName = "ReusableDemo.app"
+            BlueprintName = "ReusableDemo"
+            ReferencedContainer = "container:ReusableDemo.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
