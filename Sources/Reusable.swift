@@ -57,7 +57,14 @@ public extension UITableView {
    - seealso: `dequeueReusableCellWithIdentifier(_:,forIndexPath:)`
    */
   func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath indexPath: NSIndexPath) -> T {
-    return self.dequeueReusableCellWithIdentifier(T.reuseIdentifier, forIndexPath: indexPath) as! T
+    guard let cell = self.dequeueReusableCellWithIdentifier(T.reuseIdentifier, forIndexPath: indexPath) as? T else {
+      fatalError(
+        "Failed to dequeue a cell with identifier \(T.reuseIdentifier) matching type \(T.self). " +
+          "Check that the reuseIdentifier is set properly in your XIB/Storyboard " +
+        "and that you registered the cell beforehand"
+      )
+    }
+    return cell
   }
 
   /**
@@ -90,7 +97,14 @@ public extension UITableView {
    - seealso: `dequeueReusableHeaderFooterViewWithIdentifier(_:)`
    */
   func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>() -> T? {
-    return self.dequeueReusableHeaderFooterViewWithIdentifier(T.reuseIdentifier) as! T?
+    guard let view = self.dequeueReusableHeaderFooterViewWithIdentifier(T.reuseIdentifier) as? T? else {
+      fatalError(
+        "Failed to dequeue a header/footer with identifier \(T.reuseIdentifier) matching type \(T.self). " +
+          "Check that the reuseIdentifier is set properly in your XIB/Storyboard " +
+        "and that you registered the header/footer beforehand"
+      )
+    }
+    return view
   }
 }
 
@@ -129,7 +143,14 @@ public extension UICollectionView {
    - seealso: `dequeueReusableCellWithReuseIdentifier(_:,forIndexPath:)`
    */
   func dequeueReusableCell<T: UICollectionViewCell where T: Reusable>(indexPath indexPath: NSIndexPath) -> T {
-    return self.dequeueReusableCellWithReuseIdentifier(T.reuseIdentifier, forIndexPath: indexPath) as! T
+    guard let cell = self.dequeueReusableCellWithReuseIdentifier(T.reuseIdentifier, forIndexPath: indexPath) as? T else {
+      fatalError(
+        "Failed to dequeue a cell with identifier \(T.reuseIdentifier) matching type \(T.self). " +
+          "Check that the reuseIdentifier is set properly in your XIB/Storyboard " +
+        "and that you registered the cell beforehand"
+      )
+    }
+    return cell
   }
 
   /**
@@ -167,6 +188,13 @@ public extension UICollectionView {
    - seealso: `dequeueReusableSupplementaryViewOfKind(_:,withReuseIdentifier:,forIndexPath:)`
    */
   func dequeueReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>(elementKind: String, indexPath: NSIndexPath) -> T {
-    return self.dequeueReusableSupplementaryViewOfKind(elementKind, withReuseIdentifier: T.reuseIdentifier, forIndexPath: indexPath) as! T
+    guard let view = self.dequeueReusableSupplementaryViewOfKind(elementKind, withReuseIdentifier: T.reuseIdentifier, forIndexPath: indexPath) as? T else {
+      fatalError(
+        "Failed to dequeue a supplementary view with identifier \(T.reuseIdentifier) matching type \(T.self). " +
+          "Check that the reuseIdentifier is set properly in your XIB/Storyboard " +
+        "and that you registered the supplementary view beforehand"
+      )
+    }
+    return view
   }
 }
