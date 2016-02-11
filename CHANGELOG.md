@@ -2,10 +2,15 @@
 
 ## 2.1.1
 
-* Fixed bundle location of nibs.  
-  [@chrisamanse](https://github.com/chrisamanse), [#10](https://github.com/AliSoftware/Reusable/pull/10)
+* Made every method `final` to allow more optimizations.  
+  [@AliSoftware](https://github.com/AliSoftware)
 
-By default, `nib: UINib` of `NibLoadable` protocol will use the nib located in the bundle of the conforming class.
+* Banned the use of `as!` in the source code in favour of `guard let x = y else { fatalError(…) }`.
+  This avoids force-casts (which are considered bad practice) and generate a more explicit fatal error in case the developer forgot something (typically forgot to set the reuseIdentifier in IB).  
+  [@AliSoftware](https://github.com/AliSoftware), [#6](https://github.com/AliSoftware/Reusable/issues/6)
+
+* Fixed bundle location of nibs. By default, `nib: UINib` of `NibLoadable` protocol will now use the nib located in the bundle of the conforming class.  
+  [@chrisamanse](https://github.com/chrisamanse), [#10](https://github.com/AliSoftware/Reusable/pull/10)
 
 * Fixed issue with subclasses of types conforming to `Reusable` — due to the [Swift bug SR-617](https://bugs.swift.org/browse/SR-617).  
   [@chrisamanse](https://github.com/chrisamanse), [#2](https://github.com/AliSoftware/Reusable/issues/2)
