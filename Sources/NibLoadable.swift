@@ -14,7 +14,7 @@ public extension NibLoadable {
   /// By default, use the nib which have the same name as the name of the class,
   /// and located in the bundle of that class
   static var nib: UINib {
-    return UINib(nibName: String(Self), bundle: NSBundle(forClass: self))
+    return UINib(nibName: String(self), bundle: NSBundle(forClass: self))
   }
 }
 
