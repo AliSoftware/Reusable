@@ -32,7 +32,7 @@ public extension UITableView {
 
    - seealso: `registerNib(_:,forCellReuseIdentifier:)`
    */
-  func registerReusableCell<T: UITableViewCell where T: NibReusable>(cellType: T.Type) {
+  final func registerReusableCell<T: UITableViewCell where T: NibReusable>(cellType: T.Type) {
     self.registerNib(T.nib, forCellReuseIdentifier: T.reuseIdentifier)
   }
 
@@ -43,7 +43,7 @@ public extension UITableView {
 
    - seealso: `registerClass(_:,forCellReuseIdentifier:)`
    */
-  func registerReusableCell<T: UITableViewCell where T: Reusable>(cellType: T.Type) {
+  final func registerReusableCell<T: UITableViewCell where T: Reusable>(cellType: T.Type) {
     self.registerClass(T.self, forCellReuseIdentifier: T.reuseIdentifier)
   }
 
@@ -56,7 +56,7 @@ public extension UITableView {
 
    - seealso: `dequeueReusableCellWithIdentifier(_:,forIndexPath:)`
    */
-  func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath indexPath: NSIndexPath) -> T {
+  final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath indexPath: NSIndexPath) -> T {
     guard let cell = self.dequeueReusableCellWithIdentifier(T.reuseIdentifier, forIndexPath: indexPath) as? T else {
       fatalError(
         "Failed to dequeue a cell with identifier \(T.reuseIdentifier) matching type \(T.self). " +
@@ -74,7 +74,7 @@ public extension UITableView {
 
    - seealso: `registerNib(_:,forHeaderFooterViewReuseIdentifier:)`
    */
-  func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: NibReusable>(viewType: T.Type) {
+  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: NibReusable>(viewType: T.Type) {
     self.registerNib(T.nib, forHeaderFooterViewReuseIdentifier: T.reuseIdentifier)
   }
 
@@ -85,7 +85,7 @@ public extension UITableView {
 
    - seealso: `registerClass(_:,forHeaderFooterViewReuseIdentifier:)`
    */
-  func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(viewType: T.Type) {
+  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(viewType: T.Type) {
     self.registerClass(T.self, forHeaderFooterViewReuseIdentifier: T.reuseIdentifier)
   }
 
@@ -96,7 +96,7 @@ public extension UITableView {
 
    - seealso: `dequeueReusableHeaderFooterViewWithIdentifier(_:)`
    */
-  func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>() -> T? {
+  final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>() -> T? {
     guard let view = self.dequeueReusableHeaderFooterViewWithIdentifier(T.reuseIdentifier) as? T? else {
       fatalError(
         "Failed to dequeue a header/footer with identifier \(T.reuseIdentifier) matching type \(T.self). " +
@@ -118,7 +118,7 @@ public extension UICollectionView {
 
    - seealso: `registerNib(_:,forCellWithReuseIdentifier:)`
    */
-  func registerReusableCell<T: UICollectionViewCell where T: NibReusable>(cellType: T.Type) {
+  final func registerReusableCell<T: UICollectionViewCell where T: NibReusable>(cellType: T.Type) {
     self.registerNib(T.nib, forCellWithReuseIdentifier: T.reuseIdentifier)
   }
 
@@ -129,7 +129,7 @@ public extension UICollectionView {
 
    - seealso: `registerClass(_:,forCellWithReuseIdentifier:)`
    */
-  func registerReusableCell<T: UICollectionViewCell where T: Reusable>(cellType: T.Type) {
+  final func registerReusableCell<T: UICollectionViewCell where T: Reusable>(cellType: T.Type) {
     self.registerClass(T.self, forCellWithReuseIdentifier: T.reuseIdentifier)
   }
 
@@ -142,7 +142,7 @@ public extension UICollectionView {
 
    - seealso: `dequeueReusableCellWithReuseIdentifier(_:,forIndexPath:)`
    */
-  func dequeueReusableCell<T: UICollectionViewCell where T: Reusable>(indexPath indexPath: NSIndexPath) -> T {
+  final func dequeueReusableCell<T: UICollectionViewCell where T: Reusable>(indexPath indexPath: NSIndexPath) -> T {
     guard let cell = self.dequeueReusableCellWithReuseIdentifier(T.reuseIdentifier, forIndexPath: indexPath) as? T else {
       fatalError(
         "Failed to dequeue a cell with identifier \(T.reuseIdentifier) matching type \(T.self). " +
@@ -161,7 +161,7 @@ public extension UICollectionView {
 
    - seealso: `registerNib(_:,forSupplementaryViewOfKind:,withReuseIdentifier:)`
    */
-  func registerReusableSupplementaryView<T: UICollectionReusableView where T: NibReusable>(elementKind: String, viewType: T.Type) {
+  final func registerReusableSupplementaryView<T: UICollectionReusableView where T: NibReusable>(elementKind: String, viewType: T.Type) {
     self.registerNib(T.nib, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: T.reuseIdentifier)
   }
 
@@ -173,7 +173,7 @@ public extension UICollectionView {
 
    - seealso: `registerClass(_:,forSupplementaryViewOfKind:,withReuseIdentifier:)`
    */
-  func registerReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>(elementKind: String, viewType: T.Type) {
+  final func registerReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>(elementKind: String, viewType: T.Type) {
     self.registerClass(T.self, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: T.reuseIdentifier)
   }
 
@@ -187,7 +187,7 @@ public extension UICollectionView {
 
    - seealso: `dequeueReusableSupplementaryViewOfKind(_:,withReuseIdentifier:,forIndexPath:)`
    */
-  func dequeueReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>(elementKind: String, indexPath: NSIndexPath) -> T {
+  final func dequeueReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>(elementKind: String, indexPath: NSIndexPath) -> T {
     guard let view = self.dequeueReusableSupplementaryViewOfKind(elementKind, withReuseIdentifier: T.reuseIdentifier, forIndexPath: indexPath) as? T else {
       fatalError(
         "Failed to dequeue a supplementary view with identifier \(T.reuseIdentifier) matching type \(T.self). " +
