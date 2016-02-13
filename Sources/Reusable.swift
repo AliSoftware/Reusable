@@ -51,15 +51,16 @@ public extension UITableView {
    Returns a reusable `UITableViewCell` object for the class infered by the return-type
 
    - parameter indexPath: The index path specifying the location of the cell.
+   - parameter cellType: The cell class to dequeue
 
    - returns: A `Reusable`, `UITableViewCell` instance
 
    - seealso: `dequeueReusableCellWithIdentifier(_:,forIndexPath:)`
    */
-  final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath indexPath: NSIndexPath) -> T {
-    guard let cell = self.dequeueReusableCellWithIdentifier(T.reuseIdentifier, forIndexPath: indexPath) as? T else {
+  final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath: NSIndexPath, cellType: T.Type = T.self) -> T {
+    guard let cell = self.dequeueReusableCellWithIdentifier(cellType.reuseIdentifier, forIndexPath: indexPath) as? T else {
       fatalError(
-        "Failed to dequeue a cell with identifier \(T.reuseIdentifier) matching type \(T.self). " +
+        "Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) matching type \(cellType.self). " +
           "Check that the reuseIdentifier is set properly in your XIB/Storyboard " +
         "and that you registered the cell beforehand"
       )
@@ -91,15 +92,17 @@ public extension UITableView {
 
   /**
    Returns a reusable `UITableViewHeaderFooterView` object for the class infered by the return-type
-
+   
+   - parameter viewType: The view class to dequeue
+   
    - returns: A `Reusable`, `UITableViewHeaderFooterView` instance
 
    - seealso: `dequeueReusableHeaderFooterViewWithIdentifier(_:)`
    */
-  final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>() -> T? {
-    guard let view = self.dequeueReusableHeaderFooterViewWithIdentifier(T.reuseIdentifier) as? T? else {
+  final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(indexPath: NSIndexPath, viewType: T.Type = T.self) -> T? {
+    guard let view = self.dequeueReusableHeaderFooterViewWithIdentifier(viewType.reuseIdentifier) as? T? else {
       fatalError(
-        "Failed to dequeue a header/footer with identifier \(T.reuseIdentifier) matching type \(T.self). " +
+        "Failed to dequeue a header/footer with identifier \(viewType.reuseIdentifier) matching type \(viewType.self). " +
           "Check that the reuseIdentifier is set properly in your XIB/Storyboard " +
         "and that you registered the header/footer beforehand"
       )
@@ -137,15 +140,16 @@ public extension UICollectionView {
    Returns a reusable `UICollectionViewCell` object for the class infered by the return-type
 
    - parameter indexPath: The index path specifying the location of the cell.
+   - parameter cellType: The cell class to dequeue
 
    - returns: A `Reusable`, `UICollectionViewCell` instance
 
    - seealso: `dequeueReusableCellWithReuseIdentifier(_:,forIndexPath:)`
    */
-  final func dequeueReusableCell<T: UICollectionViewCell where T: Reusable>(indexPath indexPath: NSIndexPath) -> T {
-    guard let cell = self.dequeueReusableCellWithReuseIdentifier(T.reuseIdentifier, forIndexPath: indexPath) as? T else {
+  final func dequeueReusableCell<T: UICollectionViewCell where T: Reusable>(indexPath: NSIndexPath, cellType: T.Type = T.self) -> T {
+    guard let cell = self.dequeueReusableCellWithReuseIdentifier(cellType.reuseIdentifier, forIndexPath: indexPath) as? T else {
       fatalError(
-        "Failed to dequeue a cell with identifier \(T.reuseIdentifier) matching type \(T.self). " +
+        "Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) matching type \(cellType.self). " +
           "Check that the reuseIdentifier is set properly in your XIB/Storyboard " +
         "and that you registered the cell beforehand"
       )
@@ -182,15 +186,16 @@ public extension UICollectionView {
 
    - parameter elementKind: The kind of supplementary view to retrieve.
    - parameter indexPath:   The index path specifying the location of the cell.
-
+   - parameter viewType: The view class to dequeue
+   
    - returns: A `Reusable`, `UICollectionReusableView` instance
 
    - seealso: `dequeueReusableSupplementaryViewOfKind(_:,withReuseIdentifier:,forIndexPath:)`
    */
-  final func dequeueReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>(elementKind: String, indexPath: NSIndexPath) -> T {
-    guard let view = self.dequeueReusableSupplementaryViewOfKind(elementKind, withReuseIdentifier: T.reuseIdentifier, forIndexPath: indexPath) as? T else {
+  final func dequeueReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>(elementKind: String, indexPath: NSIndexPath, viewType: T.Type = T.self) -> T {
+    guard let view = self.dequeueReusableSupplementaryViewOfKind(elementKind, withReuseIdentifier: viewType.reuseIdentifier, forIndexPath: indexPath) as? T else {
       fatalError(
-        "Failed to dequeue a supplementary view with identifier \(T.reuseIdentifier) matching type \(T.self). " +
+        "Failed to dequeue a supplementary view with identifier \(viewType.reuseIdentifier) matching type \(viewType.self). " +
           "Check that the reuseIdentifier is set properly in your XIB/Storyboard " +
         "and that you registered the supplementary view beforehand"
       )

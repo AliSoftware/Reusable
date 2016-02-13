@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2.2.0
+
+* Added optional `viewType` & `cellType` parameters to the dequeue functions  
+  [@k3zi](https://github.com/k3zi), [#11](https://github.com/AliSoftware/Reusable/pull/11)
+
 ## 2.1.1
 
 * Made every method `final` to allow more optimizations.  
