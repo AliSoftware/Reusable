@@ -48,7 +48,7 @@ public extension UITableView {
   }
 
   /**
-   Returns a reusable `UITableViewCell` object for the class infered by the return-type
+   Returns a reusable `UITableViewCell` object for the class inferred by the return-type
 
    - parameter indexPath: The index path specifying the location of the cell.
    - parameter cellType: The cell class to dequeue
@@ -57,7 +57,7 @@ public extension UITableView {
 
    - seealso: `dequeueReusableCellWithIdentifier(_:,forIndexPath:)`
    */
-  final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath: NSIndexPath, cellType: T.Type = T.self) -> T {
+  final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath indexPath: NSIndexPath, cellType: T.Type = T.self) -> T {
     guard let cell = self.dequeueReusableCellWithIdentifier(cellType.reuseIdentifier, forIndexPath: indexPath) as? T else {
       fatalError(
         "Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) matching type \(cellType.self). " +
@@ -91,15 +91,15 @@ public extension UITableView {
   }
 
   /**
-   Returns a reusable `UITableViewHeaderFooterView` object for the class infered by the return-type
-   
+   Returns a reusable `UITableViewHeaderFooterView` object for the class inferred by the return-type
+
    - parameter viewType: The view class to dequeue
-   
+
    - returns: A `Reusable`, `UITableViewHeaderFooterView` instance
 
    - seealso: `dequeueReusableHeaderFooterViewWithIdentifier(_:)`
    */
-  final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(indexPath: NSIndexPath, viewType: T.Type = T.self) -> T? {
+  final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(viewType: T.Type = T.self) -> T? {
     guard let view = self.dequeueReusableHeaderFooterViewWithIdentifier(viewType.reuseIdentifier) as? T? else {
       fatalError(
         "Failed to dequeue a header/footer with identifier \(viewType.reuseIdentifier) matching type \(viewType.self). " +
@@ -137,7 +137,7 @@ public extension UICollectionView {
   }
 
   /**
-   Returns a reusable `UICollectionViewCell` object for the class infered by the return-type
+   Returns a reusable `UICollectionViewCell` object for the class inferred by the return-type
 
    - parameter indexPath: The index path specifying the location of the cell.
    - parameter cellType: The cell class to dequeue
@@ -146,7 +146,7 @@ public extension UICollectionView {
 
    - seealso: `dequeueReusableCellWithReuseIdentifier(_:,forIndexPath:)`
    */
-  final func dequeueReusableCell<T: UICollectionViewCell where T: Reusable>(indexPath: NSIndexPath, cellType: T.Type = T.self) -> T {
+  final func dequeueReusableCell<T: UICollectionViewCell where T: Reusable>(indexPath indexPath: NSIndexPath, cellType: T.Type = T.self) -> T {
     guard let cell = self.dequeueReusableCellWithReuseIdentifier(cellType.reuseIdentifier, forIndexPath: indexPath) as? T else {
       fatalError(
         "Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) matching type \(cellType.self). " +
@@ -182,12 +182,12 @@ public extension UICollectionView {
   }
 
   /**
-   Returns a reusable `UICollectionReusableView` object for the class infered by the return-type
+   Returns a reusable `UICollectionReusableView` object for the class inferred by the return-type
 
    - parameter elementKind: The kind of supplementary view to retrieve.
    - parameter indexPath:   The index path specifying the location of the cell.
    - parameter viewType: The view class to dequeue
-   
+
    - returns: A `Reusable`, `UICollectionReusableView` instance
 
    - seealso: `dequeueReusableSupplementaryViewOfKind(_:,withReuseIdentifier:,forIndexPath:)`
