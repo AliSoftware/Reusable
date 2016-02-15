@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## 2.2.0
+
+* Added optional `viewType` & `cellType` parameters to the dequeue functions.  
+  [@k3zi](https://github.com/k3zi), [#11](https://github.com/AliSoftware/Reusable/pull/11)
+
+This parameter is only needed if you can't write `… as MyCell` (to let Swift infer the cell type from the return type),
+which might be the case for example when your cell class is stored in a variable:
+
+```swift
+let cellType: Any.Type = self.cellTypeForIndexPath(indexPath)
+// Can't do this in this case (because cellType is a variable):
+let cell = tableView.dequeueReusableCell(indexPath: indexPath) as cellType ❌ // compiler error
+// But now we can use that alternate way for such cases:
+let cell = tableView.dequeueReusableCell(indexPath: indexPath, cellType: cellType)
+```
+
+But if you know the type at compile time, you can omit the `cellType` parameter and still do this, letting the return type infer it for you:
+
+```swift
+let cell = tableView.dequeueReusableCell(indexPath: indexPath) as MyCell
+```
+
 ## 2.1.1
 
 * Made every method `final` to allow more optimizations.  
