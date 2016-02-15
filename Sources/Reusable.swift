@@ -55,6 +55,8 @@ public extension UITableView {
 
    - returns: A `Reusable`, `UITableViewCell` instance
 
+   - note: The `cellType` parameter can generally be omitted and infered by the return type,
+           except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableCellWithIdentifier(_:,forIndexPath:)`
    */
   final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath indexPath: NSIndexPath, cellType: T.Type = T.self) -> T {
@@ -97,6 +99,8 @@ public extension UITableView {
 
    - returns: A `Reusable`, `UITableViewHeaderFooterView` instance
 
+   - note: The `viewType` parameter can generally be omitted and infered by the return type,
+           except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableHeaderFooterViewWithIdentifier(_:)`
    */
   final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(viewType: T.Type = T.self) -> T? {
@@ -144,6 +148,8 @@ public extension UICollectionView {
 
    - returns: A `Reusable`, `UICollectionViewCell` instance
 
+   - note: The `cellType` parameter can generally be omitted and infered by the return type,
+           except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableCellWithReuseIdentifier(_:,forIndexPath:)`
    */
   final func dequeueReusableCell<T: UICollectionViewCell where T: Reusable>(indexPath indexPath: NSIndexPath, cellType: T.Type = T.self) -> T {
@@ -190,6 +196,8 @@ public extension UICollectionView {
 
    - returns: A `Reusable`, `UICollectionReusableView` instance
 
+   - note: The `viewType` parameter can generally be omitted and infered by the return type,
+           except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableSupplementaryViewOfKind(_:,withReuseIdentifier:,forIndexPath:)`
    */
   final func dequeueReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>(elementKind: String, indexPath: NSIndexPath, viewType: T.Type = T.self) -> T {
