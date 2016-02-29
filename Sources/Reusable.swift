@@ -33,7 +33,7 @@ public extension UITableView {
    - seealso: `registerNib(_:,forCellReuseIdentifier:)`
    */
   final func registerReusableCell<T: UITableViewCell where T: NibReusable>(cellType: T.Type) {
-    self.registerNib(T.nib, forCellReuseIdentifier: T.reuseIdentifier)
+    self.registerNib(cellType.nib, forCellReuseIdentifier: cellType.reuseIdentifier)
   }
 
   /**
@@ -44,7 +44,7 @@ public extension UITableView {
    - seealso: `registerClass(_:,forCellReuseIdentifier:)`
    */
   final func registerReusableCell<T: UITableViewCell where T: Reusable>(cellType: T.Type) {
-    self.registerClass(T.self, forCellReuseIdentifier: T.reuseIdentifier)
+    self.registerClass(cellType.self, forCellReuseIdentifier: cellType.reuseIdentifier)
   }
 
   /**
@@ -56,7 +56,7 @@ public extension UITableView {
    - returns: A `Reusable`, `UITableViewCell` instance
 
    - note: The `cellType` parameter can generally be omitted and infered by the return type,
-           except when your type is in a variable and cannot be determined at compile time.
+   except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableCellWithIdentifier(_:,forIndexPath:)`
    */
   final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath indexPath: NSIndexPath, cellType: T.Type = T.self) -> T {
@@ -78,7 +78,7 @@ public extension UITableView {
    - seealso: `registerNib(_:,forHeaderFooterViewReuseIdentifier:)`
    */
   final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: NibReusable>(viewType: T.Type) {
-    self.registerNib(T.nib, forHeaderFooterViewReuseIdentifier: T.reuseIdentifier)
+    self.registerNib(viewType.nib, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
   }
 
   /**
@@ -89,7 +89,7 @@ public extension UITableView {
    - seealso: `registerClass(_:,forHeaderFooterViewReuseIdentifier:)`
    */
   final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(viewType: T.Type) {
-    self.registerClass(T.self, forHeaderFooterViewReuseIdentifier: T.reuseIdentifier)
+    self.registerClass(viewType.self, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
   }
 
   /**
@@ -100,7 +100,7 @@ public extension UITableView {
    - returns: A `Reusable`, `UITableViewHeaderFooterView` instance
 
    - note: The `viewType` parameter can generally be omitted and infered by the return type,
-           except when your type is in a variable and cannot be determined at compile time.
+   except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableHeaderFooterViewWithIdentifier(_:)`
    */
   final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(viewType: T.Type = T.self) -> T? {
@@ -126,7 +126,7 @@ public extension UICollectionView {
    - seealso: `registerNib(_:,forCellWithReuseIdentifier:)`
    */
   final func registerReusableCell<T: UICollectionViewCell where T: NibReusable>(cellType: T.Type) {
-    self.registerNib(T.nib, forCellWithReuseIdentifier: T.reuseIdentifier)
+    self.registerNib(cellType.nib, forCellWithReuseIdentifier: cellType.reuseIdentifier)
   }
 
   /**
@@ -137,7 +137,7 @@ public extension UICollectionView {
    - seealso: `registerClass(_:,forCellWithReuseIdentifier:)`
    */
   final func registerReusableCell<T: UICollectionViewCell where T: Reusable>(cellType: T.Type) {
-    self.registerClass(T.self, forCellWithReuseIdentifier: T.reuseIdentifier)
+    self.registerClass(cellType.self, forCellWithReuseIdentifier: cellType.reuseIdentifier)
   }
 
   /**
@@ -172,7 +172,7 @@ public extension UICollectionView {
    - seealso: `registerNib(_:,forSupplementaryViewOfKind:,withReuseIdentifier:)`
    */
   final func registerReusableSupplementaryView<T: UICollectionReusableView where T: NibReusable>(elementKind: String, viewType: T.Type) {
-    self.registerNib(T.nib, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: T.reuseIdentifier)
+    self.registerNib(viewType.nib, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
   }
 
   /**
@@ -184,7 +184,7 @@ public extension UICollectionView {
    - seealso: `registerClass(_:,forSupplementaryViewOfKind:,withReuseIdentifier:)`
    */
   final func registerReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>(elementKind: String, viewType: T.Type) {
-    self.registerClass(T.self, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: T.reuseIdentifier)
+    self.registerClass(viewType.self, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
   }
 
   /**
@@ -202,7 +202,7 @@ public extension UICollectionView {
    */
   final func dequeueReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>
     (elementKind: String, indexPath: NSIndexPath, viewType: T.Type = T.self) -> T {
-      let view = self.dequeueReusableSupplementaryViewOfKind(elementKind, withReuseIdentifier: viewType.reuseIdentifier, forIndexPath: indexPath)
+    let view = self.dequeueReusableSupplementaryViewOfKind(elementKind, withReuseIdentifier: viewType.reuseIdentifier, forIndexPath: indexPath)
     guard let typedView = view as? T else {
       fatalError(
         "Failed to dequeue a supplementary view with identifier \(viewType.reuseIdentifier) matching type \(viewType.self). "
