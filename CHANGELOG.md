@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2.2.1
+
+* Fixed issue with `register…` methods registering the superclass `T` instead of the dynamic class `cellType` / `viewType`.  
+  [@narirou](https://github.com/narirou), [#13](https://github.com/AliSoftware/Reusable/pull/13)
+
 ## 2.2.0
 
 * Added optional `viewType` & `cellType` parameters to the dequeue functions.  
