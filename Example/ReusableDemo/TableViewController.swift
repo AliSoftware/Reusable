@@ -20,6 +20,16 @@ class TableViewController: UITableViewController {
     // No need to register this one, the UIStoryboard already auto-register its cells
 //    tableView.registerReusableCell(MyStoryBoardIndexPathCell)
   }
+  
+  override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return 90
+  }
+  
+  override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let view = MyHeaderTableView.loadFromNib()
+    view.load(section)
+    return view
+  }
 
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 4
