@@ -89,6 +89,16 @@ class NibBasedRandomView: UIView, NibLoadable {
 }
 ```
 
+### Example with a UIView in XIB's File's Owner
+
+`Reusable` can also be used to load a `UIView` in Xib's File's Owner (even a non-reusable, non-cell view) designed in a XIB by simply marking it as `NibOwnLoadable`:
+
+```swift
+class NibBasedRandomView: UIView, NibOwnLoadable {
+  // The rest of the view code goes here
+}
+```
+
 ## Registering your cells by code
 
 Then to use those cells, you'll register them like this, without the need to manipulate any `reuseIdentifier` anywhere in the code:
