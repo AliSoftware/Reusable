@@ -11,7 +11,7 @@ public protocol NibLoadable: class {
 /// Make your UIView subclasses
 /// conform to this protocol when they *are* NIB-based
 /// to be able to instantiate them from NIB in a type-safe manner
-public protocol NibOwnLoadable: class {
+public protocol NibOwnerLoadable: class {
   /// The nib file to use to load a new instance of the View designed in a XIB
   static var nib: UINib { get }
 }
@@ -47,7 +47,7 @@ public extension NibLoadable where Self: UIView {
 
 //MARK : - Default implmentation from NibOwnLoadable
 
-public extension NibOwnLoadable {
+public extension NibOwnerLoadable {
   /// By default, use the nib which have the same name as the name of the class,
   /// and located in the bundle of that class
   static var nib: UINib {
@@ -57,7 +57,7 @@ public extension NibOwnLoadable {
 
 // MARK: - Support for instantiation from nib
 
-public extension NibOwnLoadable where Self: UIView {
+public extension NibOwnerLoadable where Self: UIView {
   /**
    Returns a `UIView` object instantiated from nib
    

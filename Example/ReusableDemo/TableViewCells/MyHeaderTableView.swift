@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-class MyHeaderTableView: UIView, NibOwnLoadable {
+class MyHeaderTableView: UIView, NibOwnerLoadable {
   
   @IBOutlet var rootView: UIView!
   @IBOutlet weak var blueSquare: UIView!
