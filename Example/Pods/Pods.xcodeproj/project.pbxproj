@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0922A2111D00DBA800946179 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922A20B1D00D9FA00946179 /* UITableView+Reusable.swift */; };
+		0922A2121D00DBAC00946179 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922A20D1D00DA2C00946179 /* UICollectionView+Reusable.swift */; };
+		0922A2131D00DBB300946179 /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922A20F1D00DBA000946179 /* NibOwnerLoadable.swift */; };
 		138CD9183A3A2ABF176749178EAF7C39 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
 		35576EECEA87FB95F8BCF40A63147B27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
 		422867E5CA5300FBE834F7D2CAF6EBD3 /* Reusable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E8F7A3DF26D98C51FB8CFF9319B5A9A /* Reusable-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +34,9 @@
 /* Begin PBXFileReference section */
 		02B1AD88B23968F5D7BE0B8F79A9655E /* Reusable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Reusable-dummy.m"; sourceTree = "<group>"; };
 		068498FE04F5BC0EBCD074FEF1D82223 /* Pods-ReusableDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ReusableDemo.modulemap"; sourceTree = "<group>"; };
+		0922A20B1D00D9FA00946179 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		0922A20D1D00DA2C00946179 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		0922A20F1D00DBA000946179 /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadable.swift; sourceTree = "<group>"; };
 		0CB250E75C711174F18D7127E09831D4 /* Pods-ReusableDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReusableDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		16D5B1B022E00CAF636DD01C0028E4AA /* Pods-ReusableDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ReusableDemo-dummy.m"; sourceTree = "<group>"; };
 		184A03E87FE9108FC259033367FA9F60 /* Pods-ReusableDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReusableDemo-frameworks.sh"; sourceTree = "<group>"; };
@@ -96,7 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				C0B5B0FCDE060429A9DB487C30F334B1 /* NibLoadable.swift */,
+				0922A20F1D00DBA000946179 /* NibOwnerLoadable.swift */,
 				E8269263CFA71027B1DD7F55041656A8 /* Reusable.swift */,
+				0922A20B1D00D9FA00946179 /* UITableView+Reusable.swift */,
+				0922A20D1D00DA2C00946179 /* UICollectionView+Reusable.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -242,7 +251,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -276,6 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0922A2111D00DBA800946179 /* UITableView+Reusable.swift in Sources */,
+				0922A2131D00DBB300946179 /* NibOwnerLoadable.swift in Sources */,
+				0922A2121D00DBAC00946179 /* UICollectionView+Reusable.swift in Sources */,
 				A465148049C41B4B313C091EDCA9E92A /* NibLoadable.swift in Sources */,
 				E778177E2EB794A2096A91E48DCDC958 /* Reusable-dummy.m in Sources */,
 				FBECAE4F991B0B7F0592DFC56BD68020 /* Reusable.swift in Sources */,
@@ -298,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EF575ABC5A0AE0578CF97EF1D24579F2 /* Pods-ReusableDemo.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -328,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E37F740CA8BE0C4A275075749D6E978 /* Pods-ReusableDemo.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
