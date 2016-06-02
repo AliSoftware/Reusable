@@ -27,7 +27,7 @@ class TableViewController: UITableViewController {
   
   override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let view = MyHeaderTableView.loadFromNib()
-    view.load(section)
+    view.fillForSection(section)
     return view
   }
 
