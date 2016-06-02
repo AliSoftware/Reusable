@@ -9,6 +9,12 @@
 import UIKit
 import Reusable
 
+/**
+ * This view is loaded from a NIB, and is used as the File's Owner
+ * of the XIB file (and not set as the XIB's root view)
+ *
+ * That's why it's annotated with the `NibOwnerLoadable` protocol.
+ */
 class MyHeaderTableView: UIView, NibOwnerLoadable {
 
   @IBOutlet private weak var titleLabel: UILabel!
