@@ -32,7 +32,7 @@ public extension NibLoadable {
 public extension NibLoadable where Self: UIView {
   /**
    Returns a `UIView` object instantiated from nib
-   
+
    - returns: A `NibLoadable`, `UIView` instance
    */
   static func loadFromNib() -> Self {
@@ -60,13 +60,13 @@ public extension NibOwnerLoadable {
 public extension NibOwnerLoadable where Self: UIView {
   /**
    Returns a `UIView` object instantiated from nib
-   
+
    - returns: A `NibOwnLoadable`, `UIView` instance
    */
   static func loadFromNib() -> Self {
     let owner = Self()
-    let layoutAttributes:[NSLayoutAttribute] = [.Top, .Leading, .Bottom, .Trailing]
-    
+    let layoutAttributes: [NSLayoutAttribute] = [.Top, .Leading, .Bottom, .Trailing]
+
     for view in nib.instantiateWithOwner(owner, options: nil) {
       if let view = view as? UIView {
         view.translatesAutoresizingMaskIntoConstraints = false

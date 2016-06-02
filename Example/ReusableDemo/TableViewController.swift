@@ -17,14 +17,14 @@ class TableViewController: UITableViewController {
     tableView.registerReusableCell(MySimpleColorCell)
     tableView.registerReusableCell(MyXIBTextCell)
     tableView.registerReusableCell(MyXIBSwitchCell)
-    // No need to register this one, the UIStoryboard already auto-register its cells
+    /* No need to register this one, the UIStoryboard already auto-register its cells */
 //    tableView.registerReusableCell(MyStoryBoardIndexPathCell)
   }
-  
+
   override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     return 90
   }
-  
+
   override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let view = MyHeaderTableView.loadFromNib()
     view.fillForSection(section)
