@@ -1,6 +1,12 @@
+/*********************************************
+ *
+ * This code is under the MIT License (MIT)
+ *
+ * Copyright (c) 2016 AliSoftware
+ *
+ *********************************************/
+
 import UIKit
-
-
 
 
 // MARK: Protocol Definition
