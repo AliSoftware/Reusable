@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## 2.2.2
+## 2.3.0
+
 * Added ` NibOwnerLoadable` protocol for UIView in XIB's File's Owner. [@PoissonBallon](https://github.com/PoissonBallon), [#16](https://github.com/AliSoftware/Reusable/pull/16)
 
 ## 2.2.1
