@@ -2,7 +2,11 @@
 
 ## 2.3.0
 
-* Added ` NibOwnerLoadable` protocol for UIView in XIB's File's Owner. [@PoissonBallon](https://github.com/PoissonBallon), [#16](https://github.com/AliSoftware/Reusable/pull/16)
+* Added ` NibOwnerLoadable` protocol for `UIView` set as XIB's File's Owner.  
+  [@PoissonBallon](https://github.com/PoissonBallon), [#16](https://github.com/AliSoftware/Reusable/pull/16)
+
+_While the `NibLoadable` protocol is adapted to views loaded from XIB but that are set as the root view of the XIB,
+this new `NibOwnerLoadable` protocol is adapted to view loaded from XIB too, but that are set as the XIB's File's Owner._
 
 ## 2.2.1
 
