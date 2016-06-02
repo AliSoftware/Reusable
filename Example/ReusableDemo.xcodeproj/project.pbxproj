@@ -27,6 +27,8 @@
 		09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */; };
 		09B346461C4EF8F600BA041F /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */; };
 		1149585143A38AA408C8C457 /* Pods_ReusableDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC88F8AA8F28D6913F033D5E /* Pods_ReusableDemo.framework */; };
+		3BC2191F1CFC259F003BE78C /* MyHeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */; };
+		3BC219201CFC259F003BE78C /* MyHeaderTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		25D9439283FDBED3E9FAC6B0 /* Pods-ReusableDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHeaderTableView.swift; sourceTree = "<group>"; };
+		3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyHeaderTableView.xib; sourceTree = "<group>"; };
 		8F9360FD65142C0DA3C40545 /* Pods-ReusableDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo.release.xcconfig"; sourceTree = "<group>"; };
 		EC88F8AA8F28D6913F033D5E /* Pods_ReusableDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -116,6 +120,8 @@
 		09B3461F1C4ED34F00BA041F /* TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */,
+				3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */,
 				09B346201C4ED39700BA041F /* MyXIBTextCell.swift */,
 				09B346211C4ED39700BA041F /* MyXIBTextCell.xib */,
 				09B346261C4ED51600BA041F /* MyXIBSwitchCell.swift */,
@@ -166,7 +172,7 @@
 			buildPhases = (
 				EE285E0C2E7A2C65070A7256 /* Check Pods Manifest.lock */,
 				09B346051C4ED26F00BA041F /* Sources */,
-				091AEA061C5ED6500094EA6C /* $ SwiftLint */,
+				091AEA061C5ED6500094EA6C /* ⚠️ SwiftLint */,
 				09B346061C4ED26F00BA041F /* Frameworks */,
 				09B346071C4ED26F00BA041F /* Resources */,
 				557629C6ED80D1329D02329B /* Embed Pods Frameworks */,
@@ -225,6 +231,7 @@
 				09B346141C4ED26F00BA041F /* Assets.xcassets in Resources */,
 				09B346251C4ED4CE00BA041F /* Default-568h@2x.png in Resources */,
 				09B346121C4ED26F00BA041F /* Main.storyboard in Resources */,
+				3BC219201CFC259F003BE78C /* MyHeaderTableView.xib in Resources */,
 				09B346421C4EF71900BA041F /* MyXIBIndexSquaceCell.xib in Resources */,
 				09B346291C4ED51600BA041F /* MyXIBSwitchCell.xib in Resources */,
 			);
@@ -233,14 +240,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		091AEA061C5ED6500094EA6C /* $ SwiftLint */ = {
+		091AEA061C5ED6500094EA6C /* ⚠️ SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "$ SwiftLint";
+			name = "⚠️ SwiftLint";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +315,7 @@
 				09B3463E1C4EF4A400BA041F /* CollectionViewController.swift in Sources */,
 				09B3460F1C4ED26F00BA041F /* TableViewController.swift in Sources */,
 				09B3460D1C4ED26F00BA041F /* AppDelegate.swift in Sources */,
+				3BC2191F1CFC259F003BE78C /* MyHeaderTableView.swift in Sources */,
 				09B346281C4ED51600BA041F /* MyXIBSwitchCell.swift in Sources */,
 				09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */,
 				09B3462B1C4ED6C400BA041F /* MySimpleColorCell.swift in Sources */,

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.3.0
+
+* Added ` NibOwnerLoadable` protocol for UIView in XIB's File's Owner. [@PoissonBallon](https://github.com/PoissonBallon), [#16](https://github.com/AliSoftware/Reusable/pull/16)
+
 ## 2.2.1
 
 * Fixed issue with `register…` methods registering the superclass `T` instead of the dynamic class `cellType` / `viewType`.  
