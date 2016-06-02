@@ -22,7 +22,7 @@ class TableViewController: UITableViewController {
   }
 
   override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 90
+    return MyHeaderTableView.height
   }
 
   override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
