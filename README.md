@@ -31,7 +31,7 @@ So for example to create a `UITableViewCell` subclass which doesn't use a XIB (e
 
 ```swift
 class CodeBasedCustomCell: UITableViewCell, Reusable {
-  // By default this cell will have a reuseIdentifier of "MyCustomCell"
+  // By default this cell will have a reuseIdentifier of "CodeBasedCustomCell"
   // unless you provide an alternative implementation of `var reuseIdentifier`
   
   // No need to add anything to conform to Reusable. you can just keep your normal cell code
