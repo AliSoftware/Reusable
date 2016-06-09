@@ -91,10 +91,10 @@ class NibBasedRandomView: UIView, NibLoadable {
 
 ### Example with a UIView in XIB's File's Owner
 
-`Reusable` can also be used to load a `UIView` in Xib's File's Owner (even a non-reusable, non-cell view) designed in a XIB by simply marking it as `NibOwnLoadable`:
+`Reusable` can also be used to load a `UIView` in Xib's File's Owner (even a non-reusable, non-cell view) designed in a XIB by simply marking it as `NibOwnerLoadable`:
 
 ```swift
-class NibBasedRandomView: UIView, NibOwnLoadable {
+class NibBasedRandomView: UIView, NibOwnerLoadable {
   // The rest of the view code goes here
 }
 ```
