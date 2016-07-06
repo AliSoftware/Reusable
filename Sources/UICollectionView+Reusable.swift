@@ -17,10 +17,10 @@ public extension UICollectionView {
 
    - parameter cellType: the `UICollectionViewCell` (`NibReusable`-conforming) subclass to register
 
-   - seealso: `registerNib(_:,forCellWithReuseIdentifier:)`
+   - seealso: `register(_:,forCellWithReuseIdentifier:)`
    */
   final func registerReusableCell<T: UICollectionViewCell where T: NibReusable>(cellType: T.Type) {
-    self.registerNib(cellType.nib, forCellWithReuseIdentifier: cellType.reuseIdentifier)
+    self.register(cellType.nib, forCellWithReuseIdentifier: cellType.reuseIdentifier)
   }
 
   /**
@@ -28,10 +28,10 @@ public extension UICollectionView {
 
    - parameter cellType: the `UICollectionViewCell` (`Reusable`-conforming) subclass to register
 
-   - seealso: `registerClass(_:,forCellWithReuseIdentifier:)`
+   - seealso: `register(_:,forCellWithReuseIdentifier:)`
    */
   final func registerReusableCell<T: UICollectionViewCell where T: Reusable>(cellType: T.Type) {
-    self.registerClass(cellType.self, forCellWithReuseIdentifier: cellType.reuseIdentifier)
+    self.register(cellType.self, forCellWithReuseIdentifier: cellType.reuseIdentifier)
   }
 
   /**
@@ -46,7 +46,7 @@ public extension UICollectionView {
    except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableCellWithReuseIdentifier(_:,forIndexPath:)`
    */
-  final func dequeueReusableCell<T: UICollectionViewCell where T: Reusable>(indexPath indexPath: NSIndexPath, cellType: T.Type = T.self) -> T {
+  final func dequeueReusableCell<T: UICollectionViewCell where T: Reusable>(indexPath: IndexPath, cellType: T.Type = T.self) -> T {
     guard let cell = self.dequeueReusableCellWithReuseIdentifier(cellType.reuseIdentifier, forIndexPath: indexPath) as? T else {
       fatalError(
         "Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) matching type \(cellType.self). "
@@ -63,10 +63,10 @@ public extension UICollectionView {
    - parameter elementKind: The kind of supplementary view to create.
    - parameter viewType: the `UIView` (`NibReusable`-conforming) subclass to register as Supplementary View
 
-   - seealso: `registerNib(_:,forSupplementaryViewOfKind:,withReuseIdentifier:)`
+   - seealso: `register(_:,forSupplementaryViewOfKind:,withReuseIdentifier:)`
    */
   final func registerReusableSupplementaryView<T: UICollectionReusableView where T: NibReusable>(elementKind: String, viewType: T.Type) {
-    self.registerNib(viewType.nib, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
+    self.register(viewType.nib, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
   }
 
   /**
@@ -75,10 +75,10 @@ public extension UICollectionView {
    - parameter elementKind: The kind of supplementary view to create.
    - parameter viewType: the `UIView` (`Reusable`-conforming) subclass to register as Supplementary View
 
-   - seealso: `registerClass(_:,forSupplementaryViewOfKind:,withReuseIdentifier:)`
+   - seealso: `register(_:,forSupplementaryViewOfKind:,withReuseIdentifier:)`
    */
   final func registerReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>(elementKind: String, viewType: T.Type) {
-    self.registerClass(viewType.self, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
+    self.register(viewType.self, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
   }
 
   /**
@@ -95,7 +95,7 @@ public extension UICollectionView {
    - seealso: `dequeueReusableSupplementaryViewOfKind(_:,withReuseIdentifier:,forIndexPath:)`
    */
   final func dequeueReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>
-    (elementKind: String, indexPath: NSIndexPath, viewType: T.Type = T.self) -> T {
+    (elementKind: String, indexPath: IndexPath, viewType: T.Type = T.self) -> T {
     let view = self.dequeueReusableSupplementaryViewOfKind(elementKind, withReuseIdentifier: viewType.reuseIdentifier, forIndexPath: indexPath)
     guard let typedView = view as? T else {
       fatalError(
