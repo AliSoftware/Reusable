@@ -28,10 +28,10 @@ public extension UITableView {
 
    - parameter cellType: the `UITableViewCell` (`Reusable`-conforming) subclass to register
 
-   - seealso: `registerClass(_:,forCellReuseIdentifier:)`
+   - seealso: `register(_:,forCellReuseIdentifier:)`
    */
   final func registerReusableCell<T: UITableViewCell where T: Reusable>(cellType: T.Type) {
-    self.registerClass(cellType.self, forCellReuseIdentifier: cellType.reuseIdentifier)
+    self.register(cellType.self, forCellReuseIdentifier: cellType.reuseIdentifier)
   }
 
   /**
@@ -46,7 +46,7 @@ public extension UITableView {
    except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableCellWithIdentifier(_:,forIndexPath:)`
    */
-  final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath indexPath: NSIndexPath, cellType: T.Type = T.self) -> T {
+  final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath: IndexPath, cellType: T.Type = T.self) -> T {
     guard let cell = self.dequeueReusableCellWithIdentifier(cellType.reuseIdentifier, forIndexPath: indexPath) as? T else {
       fatalError(
         "Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) matching type \(cellType.self). "
@@ -73,10 +73,10 @@ public extension UITableView {
 
    - parameter viewType: the `UITableViewHeaderFooterView` (`Reusable`-confirming) subclass to register
 
-   - seealso: `registerClass(_:,forHeaderFooterViewReuseIdentifier:)`
+   - seealso: `register(_:,forHeaderFooterViewReuseIdentifier:)`
    */
   final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(viewType: T.Type) {
-    self.registerClass(viewType.self, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
+    self.register(viewType.self, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
   }
 
   /**
@@ -88,10 +88,10 @@ public extension UITableView {
 
    - note: The `viewType` parameter can generally be omitted and infered by the return type,
    except when your type is in a variable and cannot be determined at compile time.
-   - seealso: `dequeueReusableHeaderFooterViewWithIdentifier(_:)`
+   - seealso: `dequeueReusableHeaderFooterView(withIdentifier:)`
    */
   final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(viewType: T.Type = T.self) -> T? {
-    guard let view = self.dequeueReusableHeaderFooterViewWithIdentifier(viewType.reuseIdentifier) as? T? else {
+    guard let view = self.dequeueReusableHeaderFooterView(withIdentifier: viewType.reuseIdentifier) as? T? else {
       fatalError(
         "Failed to dequeue a header/footer with identifier \(viewType.reuseIdentifier) matching type \(viewType.self). "
           + "Check that the reuseIdentifier is set properly in your XIB/Storyboard "
