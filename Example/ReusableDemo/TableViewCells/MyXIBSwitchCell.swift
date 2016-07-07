@@ -24,15 +24,31 @@ class MyXIBSwitchCell: UITableViewCell, NibReusable {
 
   @IBOutlet private weak var titleLabel: UILabel!
   @IBOutlet private weak var valueSwitch: UISwitch!
-  private var toggleBlock: (Bool->Void)?
+  private var toggleBlock: ((Bool)->Void)?
 
-  func fill(title: String, value: Bool, onToggle: (Bool->Void)) {
+  func fill(_ title: String, value: Bool, onToggle: ((Bool)->Void)) {
     titleLabel.text = title
-    valueSwitch.on = value
+    valueSwitch.isOn = value
     self.toggleBlock = onToggle
   }
 
-  @IBAction func onSwitchToggle(sender: UISwitch) {
-    self.toggleBlock?(sender.on)
+  @IBAction func onSwitchToggle(_ sender: UISwitch) {
+    self.toggleBlock?(sender.isOn)
   }
 }
+
+#if swift(>=3.0)
+  /* UISwitch.isOn is already defined */
+#else
+  /// Adds `isOn` property alias for `on`
+  extension UISwitch {
+    @nonobjc var isOn: Bool {
+      get {
+        return on
+      }
+      set {
+        on = newValue
+      }
+    }
+  }
+#endif

@@ -21,13 +21,17 @@ import Reusable
 class MySimpleColorCell: UITableViewCell, Reusable {
   private lazy var colorView: UIView = {
     let colorView = UIView()
-    colorView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+    #if swift(>=3.0)
+      colorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    #else
+      colorView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+    #endif
     colorView.frame = self.contentView.bounds.insetBy(dx: 50, dy: 5)
     self.contentView.addSubview(colorView)
     return colorView
   }()
 
-  func fill(color: UIColor) {
+  func fill(_ color: UIColor) {
     self.colorView.backgroundColor = color
   }
 }
