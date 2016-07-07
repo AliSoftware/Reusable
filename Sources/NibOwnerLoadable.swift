@@ -30,7 +30,11 @@ public extension NibOwnerLoadable {
   /// By default, use the nib which have the same name as the name of the class,
   /// and located in the bundle of that class
   static var nib: UINib {
-    return UINib(nibName: String(self), bundle: Bundle(forClass: self))
+    #if swift(>=3.0)
+      return UINib(nibName: String(self), bundle: Bundle(for: self))
+    #else
+      return UINib(nibName: String(self), bundle: NSBundle(forClass: self))
+    #endif
   }
 }
 
@@ -47,16 +51,24 @@ public extension NibOwnerLoadable where Self: UIView {
    */
   static func loadFromNib() -> Self {
     let owner = Self()
-    let layoutAttributes: [NSLayoutAttribute] = [.Top, .Leading, .Bottom, .Trailing]
+    #if swift(>=3.0)
+      let views = nib.instantiate(withOwner: owner, options: nil)
+      let layoutAttributes: [NSLayoutAttribute] = [.top, .leading, .bottom, .trailing]
+      let relation: NSLayoutRelation = .equal
+    #else
+      let views = nib.instantiateWithOwner(owner, options: nil)
+      let layoutAttributes: [NSLayoutAttribute] = [.Top, .Leading, .Bottom, .Trailing]
+      let relation: NSLayoutRelation = .Equal
+    #endif
 
-    for view in nib.instantiateWithOwner(owner, options: nil) {
+    for view in views {
       if let view = view as? UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         owner.addSubview(view)
         layoutAttributes.forEach { attribute in
           owner.addConstraint(NSLayoutConstraint(item: view,
             attribute: attribute,
-            relatedBy: .Equal,
+            relatedBy: relation,
             toItem: owner,
             attribute: attribute,
             multiplier: 1,
