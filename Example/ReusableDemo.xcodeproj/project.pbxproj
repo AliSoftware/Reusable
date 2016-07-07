@@ -170,13 +170,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09B3461B1C4ED26F00BA041F /* Build configuration list for PBXNativeTarget "ReusableDemo" */;
 			buildPhases = (
-				8D810F689ED55C59DF40EA88 /* 📦 Check Pods Manifest.lock */,
+				8D810F689ED55C59DF40EA88 /* [CP] Check Pods Manifest.lock */,
 				09B346051C4ED26F00BA041F /* Sources */,
 				091AEA061C5ED6500094EA6C /* ⚠️ SwiftLint */,
 				09B346061C4ED26F00BA041F /* Frameworks */,
 				09B346071C4ED26F00BA041F /* Resources */,
-				D01516303907BB14A4BDD69A /* 📦 Embed Pods Frameworks */,
-				B74A5D9CF37846C09D87FA1B /* 📦 Copy Pods Resources */,
+				D01516303907BB14A4BDD69A /* [CP] Embed Pods Frameworks */,
+				B74A5D9CF37846C09D87FA1B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,14 +255,14 @@
 			shellScript = "if which swiftlint; then\n  swiftlint\nelse\n  echo \"warning: Install SwiftLint to ensure the coding conventions are respected on this project.\"\nfi";
 			showEnvVarsInLog = 0;
 		};
-		8D810F689ED55C59DF40EA88 /* 📦 Check Pods Manifest.lock */ = {
+		8D810F689ED55C59DF40EA88 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,14 +270,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		B74A5D9CF37846C09D87FA1B /* 📦 Copy Pods Resources */ = {
+		B74A5D9CF37846C09D87FA1B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,14 +285,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D01516303907BB14A4BDD69A /* 📦 Embed Pods Frameworks */ = {
+		D01516303907BB14A4BDD69A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
