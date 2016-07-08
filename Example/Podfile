@@ -4,3 +4,7 @@ use_frameworks!
 target 'ReusableDemo' do
   pod 'Reusable', :path => '../'
 end
+
+post_install do |installer|
+  system "sed -i '' -E 's/EMBEDDED_CONTENT_CONTAINS_SWIFT[[:space:]]=[[:space:]]YES/EMBEDDED_CONTENT_CONTAINS_SWIFT = NO/g' Pods/Target\\ Support\\ Files/Pods-ReusableDemo/*.xcconfig"
+end
