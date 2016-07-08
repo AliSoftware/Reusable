@@ -2,16 +2,36 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode7.3
 language: objective-c
+
 # cache: cocoapods
 podfile: Example/Podfile
 # before_install:
 #   - pod install --project-directory=Example
-env:
-  matrix:
-    - TASK=xcodebuild
-    - TASK=lintpod
+
+osx_image:
+  - xcode7.3
+  - xcode8
+# env:
+#   matrix:
+#     - TASK=xcodebuild
+#     - TASK=lintpod
+
+matrix:
+    include:
+        - os: osx
+          osx_image: xcode7.3
+          env: TASK=xcodebuild[7]
+        - os: osx
+          osx_image: xcode7.3
+          env: TASK=lintpod
+        - os: osx
+          osx_image: xcode8
+          env: TASK=xcodebuild[8]
+        - os: osx
+          osx_image: xcode8
+          env: TASK=lintpod
+
 script:
   - rake ci:$TASK
 
