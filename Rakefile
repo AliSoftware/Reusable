@@ -33,6 +33,6 @@ namespace "ci" do
 
   desc "Lints the Reusable.podspec"
   task :lintpod do |t|
-    run "pod lib lint --verbose"
+    run "pod lib lint --verbose --allow-warnings"
   end
 end
