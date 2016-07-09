@@ -20,14 +20,18 @@ osx_image:
 matrix:
     include:
         - os: osx
+          osx_image: xcode8
+          env:
+            - TASK=build
+              DESTINATION="OS=10.0,name=iPhone 6,platform=iOS Simulator"
+        - os: osx
           osx_image: xcode7.3
-          env: TASK=build[7]
+          env:
+            - TASK=build
+              DESTINATION="OS=9.3,name=iPhone 6,platform=iOS Simulator"
         - os: osx
           osx_image: xcode7.3
           env: TASK=lintpod
-        - os: osx
-          osx_image: xcode8
-          env: TASK=build[8]
         # - os: osx
         #   osx_image: xcode8
         #   env: TASK=lintpod

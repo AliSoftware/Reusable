@@ -19,16 +19,10 @@ namespace "ci" do
     run "carthage build --no-skip-current --verbose"
   end
 
-  desc "Builds the ReusableDemo project using xcodebuild. Pass integer argument to select version (default: 7)"
-  task :build, [:version] do |t, args|
-    version = args[:version] ||= 7
-    puts "xcodebuild version: #{version}"
-    if version.to_i >= 8
-      destination = "-destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0'"
-    else
-      destination = "-destination 'platform=iOS Simulator,name=iPhone 6,OS=9.3'"
-    end
-    run "set -o pipefail && xcodebuild test -workspace Example/ReusableDemo.xcworkspace -scheme ReusableDemo -sdk iphonesimulator #{destination} ONLY_ACTIVE_ARCH=NO | xcpretty"
+  desc "Builds the ReusableDemo project using xcodebuild."
+  task :build do |t, args|
+    destination = ENV["DESTINATION"] ||= "OS=9.3,name=iPhone 6,platform=iOS Simulator"
+    run "set -o pipefail && xcodebuild build -workspace Example/ReusableDemo.xcworkspace -scheme ReusableDemo -sdk iphonesimulator -destination='#{destination}' ONLY_ACTIVE_ARCH=NO | xcpretty"
   end
 
   desc "Lints the Reusable.podspec"
