@@ -20,7 +20,7 @@ namespace "ci" do
   end
 
   desc "Builds the ReusableDemo project using xcodebuild. Pass integer argument to select version (default: 7)"
-  task :xcodebuild, [:version] do |t, args|
+  task :build, [:version] do |t, args|
     version = args[:version] ||= 7
     puts "xcodebuild version: #{version}"
     if version.to_i >= 8
