@@ -28,7 +28,7 @@ namespace "ci" do
     else
       destination = "-destination 'platform=iOS Simulator,name=iPhone 6,OS=9.3'"
     end
-    run "set -o pipefail && xcodebuild build -workspace Example/ReusableDemo.xcworkspace -scheme ReusableDemo -sdk iphonesimulator #{destination} ONLY_ACTIVE_ARCH=NO | xcpretty"
+    run "set -o pipefail && xcodebuild test -workspace Example/ReusableDemo.xcworkspace -scheme ReusableDemo -sdk iphonesimulator #{destination} ONLY_ACTIVE_ARCH=NO | xcpretty"
   end
 
   desc "Lints the Reusable.podspec"
