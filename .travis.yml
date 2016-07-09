@@ -6,8 +6,9 @@ language: objective-c
 
 # cache: cocoapods
 podfile: Example/Podfile
-# before_install:
-#   - pod install --project-directory=Example
+
+before_install:
+  - brew install swiftlint
 
 osx_image:
   - xcode7.3
