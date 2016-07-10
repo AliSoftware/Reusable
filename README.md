@@ -173,6 +173,8 @@ let instance3 = NibBasedRandomView.loadFromNib()
 
 ## Instanciating ViewControllers from Storyboards 
 
+### Initial ViewController
+
 If one of your custom `UIViewController` (named `CustomVC` for example) is **designed as the initial ViewController of a Storyboard** (named `CustomVC.storyboard`):
 
 * simply mark it as conforming to `StoryboardBased`
@@ -186,6 +188,8 @@ func presentIt() {
   self.presentViewController(vc, animated: true) {}
 }
 ```
+
+### Secondary ViewControllers
 
 If your custom `UIViewController` (named `SecondaryVC` for example) is **designed in a Storyboard `CustomVC.storyboard` but is _not_ the initial ViewController**, but instead has a custom **"Scene Identifier"** with the value `SecondaryVC` to be reached:
 
