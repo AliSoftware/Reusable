@@ -194,16 +194,14 @@ func presentIt() {
 If your custom `UIViewController` (named `SecondaryVC` for example) is **designed in a Storyboard `CustomVC.storyboard` but is _not_ the initial ViewController**, but instead has a custom **"Scene Identifier"** with the value `SecondaryVC` to be reached:
 
 * mark it as conforming to `StoryboardSceneBased`
-* implement `static var storyboard: UIStoryboard` to indicate the Storyboard where this scene is
+* define `static let storyboard = …` to indicate the Storyboard where this scene is designed
 * call `instantiate()` to create an instance from the Storyboard
 
 _(If you don't implement `static var sceneIdentifier`, it will assume the Scene to have the name of the class used as its scene identifier)_
 
 ```swift
 class SecondaryVC: UIViewController: StoryboardSceneBased {
-  static var storyboard: UIStoryboard {
-    return UIStoryboard(name: "CustomVC", bundle: nil)
-  }
+  static let storyboard = UIStoryboard(name: "CustomVC", bundle: nil)
 }
 …
 func presentIt() {
