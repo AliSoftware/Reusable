@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Master
+## 2.4.0
 
 * Added `StoryboardBased` and `StoryboardSceneBased` protocols for storyboard based `UIViewController` easy instantiation.  
   [@AliSoftware](https://github.com/AliSoftware)
