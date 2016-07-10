@@ -2,21 +2,42 @@
 
 ![Reusable](Example/ReusableDemo/Assets.xcassets/AppIcon.appiconset/AppIcon-167.png)
 
-A Swift mixin to use `UITableViewCells` and `UICollectionViewCells` in a **type-safe way**, without the need to manipulate their `String`-typed `reuseIdentifiers`. This library also supports arbitrary `UIView` to be loaded via a XIB using a simple call to `loadFromNib()`
+A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewControllers` in a **type-safe way**, without the need to manipulate their `String`-typed `reuseIdentifiers`. This library also supports arbitrary `UIView` to be loaded via a XIB using a simple call to `loadFromNib()`
 
 [![Platform](http://cocoapod-badges.herokuapp.com/p/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 [![Version](http://cocoapod-badges.herokuapp.com/v/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 
-*TL;DR:*
+## TL;DR
 
-* Mark your `UITableViewCell` and `UICollectionViewCell` classes to conform to either `Reusable` or `NibReusable` (no additional code to implement!)
-* Then simply use `tableView.dequeueReusableCell(indexPath: indexPath) as MyCustomCell` and you'll get a dequeued instance of the expected cell class in return. **No need for you to manipulate `reuseIdentifiers` manually!**
+### Type-safe `UITableViewCell` and `UICollectionViewCell`
+
+* Mark your `UITableViewCell` classes to conform to either `Reusable` or `NibReusable` (no additional code to implement!)
+* Then simply use `tableView.dequeueReusableCell(indexPath: indexPath) as MyCustomCell` to get a dequeued instance of the expected cell class. **No need for you to manipulate `reuseIdentifiers` manually!**
+* Use the same for `UICollectionViewCells`
+
+```swift
+class MyCustomCell: UITableViewCell, NibReusable { }
+…
+func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  let cell: MyCustomCell = tableView.dequeueReusableCell(indexPath: indexPath)
+  … // configure the cell, which is already of the expected MyCustomCell type
+  return cell
+}
+```
 
 No more force-casting the returned `UITableViewCell` instance down to your `MyCustomCell` class, and no more fear that you'll mismatch the `reuseIdentifier` and the class you down-cast to. Now all you have is **a beautiful code and type-safe cells**!
 
 > For more information on how this works, see [my dedicated blog post about this technique](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/).
 
-Note: the `Reusable` library can also be used to mark any arbitrary `UIView` as `NibLoadable` and then simply create an instance of that XIB-based view using `MyCustomView.loadFromNib()`.
+### Type-safe `UIView` from XIB
+
+* Mark your `UIView` custom classes to conform to `NibLoadable` (no additional code to implement!)
+* Then simply use `MyCustomView.loadFromNib()` to create an instance of that XIB-based view
+
+### Type-safe `UIViewController` from Storyboards
+
+* Mark your `UIViewController` custom classes to conform to `StoryboardBased` (if they are the initial ViewController) or `StoryboardSceneBased` (if they're not)
+* Then imply use `YourCustomViewController.instantiate()` to create an instance of that Storyboard-based ViewController.
 
 ## Declaring your cell subclasses
 
@@ -148,6 +169,43 @@ let instance1 = NibBasedRandomView.loadFromNib()
 let instance2 = NibBasedRandomView.loadFromNib()
 let instance3 = NibBasedRandomView.loadFromNib()
 …
+```
+
+## Instanciating ViewControllers from Storyboards 
+
+If one of your custom `UIViewController` (named `CustomVC` for example) is **designed as the initial ViewController of a Storyboard** (named `CustomVC.storyboard`):
+
+* simply mark it as conforming to `StoryboardBased`
+* call `instantiate()` to create an instance from the Storyboard
+
+```swift
+class CustomVC: UIViewController: StoryboardBased { }
+…
+func presentIt() {
+  let vc = CustomVC.instantitate()
+  self.presentViewController(vc, animated: true) {}
+}
+```
+
+If your custom `UIViewController` (named `SecondaryVC` for example) is **designed in a Storyboard `CustomVC.storyboard` but is _not_ the initial ViewController**, but instead has a custom **"Scene Identifier"** with the value `SecondaryVC` to be reached:
+
+* mark it as conforming to `StoryboardSceneBased`
+* implement `static var storyboard: UIStoryboard` to indicate the Storyboard where this scene is
+* call `instantiate()` to create an instance from the Storyboard
+
+_(If you don't implement `static var sceneIdentifier`, it will assume the Scene to have the name of the class used as its scene identifier)_
+
+```swift
+class SecondaryVC: UIViewController: StoryboardSceneBased {
+  static var storyboard: UIStoryboard {
+    return UIStoryboard(name: "CustomVC", bundle: nil)
+  }
+}
+…
+func presentIt() {
+  let vc = SecondaryVC.instantitate() // Init from the "SecondaryVC" scene of CustomVC.storyboard
+  self.presentViewController(vc, animated: true) {}
+}
 ```
 
 ## Customization

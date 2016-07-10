@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09441AE21D32A0390029B8A6 /* InfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09441AE11D32A0390029B8A6 /* InfoViewController.storyboard */; };
+		09441AE41D32A0700029B8A6 /* InfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09441AE31D32A0700029B8A6 /* InfoDetailViewController.swift */; };
+		09441AE61D32A07D0029B8A6 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09441AE51D32A07D0029B8A6 /* InfoViewController.swift */; };
 		09B3460D1C4ED26F00BA041F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3460C1C4ED26F00BA041F /* AppDelegate.swift */; };
 		09B3460F1C4ED26F00BA041F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3460E1C4ED26F00BA041F /* TableViewController.swift */; };
 		09B346121C4ED26F00BA041F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B346101C4ED26F00BA041F /* Main.storyboard */; };
@@ -15,8 +18,8 @@
 		09B346221C4ED39700BA041F /* MyXIBTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346201C4ED39700BA041F /* MyXIBTextCell.swift */; };
 		09B346231C4ED39700BA041F /* MyXIBTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346211C4ED39700BA041F /* MyXIBTextCell.xib */; };
 		09B346251C4ED4CE00BA041F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B346241C4ED4CE00BA041F /* Default-568h@2x.png */; };
-		09B346281C4ED51600BA041F /* MyXIBSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346261C4ED51600BA041F /* MyXIBSwitchCell.swift */; };
-		09B346291C4ED51600BA041F /* MyXIBSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346271C4ED51600BA041F /* MyXIBSwitchCell.xib */; };
+		09B346281C4ED51600BA041F /* MyXIBInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346261C4ED51600BA041F /* MyXIBInfoCell.swift */; };
+		09B346291C4ED51600BA041F /* MyXIBInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346271C4ED51600BA041F /* MyXIBInfoCell.xib */; };
 		09B3462B1C4ED6C400BA041F /* MySimpleColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3462A1C4ED6C400BA041F /* MySimpleColorCell.swift */; };
 		09B346341C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346331C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift */; };
 		09B3463A1C4EF3F900BA041F /* MyColorSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346391C4EF3F900BA041F /* MyColorSquareCell.swift */; };
@@ -32,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09441AE11D32A0390029B8A6 /* InfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfoViewController.storyboard; sourceTree = "<group>"; };
+		09441AE31D32A0700029B8A6 /* InfoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailViewController.swift; sourceTree = "<group>"; };
+		09441AE51D32A07D0029B8A6 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		09B346091C4ED26F00BA041F /* ReusableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B3460C1C4ED26F00BA041F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09B3460E1C4ED26F00BA041F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -42,8 +48,8 @@
 		09B346201C4ED39700BA041F /* MyXIBTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyXIBTextCell.swift; sourceTree = "<group>"; };
 		09B346211C4ED39700BA041F /* MyXIBTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyXIBTextCell.xib; sourceTree = "<group>"; };
 		09B346241C4ED4CE00BA041F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		09B346261C4ED51600BA041F /* MyXIBSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyXIBSwitchCell.swift; sourceTree = "<group>"; };
-		09B346271C4ED51600BA041F /* MyXIBSwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyXIBSwitchCell.xib; sourceTree = "<group>"; };
+		09B346261C4ED51600BA041F /* MyXIBInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyXIBInfoCell.swift; sourceTree = "<group>"; };
+		09B346271C4ED51600BA041F /* MyXIBInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyXIBInfoCell.xib; sourceTree = "<group>"; };
 		09B3462A1C4ED6C400BA041F /* MySimpleColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySimpleColorCell.swift; sourceTree = "<group>"; };
 		09B346331C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryBoardIndexPathCell.swift; sourceTree = "<group>"; };
 		09B346391C4EF3F900BA041F /* MyColorSquareCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColorSquareCell.swift; sourceTree = "<group>"; };
@@ -72,6 +78,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09441AE01D32A0070029B8A6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				09441AE11D32A0390029B8A6 /* InfoViewController.storyboard */,
+				09441AE51D32A07D0029B8A6 /* InfoViewController.swift */,
+				09441AE31D32A0700029B8A6 /* InfoDetailViewController.swift */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		09B346001C4ED26F00BA041F = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +117,7 @@
 				09B3461F1C4ED34F00BA041F /* TableView Cells */,
 				09B3463D1C4EF4A400BA041F /* CollectionViewController.swift */,
 				09B346381C4EF36D00BA041F /* CollectionViewCells */,
+				09441AE01D32A0070029B8A6 /* Storyboards */,
 				09B3461E1C4ED33D00BA041F /* SupportingFiles */,
 			);
 			path = ReusableDemo;
@@ -124,8 +141,8 @@
 				3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */,
 				09B346201C4ED39700BA041F /* MyXIBTextCell.swift */,
 				09B346211C4ED39700BA041F /* MyXIBTextCell.xib */,
-				09B346261C4ED51600BA041F /* MyXIBSwitchCell.swift */,
-				09B346271C4ED51600BA041F /* MyXIBSwitchCell.xib */,
+				09B346261C4ED51600BA041F /* MyXIBInfoCell.swift */,
+				09B346271C4ED51600BA041F /* MyXIBInfoCell.xib */,
 				09B3462A1C4ED6C400BA041F /* MySimpleColorCell.swift */,
 				09B346331C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift */,
 			);
@@ -170,13 +187,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09B3461B1C4ED26F00BA041F /* Build configuration list for PBXNativeTarget "ReusableDemo" */;
 			buildPhases = (
-				8D810F689ED55C59DF40EA88 /* 📦 Check Pods Manifest.lock */,
+				8D810F689ED55C59DF40EA88 /* [CP] Check Pods Manifest.lock */,
 				09B346051C4ED26F00BA041F /* Sources */,
 				091AEA061C5ED6500094EA6C /* ⚠️ SwiftLint */,
 				09B346061C4ED26F00BA041F /* Frameworks */,
 				09B346071C4ED26F00BA041F /* Resources */,
-				D01516303907BB14A4BDD69A /* 📦 Embed Pods Frameworks */,
-				B74A5D9CF37846C09D87FA1B /* 📦 Copy Pods Resources */,
+				D01516303907BB14A4BDD69A /* [CP] Embed Pods Frameworks */,
+				B74A5D9CF37846C09D87FA1B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,12 +245,13 @@
 				09B346231C4ED39700BA041F /* MyXIBTextCell.xib in Resources */,
 				09B346461C4EF8F600BA041F /* CollectionHeaderView.xib in Resources */,
 				09B346171C4ED26F00BA041F /* LaunchScreen.storyboard in Resources */,
+				09441AE21D32A0390029B8A6 /* InfoViewController.storyboard in Resources */,
 				09B346141C4ED26F00BA041F /* Assets.xcassets in Resources */,
 				09B346251C4ED4CE00BA041F /* Default-568h@2x.png in Resources */,
 				09B346121C4ED26F00BA041F /* Main.storyboard in Resources */,
 				3BC219201CFC259F003BE78C /* MyHeaderTableView.xib in Resources */,
 				09B346421C4EF71900BA041F /* MyXIBIndexSquaceCell.xib in Resources */,
-				09B346291C4ED51600BA041F /* MyXIBSwitchCell.xib in Resources */,
+				09B346291C4ED51600BA041F /* MyXIBInfoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,14 +273,14 @@
 			shellScript = "if which swiftlint; then\n  swiftlint\nelse\n  echo \"warning: Install SwiftLint to ensure the coding conventions are respected on this project.\"\nfi";
 			showEnvVarsInLog = 0;
 		};
-		8D810F689ED55C59DF40EA88 /* 📦 Check Pods Manifest.lock */ = {
+		8D810F689ED55C59DF40EA88 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,14 +288,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		B74A5D9CF37846C09D87FA1B /* 📦 Copy Pods Resources */ = {
+		B74A5D9CF37846C09D87FA1B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,14 +303,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D01516303907BB14A4BDD69A /* 📦 Embed Pods Frameworks */ = {
+		D01516303907BB14A4BDD69A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,9 +332,11 @@
 				09B3463C1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift in Sources */,
 				09B3463E1C4EF4A400BA041F /* CollectionViewController.swift in Sources */,
 				09B3460F1C4ED26F00BA041F /* TableViewController.swift in Sources */,
+				09441AE41D32A0700029B8A6 /* InfoDetailViewController.swift in Sources */,
 				09B3460D1C4ED26F00BA041F /* AppDelegate.swift in Sources */,
 				3BC2191F1CFC259F003BE78C /* MyHeaderTableView.swift in Sources */,
-				09B346281C4ED51600BA041F /* MyXIBSwitchCell.swift in Sources */,
+				09441AE61D32A07D0029B8A6 /* InfoViewController.swift in Sources */,
+				09B346281C4ED51600BA041F /* MyXIBInfoCell.swift in Sources */,
 				09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */,
 				09B3462B1C4ED6C400BA041F /* MySimpleColorCell.swift in Sources */,
 			);

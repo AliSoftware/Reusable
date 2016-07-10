@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Master
+
+* Added `StoryboardBased` and `StoryboardSceneBased` protocols for storyboard based `UIViewController` easy instantiation.  
+  [@AliSoftware](https://github.com/AliSoftware)
+
 ## 2.3.0
 
 * Added ` NibOwnerLoadable` protocol for `UIView` set as XIB's File's Owner.  

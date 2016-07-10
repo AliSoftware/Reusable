@@ -20,6 +20,15 @@
     "git": "https://github.com/AliSoftware/Reusable.git",
     "tag": "2.3.0"
   },
-  "source_files": "Sources",
-  "frameworks": "UIKit"
+  "frameworks": "UIKit",
+  "subspecs": [
+    {
+      "name": "View",
+      "source_files": "Sources/View/*.swift"
+    },
+    {
+      "name": "Storyboard",
+      "source_files": "Sources/Storyboard/*.swift"
+    }
+  ]
 }

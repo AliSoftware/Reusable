@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VAY-p3-M4u">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Info View Controller-->
+        <scene sceneID="Kad-6T-wzS">
+            <objects>
+                <viewController id="VAY-p3-M4u" customClass="InfoViewController" customModule="ReusableDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iOo-jn-cbA"/>
+                        <viewControllerLayoutGuide type="bottom" id="NCk-cL-WOq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lzd-8M-9ja">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Info View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCC-w6-RXm">
+                                <rect key="frame" x="183" y="289" width="233" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWw-hy-O0F">
+                                <rect key="frame" x="541" y="20" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeAction:" destination="VAY-p3-M4u" eventType="touchUpInside" id="XEQ-jh-9FB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Info&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEp-0T-QUl">
+                                <rect key="frame" x="275" y="330" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LCC-w6-RXm" firstAttribute="centerY" secondItem="Lzd-8M-9ja" secondAttribute="centerY" id="8Bq-Zj-6QE"/>
+                            <constraint firstItem="LCC-w6-RXm" firstAttribute="centerX" secondItem="Lzd-8M-9ja" secondAttribute="centerX" id="Ier-tj-9UQ"/>
+                            <constraint firstItem="VEp-0T-QUl" firstAttribute="top" secondItem="LCC-w6-RXm" secondAttribute="bottom" constant="20" id="RSl-2p-TGd"/>
+                            <constraint firstItem="mWw-hy-O0F" firstAttribute="top" secondItem="iOo-jn-cbA" secondAttribute="bottom" id="dTb-NL-aeq"/>
+                            <constraint firstItem="VEp-0T-QUl" firstAttribute="centerX" secondItem="LCC-w6-RXm" secondAttribute="centerX" id="qYg-ny-Ayu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mWw-hy-O0F" secondAttribute="trailing" id="vs8-wB-PVN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="VEp-0T-QUl" id="U56-9P-yhB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CT6-kV-QbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330" y="454"/>
+        </scene>
+        <!--Info Detail View Controller-->
+        <scene sceneID="8qn-fi-o8u">
+            <objects>
+                <viewController storyboardIdentifier="InfoDetailViewController" id="xhA-Xx-FPO" customClass="InfoDetailViewController" customModule="ReusableDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="epr-T2-LzQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="v7I-eg-8iS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fDJ-hq-Bfm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLv-Ji-FHA">
+                                <rect key="frame" x="541" y="20" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeAction:" destination="xhA-Xx-FPO" eventType="touchUpInside" id="otk-7D-O5L"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Info Detail View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5i-Vh-W1n">
+                                <rect key="frame" x="160" y="289" width="281" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.73019072210000002" blue="0.3297343808" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Details&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEC-Ds-tOk">
+                                <rect key="frame" x="263" y="330" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.73019072210000002" blue="0.3297343808" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZEC-Ds-tOk" firstAttribute="top" secondItem="m5i-Vh-W1n" secondAttribute="bottom" constant="20" id="6UD-Iz-DxI"/>
+                            <constraint firstItem="hLv-Ji-FHA" firstAttribute="trailing" secondItem="fDJ-hq-Bfm" secondAttribute="trailingMargin" id="Ask-qd-7Yj"/>
+                            <constraint firstItem="hLv-Ji-FHA" firstAttribute="top" secondItem="epr-T2-LzQ" secondAttribute="bottom" id="BZy-mU-oaq"/>
+                            <constraint firstItem="m5i-Vh-W1n" firstAttribute="centerY" secondItem="fDJ-hq-Bfm" secondAttribute="centerY" id="GcF-vy-VLS"/>
+                            <constraint firstItem="ZEC-Ds-tOk" firstAttribute="centerX" secondItem="m5i-Vh-W1n" secondAttribute="centerX" id="qfz-nm-RsB"/>
+                            <constraint firstItem="m5i-Vh-W1n" firstAttribute="centerX" secondItem="fDJ-hq-Bfm" secondAttribute="centerX" id="tjf-Sc-fI4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailsLabel" destination="ZEC-Ds-tOk" id="muW-xf-vbW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j8L-Pp-kuw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971" y="454"/>
+        </scene>
+    </scenes>
+</document>
