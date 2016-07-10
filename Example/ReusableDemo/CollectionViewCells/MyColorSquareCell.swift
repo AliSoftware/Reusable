@@ -18,7 +18,7 @@ import Reusable
  * This view is NOT loaded from a NIB (but defined entierly by code),
  * that's why it's not annotated as `NibLoadable` but only `Reusable`
  */
-class MyColorSquareCell: UICollectionViewCell, Reusable {
+final class MyColorSquareCell: UICollectionViewCell, Reusable {
   private lazy var colorView: UIView = {
     let colorView = UIView()
     colorView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]

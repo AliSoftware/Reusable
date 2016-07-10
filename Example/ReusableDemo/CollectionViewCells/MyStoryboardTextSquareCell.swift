@@ -18,7 +18,7 @@ import Reusable
  * `registerCell` is implemented, and as we won't need to call that method anyway
  * because the storyboard will register the cell for us, this makes no difference here.
  */
-class MyStoryboardTextSquareCell: UICollectionViewCell, Reusable {
+final class MyStoryboardTextSquareCell: UICollectionViewCell, Reusable {
   @IBOutlet private weak var titleLabel: UILabel!
   func fill(text: String) {
     titleLabel.text = text

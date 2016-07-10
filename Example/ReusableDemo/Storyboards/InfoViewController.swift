@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-class InfoViewController: UIViewController, StoryboardBased {
+final class InfoViewController: UIViewController, StoryboardBased {
   @IBOutlet private weak var infoLabel: UILabel!
   private var infoText: String?
 

@@ -20,7 +20,7 @@ import Reusable
  * Which in fact is just a convenience protocol that combines
  * both `NibLoadable` + `Reusable` protocols.
  */
-class CollectionHeaderView: UICollectionReusableView, NibReusable {
+final class CollectionHeaderView: UICollectionReusableView, NibReusable {
   @IBOutlet private weak var titleLabel: UILabel! {
     didSet { update() }
   }

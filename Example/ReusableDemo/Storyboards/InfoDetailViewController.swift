@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-class InfoDetailViewController: UIViewController, StoryboardSceneBased {
+final class InfoDetailViewController: UIViewController, StoryboardSceneBased {
   static let storyboard = UIStoryboard(name: "InfoViewController", bundle: nil)
 
   @IBOutlet private weak var detailsLabel: UILabel!

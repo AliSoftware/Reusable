@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+final class TableViewController: UITableViewController {
   var boolValues = [false, false]
 
   override func viewDidLoad() {

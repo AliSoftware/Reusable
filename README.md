@@ -7,7 +7,7 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 [![Platform](http://cocoapod-badges.herokuapp.com/p/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 [![Version](http://cocoapod-badges.herokuapp.com/v/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 
-## TL;DR
+## Quick Start
 
 ### Type-safe `UITableViewCell` and `UICollectionViewCell`
 
@@ -181,7 +181,7 @@ If one of your custom `UIViewController` (named `CustomVC` for example) is **des
 * call `instantiate()` to create an instance from the Storyboard
 
 ```swift
-class CustomVC: UIViewController: StoryboardBased { }
+final class CustomVC: UIViewController: StoryboardBased { }
 …
 func presentIt() {
   let vc = CustomVC.instantitate()
@@ -200,7 +200,7 @@ If your custom `UIViewController` (named `SecondaryVC` for example) is **designe
 _(If you don't implement `static var sceneIdentifier`, it will assume the Scene to have the name of the class used as its scene identifier)_
 
 ```swift
-class SecondaryVC: UIViewController: StoryboardSceneBased {
+final class SecondaryVC: UIViewController: StoryboardSceneBased {
   static let storyboard = UIStoryboard(name: "CustomVC", bundle: nil)
 }
 …
@@ -209,6 +209,19 @@ func presentIt() {
   self.presentViewController(vc, animated: true) {}
 }
 ```
+
+## Tip: make your subclasses `final`
+
+It's strongly advised to mark your custom `UITableViewCell`, `UICollectionViewCell`, `UIView` and `UIViewController` subclasses as being `final`, because:
+
+* usually your custom cells and VCs are not intended to be subclassed
+* more importantly, it helps the compiler a lot and gives you big optimizations
+* it can be required in some cases when conforming to `protocols` that have `Self` requirements, like the ones used by this pod (`Reusable`, `StoryboardBased`, …). 
+
+In some cases you can avoid making your classes `final`, but in general it's a good practice, and in the case of this pod, usually your custom `UIViewController` or whatever won't be subclassed anyway:
+
+* Either they are intended to be used and instantiated directly and never be subclassed, so `final` makes sense here
+* In case your custom `UIViewController`, `UITableViewCell`, etc… is intended to be subclassed and be the parent class of many classes in your app, it makes more sense to add the protocol conformance (`StoryboardBased`, `Reusable`, …) to the child classes (and mark _them_ `final`) than adding the protocol on the parent, abstract class.
 
 ## Customization
 
