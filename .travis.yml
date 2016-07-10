@@ -1,0 +1,34 @@
+# references:
+# * http://www.objc.io/issue-6/travis-ci.html
+# * https://github.com/supermarin/xcpretty#usage
+
+language: objective-c
+
+# cache: cocoapods
+podfile: Example/Podfile
+
+before_install:
+  - brew install swiftlint
+
+osx_image:
+  - xcode7.3
+#  - xcode8
+
+matrix:
+    include:
+#        - os: osx
+#          osx_image: xcode8
+#          env:
+#            - TASK=build
+#              DESTINATION="OS=10.0,name=iPhone 6,platform=iOS Simulator"
+        - os: osx
+          osx_image: xcode7.3
+          env:
+            - TASK=build
+              DESTINATION="OS=9.3,name=iPhone 6,platform=iOS Simulator"
+        - os: osx
+          osx_image: xcode7.3
+          env: TASK=lintpod
+
+script:
+  - rake ci:$TASK
