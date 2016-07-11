@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## UNRELEASED
+
+* Added Swift 3 support (Xcode 8 beta 2) while retaining Swift 2 support.  
+  [@phatblat](https://github.com/phatblat), [#20](https://github.com/AliSoftware/Reusable/pull/20)
+
 ## 2.3.0
 
 * Added ` NibOwnerLoadable` protocol for `UIView` set as XIB's File's Owner.  
