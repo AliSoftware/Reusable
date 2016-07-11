@@ -6,5 +6,8 @@ target 'ReusableDemo' do
 end
 
 post_install do |installer|
-  system "sed -i '' -E 's/EMBEDDED_CONTENT_CONTAINS_SWIFT[[:space:]]=[[:space:]]YES/EMBEDDED_CONTENT_CONTAINS_SWIFT = NO/g' Pods/Target\\ Support\\ Files/Pods-ReusableDemo/*.xcconfig"
+  target = installer.pods_project.targets.find { |t| t.name.start_with? 'Pods-' }
+  target.build_configurations.each do |config|
+    config.build_settings['EMBEDDED_CONTENT_CONTAINS_SWIFT'] = 'NO'
+  end
 end
