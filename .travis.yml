@@ -24,12 +24,12 @@ matrix:
           osx_image: xcode8
           env:
             - TASK=build
-              DESTINATION="OS=10.0,name=iPhone 6,platform=iOS Simulator"
+              DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=10.0"
         - os: osx
           osx_image: xcode7.3
           env:
             - TASK=build
-              DESTINATION="OS=9.3,name=iPhone 6,platform=iOS Simulator"
+              DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=9.3"
         - os: osx
           osx_image: xcode7.3
           env: TASK=lintpod
