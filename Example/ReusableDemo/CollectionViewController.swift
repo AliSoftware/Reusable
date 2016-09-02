@@ -37,7 +37,7 @@ final class CollectionViewController: UICollectionViewController {
       return 3
     }
   #else
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
       return 3
     }
   #endif
@@ -57,7 +57,7 @@ final class CollectionViewController: UICollectionViewController {
   #else
     override func collectionView(_ collectionView: UICollectionView,
       viewForSupplementaryElementOfKind kind: String,
-      atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+      at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(kind, indexPath: indexPath) as CollectionHeaderView
         header.title = "Section \(indexPath.section)"
         return header

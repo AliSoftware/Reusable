@@ -266,11 +266,13 @@
 				TargetAttributes = {
 					09B346081C4ED26F00BA041F = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					F81A750C1D30942600B5412F = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MTGSZH8QM4;
 						DevelopmentTeamName = "Log Dash G, LLC";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 09B346081C4ED26F00BA041F;
 					};
@@ -539,6 +541,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.ReusableDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -554,6 +557,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.ReusableDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

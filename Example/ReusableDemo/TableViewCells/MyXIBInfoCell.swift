@@ -22,23 +22,23 @@ import Reusable
  */
 final class MyXIBInfoCell: UITableViewCell, NibReusable {
 
-  @IBOutlet private weak var titleLabel: UILabel!
-  private var info: String = "<Info?>"
-  private var details: String = "<Details?>"
+  @IBOutlet fileprivate weak var titleLabel: UILabel!
+  fileprivate var info: String = "<Info?>"
+  fileprivate var details: String = "<Details?>"
 
-  func fill(title: String, info: String, details: String) {
+  func fill(_ title: String, info: String, details: String) {
     self.titleLabel.text = title
     self.info = info
     self.details = details
   }
 
-  @IBAction func infoAction(sender: UIButton) {
+  @IBAction func infoAction(_ sender: UIButton) {
     let infoVC = InfoViewController.instantiate()
     infoVC.setInfo(self.info)
     self.window?.rootViewController?.presentViewController(infoVC, animated: true, completion: nil)
   }
 
-  @IBAction func detailsAction(sender: UIButton) {
+  @IBAction func detailsAction(_ sender: UIButton) {
     let detailsVC = InfoDetailViewController.instantiate()
     detailsVC.setDetails(self.details)
     self.window?.rootViewController?.presentViewController(detailsVC, animated: true, completion: nil)

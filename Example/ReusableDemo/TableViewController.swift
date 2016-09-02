@@ -37,7 +37,7 @@ final class TableViewController: UITableViewController {
       return 4
     }
   #else
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
       return 4
     }
   #endif
@@ -73,7 +73,7 @@ final class TableViewController: UITableViewController {
       }
     }
   #else
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: IdxPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IdxPath) -> UITableViewCell {
       switch indexPath.section {
       case 0:
         let colorCell = tableView.dequeueReusableCell(indexPath) as MySimpleColorCell

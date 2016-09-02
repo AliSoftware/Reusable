@@ -14,8 +14,8 @@ import Reusable
 // The Main.storyboard already auto-registers its cells without the need for additional code
 
 final class MyStoryBoardIndexPathCell: UITableViewCell, Reusable {
-  @IBOutlet private weak var sectionLabel: UILabel!
-  @IBOutlet private weak var rowLabel: UILabel!
+  @IBOutlet fileprivate weak var sectionLabel: UILabel!
+  @IBOutlet fileprivate weak var rowLabel: UILabel!
 
   func fill(_ indexPath: IdxPath) {
     sectionLabel.text = String(indexPath.section)

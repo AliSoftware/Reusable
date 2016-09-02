@@ -19,12 +19,12 @@ import Reusable
  * that's why it's not annotated as `NibLoadable` but only `Reusable`
  */
 final class MySimpleColorCell: UITableViewCell, Reusable {
-  private lazy var colorView: UIView = {
+  fileprivate lazy var colorView: UIView = {
     let colorView = UIView()
     #if swift(>=3.0)
       colorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     #else
-      colorView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+      colorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     #endif
     colorView.frame = self.contentView.bounds.insetBy(dx: 50, dy: 5)
     self.contentView.addSubview(colorView)
