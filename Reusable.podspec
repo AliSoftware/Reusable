@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Reusable"
-  s.version      = "2.3.0"
+  s.version      = "2.4.0"
   s.summary      = "A Swift Mixin to deal with reusable UITableView & UICollectionView cells and XIB-based views"
 
   s.description  = <<-DESC
@@ -32,7 +32,12 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/AliSoftware/Reusable.git", :tag => s.version.to_s }
 
-  s.source_files  = "Sources"
+  s.subspec 'View' do |ss|
+    ss.source_files  = "Sources/View/*.swift"
+  end
+  s.subspec 'Storyboard' do |ss|
+    ss.source_files  = "Sources/Storyboard/*.swift"
+  end
 
   s.framework  = "UIKit"
 

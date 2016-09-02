@@ -13,7 +13,7 @@ import Reusable
 // As we will never have to explicitly call tableView.register(…) to register it:
 // The Main.storyboard already auto-registers its cells without the need for additional code
 
-class MyStoryBoardIndexPathCell: UITableViewCell, Reusable {
+final class MyStoryBoardIndexPathCell: UITableViewCell, Reusable {
   @IBOutlet private weak var sectionLabel: UILabel!
   @IBOutlet private weak var rowLabel: UILabel!
 

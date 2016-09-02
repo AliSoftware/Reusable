@@ -9,7 +9,7 @@
 import Reusable
 import UIKit
 
-class CollectionViewController: UICollectionViewController {
+final class CollectionViewController: UICollectionViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()

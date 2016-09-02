@@ -20,6 +20,11 @@ osx_image:
 
 matrix:
     include:
+#        - os: osx
+#          osx_image: xcode8
+#          env:
+#            - TASK=build
+#              DESTINATION="OS=10.0,name=iPhone 6,platform=iOS Simulator"
         - os: osx
           osx_image: xcode8
           env:
@@ -39,4 +44,3 @@ matrix:
 
 script:
   - rake ci:$TASK
-

@@ -9,7 +9,7 @@
 import Reusable
 import UIKit
 
-class TableViewController: UITableViewController {
+final class TableViewController: UITableViewController {
   var boolValues = [false, false]
 
   override func viewDidLoad() {
@@ -17,7 +17,7 @@ class TableViewController: UITableViewController {
 
     tableView.registerReusableCell(MySimpleColorCell)
     tableView.registerReusableCell(MyXIBTextCell)
-    tableView.registerReusableCell(MyXIBSwitchCell)
+    tableView.registerReusableCell(MyXIBInfoCell)
     /* No need to register this one, the UIStoryboard already auto-register its cells */
 //    tableView.registerReusableCell(MyStoryBoardIndexPathCell)
   }
@@ -59,11 +59,11 @@ class TableViewController: UITableViewController {
         textCell.fill("{section \(indexPath.section), row \(indexPath.row)}")
         return textCell
       case 2:
-        let boolCell = tableView.dequeueReusableCell(indexPath: indexPath) as MyXIBSwitchCell
-        boolCell.fill("Switch #\(indexPath.row)", value: boolValues[indexPath.row]) {
-          [unowned self] in self.boolValues[indexPath.row] = $0
-        }
-        return boolCell
+        let infoCell = tableView.dequeueReusableCell(indexPath: indexPath) as MyXIBInfoCell
+        infoCell.fill("InfoCell #\(indexPath.row)", info: "Info #\(indexPath.row)", details: "Details #\(indexPath.row)")
+        return infoCell
+      case 3:
+        let pathCell = tableView.dequeueReusableCell(indexPath: indexPath) as MyStoryBoardIndexPathCell
       case 3:
         let pathCell = tableView.dequeueReusableCell(indexPath: indexPath) as MyStoryBoardIndexPathCell
         pathCell.fill(indexPath)
