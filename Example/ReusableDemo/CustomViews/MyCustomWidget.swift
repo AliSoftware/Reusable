@@ -28,5 +28,7 @@ class MyCustomWidget: UIView, NibOwnerLoadable {
     super.init(coder: aDecoder)
     MyCustomWidget.loadFromNib(owner: self)
   }
-
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+  }
 }
