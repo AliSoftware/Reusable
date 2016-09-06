@@ -408,7 +408,7 @@ _But the beauty is in 90% of cases the default implementation will match typical
 
 `Reusable` allows you to have type-safe APIs to manipulate, to make you avoid typos. But things could still go wrong, for example if you forgot to set your the `reuseIdentifier` of your cell in its `XIB`, or you declared a `FooViewController` to be `StoryboardBased` but forgot to set the initial ViewController flag on that `FooViewController` scene in that Storyboard, etc.
 
-In such cases, because those are developer errors that should be caught as early as possible in the development process[^1], `Reusable` will call `fatalError` **with an error message as descriptive as possible** (instead of crashing with an obscure message about some force-cast or force-unwrap or whatnot).
+In such cases, because those are developer errors that should be caught as early as possible in the development process, `Reusable` will call `fatalError` **with an error message as descriptive as possible** (instead of crashing with an obscure message about some force-cast or force-unwrap or whatnot).
 
 For example, if `Reusable` fails to dequeue a cell, it will fail with a message like this:
 
@@ -417,7 +417,6 @@ For example, if `Reusable` fails to dequeue a cell, it will fail with a message 
 
 Hopefully, those explicit failure messages will allow you to understand what was misconfigured and help you fix it!
 
-[^1]: and because having a fallback wouldn't make sense anyway if the reason the instantiation failed is because you forgot to configure something right — which is also why I chose not to use throwing functions or functions returning optionals that would otherwise be a pain to use at call site when everything goes as expected.
 
 
 ---
