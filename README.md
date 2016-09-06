@@ -288,11 +288,11 @@ final class MyCustomWidget: UIView, NibOwnerLoadable {
 
 Overriding `init?(coder:)` allows your `MyCustomWidget` custom view to load its content from the associated XIB `MyCustomWidget.xib` and add it as subviews of itself.
 
-_💡 Note: overriding `init(frame:)`, even just to call `super.init(frame: frame)` might seems pointless, but seems necessary in some cases due to an issue with Swift and dynamic dispatch not being able to detect that this function is declared in the superclass. I've sometimes seen crashes when not implementing it, so better safe than sorry._
+_💡 Note: overriding `init(frame:)`, even just to call `super.init(frame: frame)` might seems pointless, but seems necessary in some cases due to a strange issue with Swift and dynamic dispatch not being able to detect and call the superclass implementation all by itself: I've sometimes seen crashes when not implementing it explicitly, so better safe than sorry._
 
 ## 3b. Instantiating a `NibLoadable` view
 
-If you used `NibLoadable` and made your custom view the root view of your XIB (not using the File's Owner at all), there are not designed to be used in other Storyboards or XIBs like `NibOwnerLoadable` as they won't be able to auto-load their content.
+If you used `NibLoadable` and made your custom view the root view of your XIB (not using the File's Owner at all), these are not designed to be used in other Storyboards or XIBs like `NibOwnerLoadable` is, as they won't be able to auto-load their content.
 
 Instead, you will instantiate those `NibLoadable` views by code, which is as simple as calling `loadFromNib()` on your custom class:
 
@@ -398,6 +398,10 @@ final class VeryCustomNibBasedCell: UITableViewCell, NibReusable {
   // Then continue with the rest of your normal cell code 
 }
 ```
+
+The same is true for all the protocols of this pod, which always provide default implementations which could still be replaced by your own if you need some custom cases.
+
+_But the beauty is in 90% of cases the default implementation will match typical conventions and the default implementations will be exactly what you want!_
 
 
 
