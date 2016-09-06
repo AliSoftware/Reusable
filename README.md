@@ -1,6 +1,6 @@
 # Reusable
 
-![Reusable](Example/ReusableDemo/Assets.xcassets/AppIcon.appiconset/AppIcon-167.png)
+<center>![Reusable](Example/ReusableDemo/Assets.xcassets/AppIcon.appiconset/AppIcon-167.png)</center>
 
 A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewControllers` in a **type-safe way**, without the need to manipulate their `String`-typed `reuseIdentifiers`. This library also supports arbitrary `UIView` to be loaded via a XIB using a simple call to `loadFromNib()`
 
@@ -9,7 +9,8 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 
 # Introduction
 
-This library aims to make it super-easy to create and dequeue/instantiate Reusable views, including `UITableViewCell`, `UICollectionViewCell` and custom `UIView`s, but also VCs from Storyboards… all that by **simply marking your classes as conforming to a protocols, without having to add any code**, and **creating a type-safe API with no more String-based API**.
+This library aims to make it super-easy to create, dequeue and instantiate Reusable views anywhere this pattern is used: From the obvious `UITableViewCell` and `UICollectionViewCell` to custom `UIViews`, even supporting `UIViewControllers` from Storyboards.  
+All of that symply by **marking your classes as conforming to a protocols, without having to add any code**, and **creating a type-safe API with no more String-based API**.
 
 ```swift
 // Example of what Reusable allows you to do
@@ -18,7 +19,7 @@ tableView.registerReusableCell(MyCustomCell)
 let cell: MyCustomCell = tableView.dequeueReusableCell(indexPath: indexPath)
 ```
 
-Ths concept, called a [Mixin](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/) (a protocol with default implementation for all its methods), is explained [here in my blog post](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/) in details.
+This concept, called a [Mixin](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/) (a protocol with default implementation for all its methods), is explained [here in my blog post](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/) in details.
 
 **Table of Contents**
 
@@ -144,7 +145,7 @@ let cell = tableView.dequeueReusableCell(indexPath: indexPath) as MyCustomCell
 let cell: MyCustomCell = tableView.dequeueReusableCell(indexPath: indexPath)
 ```
 
-As long as **Swift can use type-inference to understand that you'll want a cell of type `MyCustomCell`** (either using `as MyCystomCell` or explicitly typing the receiving variable `cell: MyCustomCell`), it will magially infer both the cell class to use and thus its `reuseIdentifier` needed to dequeue the cell, and which exact type to return to sav you a type-cast.
+As long as **Swift can use type-inference to understand that you'll want a cell of type `MyCustomCell`** (either using `as MyCystomCell` or explicitly typing the receiving variable `cell: MyCustomCell`), it will magically infer both the cell class to use and thus its `reuseIdentifier` needed to dequeue the cell, and which exact type to return to save you a type-cast.
 
 * No need for you to manipulate `reuseIdentifiers` Strings manually anymore!
 * No need to force-casting the returned `UITableViewCell` instance down to your `MyCustomCell` class either!
@@ -403,6 +404,20 @@ The same is true for all the protocols of this pod, which always provide default
 
 _But the beauty is in 90% of cases the default implementation will match typical conventions and the default implementations will be exactly what you want!_
 
+## Type-safety and `fatalError`
+
+`Reusable` allows you to have type-safe APIs to manipulate, to make you avoid typos. But things could still go wrong, for example if you forgot to set your the `reuseIdentifier` of your cell in its `XIB`, or you declared a `FooViewController` to be `StoryboardBasd` but forgot to set the initial ViewController flag on that `FooViewController` scene in that Storyboard, etc.
+
+In such cases, because those are developer errors that should be caught as early as possible in the development process[^1], `Reusable` will call `fatalError` **with an error message as descriptive as possible** (instead of crashing with an obscure message about some force-cast or force-unwrap or whatnot).
+
+For example, if `Reusable` fails to dequeue a cell, it will fail with a message like this:
+
+> « Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) matching type \(cellType.self). 
+> Check that the reuseIdentifier is set properly in your XIB/Storyboard and that you registered the cell beforehand »
+
+Hopefully, those explicit failure messages will allow you to understand what was misconfigured and help you fix it!
+
+[^1]: and because having a fallback wouldn't make sense anyway if the reason the instantiation failed is because you forgot to configure something right — which is also why I chose not to use throwing functions or functions returning optionals that would otherwise be a pain to use at call site when everything goes as expected.
 
 
 ---
@@ -413,7 +428,7 @@ _But the beauty is in 90% of cases the default implementation will match typical
 
 This repository comes with an example project in the `Example/` folder. Feel free to try it.
 
-It demonstrate how `Reusable` work:
+It demonstrates how `Reusable` work:
 
 * both for `UITableViewCell` and `UICollectionViewCell` subclasses,
 * both for cells whose UI template is either only provided by plain code, or provided by a XIB, or prototyped directly in a Storyboard.
