@@ -135,15 +135,12 @@ class MyViewController: UIViewController {
 
 ## 3. Dequeue your cells
 
-To dequeue a cell (typically in your `cellForRowAtIndexPath` implementation), simply call:
+To dequeue a cell (typically in your `cellForRowAtIndexPath` implementation), simply call `dequeueReusableCell(indexPath:)`:
 
 ```swift
+// Either
 let cell = tableView.dequeueReusableCell(indexPath: indexPath) as MyCustomCell
-```
-
-Or
-
-```swift
+// Or
 let cell: MyCustomCell = tableView.dequeueReusableCell(indexPath: indexPath)
 ```
 
@@ -176,7 +173,30 @@ extension MyViewController: UITableViewDataSource {
 
 Now all you have is **a beautiful code and type-safe cells**, with compile-type checking, and no more String-based API!
 
-
+> 💡 If the cell class is computed at runtime in a variable, you won't be able to use `as theVariable` or `let cell: theVariable` obviously… but instead you can use the optional parameter `cellType` (which otherwise gets infered by the return type and is thus not necessary to provide explicitly)
+> 
+> <details>
+> <summary>Example with a cell type determined at runtime</summary>
+> 
+> ```swift
+> class ParentCell: UITableViewCell, Reusable {}
+> class Child1Cell: ParentCell {}
+> class Child2Cell: ParentCell {}
+> 
+> func cellType(for indexPath: NSIndexPath) -> ParentCell.Type {
+>   return (indexPath.row % 2 == 0) ? Child1Cell.self : Child2Cell.self
+> }
+> 
+> func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+>   let cellClass = self.cellType(for: indexPath)
+>   // As `self.cellType(for:)` always returns a `ParentCell` (sub-)class, the type
+>   // of the variable `cell` below is infered to be `ParentCell` too. So only methods
+>   // declared in the parent `ParentCell` class will be accessible on the `cell` variable.
+>   let cell = tableView.dequeueReusableCell(indexPath: indexPath, cellType: cellClass)
+>   return cell  
+> }
+> ```
+> </details>
 
 ---
 
