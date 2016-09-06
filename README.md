@@ -9,15 +9,16 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 
 # Introduction
 
-This library aims to make it super-easy to create and dequeue/instantiate Reusable views, including `UITableViewCell`, `UICollectionViewCell`, and custom `UIView`s, by **simply marking your classes as conforming to a procols, without having to add any code**, and creating a type-safe API with no more String-based API.
+This library aims to make it super-easy to create and dequeue/instantiate Reusable views, including `UITableViewCell`, `UICollectionViewCell` and custom `UIView`s, but also VCs from Storyboards… all that by **simply marking your classes as conforming to a protocols, without having to add any code**, and **creating a type-safe API with no more String-based API**.
 
 ```swift
+// Example of what Reusable allows you to do
 final class MyCustomCell: UITableViewCell, Reusable { /* And that's it! */ }
 tableView.registerReusableCell(MyCustomCell)
 let cell: MyCustomCell = tableView.dequeueReusableCell(indexPath: indexPath)
 ```
 
-Ths concept, called a [Mixin](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/) (a protocol with default implementation for all its methods), is explained [here in my blog post](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/).
+Ths concept, called a [Mixin](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/) (a protocol with default implementation for all its methods), is explained [here in my blog post](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/) in details.
 
 **Table of Contents**
 
@@ -35,12 +36,12 @@ Ths concept, called a [Mixin](http://alisoftware.github.io/swift/protocol/2015/1
 
 # Type-safe `UITableViewCell` / `UICollectionViewCell`
 
+> ✍️ Examples and explanations below use `UITableView` and `UITableViewCell`, but the exact same examples and explanations apply for `UICollectionView` and `UICollectionViewCell`.
+
 ## 1. Declare your cells to conform to `Reusable` or `NibReusable`
 
 * Use the `Reusable` protocol if they don't depend on a NIB (this will use `registerClass(…)` to register the cell)
 * Use the `NibReusable` protocol if they use a `XIB` file for their content (this will use `registerNib(…)` to register the cell)
-
-💡 Everything that applies for `UITableView` and `UITableViewCell` here also applies to `UICollectionView` and `UICollectionViewCell`.
 
 ```swift
 final class CustomCell: UITableViewCell, Reusable { /* And that's it! */ }
@@ -137,10 +138,16 @@ class MyViewController: UIViewController {
 To dequeue a cell (typically in your `cellForRowAtIndexPath` implementation), simply call:
 
 ```swift
-tableView.dequeueReusableCell(indexPath: indexPath) as MyCustomCell
+let cell = tableView.dequeueReusableCell(indexPath: indexPath) as MyCustomCell
 ```
 
-Swift will use type-inference to understand that you'll want a cell of type `MyCustomCell` and thus magially infer both the cell class to use and thus its `reuseIdentifier` to use, and which exact type to return.
+Or
+
+```swift
+let cell: MyCustomCell = tableView.dequeueReusableCell(indexPath: indexPath)
+```
+
+As long as **Swift can use type-inference to understand that you'll want a cell of type `MyCustomCell`** (either using `as MyCystomCell` or explicitly typing the receiving variable `cell: MyCustomCell`), it will magially infer both the cell class to use and thus its `reuseIdentifier` needed to dequeue the cell, and which exact type to return to sav you a type-cast.
 
 * No need for you to manipulate `reuseIdentifiers` Strings manually anymore!
 * No need to force-casting the returned `UITableViewCell` instance down to your `MyCustomCell` class either!
@@ -194,7 +201,8 @@ final class NibBasedRootView: UIView, NibLoadable { /* and that's it! */ }
 final class NibBasedFileOwnerView: UIView, NibOwnerLoadable { /* and that's it! */ }
 ```
 
-_💡 You should use the second approach if you plan to use your custom view in another XIB or Storyboard, because it will allow you to drop a UIView in yourXIB/Storyboard, change its class to the class of your custom XIB-based view, and that custom view will then automagically load its own content from the associated XIB, without having to write additional code to load the content manually every time._
+> 💡 You should use the second approach if you plan to use your custom view in another XIB or Storyboard.  
+> This will allow you to just drop a UIView in a XIB/Storyboard and change its class to the class of your custom XIB-based view to use it. That custom view will then automagically load its own content from the associated XIB when instantiated by the storyboard containing it, without having to write additional code to load the content of the ustom view manually every time.
 
 ## 2. Design your view in Interface Builder
 
