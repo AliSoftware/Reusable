@@ -1,6 +1,8 @@
 # Reusable
 
-<center>![Reusable](Example/ReusableDemo/Assets.xcassets/AppIcon.appiconset/AppIcon-167.png)</center>
+<p align="center">
+  <img alt="Reusable" src="Example/ReusableDemo/Assets.xcassets/AppIcon.appiconset/AppIcon-167.png" />
+</p>
 
 A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewControllers` in a **type-safe way**, without the need to manipulate their `String`-typed `reuseIdentifiers`. This library also supports arbitrary `UIView` to be loaded via a XIB using a simple call to `loadFromNib()`
 
