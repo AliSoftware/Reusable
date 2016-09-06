@@ -264,7 +264,7 @@ Then that widget can be integrated in a Storyboard Scene (or any other XIB) by s
 
 * In the capture below, all blue square views have a custom class of `MyCustomWidget` set in Interface Builder.
 * When selecting one of this custom class, you have direct access to all `@IBOutlet` that this `MyCustomWidget` exposes, which allows you to connect them to other views of the Storyboard if needed
-* When selecting one of this custom class, you also have access to all the `@IBInspectable` properties. For example, n the capture below, you can see the "Rect color" and "Text" inspectable properties on the right panel, that you can change right from the Storyboard integrating your custom widget.
+* When selecting one of this custom class, you also have access to all the `@IBInspectable` properties. For example, in the capture below, you can see the "Rect color" and "Text" inspectable properties on the right panel, that you can change right from the Storyboard integrating your custom widget.
 
 ![NibOwnerLoadable integrated in a Storyboard](NibOwnerLoadable-InStoryboard.png)
 </details>
