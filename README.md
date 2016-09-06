@@ -406,7 +406,7 @@ _But the beauty is in 90% of cases the default implementation will match typical
 
 ## Type-safety and `fatalError`
 
-`Reusable` allows you to have type-safe APIs to manipulate, to make you avoid typos. But things could still go wrong, for example if you forgot to set your the `reuseIdentifier` of your cell in its `XIB`, or you declared a `FooViewController` to be `StoryboardBasd` but forgot to set the initial ViewController flag on that `FooViewController` scene in that Storyboard, etc.
+`Reusable` allows you to have type-safe APIs to manipulate, to make you avoid typos. But things could still go wrong, for example if you forgot to set your the `reuseIdentifier` of your cell in its `XIB`, or you declared a `FooViewController` to be `StoryboardBased` but forgot to set the initial ViewController flag on that `FooViewController` scene in that Storyboard, etc.
 
 In such cases, because those are developer errors that should be caught as early as possible in the development process[^1], `Reusable` will call `fatalError` **with an error message as descriptive as possible** (instead of crashing with an obscure message about some force-cast or force-unwrap or whatnot).
 
@@ -428,7 +428,7 @@ Hopefully, those explicit failure messages will allow you to understand what was
 
 This repository comes with an example project in the `Example/` folder. Feel free to try it.
 
-It demonstrates how `Reusable` work:
+It demonstrates how `Reusable` works:
 
 * both for `UITableViewCell` and `UICollectionViewCell` subclasses,
 * both for cells whose UI template is either only provided by plain code, or provided by a XIB, or prototyped directly in a Storyboard.
