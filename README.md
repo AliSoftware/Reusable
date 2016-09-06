@@ -229,11 +229,11 @@ final class NibBasedFileOwnerView: UIView, NibOwnerLoadable { /* and that's it! 
 
 ## 2. Design your view in Interface Builder
 
-For example if you named your class `MyCustomView` and made it `NibOwnerLoadable`:
+For example if you named your class `MyCustomWidget` and made it `NibOwnerLoadable`:
 
-* Set the _File's Owner_'s class to `MyCustomView`
+* Set the _File's Owner_'s class to `MyCustomWidget`
 * Design the content of the view via the root view of that XIB (which is a standard `UIView` with no custom class) and its subviews
-* Connect any `@IBOutlets` and `@IBActions` between the _File's Owner_ (the `MyCustomView`) and its content
+* Connect any `@IBOutlets` and `@IBActions` between the _File's Owner_ (the `MyCustomWidget`) and its content
 
 <details>
 <summary>A view configured to be `NibOwnerLoadable`</summary>
@@ -429,11 +429,12 @@ Hopefully, those explicit failure messages will allow you to understand what was
 
 This repository comes with an example project in the `Example/` folder. Feel free to try it.
 
-It demonstrates how `Reusable` works:
+It demonstrates how `Reusable` works for:
 
-* both for `UITableViewCell` and `UICollectionViewCell` subclasses,
-* both for cells whose UI template is either only provided by plain code, or provided by a XIB, or prototyped directly in a Storyboard.
-* both for cells `UICollectionView`'s `SupplementaryViews` (section Headers)
+* `UITableViewCell` and `UICollectionViewCell` subclasses,
+* Cells whose UI template is either only provided by plain code, or provided by a XIB, or prototyped directly in a Storyboard.
+* `UICollectionView`'s `SupplementaryViews` (section Headers)
+* Custom `UIView` designed in a XIB (`NibOwnerLoadable`)
 
 
 
