@@ -57,7 +57,7 @@ final class CustomCell: UITableViewCell, Reusable { /* And that's it! */ }
 
 
 <details>
-<summary>Example for a Code-based custom tableView cell</summary>
+<summary>📑 Example for a Code-based custom tableView cell</summary>
 
 ```swift
 final class CodeBasedCustomCell: UITableViewCell, Reusable {
@@ -72,7 +72,7 @@ final class CodeBasedCustomCell: UITableViewCell, Reusable {
 </details>
 
 <details>
-<summary>Example for a Nib-based custom tableView cell</summary>
+<summary>📑 Example for a Nib-based custom tableView cell</summary>
 
 ```swift
 final class NibBasedCustomCell: UITableViewCell, NibReusable {
@@ -87,7 +87,7 @@ final class NibBasedCustomCell: UITableViewCell, NibReusable {
 </details>
 
 <details>
-<summary>Example for a Code-based custom collectionView cell</summary>
+<summary>📑 Example for a Code-based custom collectionView cell</summary>
 
 ```swift
 // A UICollectionViewCell which doesn't need a XIB to register
@@ -99,7 +99,7 @@ final class CodeBasedCollectionViewCell: UICollectionViewCell, Reusable {
 </details>
 
 <details>
-<summary>Example for a Nib-based custom collectionView cell</summary>
+<summary>📑 Example for a Nib-based custom collectionView cell</summary>
 
 ```swift
 // A UICollectionViewCell using a XIB to define it's UI
@@ -121,7 +121,7 @@ tableView.registerReusableCell(theCellClass)
 ```
 
 <details>
-<summary>Example of tableView cell registration</summary>
+<summary>📑 Example of `UITableView` registration</summary>
 
 ```swift
 class MyViewController: UIViewController {
@@ -153,7 +153,7 @@ As long as **Swift can use type-inference to understand that you'll want a cell 
 * No need to force-casting the returned `UITableViewCell` instance down to your `MyCustomCell` class either!
 
 <details>
-<summary>Example implementation of `cellForRowAtIndexPath` using `Reusable`</summary>
+<summary>📑 Example implementation of `cellForRowAtIndexPath` using `Reusable`</summary>
 
 ```swift
 extension MyViewController: UITableViewDataSource {
@@ -179,7 +179,7 @@ Now all you have is **a beautiful code and type-safe cells**, with compile-type 
 > 💡 If the cell class is computed at runtime in a variable, you won't be able to use `as theVariable` or `let cell: theVariable` obviously… but instead you can use the optional parameter `cellType` (which otherwise gets infered by the return type and is thus not necessary to provide explicitly)
 > 
 > <details>
-> <summary>Example with a cell type determined at runtime</summary>
+> <summary>📑 Example with a cell type determined at runtime</summary>
 > 
 > ```swift
 > class ParentCell: UITableViewCell, Reusable {}
@@ -236,7 +236,7 @@ For example if you named your class `MyCustomWidget` and made it `NibOwnerLoadab
 * Connect any `@IBOutlets` and `@IBActions` between the _File's Owner_ (the `MyCustomWidget`) and its content
 
 <details>
-<summary>A view configured to be `NibOwnerLoadable`</summary>
+<summary>🖼📑 A view configured to be `NibOwnerLoadable`</summary>
 
 ![NibOwnerLoadable view in Interface Builder](NibOwnerLoadable.png)
 
@@ -263,7 +263,7 @@ final class MyCustomWidget: UIView, NibOwnerLoadable {
 Then that widget can be integrated in a Storyboard Scene (or any other XIB) by simply dropping a `UIView` on the Storyboard, and changing its class to `MyCustomWidget`.
 
 <details>
-<summary>Example of a `NibOwnerLoadable` custom view once integrated in another Storyboard</summary>
+<summary>🖼 Example of a `NibOwnerLoadable` custom view once integrated in another Storyboard</summary>
 
 * In the capture below, all blue square views have a custom class of `MyCustomWidget` set in Interface Builder.
 * When selecting one of this custom class, you have direct access to all `@IBOutlet` that this `MyCustomWidget` exposes, which allows you to connect them to other views of the Storyboard if needed
@@ -327,7 +327,7 @@ In your swift source declaring your custom `UIViewController` class:
   * You'll then be required to implement the `storyboard` type property to indicate the storyboard it belongs to.
 
 <details>
-<summary>Example of a ViewController being the initial ViewController of its Storyboard</summary>
+<summary>📑 Example of a ViewController being the initial ViewController of its Storyboard</summary>
 
 In this example, `CustomVC` is designed as the initial ViewController of a Storyboard named `CustomVC.storyboard`:
 
@@ -337,7 +337,7 @@ final class CustomVC: UIViewController: StoryboardBased { /* and that's it! */ }
 </details>
 
 <details>
-<summary>Example of a ViewController being an arbitrary scene in a differently-named Storyboard</summary>
+<summary>📑 Example of a ViewController being an arbitrary scene in a differently-named Storyboard</summary>
 
 In this example, `SecondaryVC` is designed in a Storyboard name `CustomVC.storyboard` (so with a different name than the class itself) and is _not_ the initial ViewController, but instead has its **"Scene Identifier"** set to the value `"SecondaryVC"` (same as the class name)
 
