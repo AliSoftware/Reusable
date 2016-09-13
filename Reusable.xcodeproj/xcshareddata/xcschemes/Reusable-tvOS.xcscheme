@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B556E50D1D8812A90034D9AC"
+               BlueprintIdentifier = "B5A138601D884D6000D801F6"
                BuildableName = "Reusable.framework"
-               BlueprintName = "Reusable"
+               BlueprintName = "Reusable-tvOS"
                ReferencedContainer = "container:Reusable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B556E50D1D8812A90034D9AC"
+            BlueprintIdentifier = "B5A138601D884D6000D801F6"
             BuildableName = "Reusable.framework"
-            BlueprintName = "Reusable"
+            BlueprintName = "Reusable-tvOS"
             ReferencedContainer = "container:Reusable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B556E50D1D8812A90034D9AC"
+            BlueprintIdentifier = "B5A138601D884D6000D801F6"
             BuildableName = "Reusable.framework"
-            BlueprintName = "Reusable"
+            BlueprintName = "Reusable-tvOS"
             ReferencedContainer = "container:Reusable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

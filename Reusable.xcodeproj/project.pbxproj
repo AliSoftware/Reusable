@@ -15,6 +15,14 @@
 		B556E53C1D8813670034D9AC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E5351D8813670034D9AC /* Reusable.swift */; };
 		B556E53D1D8813670034D9AC /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E5361D8813670034D9AC /* UICollectionView+Reusable.swift */; };
 		B556E53E1D8813670034D9AC /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E5371D8813670034D9AC /* UITableView+Reusable.swift */; };
+		B5A138691D884E3500D801F6 /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E5301D8813670034D9AC /* StoryboardBased.swift */; };
+		B5A1386A1D884E3500D801F6 /* StoryboardSceneBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E5311D8813670034D9AC /* StoryboardSceneBased.swift */; };
+		B5A1386B1D884E3500D801F6 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E5331D8813670034D9AC /* NibLoadable.swift */; };
+		B5A1386C1D884E3500D801F6 /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E5341D8813670034D9AC /* NibOwnerLoadable.swift */; };
+		B5A1386D1D884E3500D801F6 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E5351D8813670034D9AC /* Reusable.swift */; };
+		B5A1386E1D884E3500D801F6 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E5361D8813670034D9AC /* UICollectionView+Reusable.swift */; };
+		B5A1386F1D884E3500D801F6 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E5371D8813670034D9AC /* UITableView+Reusable.swift */; };
+		B5A138701D884E5D00D801F6 /* Reusable.h in Headers */ = {isa = PBXBuildFile; fileRef = B556E5111D8812A90034D9AC /* Reusable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +36,18 @@
 		B556E5351D8813670034D9AC /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		B556E5361D8813670034D9AC /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		B556E5371D8813670034D9AC /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		B5A138611D884D6000D801F6 /* Reusable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reusable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B556E50A1D8812A90034D9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5A1385D1D884D6000D801F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				B556E50E1D8812A90034D9AC /* Reusable.framework */,
+				B5A138611D884D6000D801F6 /* Reusable.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,12 +125,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5A1385E1D884D6000D801F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A138701D884E5D00D801F6 /* Reusable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B556E50D1D8812A90034D9AC /* Reusable */ = {
+		B556E50D1D8812A90034D9AC /* Reusable-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B556E5161D8812A90034D9AC /* Build configuration list for PBXNativeTarget "Reusable" */;
+			buildConfigurationList = B556E5161D8812A90034D9AC /* Build configuration list for PBXNativeTarget "Reusable-iOS" */;
 			buildPhases = (
 				B556E5091D8812A90034D9AC /* Sources */,
 				B556E50A1D8812A90034D9AC /* Frameworks */,
@@ -124,9 +149,27 @@
 			);
 			dependencies = (
 			);
-			name = Reusable;
+			name = "Reusable-iOS";
 			productName = Reusable;
 			productReference = B556E50E1D8812A90034D9AC /* Reusable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B5A138601D884D6000D801F6 /* Reusable-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5A138661D884D6000D801F6 /* Build configuration list for PBXNativeTarget "Reusable-tvOS" */;
+			buildPhases = (
+				B5A1385C1D884D6000D801F6 /* Sources */,
+				B5A1385D1D884D6000D801F6 /* Frameworks */,
+				B5A1385E1D884D6000D801F6 /* Headers */,
+				B5A1385F1D884D6000D801F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reusable-tvOS";
+			productName = "Reusable-tvOS";
+			productReference = B5A138611D884D6000D801F6 /* Reusable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -139,6 +182,9 @@
 				ORGANIZATIONNAME = AliSoftware;
 				TargetAttributes = {
 					B556E50D1D8812A90034D9AC = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					B5A138601D884D6000D801F6 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -155,13 +201,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B556E50D1D8812A90034D9AC /* Reusable */,
+				B556E50D1D8812A90034D9AC /* Reusable-iOS */,
+				B5A138601D884D6000D801F6 /* Reusable-tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B556E50C1D8812A90034D9AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5A1385F1D884D6000D801F6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -182,6 +236,20 @@
 				B556E5391D8813670034D9AC /* StoryboardSceneBased.swift in Sources */,
 				B556E53D1D8813670034D9AC /* UICollectionView+Reusable.swift in Sources */,
 				B556E53E1D8813670034D9AC /* UITableView+Reusable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5A1385C1D884D6000D801F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A1386B1D884E3500D801F6 /* NibLoadable.swift in Sources */,
+				B5A1386C1D884E3500D801F6 /* NibOwnerLoadable.swift in Sources */,
+				B5A1386D1D884E3500D801F6 /* Reusable.swift in Sources */,
+				B5A138691D884E3500D801F6 /* StoryboardBased.swift in Sources */,
+				B5A1386A1D884E3500D801F6 /* StoryboardSceneBased.swift in Sources */,
+				B5A1386E1D884E3500D801F6 /* UICollectionView+Reusable.swift in Sources */,
+				B5A1386F1D884E3500D801F6 /* UITableView+Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +359,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.Reusable;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Reusable;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -308,8 +376,46 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.Reusable;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Reusable;
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B5A138671D884D6000D801F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Reusable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.Reusable;
+				PRODUCT_NAME = Reusable;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		B5A138681D884D6000D801F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Reusable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.Reusable;
+				PRODUCT_NAME = Reusable;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -325,11 +431,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B556E5161D8812A90034D9AC /* Build configuration list for PBXNativeTarget "Reusable" */ = {
+		B556E5161D8812A90034D9AC /* Build configuration list for PBXNativeTarget "Reusable-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B556E5171D8812A90034D9AC /* Debug */,
 				B556E5181D8812A90034D9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5A138661D884D6000D801F6 /* Build configuration list for PBXNativeTarget "Reusable-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5A138671D884D6000D801F6 /* Debug */,
+				B5A138681D884D6000D801F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
