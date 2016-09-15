@@ -10,7 +10,6 @@ podfile: Example/Podfile
 before_install:
   - brew install swiftlint
   - gem install cocoapods --pre
-  - xcodeproj --version && gem update xcodeproj && xcodeproj --version
 
 osx_image:
   - xcode7.3
