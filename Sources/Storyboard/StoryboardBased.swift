@@ -28,7 +28,11 @@ public protocol StoryboardBased: class {
 public extension StoryboardBased {
   /// By default, use the storybaord with the same name as the class
   static var storyboard: UIStoryboard {
-    return UIStoryboard(name: String(describing: self), bundle: Bundle(for: self))
+    #if swift(>=3.0)
+      return UIStoryboard(name: String(describing: self), bundle: Bundle(for: self))
+    #else
+      return UIStoryboard(name: String(self), bundle: NSBundle(for: self))
+    #endif
   }
 }
 
