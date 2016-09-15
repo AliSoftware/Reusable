@@ -52,7 +52,7 @@ public extension NibOwnerLoadable where Self: UIView {
                       Defaults to a brand new instance if not provided.
    - returns: A `NibOwnLoadable`, `UIView` instance
    */
-  static func loadFromNib(owner owner: Self = Self()) -> Self {
+  static func loadFromNib(owner: Self = Self()) -> Self {
     #if swift(>=3.0)
       let views = nib.instantiate(withOwner: owner, options: nil)
       let layoutAttributes: [NSLayoutAttribute] = [.top, .leading, .bottom, .trailing]
