@@ -17,7 +17,7 @@ final class MyStoryBoardIndexPathCell: UITableViewCell, Reusable {
   @IBOutlet fileprivate weak var sectionLabel: UILabel!
   @IBOutlet fileprivate weak var rowLabel: UILabel!
 
-  func fill(_ indexPath: IdxPath) {
+  func fill(_ indexPath: IndexPath) {
     sectionLabel.text = String(indexPath.section)
     rowLabel.text = String(indexPath.row)
   }

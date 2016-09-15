@@ -47,7 +47,7 @@ final class TableViewController: UITableViewController {
   }
 
   #if swift(>=3.0)
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IdxPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       switch indexPath.section {
       case 0:
         let colorCell = tableView.dequeueReusableCell(indexPath: indexPath) as MySimpleColorCell
@@ -73,7 +73,7 @@ final class TableViewController: UITableViewController {
       }
     }
   #else
-    override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IdxPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
       switch indexPath.section {
       case 0:
         let colorCell = tableView.dequeueReusableCell(indexPath) as MySimpleColorCell

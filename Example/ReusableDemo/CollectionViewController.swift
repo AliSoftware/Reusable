@@ -49,7 +49,7 @@ final class CollectionViewController: UICollectionViewController {
   #if swift(>=3.0)
     override func collectionView(_ collectionView: UICollectionView,
       viewForSupplementaryElementOfKind kind: String,
-      at indexPath: IdxPath) -> UICollectionReusableView {
+      at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(kind, indexPath: indexPath) as CollectionHeaderView
         header.title = "Section \(indexPath.section)"
         return header
@@ -66,7 +66,7 @@ final class CollectionViewController: UICollectionViewController {
 
   #if swift(>=3.0)
     override func collectionView(_ collectionView: UICollectionView,
-      cellForItemAt indexPath: IdxPath) -> UICollectionViewCell {
+      cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0:
           let cell = collectionView.dequeueReusableCell(indexPath: indexPath) as MyColorSquareCell
@@ -87,7 +87,7 @@ final class CollectionViewController: UICollectionViewController {
     }
   #else
     override func collectionView(_ collectionView: UICollectionView,
-      cellForItemAtIndexPath indexPath: IdxPath) -> UICollectionViewCell {
+      cellForItemAtIndexPath indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0:
           let cell = collectionView.dequeueReusableCell(indexPath) as MyColorSquareCell
