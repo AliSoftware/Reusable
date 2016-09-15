@@ -47,18 +47,20 @@ public extension NibOwnerLoadable where Self: UIView {
   /**
    Returns a `UIView` object instantiated from nib
 
+   - parameter owner: The instance of the view which will be your File's Owner
+                      (and to which you want to add the XIB's views as subviews).
+                      Defaults to a brand new instance if not provided.
    - returns: A `NibOwnLoadable`, `UIView` instance
    */
-  static func loadFromNib() -> Self {
-    let owner = Self()
+  static func loadFromNib(owner owner: Self = Self()) -> Self {
     #if swift(>=3.0)
       let views = nib.instantiate(withOwner: owner, options: nil)
       let layoutAttributes: [NSLayoutAttribute] = [.top, .leading, .bottom, .trailing]
       let relation: NSLayoutRelation = .equal
     #else
-      let views = nib.instantiate(withOwner: owner, options: nil)
-      let layoutAttributes: [NSLayoutAttribute] = [.top, .leading, .bottom, .trailing]
-      let relation: NSLayoutRelation = .equal
+      let views = nib.instantiateWithOwner(owner, options: nil)
+      let layoutAttributes: [NSLayoutAttribute] = [.Top, .Leading, .Bottom, .Trailing]
+      let relation: NSLayoutRelation = .Equal
     #endif
 
     for view in views {

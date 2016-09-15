@@ -31,6 +31,8 @@
 		09B346461C4EF8F600BA041F /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */; };
 		3BC2191F1CFC259F003BE78C /* MyHeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */; };
 		3BC219201CFC259F003BE78C /* MyHeaderTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */; };
+		47EE563C1D66155100AD3E4D /* MyCustomWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */; };
+		47EE563E1D66155D00AD3E4D /* MyCustomWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */; };
 		67781E96DC81B29330F49176 /* Pods_ReusableDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868A47776F0B74DD17857FFE /* Pods_ReusableDemo.framework */; };
 		F81A75101D30942600B5412F /* ReusableDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81A750F1D30942600B5412F /* ReusableDemoTests.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,8 @@
 		0A31F38C6BBC1AC408219D78 /* Pods-ReusableDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo.release.xcconfig"; sourceTree = "<group>"; };
 		3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHeaderTableView.swift; sourceTree = "<group>"; };
 		3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyHeaderTableView.xib; sourceTree = "<group>"; };
+		47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomWidget.swift; sourceTree = "<group>"; };
+		47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomWidget.xib; sourceTree = "<group>"; };
 		80A8538E60254C825B7D505B /* Pods-ReusableDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		868A47776F0B74DD17857FFE /* Pods_ReusableDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81A750D1D30942600B5412F /* ReusableDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReusableDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +145,7 @@
 				09B3463D1C4EF4A400BA041F /* CollectionViewController.swift */,
 				09B346381C4EF36D00BA041F /* CollectionViewCells */,
 				09441AE01D32A0070029B8A6 /* Storyboards */,
+				47EE56381D6614FA00AD3E4D /* Custom Views */,
 				09B3461E1C4ED33D00BA041F /* SupportingFiles */,
 			);
 			path = ReusableDemo;
@@ -184,6 +189,16 @@
 				09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		47EE56381D6614FA00AD3E4D /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */,
+				47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */,
+			);
+			name = "Custom Views";
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		672CCEE0D6AB1F8BD11B2F97 /* Frameworks */ = {
@@ -305,6 +320,7 @@
 				09B346231C4ED39700BA041F /* MyXIBTextCell.xib in Resources */,
 				09B346461C4EF8F600BA041F /* CollectionHeaderView.xib in Resources */,
 				09B346171C4ED26F00BA041F /* LaunchScreen.storyboard in Resources */,
+				47EE563E1D66155D00AD3E4D /* MyCustomWidget.xib in Resources */,
 				09441AE21D32A0390029B8A6 /* InfoViewController.storyboard in Resources */,
 				09B346141C4ED26F00BA041F /* Assets.xcassets in Resources */,
 				09B346251C4ED4CE00BA041F /* Default-568h@2x.png in Resources */,
@@ -396,6 +412,7 @@
 				09B346411C4EF71900BA041F /* MyXIBIndexSquaceCell.swift in Sources */,
 				09B346341C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift in Sources */,
 				09B346221C4ED39700BA041F /* MyXIBTextCell.swift in Sources */,
+				47EE563C1D66155100AD3E4D /* MyCustomWidget.swift in Sources */,
 				09B3463C1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift in Sources */,
 				09B3463E1C4EF4A400BA041F /* CollectionViewController.swift in Sources */,
 				09B3460F1C4ED26F00BA041F /* TableViewController.swift in Sources */,
