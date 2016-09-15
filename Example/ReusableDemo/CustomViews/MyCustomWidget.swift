@@ -26,7 +26,7 @@ class MyCustomWidget: UIView, NibOwnerLoadable {
 
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
-    MyCustomWidget.loadFromNib(owner: self)
+    _ = MyCustomWidget.loadFromNib(owner: self)
   }
   override init(frame: CGRect) {
     super.init(frame: frame)
