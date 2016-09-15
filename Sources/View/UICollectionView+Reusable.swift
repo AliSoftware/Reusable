@@ -19,7 +19,7 @@ public extension UICollectionView {
 
    - seealso: `register(_:,forCellWithReuseIdentifier:)`
    */
-  final func registerReusableCell<T: UICollectionViewCell where T: NibReusable>(_ cellType: T.Type) {
+  final func registerReusableCell<T: UICollectionViewCell>(_ cellType: T.Type) where T: NibReusable {
     #if swift(>=3.0)
       self.register(cellType.nib, forCellWithReuseIdentifier: cellType.reuseIdentifier)
     #else
