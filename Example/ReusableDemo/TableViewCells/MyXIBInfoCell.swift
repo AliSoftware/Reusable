@@ -35,13 +35,13 @@ final class MyXIBInfoCell: UITableViewCell, NibReusable {
   @IBAction func infoAction(_ sender: UIButton) {
     let infoVC = InfoViewController.instantiate()
     infoVC.setInfo(self.info)
-    self.window?.rootViewController?.presentViewController(infoVC, animated: true, completion: nil)
+    self.window?.rootViewController?.present(infoVC, animated: true, completion: nil)
   }
 
   @IBAction func detailsAction(_ sender: UIButton) {
     let detailsVC = InfoDetailViewController.instantiate()
     detailsVC.setDetails(self.details)
-    self.window?.rootViewController?.presentViewController(detailsVC, animated: true, completion: nil)
+    self.window?.rootViewController?.present(detailsVC, animated: true, completion: nil)
 
   }
 }
