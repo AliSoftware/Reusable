@@ -49,8 +49,9 @@ public extension StoryboardSceneBased where Self: UIViewController {
    - returns: instance of the conforming ViewController
    */
   static func instantiate() -> Self {
-    guard let vc = storyboard.instantiateViewController(withIdentifier: self.sceneIdentifier) as? Self else {
-      fatalError("The viewController '\(self.sceneIdentifier)' of '\(storyboard)' is not of class '\(self)'")
+    let sb = Self().storyboard
+    guard let vc = sb?.instantiateViewController(withIdentifier: self.sceneIdentifier) as? Self else {
+      fatalError("The viewController '\(self.sceneIdentifier)' of '\(sb)' is not of class '\(self)'")
     }
     return vc
   }
