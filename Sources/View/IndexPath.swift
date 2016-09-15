@@ -10,5 +10,5 @@ import UIKit
 
 #if swift(>=3.0)
 #else
-  typealias IndexPath = NSIndexPath
+  public typealias IndexPath = NSIndexPath
 #endif
