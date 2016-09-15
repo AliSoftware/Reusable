@@ -31,7 +31,7 @@ public extension StoryboardBased {
     #if swift(>=3.0)
       return UIStoryboard(name: String(describing: self), bundle: Bundle(for: self))
     #else
-      return UIStoryboard(name: String(self), bundle: NSBundle(for: self))
+      return UIStoryboard(name: String(self), bundle: NSBundle(forClass: self))
     #endif
   }
 }
