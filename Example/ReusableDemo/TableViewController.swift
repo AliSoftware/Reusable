@@ -64,8 +64,6 @@ final class TableViewController: UITableViewController {
         return infoCell
       case 3:
         let pathCell = tableView.dequeueReusableCell(indexPath: indexPath) as MyStoryBoardIndexPathCell
-      case 3:
-        let pathCell = tableView.dequeueReusableCell(indexPath: indexPath) as MyStoryBoardIndexPathCell
         pathCell.fill(indexPath)
         return pathCell
       default:
