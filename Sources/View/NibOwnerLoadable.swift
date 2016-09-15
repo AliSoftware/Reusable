@@ -31,9 +31,9 @@ public extension NibOwnerLoadable {
   /// and located in the bundle of that class
   static var nib: UINib {
     #if swift(>=3.0)
-      return UINib(nibName: String(self), bundle: Bundle(for: self))
+      return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
     #else
-      return UINib(nibName: String(self), bundle: NSBundle(forClass: self))
+      return UINib(nibName: String(self), bundle: Bundle(for: self))
     #endif
   }
 }
@@ -56,9 +56,9 @@ public extension NibOwnerLoadable where Self: UIView {
       let layoutAttributes: [NSLayoutAttribute] = [.top, .leading, .bottom, .trailing]
       let relation: NSLayoutRelation = .equal
     #else
-      let views = nib.instantiateWithOwner(owner, options: nil)
-      let layoutAttributes: [NSLayoutAttribute] = [.Top, .Leading, .Bottom, .Trailing]
-      let relation: NSLayoutRelation = .Equal
+      let views = nib.instantiate(withOwner: owner, options: nil)
+      let layoutAttributes: [NSLayoutAttribute] = [.top, .leading, .bottom, .trailing]
+      let relation: NSLayoutRelation = .equal
     #endif
 
     for view in views {

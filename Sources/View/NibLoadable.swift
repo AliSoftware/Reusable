@@ -31,9 +31,9 @@ public extension NibLoadable {
   /// and located in the bundle of that class
   static var nib: UINib {
     #if swift(>=3.0)
-      return UINib(nibName: String(self), bundle: Bundle(for: self))
+      return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
     #else
-      return UINib(nibName: String(self), bundle: NSBundle(forClass: self))
+      return UINib(nibName: String(self), bundle: Bundle(for: self))
     #endif
   }
 }
@@ -53,7 +53,7 @@ public extension NibLoadable where Self: UIView {
     #if swift(>=3.0)
       let view = nib.instantiate(withOwner: nil, options: nil).first
     #else
-      let view = nib.instantiateWithOwner(nil, options: nil).first
+      let view = nib.instantiate(withOwner: nil, options: nil).first
     #endif
 
     guard let typedView = view as? Self else {
