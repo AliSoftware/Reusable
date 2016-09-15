@@ -33,7 +33,7 @@ public extension NibOwnerLoadable {
     #if swift(>=3.0)
       return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
     #else
-      return UINib(nibName: String(self), bundle: Bundle(for: self))
+      return UINib(nibName: String(self), bundle: NSBundle(forClass: self))
     #endif
   }
 }
