@@ -15,9 +15,9 @@ final class TableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.registerReusableCell(MySimpleColorCell)
-    tableView.registerReusableCell(MyXIBTextCell)
-    tableView.registerReusableCell(MyXIBInfoCell)
+    tableView.registerReusableCell(MySimpleColorCell.self)
+    tableView.registerReusableCell(MyXIBTextCell.self)
+    tableView.registerReusableCell(MyXIBInfoCell.self)
     /* No need to register this one, the UIStoryboard already auto-register its cells */
 //    tableView.registerReusableCell(MyStoryBoardIndexPathCell)
   }
