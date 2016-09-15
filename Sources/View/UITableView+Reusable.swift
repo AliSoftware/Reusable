@@ -19,7 +19,7 @@ public extension UITableView {
 
    - seealso: `register(_:,forCellReuseIdentifier:)`
    */
-  final func registerReusableCell<T: UITableViewCell where T: NibReusable>(_ cellType: T.Type) {
+  final func registerReusableCell<T: UITableViewCell>(_ cellType: T.Type) where T: NibReusable {
     #if swift(>=3.0)
       self.register(cellType.nib, forCellReuseIdentifier: cellType.reuseIdentifier)
     #else
@@ -34,7 +34,7 @@ public extension UITableView {
 
    - seealso: `register(_:,forCellReuseIdentifier:)`
    */
-  final func registerReusableCell<T: UITableViewCell where T: Reusable>(_ cellType: T.Type) {
+  final func registerReusableCell<T: UITableViewCell>(_ cellType: T.Type) where T: Reusable {
     #if swift(>=3.0)
       self.register(cellType.self, forCellReuseIdentifier: cellType.reuseIdentifier)
     #else
@@ -54,7 +54,7 @@ public extension UITableView {
    except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableCell(withIdentifier:,for:)`
    */
-  final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath: IndexPath, cellType: T.Type = T.self) -> T {
+  final func dequeueReusableCell<T: UITableViewCell>(indexPath: IndexPath, cellType: T.Type = T.self) -> T where T: Reusable {
     #if swift(>=3.0)
       let cell = self.dequeueReusableCell(withIdentifier: cellType.reuseIdentifier, for: indexPath)
     #else
@@ -77,7 +77,7 @@ public extension UITableView {
 
    - seealso: `register(_:,forHeaderFooterViewReuseIdentifier:)`
    */
-  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: NibReusable>(_ viewType: T.Type) {
+  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView>(_ viewType: T.Type) where T: NibReusable {
     #if swift(>=3.0)
       self.register(viewType.nib, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
     #else
@@ -92,7 +92,7 @@ public extension UITableView {
 
    - seealso: `register(_:,forHeaderFooterViewReuseIdentifier:)`
    */
-  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(_ viewType: T.Type) {
+  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView>(_ viewType: T.Type) where T: Reusable {
     #if swift(>=3.0)
       self.register(viewType.self, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
     #else
@@ -111,7 +111,7 @@ public extension UITableView {
    except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableHeaderFooterView(withIdentifier:)`
    */
-  final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(_ viewType: T.Type = T.self) -> T? {
+  final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(_ viewType: T.Type = T.self) -> T? where T: Reusable {
     #if swift(>=3.0)
       let view = self.dequeueReusableHeaderFooterView(withIdentifier: viewType.reuseIdentifier)
     #else
