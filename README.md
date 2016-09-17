@@ -10,6 +10,8 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 [![Version](http://cocoapod-badges.herokuapp.com/v/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 [![Language](https://img.shields.io/badge/language-swift%202%20&%203-orange.svg)](https://swift.org)
 
+Reusable supports Swift 3, but still supports Swift 2. Note that Swift 2 support will be dropped in the future. The ReusableDemo project requires Xcode 8 as it uses only Swift 3.
+
 # Introduction
 
 This library aims to make it super-easy to create, dequeue and instantiate Reusable views anywhere this pattern is used: From the obvious `UITableViewCell` and `UICollectionViewCell` to custom `UIViews`, even supporting `UIViewControllers` from Storyboards.  
