@@ -54,7 +54,7 @@ public extension UICollectionView {
    except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableCell(withReuseIdentifier:,for:)`
    */
-  final func dequeueReusableCell<T: UICollectionViewCell where T: Reusable>(indexPath: IndexPath, cellType: T.Type = T.self) -> T {
+  final func dequeueReusableCell<T: UICollectionViewCell where T: Reusable>(for indexPath: IndexPath, cellType: T.Type = T.self) -> T {
     #if swift(>=3.0)
       let cell = self.dequeueReusableCell(withReuseIdentifier: cellType.reuseIdentifier, for: indexPath)
     #else

@@ -69,16 +69,16 @@ final class CollectionViewController: UICollectionViewController {
       cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0:
-          let cell = collectionView.dequeueReusableCell(indexPath: indexPath) as MyColorSquareCell
+          let cell = collectionView.dequeueReusableCell(for: indexPath) as MyColorSquareCell
           let red = CGFloat(indexPath.row) / CGFloat(collectionView.numberOfItems(inSection: indexPath.section))
           cell.fill(UIColor(red: red, green: 0.0, blue: 1.0-red, alpha: 1.0))
           return cell
         case 1:
-          let cell = collectionView.dequeueReusableCell(indexPath: indexPath) as MyStoryboardTextSquareCell
+          let cell = collectionView.dequeueReusableCell(for: indexPath) as MyStoryboardTextSquareCell
           cell.fill("Item #\(indexPath.row)")
           return cell
         case 2:
-          let cell = collectionView.dequeueReusableCell(indexPath: indexPath) as MyXIBIndexSquaceCell
+          let cell = collectionView.dequeueReusableCell(for: indexPath) as MyXIBIndexSquaceCell
           cell.fill(indexPath)
           return cell
         default:

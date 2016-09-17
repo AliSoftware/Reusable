@@ -54,7 +54,7 @@ public extension UITableView {
    except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableCell(withIdentifier:,for:)`
    */
-  final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath: IndexPath, cellType: T.Type = T.self) -> T {
+  final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(for indexPath: IndexPath, cellType: T.Type = T.self) -> T {
     #if swift(>=3.0)
       let cell = self.dequeueReusableCell(withIdentifier: cellType.reuseIdentifier, for: indexPath)
     #else
