@@ -8,6 +8,7 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 
 [![Platform](http://cocoapod-badges.herokuapp.com/p/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 [![Version](http://cocoapod-badges.herokuapp.com/v/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
+[![Language](https://img.shields.io/badge/language-swift%202%20&%203-orange.svg)](https://swift.org)
 
 # Introduction
 
