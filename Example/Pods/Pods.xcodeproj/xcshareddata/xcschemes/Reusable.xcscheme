@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B5A138601D884D6000D801F6"
+               BlueprintIdentifier = "2385D9D1E682781092E216375B7CE8EA"
                BuildableName = "Reusable.framework"
-               BlueprintName = "Reusable-tvOS"
-               ReferencedContainer = "container:Reusable.xcodeproj">
+               BlueprintName = "Reusable"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B5A138601D884D6000D801F6"
+            BlueprintIdentifier = "2385D9D1E682781092E216375B7CE8EA"
             BuildableName = "Reusable.framework"
-            BlueprintName = "Reusable-tvOS"
-            ReferencedContainer = "container:Reusable.xcodeproj">
+            BlueprintName = "Reusable"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B5A138601D884D6000D801F6"
-            BuildableName = "Reusable.framework"
-            BlueprintName = "Reusable-tvOS"
-            ReferencedContainer = "container:Reusable.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
