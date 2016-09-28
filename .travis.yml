@@ -21,21 +21,28 @@ osx_image:
 
 matrix:
     include:
+        # Swift 3.0 Demo+Library
         - os: osx
           osx_image: xcode8
           env:
             - TASK=build
-            SWIFT_VERSION=3.0
-              # DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=latest"
+              DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=latest"
+
+        # Swift 3.0
         - os: osx
           osx_image: xcode8
           env:
-            - TASK=build
+            - TASK=lintpod
+              SWIFT_VERSION=3.0
+
+        # Swift 2.3
+        - os: osx
+          osx_image: xcode8
+          env:
+            - TASK=lintpod
               SWIFT_VERSION=2.3
-              # DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=latest"
-        - os: osx
-          osx_image: xcode8
-          env: TASK=lintpod
+
+        # Swift 2.2
         - os: osx
           osx_image: xcode7.3
           env: TASK=lintpod
