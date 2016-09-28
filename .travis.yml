@@ -26,7 +26,6 @@ matrix:
           osx_image: xcode8
           env:
             - TASK=build
-              DESTINATION="platform=iOS Simulator,name=iPhone 6,OS=latest"
 
         # Swift 3.0
         - os: osx
