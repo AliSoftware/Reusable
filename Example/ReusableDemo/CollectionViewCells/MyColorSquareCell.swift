@@ -24,7 +24,7 @@ final class MyColorSquareCell: UICollectionViewCell, Reusable {
     #if swift(>=3.0)
       colorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     #else
-      colorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+      colorView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
     #endif
     colorView.frame = self.contentView.bounds.insetBy(dx: 10, dy: 10)
     self.contentView.addSubview(colorView)

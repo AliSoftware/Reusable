@@ -24,7 +24,7 @@ final class MySimpleColorCell: UITableViewCell, Reusable {
     #if swift(>=3.0)
       colorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     #else
-      colorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+      colorView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
     #endif
     colorView.frame = self.contentView.bounds.insetBy(dx: 50, dy: 5)
     self.contentView.addSubview(colorView)
