@@ -551,7 +551,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 80A8538E60254C825B7D505B /* Pods-ReusableDemo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReusableDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -566,7 +565,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0A31F38C6BBC1AC408219D78 /* Pods-ReusableDemo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReusableDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
