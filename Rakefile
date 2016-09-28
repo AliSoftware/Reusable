@@ -31,8 +31,10 @@ namespace "ci" do
     run "set -o pipefail && xcodebuild test -workspace Example/ReusableDemo.xcworkspace -scheme ReusableDemo -sdk iphonesimulator -destination='#{destination}' ONLY_ACTIVE_ARCH=NO | xcpretty"
   end
 
-  desc "Lints the Reusable.podspec"
+  desc "Lints the Reusable Podspec"
   task :lintpod do |t|
+    swift_version = ENV["SWIFT_VERSION"] ||= "3.0"
+    File.open(".swift-version", 'w') { |file| file.puts swift_version }
     run "pod lib lint --verbose --allow-warnings"
   end
 end
