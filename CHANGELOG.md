@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2.5.1
+
+* Adopted source files and demo project for Swift 2.3
+  [@antondomashnev](https://github.com/Antondomashnev)
+
 ## 2.5.0
 
 * Added the possibility for `NibOwnerLoadable` confirming custom views to pass an existing instance as `owner`
