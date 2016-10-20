@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 // MARK: Reusable support for UITableView
 
 public extension UITableView {

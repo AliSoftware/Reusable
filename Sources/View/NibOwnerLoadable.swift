@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 // MARK: Protocol Definition
 
 /// Make your UIView subclasses conform to this protocol when:
@@ -21,9 +20,6 @@ public protocol NibOwnerLoadable: class {
   static var nib: UINib { get }
 }
 
-
-
-
 // MARK: Default implementation
 
 public extension NibOwnerLoadable {
@@ -33,9 +29,6 @@ public extension NibOwnerLoadable {
     return UINib(nibName: String(self), bundle: NSBundle(forClass: self))
   }
 }
-
-
-
 
 // MARK: Support for instantiation from NIB
 

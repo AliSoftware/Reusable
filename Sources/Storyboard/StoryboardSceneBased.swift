@@ -24,9 +24,6 @@ public protocol StoryboardSceneBased: class {
   static var sceneIdentifier: String { get }
 }
 
-
-
-
 // MARK: Default Implementation
 
 public extension StoryboardSceneBased {
@@ -35,10 +32,6 @@ public extension StoryboardSceneBased {
     return String(self)
   }
 }
-
-
-
-
 
 // MARK: Support for instantiation from Storyboard
 

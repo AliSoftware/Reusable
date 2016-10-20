@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 // MARK: Protocol definition
 
 /// Make your `UITableViewCell` and `UICollectionViewCell` subclasses
@@ -23,9 +22,6 @@ public protocol Reusable: class {
 /// conform to this protocol when they *are* NIB-based
 /// to be able to dequeue them in a type-safe manner
 public protocol NibReusable: Reusable, NibLoadable {}
-
-
-
 
 // MARK: - Default implementation
 
