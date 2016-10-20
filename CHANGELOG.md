@@ -2,8 +2,8 @@
 
 ## 2.5.1
 
-* Adopted source files and demo project for Swift 2.3
-  [@antondomashnev](https://github.com/Antondomashnev)
+* Adapted source files and demo project for Swift 2.3  
+  [@antondomashnev](https://github.com/Antondomashnev), [#16](https://github.com/AliSoftware/Reusable/pull/28)
 
 ## 2.5.0
 
