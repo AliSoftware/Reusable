@@ -20,14 +20,14 @@ import Reusable
  * Which in fact is just a convenience protocol that combines
  * both `NibLoadable` + `Reusable` protocols.
  */
-class CollectionHeaderView: UICollectionReusableView, NibReusable {
-  @IBOutlet private weak var titleLabel: UILabel! {
+final class CollectionHeaderView: UICollectionReusableView, NibReusable {
+  @IBOutlet fileprivate weak var titleLabel: UILabel! {
     didSet { update() }
   }
   var title: String? {
     didSet { update() }
   }
-  private func update() {
+  fileprivate func update() {
     titleLabel?.text = title
   }
 }

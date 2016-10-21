@@ -20,11 +20,11 @@ import Reusable
  * Which in fact is just a convenience protocol that combines
  * both `NibLoadable` + `Reusable` protocols.
  */
-class MyXIBTextCell: UITableViewCell, NibReusable {
+final class MyXIBTextCell: UITableViewCell, NibReusable {
 
-  @IBOutlet private weak var titleLabel: UILabel!
+  @IBOutlet fileprivate weak var titleLabel: UILabel!
 
-  func fill(text: String) {
+  func fill(_ text: String) {
     titleLabel.text = text
   }
 }

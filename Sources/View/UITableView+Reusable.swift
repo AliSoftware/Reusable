@@ -17,10 +17,14 @@ public extension UITableView {
 
    - parameter cellType: the `UITableViewCell` (`NibReusable`-conforming) subclass to register
 
-   - seealso: `registerNib(_:,forCellReuseIdentifier:)`
+   - seealso: `register(_:,forCellReuseIdentifier:)`
    */
-  final func registerReusableCell<T: UITableViewCell where T: NibReusable>(cellType: T.Type) {
-    self.registerNib(cellType.nib, forCellReuseIdentifier: cellType.reuseIdentifier)
+  final func registerReusableCell<T: UITableViewCell where T: NibReusable>(_ cellType: T.Type) {
+    #if swift(>=3.0)
+      self.register(cellType.nib, forCellReuseIdentifier: cellType.reuseIdentifier)
+    #else
+      self.registerNib(cellType.nib, forCellReuseIdentifier: cellType.reuseIdentifier)
+    #endif
   }
 
   /**
@@ -30,8 +34,12 @@ public extension UITableView {
 
    - seealso: `register(_:,forCellReuseIdentifier:)`
    */
-  final func registerReusableCell<T: UITableViewCell where T: Reusable>(cellType: T.Type) {
-    self.register(cellType.self, forCellReuseIdentifier: cellType.reuseIdentifier)
+  final func registerReusableCell<T: UITableViewCell where T: Reusable>(_ cellType: T.Type) {
+    #if swift(>=3.0)
+      self.register(cellType.self, forCellReuseIdentifier: cellType.reuseIdentifier)
+    #else
+      self.registerClass(cellType.self, forCellReuseIdentifier: cellType.reuseIdentifier)
+    #endif
   }
 
   /**
@@ -44,17 +52,22 @@ public extension UITableView {
 
    - note: The `cellType` parameter can generally be omitted and infered by the return type,
    except when your type is in a variable and cannot be determined at compile time.
-   - seealso: `dequeueReusableCellWithIdentifier(_:,forIndexPath:)`
+   - seealso: `dequeueReusableCell(withIdentifier:,for:)`
    */
-  final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(indexPath: IndexPath, cellType: T.Type = T.self) -> T {
-    guard let cell = self.dequeueReusableCellWithIdentifier(cellType.reuseIdentifier, forIndexPath: indexPath) as? T else {
+  final func dequeueReusableCell<T: UITableViewCell where T: Reusable>(for indexPath: IndexPath, cellType: T.Type = T.self) -> T {
+    #if swift(>=3.0)
+      let cell = self.dequeueReusableCell(withIdentifier: cellType.reuseIdentifier, for: indexPath)
+    #else
+      let cell = self.dequeueReusableCellWithIdentifier(cellType.reuseIdentifier, forIndexPath: indexPath)
+    #endif
+    guard let reusable = cell as? T else {
       fatalError(
         "Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) matching type \(cellType.self). "
           + "Check that the reuseIdentifier is set properly in your XIB/Storyboard "
           + "and that you registered the cell beforehand"
       )
     }
-    return cell
+    return reusable
   }
 
   /**
@@ -62,10 +75,14 @@ public extension UITableView {
 
    - parameter viewType: the `UITableViewHeaderFooterView` (`NibReusable`-conforming) subclass to register
 
-   - seealso: `registerNib(_:,forHeaderFooterViewReuseIdentifier:)`
+   - seealso: `register(_:,forHeaderFooterViewReuseIdentifier:)`
    */
-  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: NibReusable>(viewType: T.Type) {
-    self.registerNib(viewType.nib, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
+  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: NibReusable>(_ viewType: T.Type) {
+    #if swift(>=3.0)
+      self.register(viewType.nib, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
+    #else
+      self.registerNib(viewType.nib, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
+    #endif
   }
 
   /**
@@ -75,8 +92,12 @@ public extension UITableView {
 
    - seealso: `register(_:,forHeaderFooterViewReuseIdentifier:)`
    */
-  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(viewType: T.Type) {
-    self.register(viewType.self, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
+  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(_ viewType: T.Type) {
+    #if swift(>=3.0)
+      self.register(viewType.self, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
+    #else
+      self.registerClass(viewType.self, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
+    #endif
   }
 
   /**
@@ -90,14 +111,19 @@ public extension UITableView {
    except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableHeaderFooterView(withIdentifier:)`
    */
-  final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(viewType: T.Type = T.self) -> T? {
-    guard let view = self.dequeueReusableHeaderFooterView(withIdentifier: viewType.reuseIdentifier) as? T? else {
+  final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView where T: Reusable>(_ viewType: T.Type = T.self) -> T? {
+    #if swift(>=3.0)
+      let view = self.dequeueReusableHeaderFooterView(withIdentifier: viewType.reuseIdentifier)
+    #else
+      let view = self.dequeueReusableHeaderFooterViewWithIdentifier(viewType.reuseIdentifier)
+    #endif
+    guard let typedView = view as? T? else {
       fatalError(
         "Failed to dequeue a header/footer with identifier \(viewType.reuseIdentifier) matching type \(viewType.self). "
           + "Check that the reuseIdentifier is set properly in your XIB/Storyboard "
           + "and that you registered the header/footer beforehand"
       )
     }
-    return view
+    return typedView
   }
 }

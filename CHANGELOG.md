@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## UNRELEASED
+
+* Added Swift 3 support (Xcode 8) while retaining Swift 2 support.  
+  ⚠️ **BREAKING API CHANGES** The following methods have new signatures:  
+    - `dequeueReusableCell(for:)`  
+    - `dequeueReusableCell(for:cellType:)`  
+  [@phatblat](https://github.com/phatblat), [#20](https://github.com/AliSoftware/Reusable/pull/20)
+
+## 2.5.0
+
+* Added the possibility for `NibOwnerLoadable` confirming custom views to pass an existing instance as `owner`
+  (used as the File's Owner) in case one already exists. This is especially useful to implement `init(coder:)`
+  to load the content of the XIB as subviews of `self` after initialization. See `MyCustomWidget.swift` for an example.  
+  [@AliSoftware](https://github.com/AliSoftware)
+
+## 2.4.0
+
+* Added `StoryboardBased` and `StoryboardSceneBased` protocols for storyboard based `UIViewController` easy instantiation.  
+  [@AliSoftware](https://github.com/AliSoftware)
+
 ## 2.3.0
 
 * Added ` NibOwnerLoadable` protocol for `UIView` set as XIB's File's Owner.  

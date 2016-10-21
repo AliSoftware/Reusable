@@ -5,13 +5,13 @@
       location = "group:../Sources"
       name = "Pod Metadata">
       <FileRef
-         location = "absolute:/Users/olivier/Documents/Dev/GitHub/AliSoftware/Reusable/Sources/../README.md">
+         location = "group:../README.md">
       </FileRef>
       <FileRef
-         location = "absolute:/Users/olivier/Documents/Dev/GitHub/AliSoftware/Reusable/Sources/../CHANGELOG.md">
+         location = "group:../CHANGELOG.md">
       </FileRef>
       <FileRef
-         location = "absolute:/Users/olivier/Documents/Dev/GitHub/AliSoftware/Reusable/Sources/../Reusable.podspec">
+         location = "group:../Reusable.podspec">
       </FileRef>
    </Group>
    <FileRef

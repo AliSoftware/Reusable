@@ -20,11 +20,11 @@ import Reusable
  * Which in fact is just a convenience protocol that combines
  * both `NibLoadable` + `Reusable` protocols.
  */
-class MyXIBIndexSquaceCell: UICollectionViewCell, NibReusable {
-  @IBOutlet private weak var sectionLabel: UILabel!
-  @IBOutlet private weak var rowLabel: UILabel!
+final class MyXIBIndexSquaceCell: UICollectionViewCell, NibReusable {
+  @IBOutlet fileprivate weak var sectionLabel: UILabel!
+  @IBOutlet fileprivate weak var rowLabel: UILabel!
 
-  func fill(indexPath: NSIndexPath) {
+  func fill(_ indexPath: IndexPath) {
     sectionLabel.text = String(indexPath.section)
     rowLabel.text = String(indexPath.row)
   }
