@@ -12,10 +12,10 @@ import Reusable
 final class InfoDetailViewController: UIViewController, StoryboardSceneBased {
   static let storyboard = UIStoryboard(name: "InfoViewController", bundle: nil)
 
-  @IBOutlet private weak var detailsLabel: UILabel!
-  private var detailsText: String?
+  @IBOutlet fileprivate weak var detailsLabel: UILabel!
+  fileprivate var detailsText: String?
 
-  func setDetails(text: String) {
+  func setDetails(_ text: String) {
     detailsText = text
     detailsLabel?.text = text
   }
@@ -25,7 +25,7 @@ final class InfoDetailViewController: UIViewController, StoryboardSceneBased {
     detailsLabel.text = detailsText
   }
 
-  @IBAction func closeAction(sender: UIButton) {
-    self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+  @IBAction func closeAction(_ sender: UIButton) {
+    self.presentingViewController?.dismiss(animated: true)
   }
 }

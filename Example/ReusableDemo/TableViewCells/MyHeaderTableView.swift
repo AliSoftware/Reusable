@@ -17,7 +17,7 @@ import Reusable
  */
 final class MyHeaderTableView: UIView, NibOwnerLoadable {
 
-  @IBOutlet private weak var titleLabel: UILabel!
+  @IBOutlet fileprivate weak var titleLabel: UILabel!
   static let height: CGFloat = 55
 
   override init(frame: CGRect) {
@@ -28,7 +28,7 @@ final class MyHeaderTableView: UIView, NibOwnerLoadable {
     super.init(coder: aDecoder)
   }
 
-  func fillForSection(section: Int) {
+  func fillForSection(_ section: Int) {
     self.titleLabel.text = "Header Section #\(section)"
   }
 }

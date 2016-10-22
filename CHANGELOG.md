@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## UNRELEASED
+
+* Converted library and Demo project to Swift 3.  
+  ⚠️ **BREAKING API CHANGES** The following methods have new signatures:  
+    - `dequeueReusableCell(for:)`  
+    - `dequeueReusableCell(for:cellType:)`  
+  [@phatblat](https://github.com/phatblat), [#20](https://github.com/AliSoftware/Reusable/pull/30)
+
 ## 2.5.0
 
 * Added the possibility for `NibOwnerLoadable` confirming custom views to pass an existing instance as `owner`

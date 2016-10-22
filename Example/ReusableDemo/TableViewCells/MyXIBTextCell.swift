@@ -22,9 +22,9 @@ import Reusable
  */
 final class MyXIBTextCell: UITableViewCell, NibReusable {
 
-  @IBOutlet private weak var titleLabel: UILabel!
+  @IBOutlet fileprivate weak var titleLabel: UILabel!
 
-  func fill(text: String) {
+  func fill(_ text: String) {
     titleLabel.text = text
   }
 }

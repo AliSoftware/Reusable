@@ -21,13 +21,13 @@ import Reusable
  * both `NibLoadable` + `Reusable` protocols.
  */
 final class CollectionHeaderView: UICollectionReusableView, NibReusable {
-  @IBOutlet private weak var titleLabel: UILabel! {
+  @IBOutlet fileprivate weak var titleLabel: UILabel! {
     didSet { update() }
   }
   var title: String? {
     didSet { update() }
   }
-  private func update() {
+  fileprivate func update() {
     titleLabel?.text = title
   }
 }

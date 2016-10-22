@@ -19,8 +19,8 @@ import Reusable
  * because the storyboard will register the cell for us, this makes no difference here.
  */
 final class MyStoryboardTextSquareCell: UICollectionViewCell, Reusable {
-  @IBOutlet private weak var titleLabel: UILabel!
-  func fill(text: String) {
+  @IBOutlet fileprivate weak var titleLabel: UILabel!
+  func fill(_ text: String) {
     titleLabel.text = text
   }
 }
