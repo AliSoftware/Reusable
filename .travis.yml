@@ -12,7 +12,6 @@ before_install:
   - gem install cocoapods
 
 osx_image:
-  - xcode7.3
   - xcode8
 # env:
 #   matrix:
@@ -32,19 +31,6 @@ matrix:
           osx_image: xcode8
           env:
             - TASK=lintpod
-              SWIFT_VERSION=3.0
-
-        # Swift 2.3
-        - os: osx
-          osx_image: xcode8
-          env:
-            - TASK=lintpod
-              SWIFT_VERSION=2.3
-
-        # Swift 2.2
-        - os: osx
-          osx_image: xcode7.3
-          env: TASK=lintpod
 
 script:
   - rake ci:$TASK

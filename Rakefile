@@ -7,7 +7,6 @@
 # - rake ci:carthage
 # - rake ci:lintpod
 # - rake ci:xcodebuild
-# - SWIFT_VERSION=2.3 rake ci:xcodebuild
 #
 
 def run(command)
@@ -22,8 +21,6 @@ namespace "ci" do
 
   desc "Lints the Reusable Podspec"
   task :lintpod do |t|
-    swift_version = ENV["SWIFT_VERSION"] ||= "3.0"
-    File.open(".swift-version", 'w') { |file| file.puts swift_version }
     run "pod lib lint --verbose --allow-warnings"
   end
 
