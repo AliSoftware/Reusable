@@ -2,11 +2,11 @@
 
 ## UNRELEASED
 
-* Added Swift 3 support (Xcode 8) while retaining Swift 2 support.  
+* Converted library and Demo project to Swift 3.  
   ⚠️ **BREAKING API CHANGES** The following methods have new signatures:  
     - `dequeueReusableCell(for:)`  
     - `dequeueReusableCell(for:cellType:)`  
-  [@phatblat](https://github.com/phatblat), [#20](https://github.com/AliSoftware/Reusable/pull/20)
+  [@phatblat](https://github.com/phatblat), [#20](https://github.com/AliSoftware/Reusable/pull/30)
 
 ## 2.5.0
 
