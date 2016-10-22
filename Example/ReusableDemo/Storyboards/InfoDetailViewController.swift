@@ -26,6 +26,6 @@ final class InfoDetailViewController: UIViewController, StoryboardSceneBased {
   }
 
   @IBAction func closeAction(_ sender: UIButton) {
-    self.presentingViewController?.dismiss(animated: true, completion: nil)
+    self.presentingViewController?.dismiss(animated: true)
   }
 }
