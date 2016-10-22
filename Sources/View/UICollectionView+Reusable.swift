@@ -19,7 +19,7 @@ public extension UICollectionView {
 
    - seealso: `register(_:,forCellWithReuseIdentifier:)`
    */
-  final func registerReusableCell<T: UICollectionViewCell where T: NibReusable>(_ cellType: T.Type) {
+  final func registerReusableCell<T: UICollectionViewCell>(_ cellType: T.Type) where T: NibReusable {
     #if swift(>=3.0)
       self.register(cellType.nib, forCellWithReuseIdentifier: cellType.reuseIdentifier)
     #else
@@ -34,7 +34,7 @@ public extension UICollectionView {
 
    - seealso: `register(_:,forCellWithReuseIdentifier:)`
    */
-  final func registerReusableCell<T: UICollectionViewCell where T: Reusable>(_ cellType: T.Type) {
+  final func registerReusableCell<T: UICollectionViewCell>(_ cellType: T.Type) where T: Reusable {
     #if swift(>=3.0)
       self.register(cellType.self, forCellWithReuseIdentifier: cellType.reuseIdentifier)
     #else
@@ -54,7 +54,7 @@ public extension UICollectionView {
    except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableCell(withReuseIdentifier:,for:)`
    */
-  final func dequeueReusableCell<T: UICollectionViewCell where T: Reusable>(for indexPath: IndexPath, cellType: T.Type = T.self) -> T {
+  final func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath, cellType: T.Type = T.self) -> T where T: Reusable {
     #if swift(>=3.0)
       let cell = self.dequeueReusableCell(withReuseIdentifier: cellType.reuseIdentifier, for: indexPath)
     #else
@@ -78,7 +78,7 @@ public extension UICollectionView {
 
    - seealso: `register(_:,forSupplementaryViewOfKind:,withReuseIdentifier:)`
    */
-  final func registerReusableSupplementaryView<T: UICollectionReusableView where T: NibReusable>(_ elementKind: String, viewType: T.Type) {
+  final func registerReusableSupplementaryView<T: UICollectionReusableView>(_ elementKind: String, viewType: T.Type) where T: NibReusable {
     #if swift(>=3.0)
       self.register(viewType.nib, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
     #else
@@ -94,7 +94,7 @@ public extension UICollectionView {
 
    - seealso: `register(_:,forSupplementaryViewOfKind:,withReuseIdentifier:)`
    */
-  final func registerReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>(_ elementKind: String, viewType: T.Type) {
+  final func registerReusableSupplementaryView<T: UICollectionReusableView>(_ elementKind: String, viewType: T.Type) where T: Reusable {
     #if swift(>=3.0)
       self.register(viewType.self, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
     #else
@@ -115,8 +115,8 @@ public extension UICollectionView {
    except when your type is in a variable and cannot be determined at compile time.
    - seealso: `dequeueReusableSupplementaryView(ofKind:,withReuseIdentifier:,for:)`
    */
-  final func dequeueReusableSupplementaryView<T: UICollectionReusableView where T: Reusable>
-    (_ elementKind: String, indexPath: IndexPath, viewType: T.Type = T.self) -> T {
+  final func dequeueReusableSupplementaryView<T: UICollectionReusableView>
+    (_ elementKind: String, indexPath: IndexPath, viewType: T.Type = T.self) -> T where T: Reusable {
     #if swift(>=3.0)
       let view = self.dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier, for: indexPath)
     #else
