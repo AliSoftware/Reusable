@@ -32,10 +32,6 @@ public protocol NibReusable: Reusable, NibLoadable {}
 public extension Reusable {
   /// By default, use the name of the class as String for its reuseIdentifier
   static var reuseIdentifier: String {
-    #if swift(>=3.0)
-      return String(describing: self)
-    #else
-      return String(self)
-    #endif
+    return String(describing: self)
   }
 }

@@ -30,11 +30,7 @@ public extension NibOwnerLoadable {
   /// By default, use the nib which have the same name as the name of the class,
   /// and located in the bundle of that class
   static var nib: UINib {
-    #if swift(>=3.0)
-      return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
-    #else
-      return UINib(nibName: String(self), bundle: NSBundle(forClass: self))
-    #endif
+    return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
   }
 }
 
@@ -53,15 +49,9 @@ public extension NibOwnerLoadable where Self: UIView {
    - returns: A `NibOwnLoadable`, `UIView` instance
    */
   static func loadFromNib(owner: Self = Self()) -> Self {
-    #if swift(>=3.0)
-      let views = nib.instantiate(withOwner: owner, options: nil)
-      let layoutAttributes: [NSLayoutAttribute] = [.top, .leading, .bottom, .trailing]
-      let relation: NSLayoutRelation = .equal
-    #else
-      let views = nib.instantiateWithOwner(owner, options: nil)
-      let layoutAttributes: [NSLayoutAttribute] = [.Top, .Leading, .Bottom, .Trailing]
-      let relation: NSLayoutRelation = .Equal
-    #endif
+    let views = nib.instantiate(withOwner: owner, options: nil)
+    let layoutAttributes: [NSLayoutAttribute] = [.top, .leading, .bottom, .trailing]
+    let relation: NSLayoutRelation = .equal
 
     for view in views {
       if let view = view as? UIView {

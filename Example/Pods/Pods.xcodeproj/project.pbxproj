@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		36598E299CFEE41293EBC68D7D270BE1 /* Reusable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA11799986E721514952035B4F0228F8 /* Reusable-dummy.m */; };
 		57100E44DE4CC4772D3805AEF4A3AA9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
-		66E786208797A9D050FD644A43AE3A7B /* IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1065152AC06E1A780E084A0A16B92583 /* IndexPath.swift */; };
 		70984DB58138D1FA643BB260E74156E5 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB4EE99A9F1F9B4DA59C02484CE6A4 /* Reusable.swift */; };
 		96DA54F9FDED46B162A8AA5ED23A9C05 /* Reusable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E95653CC5FFE4FD57242D1442F4B0E /* Reusable-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D9797A8DCB245A175BAEBA3AD3DE4AA /* Pods-ReusableDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D03B65D7C30F83CBCEFDF369B64DE77 /* Pods-ReusableDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,7 +40,6 @@
 		085DA761630C66CC2760A8381968F02E /* Reusable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Reusable.xcconfig; sourceTree = "<group>"; };
 		09D692B2CD6DE3A7ED99A1E4AFA67206 /* NibLoadable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		0CB250E75C711174F18D7127E09831D4 /* Pods-ReusableDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReusableDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		1065152AC06E1A780E084A0A16B92583 /* IndexPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IndexPath.swift; sourceTree = "<group>"; };
 		16D5B1B022E00CAF636DD01C0028E4AA /* Pods-ReusableDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ReusableDemo-dummy.m"; sourceTree = "<group>"; };
 		184A03E87FE9108FC259033367FA9F60 /* Pods-ReusableDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReusableDemo-frameworks.sh"; sourceTree = "<group>"; };
 		4D03B65D7C30F83CBCEFDF369B64DE77 /* Pods-ReusableDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ReusableDemo-umbrella.h"; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 		DAD051EA88B3F3B682F0897D235A1EAF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1065152AC06E1A780E084A0A16B92583 /* IndexPath.swift */,
 				09D692B2CD6DE3A7ED99A1E4AFA67206 /* NibLoadable.swift */,
 				770AC22E2088073D4D0A326828C1C5E6 /* NibOwnerLoadable.swift */,
 				07FB4EE99A9F1F9B4DA59C02484CE6A4 /* Reusable.swift */,
@@ -334,7 +331,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66E786208797A9D050FD644A43AE3A7B /* IndexPath.swift in Sources */,
 				A38335FEB810D41094C756FD4AF48BE9 /* NibLoadable.swift in Sources */,
 				F9D90C8510D4EDF6B8D907EE5B5C729E /* NibOwnerLoadable.swift in Sources */,
 				36598E299CFEE41293EBC68D7D270BE1 /* Reusable-dummy.m in Sources */,

@@ -32,11 +32,7 @@ public protocol StoryboardSceneBased: class {
 public extension StoryboardSceneBased {
   /// By default, use the `sceneIdentifier` with the same name as the class
   static var sceneIdentifier: String {
-    #if swift(>=3.0)
-      return String(describing: self)
-    #else
-      return String(self)
-    #endif
+    return String(describing: self)
   }
 }
 
@@ -55,11 +51,7 @@ public extension StoryboardSceneBased where Self: UIViewController {
   static func instantiate() -> Self {
     let sb = Self().storyboard
 
-    #if swift(>=3.0)
-      let vc = sb?.instantiateViewController(withIdentifier: self.sceneIdentifier)
-    #else
-      let vc = sb?.instantiateViewControllerWithIdentifier(self.sceneIdentifier)
-    #endif
+    let vc = sb?.instantiateViewController(withIdentifier: self.sceneIdentifier)
 
     guard let typedVC = vc as? Self else {
       fatalError("The viewController '\(self.sceneIdentifier)' of '\(sb)' is not of class '\(self)'")

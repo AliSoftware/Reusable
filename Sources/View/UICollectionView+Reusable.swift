@@ -20,11 +20,7 @@ public extension UICollectionView {
    - seealso: `register(_:,forCellWithReuseIdentifier:)`
    */
   final func registerReusableCell<T: UICollectionViewCell>(_ cellType: T.Type) where T: NibReusable {
-    #if swift(>=3.0)
-      self.register(cellType.nib, forCellWithReuseIdentifier: cellType.reuseIdentifier)
-    #else
-      self.registerNib(cellType.nib, forCellWithReuseIdentifier: cellType.reuseIdentifier)
-    #endif
+    self.register(cellType.nib, forCellWithReuseIdentifier: cellType.reuseIdentifier)
   }
 
   /**
@@ -35,11 +31,7 @@ public extension UICollectionView {
    - seealso: `register(_:,forCellWithReuseIdentifier:)`
    */
   final func registerReusableCell<T: UICollectionViewCell>(_ cellType: T.Type) where T: Reusable {
-    #if swift(>=3.0)
-      self.register(cellType.self, forCellWithReuseIdentifier: cellType.reuseIdentifier)
-    #else
-      self.registerClass(cellType.self, forCellWithReuseIdentifier: cellType.reuseIdentifier)
-    #endif
+    self.register(cellType.self, forCellWithReuseIdentifier: cellType.reuseIdentifier)
   }
 
   /**
@@ -55,11 +47,7 @@ public extension UICollectionView {
    - seealso: `dequeueReusableCell(withReuseIdentifier:,for:)`
    */
   final func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath, cellType: T.Type = T.self) -> T where T: Reusable {
-    #if swift(>=3.0)
-      let cell = self.dequeueReusableCell(withReuseIdentifier: cellType.reuseIdentifier, for: indexPath)
-    #else
-      let cell = self.dequeueReusableCellWithReuseIdentifier(cellType.reuseIdentifier, forIndexPath: indexPath)
-    #endif
+    let cell = self.dequeueReusableCell(withReuseIdentifier: cellType.reuseIdentifier, for: indexPath)
     guard let reusable = cell as? T else {
       fatalError(
         "Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) matching type \(cellType.self). "
@@ -79,11 +67,7 @@ public extension UICollectionView {
    - seealso: `register(_:,forSupplementaryViewOfKind:,withReuseIdentifier:)`
    */
   final func registerReusableSupplementaryView<T: UICollectionReusableView>(_ elementKind: String, viewType: T.Type) where T: NibReusable {
-    #if swift(>=3.0)
-      self.register(viewType.nib, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
-    #else
-      self.registerNib(viewType.nib, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
-    #endif
+    self.register(viewType.nib, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
   }
 
   /**
@@ -95,11 +79,7 @@ public extension UICollectionView {
    - seealso: `register(_:,forSupplementaryViewOfKind:,withReuseIdentifier:)`
    */
   final func registerReusableSupplementaryView<T: UICollectionReusableView>(_ elementKind: String, viewType: T.Type) where T: Reusable {
-    #if swift(>=3.0)
-      self.register(viewType.self, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
-    #else
-      self.registerClass(viewType.self, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
-    #endif
+    self.register(viewType.self, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier)
   }
 
   /**
@@ -117,11 +97,7 @@ public extension UICollectionView {
    */
   final func dequeueReusableSupplementaryView<T: UICollectionReusableView>
     (_ elementKind: String, indexPath: IndexPath, viewType: T.Type = T.self) -> T where T: Reusable {
-    #if swift(>=3.0)
-      let view = self.dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier, for: indexPath)
-    #else
-      let view = self.dequeueReusableSupplementaryViewOfKind(elementKind, withReuseIdentifier: viewType.reuseIdentifier, forIndexPath: indexPath)
-    #endif
+    let view = self.dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier, for: indexPath)
     guard let typedView = view as? T else {
       fatalError(
         "Failed to dequeue a supplementary view with identifier \(viewType.reuseIdentifier) matching type \(viewType.self). "

@@ -21,11 +21,7 @@ import Reusable
 final class MySimpleColorCell: UITableViewCell, Reusable {
   fileprivate lazy var colorView: UIView = {
     let colorView = UIView()
-    #if swift(>=3.0)
-      colorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-    #else
-      colorView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-    #endif
+    colorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     colorView.frame = self.contentView.bounds.insetBy(dx: 50, dy: 5)
     self.contentView.addSubview(colorView)
     return colorView
