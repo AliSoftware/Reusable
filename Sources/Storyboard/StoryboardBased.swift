@@ -44,9 +44,9 @@ public extension StoryboardBased where Self: UIViewController {
    - returns: instance of the conforming ViewController
    */
   static func instantiate() -> Self {
-    guard let vc = storyboard.instantiateInitialViewController() as? Self else {
+    guard let viewController = storyboard.instantiateInitialViewController() as? Self else {
       fatalError("The initialViewController of '\(storyboard)' is not of class '\(self)'")
     }
-    return vc
+    return viewController
   }
 }
