@@ -2,12 +2,12 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-language: objective-c
+language: swift
 
 podfile: Example/Podfile
 
 before_install:
-  - brew install swiftlint
+  - which swiftlint || brew install swiftlint
   - gem install cocoapods
 
 osx_image:
