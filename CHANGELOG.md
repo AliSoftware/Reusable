@@ -3,7 +3,8 @@
 ## 2.5.1
 
 * Adapted source files and demo project for Swift 2.3  
-  [@antondomashnev](https://github.com/Antondomashnev), [#16](https://github.com/AliSoftware/Reusable/pull/28)
+  [@antondomashnev](https://github.com/Antondomashnev)
+  [#16](https://github.com/AliSoftware/Reusable/pull/28)
 
 ## 2.5.0
 
@@ -20,7 +21,8 @@
 ## 2.3.0
 
 * Added ` NibOwnerLoadable` protocol for `UIView` set as XIB's File's Owner.  
-  [@PoissonBallon](https://github.com/PoissonBallon), [#16](https://github.com/AliSoftware/Reusable/pull/16)
+  [@PoissonBallon](https://github.com/PoissonBallon)
+  [#16](https://github.com/AliSoftware/Reusable/pull/16)
 
 _While the `NibLoadable` protocol is adapted to views loaded from XIB but that are set as the root view of the XIB,
 this new `NibOwnerLoadable` protocol is adapted to view loaded from XIB too, but that are set as the XIB's File's Owner._
@@ -28,12 +30,14 @@ this new `NibOwnerLoadable` protocol is adapted to view loaded from XIB too, but
 ## 2.2.1
 
 * Fixed issue with `register…` methods registering the superclass `T` instead of the dynamic class `cellType` / `viewType`.  
-  [@narirou](https://github.com/narirou), [#13](https://github.com/AliSoftware/Reusable/pull/13)
+  [@narirou](https://github.com/narirou)
+  [#13](https://github.com/AliSoftware/Reusable/pull/13)
 
 ## 2.2.0
 
 * Added optional `viewType` & `cellType` parameters to the dequeue functions.  
-  [@k3zi](https://github.com/k3zi), [#11](https://github.com/AliSoftware/Reusable/pull/11)
+  [@k3zi](https://github.com/k3zi)
+  [#11](https://github.com/AliSoftware/Reusable/pull/11)
 
 This parameter is only needed if you can't write `… as MyCell` (to let Swift infer the cell type from the return type),
 which might be the case for example when your cell class is stored in a variable:
@@ -59,18 +63,22 @@ let cell = tableView.dequeueReusableCell(indexPath: indexPath) as MyCell
 
 * Banned the use of `as!` in the source code in favour of `guard let x = y else { fatalError(…) }`.
   This avoids force-casts (which are considered bad practice) and generate a more explicit fatal error in case the developer forgot something (typically forgot to set the reuseIdentifier in IB).  
-  [@AliSoftware](https://github.com/AliSoftware), [#6](https://github.com/AliSoftware/Reusable/issues/6)
+  [@AliSoftware](https://github.com/AliSoftware)
+  [#6](https://github.com/AliSoftware/Reusable/issues/6)
 
 * Fixed bundle location of nibs. By default, `nib: UINib` of `NibLoadable` protocol will now use the nib located in the bundle of the conforming class.  
-  [@chrisamanse](https://github.com/chrisamanse), [#10](https://github.com/AliSoftware/Reusable/pull/10)
+  [@chrisamanse](https://github.com/chrisamanse)
+  [#10](https://github.com/AliSoftware/Reusable/pull/10)
 
 * Fixed issue with subclasses of types conforming to `Reusable` — due to the [Swift bug SR-617](https://bugs.swift.org/browse/SR-617).  
-  [@chrisamanse](https://github.com/chrisamanse), [#2](https://github.com/AliSoftware/Reusable/issues/2)
+  [@chrisamanse](https://github.com/chrisamanse)
+  [#2](https://github.com/AliSoftware/Reusable/issues/2)
 
 ## 2.1.0
 
 * Added support for direct instantiation of arbitrary `UIView` from a nib.  
-  [@jakubvano](https://github.com/jakubvano), [#5](https://github.com/AliSoftware/Reusable/pull/5)
+  [@jakubvano](https://github.com/jakubvano)
+  [#5](https://github.com/AliSoftware/Reusable/pull/5)
 
 There is now a dedicated `NibLoadable` protocol which can be used on any arbitrary `UIView` (even non-"reusable" views) to load it from a XIB (via the `loadFromNib()` function injected via the protocol extension).
 
