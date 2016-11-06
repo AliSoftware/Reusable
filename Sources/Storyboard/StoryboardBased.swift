@@ -20,9 +20,6 @@ public protocol StoryboardBased: class {
   static var storyboard: UIStoryboard { get }
 }
 
-
-
-
 // MARK: Default Implementation
 
 public extension StoryboardBased {
@@ -31,9 +28,6 @@ public extension StoryboardBased {
     return UIStoryboard(name: String(self), bundle: NSBundle(forClass: self))
   }
 }
-
-
-
 
 // MARK: Support for instantiation from Storyboard
 
