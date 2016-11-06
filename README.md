@@ -14,7 +14,7 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 # Introduction
 
 This library aims to make it super-easy to create, dequeue and instantiate Reusable views anywhere this pattern is used: From the obvious `UITableViewCell` and `UICollectionViewCell` to custom `UIViews`, even supporting `UIViewControllers` from Storyboards.  
-All of that symply by **marking your classes as conforming to a protocols, without having to add any code**, and **creating a type-safe API with no more String-based API**.
+All of that simply by **marking your classes as conforming to a protocol, without having to add any code**, and **creating a type-safe API with no more String-based API**.
 
 ```swift
 // Example of what Reusable allows you to do
