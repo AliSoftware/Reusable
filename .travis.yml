@@ -20,12 +20,12 @@ matrix:
           osx_image: xcode8
           env: 
             - TASK=lintpod
-            SWIFT_VERSION=3.0
+              SWIFT_VERSION=3.0
         - os: osx
           osx_image: xcode8
           env: 
             - TASK=carthage
-            SWIFT_VERSION=3.0
+              SWIFT_VERSION=3.0
 
 script:
   - rake ci:$TASK
