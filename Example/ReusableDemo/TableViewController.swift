@@ -14,32 +14,32 @@ final class TableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.registerReusableCell(MySimpleColorCell)
-    tableView.registerReusableCell(MyXIBTextCell)
-    tableView.registerReusableCell(MyXIBInfoCell)
+    tableView.registerReusableCell(MySimpleColorCell.self)
+    tableView.registerReusableCell(MyXIBTextCell.self)
+    tableView.registerReusableCell(MyXIBInfoCell.self)
     /* No need to register this one, the UIStoryboard already auto-register its cells */
 //    tableView.registerReusableCell(MyStoryBoardIndexPathCell)
   }
 
-  override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+  override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     return MyHeaderTableView.height
   }
 
-  override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+  override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let view = MyHeaderTableView.loadFromNib()
     view.fillForSection(section)
     return view
   }
 
-  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  override func numberOfSections(in tableView: UITableView) -> Int {
     return 4
   }
 
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 2
   }
 
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     switch indexPath.section {
     case 0:
       let colorCell = tableView.dequeueReusableCell(indexPath: indexPath) as MySimpleColorCell

@@ -10,10 +10,10 @@ import UIKit
 import Reusable
 
 final class InfoViewController: UIViewController, StoryboardBased {
-  @IBOutlet private weak var infoLabel: UILabel!
-  private var infoText: String?
+  @IBOutlet fileprivate weak var infoLabel: UILabel!
+  fileprivate var infoText: String?
 
-  func setInfo(text: String) {
+  func setInfo(_ text: String) {
     infoText = text
     infoLabel?.text = text
   }
@@ -23,7 +23,7 @@ final class InfoViewController: UIViewController, StoryboardBased {
     infoLabel.text = infoText
   }
 
-  @IBAction func closeAction(sender: UIButton) {
-    self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+  @IBAction func closeAction(_ sender: UIButton) {
+    self.presentingViewController?.dismiss(animated: true, completion: nil)
   }
 }

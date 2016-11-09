@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## UNRELEASED
+
+* Converted library and Demo project to Swift 3.
+
 ## 2.5.1
 
 * Adapted source files and demo project for Swift 2.3  

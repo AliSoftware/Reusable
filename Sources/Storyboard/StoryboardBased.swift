@@ -25,7 +25,7 @@ public protocol StoryboardBased: class {
 public extension StoryboardBased {
   /// By default, use the storybaord with the same name as the class
   static var storyboard: UIStoryboard {
-    return UIStoryboard(name: String(self), bundle: NSBundle(forClass: self))
+    return UIStoryboard(name: String(describing: self), bundle: Bundle(for: self))
   }
 }
 
