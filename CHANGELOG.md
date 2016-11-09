@@ -2,7 +2,10 @@
 
 ## UNRELEASED
 
-* Converted library and Demo project to Swift 3.
+* Converted library and Demo project to Swift 3.  
+    ⚠️ **BREAKING CHANGES** ⚠️ The following methods have new signatures:  
+    - `dequeueReusableCell(indexPath:)` is now `dequeueReusableCell(for:)`  
+    - `dequeueReusableCell(indexPath:cellType:)` is now `dequeueReusableCell(for:cellType:)`   
 
 ## 2.5.1
 
