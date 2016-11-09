@@ -6,6 +6,10 @@
     ⚠️ **BREAKING CHANGES** ⚠️ The following methods have new signatures:  
     - `dequeueReusableCell(indexPath:)` is now `dequeueReusableCell(for:)`  
     - `dequeueReusableCell(indexPath:cellType:)` is now `dequeueReusableCell(for:cellType:)`   
+    - `registerReusableCell(_:)` is now `register(cellType:)`
+    - `registerReusableHeaderFooterView(_:)` is now `register(headerFooterViewType:)`
+    - `registerReusableSupplementaryView(_:viewType:)` is now `register(supplementaryViewType:ofKind:)`
+    - `dequeueReusableSupplementaryView(_:indexPath:viewType:)` is now `dequeueReusableSupplementaryView(ofKind:indexPath:viewType:)`
 
 ## 2.5.1
 

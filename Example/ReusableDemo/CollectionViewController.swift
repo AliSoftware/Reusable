@@ -15,14 +15,13 @@ final class CollectionViewController: UICollectionViewController {
     guard let collectionView = self.collectionView else { return }
 
     // Register cell classes
-    collectionView.registerReusableCell(MyColorSquareCell.self)
-    collectionView.registerReusableCell(MyXIBIndexSquaceCell.self)
+    collectionView.register(cellType: MyColorSquareCell.self)
+    collectionView.register(cellType: MyXIBIndexSquaceCell.self)
     // No need to register this one, the UIStoryboard already auto-register its cells
     //    self.collectionView.registerReusableCell(MyStoryBoardIndexPathCell)
 
-    collectionView.registerReusableSupplementaryView(
-      UICollectionElementKindSectionHeader,
-      viewType: CollectionHeaderView.self)
+    collectionView.register(supplementaryViewType: CollectionHeaderView.self,
+                            ofKind: UICollectionElementKindSectionHeader)
 
     if let flowLayout = self.collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
       flowLayout.headerReferenceSize = CGSize(width: collectionView.bounds.size.width, height: 60)
@@ -42,7 +41,7 @@ final class CollectionViewController: UICollectionViewController {
   override func collectionView(_ collectionView: UICollectionView,
     viewForSupplementaryElementOfKind kind: String,
     at indexPath: IndexPath) -> UICollectionReusableView {
-      let header = collectionView.dequeueReusableSupplementaryView(kind, indexPath: indexPath) as CollectionHeaderView
+      let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, indexPath: indexPath) as CollectionHeaderView
       header.title = "Section \(indexPath.section)"
       return header
   }

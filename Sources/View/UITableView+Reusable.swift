@@ -18,7 +18,7 @@ public extension UITableView {
 
    - seealso: `registerNib(_:,forCellReuseIdentifier:)`
    */
-  final func registerReusableCell<T: UITableViewCell>(_ cellType: T.Type) where T: NibReusable {
+  final func register<T: UITableViewCell>(cellType: T.Type) where T: NibReusable {
     self.register(cellType.nib, forCellReuseIdentifier: cellType.reuseIdentifier)
   }
 
@@ -29,7 +29,7 @@ public extension UITableView {
 
    - seealso: `registerClass(_:,forCellReuseIdentifier:)`
    */
-  final func registerReusableCell<T: UITableViewCell>(_ cellType: T.Type) where T: Reusable {
+  final func register<T: UITableViewCell>(cellType: T.Type) where T: Reusable {
     self.register(cellType.self, forCellReuseIdentifier: cellType.reuseIdentifier)
   }
 
@@ -59,23 +59,23 @@ public extension UITableView {
   /**
    Register a NIB-Based `UITableViewHeaderFooterView` subclass (conforming to `NibReusable`)
 
-   - parameter viewType: the `UITableViewHeaderFooterView` (`NibReusable`-conforming) subclass to register
+   - parameter headerFooterViewType: the `UITableViewHeaderFooterView` (`NibReusable`-conforming) subclass to register
 
    - seealso: `registerNib(_:,forHeaderFooterViewReuseIdentifier:)`
    */
-  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView>(_ viewType: T.Type) where T: NibReusable {
-    self.register(viewType.nib, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
+  final func register<T: UITableViewHeaderFooterView>(headerFooterViewType: T.Type) where T: NibReusable {
+    self.register(headerFooterViewType.nib, forHeaderFooterViewReuseIdentifier: headerFooterViewType.reuseIdentifier)
   }
 
   /**
    Register a Class-Based `UITableViewHeaderFooterView` subclass (conforming to `Reusable`)
 
-   - parameter viewType: the `UITableViewHeaderFooterView` (`Reusable`-confirming) subclass to register
+   - parameter headerFooterViewType: the `UITableViewHeaderFooterView` (`Reusable`-confirming) subclass to register
 
    - seealso: `registerClass(_:,forHeaderFooterViewReuseIdentifier:)`
    */
-  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView>(_ viewType: T.Type) where T: Reusable {
-    self.register(viewType.self, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
+  final func register<T: UITableViewHeaderFooterView>(headerFooterViewType: T.Type) where T: Reusable {
+    self.register(headerFooterViewType.self, forHeaderFooterViewReuseIdentifier: headerFooterViewType.reuseIdentifier)
   }
 
   /**
