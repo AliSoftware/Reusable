@@ -10,6 +10,8 @@ before_install:
   - which swiftlint || brew install swiftlint
   - gem install cocoapods
 
+os: osx
+
 osx_image:
   - xcode8
 
