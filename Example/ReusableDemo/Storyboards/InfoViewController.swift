@@ -10,8 +10,8 @@ import UIKit
 import Reusable
 
 final class InfoViewController: UIViewController, StoryboardBased {
-  @IBOutlet fileprivate weak var infoLabel: UILabel!
-  fileprivate var infoText: String?
+  @IBOutlet private weak var infoLabel: UILabel!
+  private var infoText: String?
 
   func setInfo(_ text: String) {
     infoText = text

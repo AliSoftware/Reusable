@@ -17,7 +17,7 @@ import Reusable
  */
 final class MyHeaderTableView: UIView, NibOwnerLoadable {
 
-  @IBOutlet fileprivate weak var titleLabel: UILabel!
+  @IBOutlet private weak var titleLabel: UILabel!
   static let height: CGFloat = 55
 
   override init(frame: CGRect) {

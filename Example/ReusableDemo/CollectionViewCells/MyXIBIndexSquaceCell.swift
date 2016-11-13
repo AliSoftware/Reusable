@@ -21,8 +21,8 @@ import Reusable
  * both `NibLoadable` + `Reusable` protocols.
  */
 final class MyXIBIndexSquaceCell: UICollectionViewCell, NibReusable {
-  @IBOutlet fileprivate weak var sectionLabel: UILabel!
-  @IBOutlet fileprivate weak var rowLabel: UILabel!
+  @IBOutlet private weak var sectionLabel: UILabel!
+  @IBOutlet private weak var rowLabel: UILabel!
 
   func fill(_ indexPath: IndexPath) {
     sectionLabel.text = String(indexPath.section)

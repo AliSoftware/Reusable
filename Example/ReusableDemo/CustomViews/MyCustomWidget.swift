@@ -21,8 +21,8 @@ class MyCustomWidget: UIView, NibOwnerLoadable {
     }
   }
 
-  @IBOutlet fileprivate var rectView: UIView!
-  @IBOutlet fileprivate var textLabel: UILabel!
+  @IBOutlet private var rectView: UIView!
+  @IBOutlet private var textLabel: UILabel!
 
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
