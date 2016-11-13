@@ -9,7 +9,7 @@
     - `registerReusableCell(_:)` is now `register(cellType:)`
     - `registerReusableHeaderFooterView(_:)` is now `register(headerFooterViewType:)`
     - `registerReusableSupplementaryView(_:viewType:)` is now `register(supplementaryViewType:ofKind:)`
-    - `dequeueReusableSupplementaryView(_:indexPath:viewType:)` is now `dequeueReusableSupplementaryView(ofKind:indexPath:viewType:)`  
+    - `dequeueReusableSupplementaryView(_:indexPath:viewType:)` is now `dequeueReusableSupplementaryView(ofKind:for:viewType:)`  
   [@phatblat](https://github.com/phatblat)
   [#30](https://github.com/AliSoftware/Reusable/pull/30)  
   [@ceyhuno](https://github.com/ceyhuno)

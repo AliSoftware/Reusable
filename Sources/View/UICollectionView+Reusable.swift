@@ -94,7 +94,7 @@ public extension UICollectionView {
    - seealso: `dequeueReusableSupplementaryViewOfKind(_:,withReuseIdentifier:,forIndexPath:)`
    */
   final func dequeueReusableSupplementaryView<T: UICollectionReusableView>
-    (ofKind elementKind: String, indexPath: IndexPath, viewType: T.Type = T.self) -> T where T: Reusable {
+    (ofKind elementKind: String, for indexPath: IndexPath, viewType: T.Type = T.self) -> T where T: Reusable {
     let view = self.dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: viewType.reuseIdentifier, for: indexPath)
     guard let typedView = view as? T else {
       fatalError(

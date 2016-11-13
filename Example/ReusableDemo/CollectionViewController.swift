@@ -41,7 +41,7 @@ final class CollectionViewController: UICollectionViewController {
   override func collectionView(_ collectionView: UICollectionView,
     viewForSupplementaryElementOfKind kind: String,
     at indexPath: IndexPath) -> UICollectionReusableView {
-      let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, indexPath: indexPath) as CollectionHeaderView
+      let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, for: indexPath) as CollectionHeaderView
       header.title = "Section \(indexPath.section)"
       return header
   }
