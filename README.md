@@ -437,7 +437,12 @@ It demonstrates how `Reusable` works for:
 * `UICollectionView`'s `SupplementaryViews` (section Headers)
 * Custom `UIView` designed in a XIB (`NibOwnerLoadable`)
 
+# Requirements
 
+|  Swift Version |  Reusable Version  |
+|----------------|--------------------|
+|       2.x      |        2.5.1       |
+|       3.0      |        3.0.0       |
 
 # License
 
