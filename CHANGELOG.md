@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## UNRELEASED
+
+* Converted library and Demo project to Swift 3.  
+    ⚠️ **BREAKING CHANGES** ⚠️ The following methods have new signatures:  
+    - `dequeueReusableCell(indexPath:)` is now `dequeueReusableCell(for:)`  
+    - `dequeueReusableCell(indexPath:cellType:)` is now `dequeueReusableCell(for:cellType:)`   
+    - `registerReusableCell(_:)` is now `register(cellType:)`
+    - `registerReusableHeaderFooterView(_:)` is now `register(headerFooterViewType:)`
+    - `registerReusableSupplementaryView(_:viewType:)` is now `register(supplementaryViewType:ofKind:)`
+    - `dequeueReusableSupplementaryView(_:indexPath:viewType:)` is now `dequeueReusableSupplementaryView(ofKind:for:viewType:)`  
+  [@phatblat](https://github.com/phatblat)
+  [#30](https://github.com/AliSoftware/Reusable/pull/30)  
+  [@ceyhuno](https://github.com/ceyhuno)
+  [#31](https://github.com/AliSoftware/Reusable/pull/31)
+
 ## 2.5.1
 
 * Adapted source files and demo project for Swift 2.3  

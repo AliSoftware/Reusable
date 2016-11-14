@@ -15,14 +15,13 @@ final class CollectionViewController: UICollectionViewController {
     guard let collectionView = self.collectionView else { return }
 
     // Register cell classes
-    collectionView.registerReusableCell(MyColorSquareCell)
-    collectionView.registerReusableCell(MyXIBIndexSquaceCell)
+    collectionView.register(cellType: MyColorSquareCell.self)
+    collectionView.register(cellType: MyXIBIndexSquaceCell.self)
     // No need to register this one, the UIStoryboard already auto-register its cells
     //    self.collectionView.registerReusableCell(MyStoryBoardIndexPathCell)
 
-    collectionView.registerReusableSupplementaryView(
-      UICollectionElementKindSectionHeader,
-      viewType: CollectionHeaderView.self)
+    collectionView.register(supplementaryViewType: CollectionHeaderView.self,
+                            ofKind: UICollectionElementKindSectionHeader)
 
     if let flowLayout = self.collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
       flowLayout.headerReferenceSize = CGSize(width: collectionView.bounds.size.width, height: 60)
@@ -31,36 +30,36 @@ final class CollectionViewController: UICollectionViewController {
 
   // MARK: UICollectionViewDataSource
 
-  override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+  override func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 3
   }
 
-  override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 5
   }
 
-  override func collectionView(collectionView: UICollectionView,
+  override func collectionView(_ collectionView: UICollectionView,
     viewForSupplementaryElementOfKind kind: String,
-    atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-      let header = collectionView.dequeueReusableSupplementaryView(kind, indexPath: indexPath) as CollectionHeaderView
+    at indexPath: IndexPath) -> UICollectionReusableView {
+      let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, for: indexPath) as CollectionHeaderView
       header.title = "Section \(indexPath.section)"
       return header
   }
 
-  override func collectionView(collectionView: UICollectionView,
-    cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+  override func collectionView(_ collectionView: UICollectionView,
+    cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       switch indexPath.section {
       case 0:
-        let cell = collectionView.dequeueReusableCell(indexPath: indexPath) as MyColorSquareCell
-        let red = CGFloat(indexPath.row) / CGFloat(collectionView.numberOfItemsInSection(indexPath.section))
+        let cell = collectionView.dequeueReusableCell(for: indexPath) as MyColorSquareCell
+        let red = CGFloat(indexPath.row) / CGFloat(collectionView.numberOfItems(inSection: indexPath.section))
         cell.fill(UIColor(red: red, green: 0.0, blue: 1.0-red, alpha: 1.0))
         return cell
       case 1:
-        let cell = collectionView.dequeueReusableCell(indexPath: indexPath) as MyStoryboardTextSquareCell
+        let cell = collectionView.dequeueReusableCell(for: indexPath) as MyStoryboardTextSquareCell
         cell.fill("Item #\(indexPath.row)")
         return cell
       case 2:
-        let cell = collectionView.dequeueReusableCell(indexPath: indexPath) as MyXIBIndexSquaceCell
+        let cell = collectionView.dequeueReusableCell(for: indexPath) as MyXIBIndexSquaceCell
         cell.fill(indexPath)
         return cell
       default:

@@ -28,7 +28,7 @@ final class MyHeaderTableView: UIView, NibOwnerLoadable {
     super.init(coder: aDecoder)
   }
 
-  func fillForSection(section: Int) {
+  func fillForSection(_ section: Int) {
     self.titleLabel.text = "Header Section #\(section)"
   }
 }

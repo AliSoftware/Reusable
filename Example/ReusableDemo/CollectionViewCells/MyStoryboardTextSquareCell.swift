@@ -20,7 +20,7 @@ import Reusable
  */
 final class MyStoryboardTextSquareCell: UICollectionViewCell, Reusable {
   @IBOutlet private weak var titleLabel: UILabel!
-  func fill(text: String) {
+  func fill(_ text: String) {
     titleLabel.text = text
   }
 }

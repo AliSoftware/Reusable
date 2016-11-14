@@ -15,7 +15,7 @@ final class InfoDetailViewController: UIViewController, StoryboardSceneBased {
   @IBOutlet private weak var detailsLabel: UILabel!
   private var detailsText: String?
 
-  func setDetails(text: String) {
+  func setDetails(_ text: String) {
     detailsText = text
     detailsLabel?.text = text
   }
@@ -25,7 +25,7 @@ final class InfoDetailViewController: UIViewController, StoryboardSceneBased {
     detailsLabel.text = detailsText
   }
 
-  @IBAction func closeAction(sender: UIButton) {
-    self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+  @IBAction func closeAction(_ sender: UIButton) {
+    self.presentingViewController?.dismiss(animated: true, completion: nil)
   }
 }

@@ -29,7 +29,7 @@ public protocol StoryboardSceneBased: class {
 public extension StoryboardSceneBased {
   /// By default, use the `sceneIdentifier` with the same name as the class
   static var sceneIdentifier: String {
-    return String(self)
+    return String(describing: self)
   }
 }
 
@@ -42,7 +42,8 @@ public extension StoryboardSceneBased where Self: UIViewController {
    - returns: instance of the conforming ViewController
    */
   static func instantiate() -> Self {
-    guard let vc = storyboard.instantiateViewControllerWithIdentifier(self.sceneIdentifier) as? Self else {
+    let storyboard = Self().storyboard
+    guard let vc = storyboard?.instantiateViewController(withIdentifier: self.sceneIdentifier) as? Self else {
       fatalError("The viewController '\(self.sceneIdentifier)' of '\(storyboard)' is not of class '\(self)'")
     }
     return vc
