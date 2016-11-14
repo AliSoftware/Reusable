@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## UNRELEASED
+## 3.0.0
 
 * Converted library and Demo project to Swift 3.  
     ⚠️ **BREAKING CHANGES** ⚠️ The following methods have new signatures:  
