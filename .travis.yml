@@ -15,9 +15,9 @@ os: osx
 osx_image:
   - xcode8
 
-matrix:
-    include:
-        - env: TASK=lintpod
-        - env: TASK=carthage
+env:
+  - TASK=lintpod
+  - TASK=carthage
+
 script:
   - rake ci:$TASK
