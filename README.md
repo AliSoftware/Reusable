@@ -45,7 +45,7 @@ This concept, called a [Mixin](http://alisoftware.github.io/swift/protocol/2015/
 ## 1. Declare your cells to conform to `Reusable` or `NibReusable`
 
 * Use the `Reusable` protocol if they don't depend on a NIB (this will use `registerClass(…)` to register the cell)
-* Use the `NibReusable` protocol if they use a `XIB` file for their content (this will use `registerNib(…)` to register the cell)
+* Use the `NibReusable` protocol (aka combination of `Reusable` & `NibLoadable` protocols) if they use a `XIB` file for their content (this will use `registerNib(…)` to register the cell)
 
 ```swift
 final class CustomCell: UITableViewCell, Reusable { /* And that's it! */ }
@@ -55,6 +55,7 @@ final class CustomCell: UITableViewCell, Reusable { /* And that's it! */ }
 > 
 > * For cells embedded in a Storyboard's tableView, either one of those two protocols will work (as you won't register the cell them manually anyway)
 > * If you create a XIB-based cell, don't forget to set its _Reuse Identifier_ field in Interface Builder to the same string as the name of the cell class itself.
+> * 💡 `NibReusable` is syntax sugar, so you could still use two protocols conformance `Reusable, NibLoadable` instead of `NibReusable`.
 
 
 <details>
@@ -77,6 +78,9 @@ final class CodeBasedCustomCell: UITableViewCell, Reusable {
 
 ```swift
 final class NibBasedCustomCell: UITableViewCell, NibReusable {
+// or
+// final class NibBasedCustomCell: UITableViewCell, Reusable, NibLoadable {
+  
   // Here we provide a nib for this cell class (which, if we don't override the protocol's
   // default implementation of `nib`, will use a XIB of the same name as the class)
   
@@ -106,7 +110,11 @@ final class CodeBasedCollectionViewCell: UICollectionViewCell, Reusable {
 // A UICollectionViewCell using a XIB to define it's UI
 // And that will need to register using that XIB
 final class NibBasedCollectionViewCell: UICollectionViewCell, NibReusable {
+// or
+// final class NibBasedCollectionViewCell: UICollectionViewCell, Reusable, NibLoadable {
+  
   // The rest of the cell code goes here
+  
 }
 ```
 </details>
