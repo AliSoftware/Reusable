@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 3.0.1
+
+* Fix `instantiate()` implementation on `StoryboardSceneBased` ViewControllers.  
+  [@jakubgert](https://github.com/jakubgert)
+  [#38](https://github.com/AliSoftware/Reusable/pull/38)
+
 ## 3.0.0
 
 * Converted library and Demo project to Swift 3.  
