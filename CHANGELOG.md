@@ -2,9 +2,9 @@
 
 ## UNRELEASED
 
-* Removed strict `NibReusable` protocol conforming in `register` functions.
-    You can now make `Reusable` cell, and `NibLoadable` subclass.
-  [@nekrich](https://github.com/nekrich)	
+* Removed strict `NibReusable` protocol conforming in `register` functions.  
+  You can now make `Reusable` cell, and `NibLoadable` subclass.  
+  [@nekrich](https://github.com/nekrich)
   [#37](https://github.com/AliSoftware/Reusable/pull/37)
 
 ## 3.0.0

@@ -16,9 +16,9 @@ import Reusable
  * It is also reusable and has a `reuseIdentifier` (as it's a TableViewCell
  * and it uses the TableView recycling mechanism) => it is `Reusable`
  *
- * That's why it's annotated with the `NibReusable` protocol,
- * Which in fact is just a convenience protocol that combines
- * both `NibLoadable` + `Reusable` protocols.
+ * That's why it's annotated with the `NibReusable` typealias,
+ * Which in fact is just a convenience typealias that combines
+ * `NibLoadable` & `Reusable` protocols.
  */
 final class MyXIBInfoCell: UITableViewCell, NibReusable {
 

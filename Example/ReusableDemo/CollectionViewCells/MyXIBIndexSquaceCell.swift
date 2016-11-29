@@ -17,10 +17,10 @@ import Reusable
  * and it uses the CollectionView recycling mechanism) => it is `Reusable`
  *
  * That's why it's annotated with the `NibOwnerLoadable` protocol,
- * Which in fact is just a convenience protocol that combines
- * both `NibLoadable` + `Reusable` protocols.
+ * Which in fact is just a typealias that combines
+ * `NibLoadable` & `Reusable` protocols.
  */
-final class MyXIBIndexSquaceCell: UICollectionViewCell, Reusable, NibLoadable {
+final class MyXIBIndexSquaceCell: UICollectionViewCell, NibReusable {
   @IBOutlet private weak var sectionLabel: UILabel!
   @IBOutlet private weak var rowLabel: UILabel!
 

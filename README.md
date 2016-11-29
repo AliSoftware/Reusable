@@ -45,7 +45,7 @@ This concept, called a [Mixin](http://alisoftware.github.io/swift/protocol/2015/
 ## 1. Declare your cells to conform to `Reusable` or `NibReusable`
 
 * Use the `Reusable` protocol if they don't depend on a NIB (this will use `registerClass(…)` to register the cell)
-* Use the `NibReusable` protocol (aka combination of `Reusable` & `NibLoadable` protocols) if they use a `XIB` file for their content (this will use `registerNib(…)` to register the cell)
+* Use the `NibReusable` typealias if they use a `XIB` file for their content (this will use `registerNib(…)` to register the cell)
 
 ```swift
 final class CustomCell: UITableViewCell, Reusable { /* And that's it! */ }
@@ -55,7 +55,7 @@ final class CustomCell: UITableViewCell, Reusable { /* And that's it! */ }
 > 
 > * For cells embedded in a Storyboard's tableView, either one of those two protocols will work (as you won't register the cell them manually anyway)
 > * If you create a XIB-based cell, don't forget to set its _Reuse Identifier_ field in Interface Builder to the same string as the name of the cell class itself.
-> * 💡 `NibReusable` is syntax sugar, so you could still use two protocols conformance `Reusable, NibLoadable` instead of `NibReusable`.
+> * 💡 `NibReusable` is a typealias, so you could still use two protocols conformance `Reusable, NibLoadable` instead of `NibReusable`.
 
 
 <details>
@@ -394,7 +394,7 @@ In some cases you can avoid making your classes `final`, but in general it's a g
 
 ## Customize reuseIdentifier, nib, etc for non-conventional uses
 
-The protocols in this pod, like `Reusable`, `NibLoadable`, `NibReusable`, `NibOwnerLoadable`, `StoryboardBased`… are what is usually called [Mixins](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/), which basically is a Swift protocol with a default implementation provided for all of its methods.
+The protocols in this pod, like `Reusable`, `NibLoadable`, `NibOwnerLoadable`, `StoryboardBased`, `NibReusable`… are what is usually called [Mixins](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/), which basically is a Swift protocol with a default implementation provided for all of its methods.
 
 The main benefit is that **you don't need to add any code**: just conform to `Reusable`, `NibOwnerLoadable` or any of those protocol and you're ready to go with no additional code to write.
 
