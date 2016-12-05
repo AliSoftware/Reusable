@@ -1,9 +1,9 @@
 PODS:
-  - Reusable (3.0.0):
-    - Reusable/Storyboard (= 3.0.0)
-    - Reusable/View (= 3.0.0)
-  - Reusable/Storyboard (3.0.0)
-  - Reusable/View (3.0.0)
+  - Reusable (3.0.1):
+    - Reusable/Storyboard (= 3.0.1)
+    - Reusable/View (= 3.0.1)
+  - Reusable/Storyboard (3.0.1)
+  - Reusable/View (3.0.1)
 
 DEPENDENCIES:
   - Reusable (from `../`)
@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Reusable: 90af83e6e49e8a209ec4db33ad523213b8310d1b
+  Reusable: c8cbbb8e5242b9e035258d893ae5ebd8ae1d9c70
 
 PODFILE CHECKSUM: 396891106f5d114bc0d21fe52c4957aa880dd013
 
