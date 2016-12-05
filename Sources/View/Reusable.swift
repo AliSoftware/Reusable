@@ -19,9 +19,9 @@ public protocol Reusable: class {
 }
 
 /// Make your `UITableViewCell` and `UICollectionViewCell` subclasses
-/// conform to this protocol when they *are* NIB-based
+/// conform to this typealias when they *are* NIB-based
 /// to be able to dequeue them in a type-safe manner
-public protocol NibReusable: Reusable, NibLoadable {}
+public typealias NibReusable = Reusable & NibLoadable
 
 // MARK: - Default implementation
 

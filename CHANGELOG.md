@@ -5,6 +5,10 @@
 * Fix `instantiate()` implementation on `StoryboardSceneBased` ViewControllers.  
   [@jakubgert](https://github.com/jakubgert)
   [#38](https://github.com/AliSoftware/Reusable/pull/38)
+* Removed strict `NibReusable` protocol conforming in `register` functions.  
+  You can now make a `Reusable`-only cell with a `NibLoadable` subclass.  
+  [@nekrich](https://github.com/nekrich)
+  [#37](https://github.com/AliSoftware/Reusable/pull/37)
 
 ## 3.0.0
 

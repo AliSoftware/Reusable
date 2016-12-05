@@ -9,8 +9,8 @@
 import UIKit
 import Reusable
 
-// This one can be either NibReusable or just Reusable it doesn't matter actually
-// As we will never have to explicitly call tableView.register(…) to register it:
+// This one can be either `NibReusable` or just `Reusable` it doesn't matter actually
+// As we will never have to explicitly call `tableView.register(…)` to register it:
 // The Main.storyboard already auto-registers its cells without the need for additional code
 
 final class MyStoryBoardIndexPathCell: UITableViewCell, Reusable {

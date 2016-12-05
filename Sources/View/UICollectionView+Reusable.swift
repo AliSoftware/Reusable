@@ -12,13 +12,13 @@ import UIKit
 
 public extension UICollectionView {
   /**
-   Register a NIB-Based `UICollectionViewCell` subclass (conforming to `NibReusable`)
+   Register a NIB-Based `UICollectionViewCell` subclass (conforming to `Reusable` & `NibLoadable`)
 
-   - parameter cellType: the `UICollectionViewCell` (`NibReusable`-conforming) subclass to register
+   - parameter cellType: the `UICollectionViewCell` (`Reusable` & `NibLoadable`-conforming) subclass to register
 
    - seealso: `register(_:,forCellWithReuseIdentifier:)`
    */
-  final func register<T: UICollectionViewCell>(cellType: T.Type) where T: NibReusable {
+  final func register<T: UICollectionViewCell>(cellType: T.Type) where T: Reusable & NibLoadable {
     self.register(cellType.nib, forCellWithReuseIdentifier: cellType.reuseIdentifier)
   }
 
@@ -57,14 +57,14 @@ public extension UICollectionView {
   }
 
   /**
-   Register a NIB-Based `UICollectionReusableView` subclass (conforming to `NibReusable`) as a Supplementary View
+   Register a NIB-Based `UICollectionReusableView` subclass (conforming to `Reusable` & `NibLoadable`) as a Supplementary View
      
-   - parameter supplementaryViewType: the `UIView` (`NibReusable`-conforming) subclass to register as Supplementary View
+   - parameter supplementaryViewType: the `UIView` (`Reusable` & `NibLoadable`-conforming) subclass to register as Supplementary View
    - parameter elementKind: The kind of supplementary view to create.
 
    - seealso: `register(_:,forSupplementaryViewOfKind:,withReuseIdentifier:)`
    */
-  final func register<T: UICollectionReusableView>(supplementaryViewType: T.Type, ofKind elementKind: String) where T: NibReusable {
+  final func register<T: UICollectionReusableView>(supplementaryViewType: T.Type, ofKind elementKind: String) where T: Reusable & NibLoadable {
     self.register(supplementaryViewType.nib, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: supplementaryViewType.reuseIdentifier)
   }
 

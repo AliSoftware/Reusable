@@ -12,13 +12,13 @@ import UIKit
 
 public extension UITableView {
   /**
-   Register a NIB-Based `UITableViewCell` subclass (conforming to `NibReusable`)
+   Register a NIB-Based `UITableViewCell` subclass (conforming to `Reusable` & `NibLoadable`)
 
-   - parameter cellType: the `UITableViewCell` (`NibReusable`-conforming) subclass to register
+   - parameter cellType: the `UITableViewCell` (`Reusable` & `NibLoadable`-conforming) subclass to register
 
    - seealso: `register(_:,forCellReuseIdentifier:)`
    */
-  final func register<T: UITableViewCell>(cellType: T.Type) where T: NibReusable {
+  final func register<T: UITableViewCell>(cellType: T.Type) where T: Reusable & NibLoadable {
     self.register(cellType.nib, forCellReuseIdentifier: cellType.reuseIdentifier)
   }
 
@@ -57,13 +57,13 @@ public extension UITableView {
   }
 
   /**
-   Register a NIB-Based `UITableViewHeaderFooterView` subclass (conforming to `NibReusable`)
+   Register a NIB-Based `UITableViewHeaderFooterView` subclass (conforming to `Reusable` & `NibLoadable`)
 
-   - parameter headerFooterViewType: the `UITableViewHeaderFooterView` (`NibReusable`-conforming) subclass to register
+   - parameter headerFooterViewType: the `UITableViewHeaderFooterView` (`Reusable` & `NibLoadable`-conforming) subclass to register
 
    - seealso: `register(_:,forHeaderFooterViewReuseIdentifier:)`
    */
-  final func register<T: UITableViewHeaderFooterView>(headerFooterViewType: T.Type) where T: NibReusable {
+  final func register<T: UITableViewHeaderFooterView>(headerFooterViewType: T.Type) where T: Reusable & NibLoadable {
     self.register(headerFooterViewType.nib, forHeaderFooterViewReuseIdentifier: headerFooterViewType.reuseIdentifier)
   }
 

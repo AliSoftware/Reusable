@@ -10,8 +10,8 @@ import UIKit
 import Reusable
 
 /**
- * This one can be either NibReusable or just Reusable it doesn't really matter,
- * as we will never have to explicitly call collectionView.register(…) to register it:
+ * This one can be either `NibReusable` or just `Reusable` it doesn't really matter,
+ * as we will never have to explicitly call `collectionView.register(…)` to register it:
  * The `Main.storyboard` already auto-registers its cells without the need for additional code
  *
  * The only difference in marking a view `NibReusable` vs. `Reusable` is the way
