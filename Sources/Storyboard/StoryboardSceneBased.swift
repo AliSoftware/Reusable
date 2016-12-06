@@ -37,7 +37,8 @@ public extension StoryboardSceneBased {
 
 public extension StoryboardSceneBased where Self: UIViewController {
   /**
-   Create an instance of the ViewController from its associated Storyboard and the Scene with identifier `sceneIdentifier`
+   Create an instance of the ViewController from its associated Storyboard and the
+   Scene with identifier `sceneIdentifier`
 
    - returns: instance of the conforming ViewController
    */

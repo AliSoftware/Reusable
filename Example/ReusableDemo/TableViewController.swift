@@ -17,7 +17,7 @@ final class TableViewController: UITableViewController {
     tableView.register(cellType: MySimpleColorCell.self)
     tableView.register(cellType: MyXIBTextCell.self)
     tableView.register(cellType: MyXIBInfoCell.self)
-    
+
     /* No need to register this one, the UIStoryboard already auto-register its cells */
 //    tableView.registerReusableCell(MyStoryBoardIndexPathCell)
   }
