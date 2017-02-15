@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## Unreleased
+
+* Removing a parameter from `loadFromNib(owner:)` method in `NibOwnerLoadable` due to a possibility of calling `init()` or
+  `init(frame:)` initializers which might led to a crash if `init(frame:)` was not implemented in a custom UIView subclass
+  (because it is not a required initializer).
+  Additionally, changing `loadFromNib(owner:)` to an instance method as for
+  classes conforming to NibOwnerLoadable, the instance of a class is already instantiated (i.e. when loading from other
+  XIBs). However, it is still possible to load such a view programatically.
+
+    ⚠️ **BREAKING CHANGES** ⚠️ The following method has a new signature:
+    - `static func loadFromNib(owner:)` is now `func loadNibContent()`
+    [@Skoti](https://github.com/Skoti)
+    [#40](https://github.com/AliSoftware/Reusable/pull/40)
+
+* Fixing incorrect protocol naming in documentation comments for CollectionHeaderView and MyXIBIndexSquaceCell
+  [@Skoti](https://github.com/Skoti)
+
+* Fixing table view controller scene to display cells above UITabBar
+  [@Skoti](https://github.com/Skoti)
+
 ## 3.0.1
 
 * Fix `instantiate()` implementation on `StoryboardSceneBased` ViewControllers.  

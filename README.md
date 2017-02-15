@@ -297,17 +297,14 @@ final class MyCustomWidget: UIView, NibOwnerLoadable {
   …
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
-    MyCustomWidget.loadFromNib(owner: self)
-  }
-  override init(frame: CGRect) {
-    super.init(frame: frame)
+    self.loadNibContent()
   }
 }
 ```
 
 Overriding `init?(coder:)` allows your `MyCustomWidget` custom view to load its content from the associated XIB `MyCustomWidget.xib` and add it as subviews of itself.
 
-_💡 Note: overriding `init(frame:)`, even just to call `super.init(frame: frame)` might seems pointless, but seems necessary in some cases due to a strange issue with Swift and dynamic dispatch not being able to detect and call the superclass implementation all by itself: I've sometimes seen crashes when not implementing it explicitly, so better safe than sorry._
+_💡 Note: possible to override `init(frame:)`, in order to be able to create an instance of that view programatically and call `loadNibContent()` to fill with views if needed.
 
 ## 3b. Instantiating a `NibLoadable` view
 
@@ -321,8 +318,6 @@ let view2 = NibBasedRootView.loadFromNib() // Create another one
 let view3 = NibBasedRootView.loadFromNib() // and another one
 …
 ```
-
-> 💡 You could also use `MyCustomWidget.loadFromNib()` on a `NibOwnerLoadable` — the same way we just did on `NibLoadable` views above — to load them by code if needs be too.
 
 ---
 
