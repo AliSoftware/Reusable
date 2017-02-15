@@ -41,38 +41,22 @@ public extension NibOwnerLoadable where Self: UIView {
    - returns: A `NibOwnerLoadable`, `UIView` instance
    */
   @discardableResult
-  static func loadFromNib(owner: Self) -> Self {
+  func loadNibContent() {
     let layoutAttributes: [NSLayoutAttribute] = [.top, .leading, .bottom, .trailing]
-    for view in nib.instantiate(withOwner: owner, options: nil) {
+    for view in Self.nib.instantiate(withOwner: self, options: nil) {
       if let view = view as? UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
-        owner.addSubview(view)
+        self.addSubview(view)
         layoutAttributes.forEach { attribute in
-          owner.addConstraint(NSLayoutConstraint(item: view,
+          self.addConstraint(NSLayoutConstraint(item: view,
             attribute: attribute,
             relatedBy: .equal,
-            toItem: owner,
+            toItem: self,
             attribute: attribute,
             multiplier: 1,
             constant: 0.0))
         }
       }
     }
-    return owner
   }
-}
-
-public protocol FrameInitializable: class {
-    init(frame: CGRect)
-}
-
-public extension NibOwnerLoadable where Self: UIView, Self: FrameInitializable {
-    /**
-     Returns a `UIView` object instantiated from nib using a default owner instance
-     
-     - returns: A `NibOwnerLoadable`, `UIView`, `FrameInitializable` instance
-     */
-    static func loadFromNib() -> Self {
-        return Self.loadFromNib(owner: Self(frame: CGRect.zero))
-    }
 }

@@ -27,7 +27,8 @@ final class TableViewController: UITableViewController {
   }
 
   override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    let view = MyHeaderTableView.loadFromNib()
+    let view = MyHeaderTableView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: self.tableView(tableView, heightForHeaderInSection: section)))
+    view.loadNibContent()
     view.fillForSection(section)
     return view
   }
