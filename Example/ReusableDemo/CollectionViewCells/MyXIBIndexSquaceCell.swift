@@ -16,7 +16,7 @@ import Reusable
  * It is also reusable and has a `reuseIdentifier` (as it's a CollectionViewCell
  * and it uses the CollectionView recycling mechanism) => it is `Reusable`
  *
- * That's why it's annotated with the `NibOwnerLoadable` protocol,
+ * That's why it's annotated with the `NibReusable` protocol,
  * Which in fact is just a typealias that combines
  * `NibLoadable` & `Reusable` protocols.
  */
