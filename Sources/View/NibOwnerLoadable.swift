@@ -34,13 +34,8 @@ public extension NibOwnerLoadable {
 
 public extension NibOwnerLoadable where Self: UIView {
   /**
-   Returns a `UIView` object instantiated from nib
-
-   - parameter owner: The instance of the view which will be your File's Owner
-                      (and to which you want to add the XIB's views as subviews).
-   - returns: A `NibOwnerLoadable`, `UIView` instance
+   Adds content loaded from the nib to the end of the receiver's list of subviews and adds constraints automatically.
    */
-  @discardableResult
   func loadNibContent() {
     let layoutAttributes: [NSLayoutAttribute] = [.top, .leading, .bottom, .trailing]
     for view in Self.nib.instantiate(withOwner: self, options: nil) {
