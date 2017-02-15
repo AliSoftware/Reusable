@@ -2,22 +2,19 @@
 
 ## Unreleased
 
-* Removing a parameter from `loadFromNib(owner:)` method in `NibOwnerLoadable` due to a possibility of calling `init()` or
-  `init(frame:)` initializers which might led to a crash if `init(frame:)` was not implemented in a custom UIView subclass
-  (because it is not a required initializer).
-  Additionally, changing `loadFromNib(owner:)` to an instance method as for
-  classes conforming to NibOwnerLoadable, the instance of a class is already instantiated (i.e. when loading from other
-  XIBs). However, it is still possible to load such a view programatically.
+### Breaking change
 
-    ⚠️ **BREAKING CHANGES** ⚠️ The following method has a new signature:
-    - `static func loadFromNib(owner:)` is now `func loadNibContent()`
-    [@Skoti](https://github.com/Skoti)
-    [#40](https://github.com/AliSoftware/Reusable/pull/40)
+* `static func loadFromNib(owner:)` of `NibOwnerLoadable` has been replaced by instance method `func loadNibContent()`.  
+  This is more consistent and also avoids possible crashes when used with `UIView` subclasses not implementing non-required initializers `init()`/`init(frame:)`.  
+  [@Skoti](https://github.com/Skoti)
+  [#40](https://github.com/AliSoftware/Reusable/pull/40)
 
-* Fixing incorrect protocol naming in documentation comments for CollectionHeaderView and MyXIBIndexSquaceCell
+### Enhancements
+
+* Fixing documentation typos for `CollectionHeaderView` and `MyXIBIndexSquaceCell`.  
   [@Skoti](https://github.com/Skoti)
 
-* Fixing table view controller scene to display cells above UITabBar
+* Fixing table view controller scene in Example project, to display cells above `UITabBar`.  
   [@Skoti](https://github.com/Skoti)
 
 ## 3.0.1
