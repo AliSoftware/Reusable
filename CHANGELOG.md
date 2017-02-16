@@ -2,7 +2,7 @@
 
 ## 4.0.0
 
-### Breaking change
+### Breaking changes
 
 * The method `static func loadFromNib(owner:)` of `NibOwnerLoadable` has been replaced by instance method `func loadNibContent()`.  
   This is more consistent as we need an instance (owner) anyway, and also avoids possible crashes when used with `UIView` subclasses
@@ -10,6 +10,9 @@
   _(Method `static func loadFromNib()` of `NibLoadable` is still unchanged)_.  
   [@Skoti](https://github.com/Skoti)
   [#40](https://github.com/AliSoftware/Reusable/pull/40)
+* The `storyboard` property of `StoryboardBased` and `StoryboardSceneBased` protocols has been renamed to `sceneStoryboard` to avoid conflicts.  
+  [@jakubgert](https://github.com/jakubgert)
+  [#33](https://github.com/AliSoftware/Reusable/pull/33)
 
 ### Fixes
 
