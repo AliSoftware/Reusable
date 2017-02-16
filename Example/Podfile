@@ -1,6 +1,6 @@
 use_frameworks!
 
-target 'ReusableDemo' do
+target 'ReusableDemo iOS' do
   platform :ios, '8.0'
   pod 'Reusable', :path => '../'
 end

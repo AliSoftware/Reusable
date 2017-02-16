@@ -29,6 +29,7 @@
 		09B346421C4EF71900BA041F /* MyXIBIndexSquaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346401C4EF71900BA041F /* MyXIBIndexSquaceCell.xib */; };
 		09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */; };
 		09B346461C4EF8F600BA041F /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */; };
+		235A8B00726D55D8B0B0A6F6 /* Pods_ReusableDemo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3484E7E7CA287D354747565F /* Pods_ReusableDemo_iOS.framework */; };
 		37E3FC6F1E55CDD8000A7436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E3FC6E1E55CDD8000A7436 /* AppDelegate.swift */; };
 		37E3FC741E55CDD8000A7436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC721E55CDD8000A7436 /* Main.storyboard */; };
 		37E3FC761E55CDD8000A7436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC751E55CDD8000A7436 /* Assets.xcassets */; };
@@ -38,7 +39,6 @@
 		3BC219201CFC259F003BE78C /* MyHeaderTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */; };
 		47EE563C1D66155100AD3E4D /* MyCustomWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */; };
 		47EE563E1D66155D00AD3E4D /* MyCustomWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */; };
-		67781E96DC81B29330F49176 /* Pods_ReusableDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868A47776F0B74DD17857FFE /* Pods_ReusableDemo.framework */; };
 		73E86102FC28DA0699B75437 /* Pods_ReusableDemo_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2606E6E047118D562E70F0CF /* Pods_ReusableDemo_tvOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +46,7 @@
 		09441AE11D32A0390029B8A6 /* InfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfoViewController.storyboard; sourceTree = "<group>"; };
 		09441AE31D32A0700029B8A6 /* InfoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailViewController.swift; sourceTree = "<group>"; };
 		09441AE51D32A07D0029B8A6 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		09B346091C4ED26F00BA041F /* ReusableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09B346091C4ED26F00BA041F /* ReusableDemo iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReusableDemo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B3460C1C4ED26F00BA041F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09B3460E1C4ED26F00BA041F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		09B346111C4ED26F00BA041F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,6 +70,7 @@
 		0A31F38C6BBC1AC408219D78 /* Pods-ReusableDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2606E6E047118D562E70F0CF /* Pods_ReusableDemo_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F33A2EB6B444F6F51004271 /* Pods-ReusableDemo tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		3484E7E7CA287D354747565F /* Pods_ReusableDemo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E3FC6C1E55CDD8000A7436 /* ReusableDemo tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReusableDemo tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E3FC6E1E55CDD8000A7436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37E3FC731E55CDD8000A7436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,7 +84,9 @@
 		47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomWidget.xib; sourceTree = "<group>"; };
 		80A8538E60254C825B7D505B /* Pods-ReusableDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		868A47776F0B74DD17857FFE /* Pods_ReusableDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFC3794861C2D883C20E9AC8 /* Pods-ReusableDemo iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E7E0B2333D96C0FED6D45DD1 /* Pods-ReusableDemo tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		FB77CDB068583366F960D03D /* Pods-ReusableDemo iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67781E96DC81B29330F49176 /* Pods_ReusableDemo.framework in Frameworks */,
+				235A8B00726D55D8B0B0A6F6 /* Pods_ReusableDemo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +122,7 @@
 		09B346001C4ED26F00BA041F = {
 			isa = PBXGroup;
 			children = (
-				09B3460B1C4ED26F00BA041F /* ReusableDemo */,
+				09B3460B1C4ED26F00BA041F /* ReusableDemo iOS */,
 				37E3FC6D1E55CDD8000A7436 /* ReusableDemo tvOS */,
 				09B3460A1C4ED26F00BA041F /* Products */,
 				FA987BC7BD1F7BF412BF7FC8 /* Pods */,
@@ -132,13 +135,13 @@
 		09B3460A1C4ED26F00BA041F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09B346091C4ED26F00BA041F /* ReusableDemo.app */,
+				09B346091C4ED26F00BA041F /* ReusableDemo iOS.app */,
 				37E3FC6C1E55CDD8000A7436 /* ReusableDemo tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		09B3460B1C4ED26F00BA041F /* ReusableDemo */ = {
+		09B3460B1C4ED26F00BA041F /* ReusableDemo iOS */ = {
 			isa = PBXGroup;
 			children = (
 				09B3460C1C4ED26F00BA041F /* AppDelegate.swift */,
@@ -151,7 +154,7 @@
 				47EE56381D6614FA00AD3E4D /* Custom Views */,
 				09B3461E1C4ED33D00BA041F /* SupportingFiles */,
 			);
-			path = ReusableDemo;
+			path = "ReusableDemo iOS";
 			sourceTree = "<group>";
 		};
 		09B3461E1C4ED33D00BA041F /* SupportingFiles */ = {
@@ -230,6 +233,7 @@
 			children = (
 				868A47776F0B74DD17857FFE /* Pods_ReusableDemo.framework */,
 				2606E6E047118D562E70F0CF /* Pods_ReusableDemo_tvOS.framework */,
+				3484E7E7CA287D354747565F /* Pods_ReusableDemo_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -241,6 +245,8 @@
 				0A31F38C6BBC1AC408219D78 /* Pods-ReusableDemo.release.xcconfig */,
 				E7E0B2333D96C0FED6D45DD1 /* Pods-ReusableDemo tvOS.debug.xcconfig */,
 				2F33A2EB6B444F6F51004271 /* Pods-ReusableDemo tvOS.release.xcconfig */,
+				CFC3794861C2D883C20E9AC8 /* Pods-ReusableDemo iOS.debug.xcconfig */,
+				FB77CDB068583366F960D03D /* Pods-ReusableDemo iOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -248,9 +254,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		09B346081C4ED26F00BA041F /* ReusableDemo */ = {
+		09B346081C4ED26F00BA041F /* ReusableDemo iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09B3461B1C4ED26F00BA041F /* Build configuration list for PBXNativeTarget "ReusableDemo" */;
+			buildConfigurationList = 09B3461B1C4ED26F00BA041F /* Build configuration list for PBXNativeTarget "ReusableDemo iOS" */;
 			buildPhases = (
 				8D810F689ED55C59DF40EA88 /* [CP] Check Pods Manifest.lock */,
 				09B346051C4ED26F00BA041F /* Sources */,
@@ -264,9 +270,9 @@
 			);
 			dependencies = (
 			);
-			name = ReusableDemo;
+			name = "ReusableDemo iOS";
 			productName = ReusableDemo;
-			productReference = 09B346091C4ED26F00BA041F /* ReusableDemo.app */;
+			productReference = 09B346091C4ED26F00BA041F /* ReusableDemo iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		37E3FC6B1E55CDD8000A7436 /* ReusableDemo tvOS */ = {
@@ -323,7 +329,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				09B346081C4ED26F00BA041F /* ReusableDemo */,
+				09B346081C4ED26F00BA041F /* ReusableDemo iOS */,
 				37E3FC6B1E55CDD8000A7436 /* ReusableDemo tvOS */,
 			);
 		};
@@ -433,7 +439,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D01516303907BB14A4BDD69A /* [CP] Embed Pods Frameworks */ = {
@@ -448,7 +454,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EC45F6CEBD45B4A8F3B56EEA /* [CP] Embed Pods Frameworks */ = {
@@ -622,10 +628,10 @@
 		};
 		09B3461C1C4ED26F00BA041F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80A8538E60254C825B7D505B /* Pods-ReusableDemo.debug.xcconfig */;
+			baseConfigurationReference = CFC3794861C2D883C20E9AC8 /* Pods-ReusableDemo iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ReusableDemo/Info.plist;
+				INFOPLIST_FILE = "ReusableDemo iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.ReusableDemo;
@@ -636,10 +642,10 @@
 		};
 		09B3461D1C4ED26F00BA041F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A31F38C6BBC1AC408219D78 /* Pods-ReusableDemo.release.xcconfig */;
+			baseConfigurationReference = FB77CDB068583366F960D03D /* Pods-ReusableDemo iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ReusableDemo/Info.plist;
+				INFOPLIST_FILE = "ReusableDemo iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.ReusableDemo;
@@ -701,7 +707,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09B3461B1C4ED26F00BA041F /* Build configuration list for PBXNativeTarget "ReusableDemo" */ = {
+		09B3461B1C4ED26F00BA041F /* Build configuration list for PBXNativeTarget "ReusableDemo iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09B3461C1C4ED26F00BA041F /* Debug */,

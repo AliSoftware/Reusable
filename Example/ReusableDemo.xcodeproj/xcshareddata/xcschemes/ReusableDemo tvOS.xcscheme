@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09B346081C4ED26F00BA041F"
-               BuildableName = "ReusableDemo.app"
-               BlueprintName = "ReusableDemo"
+               BlueprintIdentifier = "37E3FC6B1E55CDD8000A7436"
+               BuildableName = "ReusableDemo tvOS.app"
+               BlueprintName = "ReusableDemo tvOS"
                ReferencedContainer = "container:ReusableDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "09B346081C4ED26F00BA041F"
-            BuildableName = "ReusableDemo.app"
-            BlueprintName = "ReusableDemo"
+            BlueprintIdentifier = "37E3FC6B1E55CDD8000A7436"
+            BuildableName = "ReusableDemo tvOS.app"
+            BlueprintName = "ReusableDemo tvOS"
             ReferencedContainer = "container:ReusableDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "09B346081C4ED26F00BA041F"
-            BuildableName = "ReusableDemo.app"
-            BlueprintName = "ReusableDemo"
+            BlueprintIdentifier = "37E3FC6B1E55CDD8000A7436"
+            BuildableName = "ReusableDemo tvOS.app"
+            BlueprintName = "ReusableDemo tvOS"
             ReferencedContainer = "container:ReusableDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "09B346081C4ED26F00BA041F"
-            BuildableName = "ReusableDemo.app"
-            BlueprintName = "ReusableDemo"
+            BlueprintIdentifier = "37E3FC6B1E55CDD8000A7436"
+            BuildableName = "ReusableDemo tvOS.app"
+            BlueprintName = "ReusableDemo tvOS"
             ReferencedContainer = "container:ReusableDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
