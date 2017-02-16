@@ -22,6 +22,7 @@ final class MyHeaderTableView: UIView, NibOwnerLoadable {
 
   override init(frame: CGRect) {
     super.init(frame: frame)
+    self.loadNibContent()
   }
 
   required init?(coder aDecoder: NSCoder) {

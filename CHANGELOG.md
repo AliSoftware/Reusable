@@ -1,6 +1,27 @@
 # CHANGELOG
 
+## 4.0.0
+
+### Breaking change
+
+* The method `static func loadFromNib(owner:)` of `NibOwnerLoadable` has been replaced by instance method `func loadNibContent()`.  
+  This is more consistent as we need an instance (owner) anyway, and also avoids possible crashes when used with `UIView` subclasses
+  not implementing non-required initializers `init()`/`init(frame:)`.
+  _(Method `static func loadFromNib()` of `NibLoadable` is still unchanged)_.  
+  [@Skoti](https://github.com/Skoti)
+  [#40](https://github.com/AliSoftware/Reusable/pull/40)
+
+### Fixes
+
+* Fixing documentation typos for `CollectionHeaderView` and `MyXIBIndexSquaceCell`.  
+  [@Skoti](https://github.com/Skoti)
+
+* Fixing TableView Controller scene in Example project, to display cells above `UITabBar`.  
+  [@Skoti](https://github.com/Skoti)
+
 ## 3.0.1
+
+### Bug Fixes
 
 * Fix `instantiate()` implementation on `StoryboardSceneBased` ViewControllers.  
   [@jakubgert](https://github.com/jakubgert)
@@ -12,8 +33,10 @@
 
 ## 3.0.0
 
+### Breaking Changes
+
 * Converted library and Demo project to Swift 3.  
-    ⚠️ **BREAKING CHANGES** ⚠️ The following methods have new signatures:  
+    ⚠️ The following methods have new signatures:  
     - `dequeueReusableCell(indexPath:)` is now `dequeueReusableCell(for:)`  
     - `dequeueReusableCell(indexPath:cellType:)` is now `dequeueReusableCell(for:cellType:)`   
     - `registerReusableCell(_:)` is now `register(cellType:)`
