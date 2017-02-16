@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 4.0.1
+
+* Added a tvOS target in the Example project.
+* Carthage should now see the tvOS framework
+
 ## 4.0.0
 
 ### Breaking changes
