@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyCustomWidget" customModule="ReusableDemo_tvOS" customModuleProvider="target">
+            <connections>
+                <outlet property="rectView" destination="PYQ-vP-y8n" id="c5T-gK-VFI"/>
+                <outlet property="textLabel" destination="cn8-zX-6SP" id="0Hk-K0-apm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="805" height="624"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cn8-zX-6SP">
+                    <rect key="frame" x="366" y="50" width="72" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYQ-vP-y8n">
+                    <rect key="frame" x="50" y="136" width="705" height="438"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="PYQ-vP-y8n" secondAttribute="bottom" constant="50" id="9NM-mj-ICr"/>
+                <constraint firstAttribute="trailing" secondItem="PYQ-vP-y8n" secondAttribute="trailing" constant="50" id="9VW-7v-A3b"/>
+                <constraint firstItem="PYQ-vP-y8n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="9l8-ob-TcD"/>
+                <constraint firstItem="cn8-zX-6SP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="aXw-no-wwk"/>
+                <constraint firstItem="PYQ-vP-y8n" firstAttribute="top" secondItem="cn8-zX-6SP" secondAttribute="bottom" constant="50" id="hsQ-qs-rG6"/>
+                <constraint firstItem="cn8-zX-6SP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wij-mR-ias"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-488.5" y="-121"/>
+        </view>
+    </objects>
+</document>

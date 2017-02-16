@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7fF-Ae-xTS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7fF-Ae-xTS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--TableView-->
@@ -11,43 +15,43 @@
             <objects>
                 <tableViewController id="Spa-tB-Bt1" customClass="TableViewController" customModule="ReusableDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="zRB-As-Ilv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyStoryBoardIndexPathCell" id="Tw8-mE-1pZ" customClass="MyStoryBoardIndexPathCell" customModule="ReusableDemo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tw8-mE-1pZ" id="06x-cI-AjP">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRp-NR-1CZ">
-                                            <rect key="frame" x="10" y="13" width="138" height="54"/>
+                                            <rect key="frame" x="10" y="13" width="81.5" height="54"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SectionValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeQ-5x-Yyw">
-                                            <rect key="frame" x="157" y="13" width="138" height="54"/>
+                                            <rect key="frame" x="101.5" y="13" width="81" height="54"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Row" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58k-rb-kFu">
-                                            <rect key="frame" x="305" y="13" width="138" height="54"/>
+                                            <rect key="frame" x="192.5" y="13" width="81.5" height="54"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RowValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgS-T5-lcO">
-                                            <rect key="frame" x="452" y="13" width="138" height="54"/>
+                                            <rect key="frame" x="284" y="13" width="81" height="54"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.83865497276885415" green="0.95461380879166668" blue="0.787292117222257" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.83865497276885415" green="0.95461380879166668" blue="0.787292117222257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="58k-rb-kFu" firstAttribute="width" secondItem="xRp-NR-1CZ" secondAttribute="width" id="26U-0F-ixt"/>
                                         <constraint firstItem="58k-rb-kFu" firstAttribute="centerX" secondItem="06x-cI-AjP" secondAttribute="centerX" id="6Ph-AO-H1d"/>
@@ -104,7 +108,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="gin-v0-BXl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Spa-tB-Bt1" kind="relationship" relationship="viewControllers" id="BUR-0K-Gpa"/>
@@ -125,51 +129,51 @@
                         <viewControllerLayoutGuide type="bottom" id="dRd-uT-ZnN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Ku-UX-Jef">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnw-gc-OgB" customClass="MyCustomWidget" customModule="ReusableDemo" customModuleProvider="target">
-                                <rect key="frame" x="310" y="40" width="270" height="236"/>
-                                <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="197.5" y="40" width="157.5" height="269"/>
+                                <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Top Right"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="rectColor">
-                                        <color key="value" red="0.54503803409999996" green="1" blue="0.4692268389" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.54503803409999996" green="1" blue="0.4692268389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7m-0U-p9d" customClass="MyCustomWidget" customModule="ReusableDemo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="40" width="270" height="236"/>
-                                <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="20" y="40" width="157.5" height="269"/>
+                                <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Top Left"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="rectColor">
-                                        <color key="value" red="1" green="0.41393993569999998" blue="0.33706153439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.41393993569999998" blue="0.33706153439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKT-T1-jUw" customClass="MyCustomWidget" customModule="ReusableDemo" customModuleProvider="target">
-                                <rect key="frame" x="310" y="296" width="270" height="235"/>
-                                <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="197.5" y="329" width="157.5" height="269"/>
+                                <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Bottom Right"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="rectColor">
-                                        <color key="value" red="0.19395312109999999" green="0.27580727269999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.19395312109999999" green="0.27580727269999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXD-BO-hZ6" customClass="MyCustomWidget" customModule="ReusableDemo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="295" width="270" height="236"/>
-                                <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="20" y="329" width="157.5" height="269"/>
+                                <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Bottom Left"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="rectColor">
-                                        <color key="value" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fnw-gc-OgB" firstAttribute="height" secondItem="cKT-T1-jUw" secondAttribute="height" id="1Si-8K-2Jx"/>
                             <constraint firstItem="EXD-BO-hZ6" firstAttribute="leading" secondItem="6Ku-UX-Jef" secondAttribute="leading" constant="20" id="9aP-3q-qmp"/>
@@ -200,9 +204,9 @@
             <objects>
                 <collectionViewController id="Oo7-g3-hUO" customClass="CollectionViewController" customModule="ReusableDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="UF5-eQ-lJJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wP3-ik-mWK">
                             <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -220,13 +224,12 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qy0-a7-3d2">
                                             <rect key="frame" x="29" y="39" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.83705627918243408" green="0.9440377950668335" blue="0.99964547157287598" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.83705627918243408" green="0.9440377950668335" blue="0.99964547157287598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Qy0-a7-3d2" firstAttribute="centerY" secondItem="JER-8f-07J" secondAttribute="centerY" id="HWI-l9-QBJ"/>
                                     <constraint firstItem="Qy0-a7-3d2" firstAttribute="centerX" secondItem="JER-8f-07J" secondAttribute="centerX" id="sny-oq-sTK"/>

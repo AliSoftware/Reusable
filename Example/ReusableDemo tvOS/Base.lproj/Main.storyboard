@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JEg-c4-sQq">
+                                <rect key="frame" x="5" y="5" width="1910" height="1070"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OfR-Ua-25k">
+                                        <rect key="frame" x="0.0" y="0.0" width="1910" height="533"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZY-lA-ewp" customClass="MyCustomWidget" customModule="ReusableDemo_tvOS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="633" height="533"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="rectColor">
+                                                        <color key="value" red="0.54503803409999996" green="1" blue="0.4692268389" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="L1C1"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZQ-Z8-WKn" customClass="MyCustomWidget" customModule="ReusableDemo_tvOS" customModuleProvider="target">
+                                                <rect key="frame" x="638" y="0.0" width="634" height="533"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="rectColor">
+                                                        <color key="value" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="L1C2"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGS-D7-m4D" customClass="MyCustomWidget" customModule="ReusableDemo_tvOS" customModuleProvider="target">
+                                                <rect key="frame" x="1277" y="0.0" width="633" height="533"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="rectColor">
+                                                        <color key="value" red="0.50196078430000002" green="0.74117647060000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="L1C3"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DSg-22-I8C">
+                                        <rect key="frame" x="0.0" y="538" width="1910" height="532"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4j-e1-B8O" customClass="MyCustomWidget" customModule="ReusableDemo_tvOS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="633" height="532"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="rectColor">
+                                                        <color key="value" red="0.19395312109999999" green="0.27580727269999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="L2C1"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svu-kq-5Hw" customClass="MyCustomWidget" customModule="ReusableDemo_tvOS" customModuleProvider="target">
+                                                <rect key="frame" x="638" y="0.0" width="634" height="532"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="rectColor">
+                                                        <color key="value" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="L2C2"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tf3-sH-QIt" customClass="MyCustomWidget" customModule="ReusableDemo_tvOS" customModuleProvider="target">
+                                                <rect key="frame" x="1277" y="0.0" width="633" height="532"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="rectColor">
+                                                        <color key="value" red="0.96975212700000002" green="0.96975212700000002" blue="0.96975212700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="L2C3"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OfR-Ua-25k" firstAttribute="height" secondItem="DSg-22-I8C" secondAttribute="height" id="OND-SY-Avl"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JEg-c4-sQq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="3mK-8U-UJ9"/>
+                            <constraint firstItem="JEg-c4-sQq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="8GF-u1-vLU"/>
+                            <constraint firstAttribute="bottom" secondItem="JEg-c4-sQq" secondAttribute="bottom" constant="5" id="fTs-G3-2F7"/>
+                            <constraint firstAttribute="trailing" secondItem="JEg-c4-sQq" secondAttribute="trailing" constant="5" id="sD2-nN-Xzf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
