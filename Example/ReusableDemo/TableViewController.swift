@@ -28,11 +28,10 @@ final class TableViewController: UITableViewController {
 
   override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let frame = CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: self.tableView(tableView, heightForHeaderInSection: section))
-    
     // See the overridden `MyHeaderTableView.init(frame:)` initializer, which
     // automatically loads the view content from its nib using loadNibContent()
     let view = MyHeaderTableView(frame: frame)
-    
+
     view.fillForSection(section)
     return view
   }
