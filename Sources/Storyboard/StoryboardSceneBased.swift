@@ -16,10 +16,10 @@ import UIKit
 ///
 /// to be able to instantiate them from the Storyboard in a type-safe manner.
 ///
-/// You need to implement `storyboard` yourself to indicate the UIStoryboard this scene is from.
+/// You need to implement `sceneStoryboard` yourself to indicate the UIStoryboard this scene is from.
 public protocol StoryboardSceneBased: class {
   /// The UIStoryboard to use when we want to instantiate this ViewController
-  static var storyboard: UIStoryboard { get }
+  static var sceneStoryboard: UIStoryboard { get }
   /// The scene identifier to use when we want to instantiate this ViewController from its associated Storyboard
   static var sceneIdentifier: String { get }
 }
@@ -43,7 +43,7 @@ public extension StoryboardSceneBased where Self: UIViewController {
    - returns: instance of the conforming ViewController
    */
   static func instantiate() -> Self {
-    let storyboard = (Self.self as StoryboardSceneBased.Type).storyboard
+    let storyboard = Self.sceneStoryboard
     guard let vc = storyboard.instantiateViewController(withIdentifier: self.sceneIdentifier) as? Self else {
       fatalError("The viewController '\(self.sceneIdentifier)' of '\(storyboard)' is not of class '\(self)'")
     }

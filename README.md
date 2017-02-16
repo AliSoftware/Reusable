@@ -335,7 +335,7 @@ In your swift source declaring your custom `UIViewController` class:
   * This is typically ideal if you use one Storyboard per ViewController, for example.
 * Use the `StoryboardSceneBased` protocol if scene in your storyboard has the same `sceneIdentifier` as the name of the ViewController's class, but the `*.storyboard` file name doesn't necessary match the ViewController's class name.
   * This is typically ideal for secondary scenes in bigger storyboards
-  * You'll then be required to implement the `storyboard` type property to indicate the storyboard it belongs to.
+  * You'll then be required to implement the `sceneStoryboard` type property to indicate the storyboard it belongs to.
 
 <details>
 <summary>📑 Example of a ViewController being the initial ViewController of its Storyboard</summary>
@@ -352,11 +352,11 @@ final class CustomVC: UIViewController: StoryboardBased { /* and that's it! */ }
 
 In this example, `SecondaryVC` is designed in a Storyboard name `CustomVC.storyboard` (so with a different name than the class itself) and is _not_ the initial ViewController, but instead has its **"Scene Identifier"** set to the value `"SecondaryVC"` (same as the class name)
 
-Conforming to `StoryboardSceneBased` will still require you to implement `static var storyboard: UIStoryboard { get }` to indicate the Storyboard where this scene is designed. You can typically implement that property using a `let` type constant:
+Conforming to `StoryboardSceneBased` will still require you to implement `static var sceneStoryboard: UIStoryboard { get }` to indicate the Storyboard where this scene is designed. You can typically implement that property using a `let` type constant:
 
 ```swift
 final class SecondaryVC: UIViewController: StoryboardSceneBased {
-  static let storyboard = UIStoryboard(name: "CustomVC", bundle: nil)
+  static let sceneStoryboard = UIStoryboard(name: "CustomVC", bundle: nil)
   /* and that's it! */
 }
 ```
