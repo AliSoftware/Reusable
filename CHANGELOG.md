@@ -1,8 +1,8 @@
 # CHANGELOG
 
-## 4.0.2
+## Master
 
-* Updated README instructions to Swift 3.
+* Updated README instructions to Swift 3.  
   [@neilkimmett](https://github.com/neilkimmett)
   [#41](https://github.com/AliSoftware/Reusable/pull/41)
 
