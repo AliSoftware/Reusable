@@ -25,8 +25,8 @@ All of that simply by **marking your classes as conforming to a protocol, withou
 ```swift
 // Example of what Reusable allows you to do
 final class MyCustomCell: UITableViewCell, Reusable { /* And that's it! */ }
-tableView.register(MyCustomCell)
-let cell: MyCustomCell = tableView.dequeueReusableCell(indexPath: indexPath)
+tableView.register(cellType: MyCustomCell.self)
+let cell: MyCustomCell = tableView.dequeueReusableCell(for: indexPath)
 ```
 
 This concept, called a [Mixin](http://alisoftware.github.io/swift/protocol/2015/11/08/mixins-over-inheritance/) (a protocol with default implementation for all its methods), is explained [here in my blog post](http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/) in details.
@@ -133,7 +133,7 @@ Unless you've prototyped your cell in a Storyboard, you'll have to register the 
 To do this, instead of calling `registerClass(…)` or `registerNib(…)` using a String-based `reuseIdentifier`, just call:
 
 ```swift
-tableView.register(theCellClass)
+tableView.register(cellType: theCellClass.self)
 ```
 
 <details>
@@ -145,8 +145,8 @@ class MyViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    tableView.register(CodeBasedCustomCell) // This will register using the class without using a UINib
-    tableView.register(NibBasedCustomCell) // This will register using NibBasedCustomCell.xib
+    tableView.register(cellType: CodeBasedCustomCell.self) // This will register using the class without using a UINib
+    tableView.register(cellType: NibBasedCustomCell.self) // This will register using NibBasedCustomCell.xib
   }
 }
 ```
@@ -158,9 +158,9 @@ To dequeue a cell (typically in your `cellForRowAtIndexPath` implementation), si
 
 ```swift
 // Either
-let cell = tableView.dequeueReusableCell(indexPath: indexPath) as MyCustomCell
+let cell = tableView.dequeueReusableCell(for: indexPath) as MyCustomCell
 // Or
-let cell: MyCustomCell = tableView.dequeueReusableCell(indexPath: indexPath)
+let cell: MyCustomCell = tableView.dequeueReusableCell(for: indexPath)
 ```
 
 As long as **Swift can use type-inference to understand that you'll want a cell of type `MyCustomCell`** (either using `as MyCystomCell` or explicitly typing the receiving variable `cell: MyCustomCell`), it will magically infer both the cell class to use and thus its `reuseIdentifier` needed to dequeue the cell, and which exact type to return to save you a type-cast.
@@ -211,7 +211,7 @@ Now all you have is **a beautiful code and type-safe cells**, with compile-type 
 >   // As `self.cellType(for:)` always returns a `ParentCell` (sub-)class, the type
 >   // of the variable `cell` below is infered to be `ParentCell` too. So only methods
 >   // declared in the parent `ParentCell` class will be accessible on the `cell` variable.
->   let cell = tableView.dequeueReusableCell(indexPath: indexPath, cellType: cellClass)
+>   let cell = tableView.dequeueReusableCell(for: indexPath, cellType: cellClass)
 >   return cell  
 > }
 > ```
@@ -369,7 +369,7 @@ Simply call `instantiate()` on your custom class. This will automatically know w
 ```swift
 func presentSecondary() {
   let vc = SecondaryVC.instantitate() // Init from the "SecondaryVC" scene of CustomVC.storyboard
-  self.presentViewController(vc, animated: true) {}
+  self.present(vc, animated: true) {}
 }
 ```
 
