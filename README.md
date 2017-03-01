@@ -343,7 +343,7 @@ In your swift source declaring your custom `UIViewController` class:
 In this example, `CustomVC` is designed as the initial ViewController of a Storyboard named `CustomVC.storyboard`:
 
 ```swift
-final class CustomVC: UIViewController: StoryboardBased { /* and that's it! */ }
+final class CustomVC: UIViewController, StoryboardBased { /* and that's it! */ }
 ```
 </details>
 
@@ -355,7 +355,7 @@ In this example, `SecondaryVC` is designed in a Storyboard name `CustomVC.storyb
 Conforming to `StoryboardSceneBased` will still require you to implement `static var sceneStoryboard: UIStoryboard { get }` to indicate the Storyboard where this scene is designed. You can typically implement that property using a `let` type constant:
 
 ```swift
-final class SecondaryVC: UIViewController: StoryboardSceneBased {
+final class SecondaryVC: UIViewController, StoryboardSceneBased {
   static let sceneStoryboard = UIStoryboard(name: "CustomVC", bundle: nil)
   /* and that's it! */
 }

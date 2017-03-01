@@ -2,6 +2,10 @@
 
 ## Master
 
+* Fix typo in StoryboardBased examples.  
+  [@danshevluk](https://github.com/danshevluk)
+  [#42](https://github.com/AliSoftware/Reusable/pull/42)
+
 * Updated README instructions to Swift 3.  
   [@neilkimmett](https://github.com/neilkimmett)
   [#41](https://github.com/AliSoftware/Reusable/pull/41)
