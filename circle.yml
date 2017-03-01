@@ -5,11 +5,13 @@ machine:
 dependencies:
   pre:
     - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-    - which swiftlint || brew install swiftlint
-    # - which carthage || brew install carthage
+    - rake swiftlint:install
+    - rake carthage:install
     - curl -sS https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash
 
 test:
+  pre:
+    - rake swiftlint:lint
   override:
     - rake fmk:ios
     - rake fmk:tvos
@@ -17,4 +19,4 @@ test:
     - rake demo:tvos
   post:
     - rake pod:lint
-    # - rake carthage:build
+    - rake carthage:build

@@ -29,4 +29,3 @@ class MyCustomWidget: UIView, NibOwnerLoadable {
     self.loadNibContent()
   }
 }
-

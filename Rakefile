@@ -17,12 +17,37 @@ DESTINATIONS = {
   :tvos_sim => "OS=10.1,name=Apple TV 1080p,platform=tvOS Simulator",
 }
 
+def install_pkg(pkg_url)
+  tmppath = '/tmp/' + File.basenam(pkg_url)
+  sh("curl -Lo #{tmppath} #{pkg_url}")
+  sh("sudo installer -pkg #{tmppath} -target /")
+end
+
 ## TASKS ##
 
 namespace :carthage do
+  desc "Install Carthage from pkg"
+  task :install do
+    next if system('which carthage >/dev/null')
+    install_pkg('https://github.com/Carthage/Carthage/releases/download/0.20.0/Carthage.pkg')
+  end
+
   desc "Builds the Reusable framework using Carthage"
-  task :build do |t|
+  task :build do
     run "carthage build --no-skip-current --verbose"
+  end
+end
+
+namespace :swiftlint do
+  desc "Install SwiftLint from pkg"
+  task :install do
+    next if system('which swiftlint >/dev/null')
+    install_pkg('https://github.com/realm/SwiftLint/releases/download/0.16.1/SwiftLint.pkg')
+  end
+
+  desc "Run SwiftLint on the source code"
+  task :run do
+    run('swiftlint lint --strict', xcpretty: false)
   end
 end
 
