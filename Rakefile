@@ -18,7 +18,7 @@ DESTINATIONS = {
 }
 
 def install_pkg(pkg_url)
-  tmppath = '/tmp/' + File.basenam(pkg_url)
+  tmppath = '/tmp/' + File.basename(pkg_url)
   sh("curl -Lo #{tmppath} #{pkg_url}")
   sh("sudo installer -pkg #{tmppath} -target /")
 end
