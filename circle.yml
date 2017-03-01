@@ -1,0 +1,20 @@
+machine:
+  xcode:
+    version: 8.2
+
+dependencies:
+  pre:
+    - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+    - which swiftlint || brew install swiftlint
+    # - which carthage || brew install carthage
+    - curl -sS https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash
+
+test:
+  override:
+    - rake fmk:ios
+    - rake fmk:tvos
+    - rake demo:ios
+    - rake demo:tvos
+  post:
+    - rake pod:lint
+    # - rake carthage:build
