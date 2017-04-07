@@ -39,6 +39,7 @@ This concept, called a [Mixin](http://alisoftware.github.io/swift/protocol/2015/
 * [Type-safe ViewControllers from Storyboards](#type-safe-viewcontrollers-from-storyboards)
 * [Additional tips](#additional-tips)
 * [Example project](#example-project)
+* [Talks and Articles about Reusable](#talks-and-articles-about-reusable)
 * [License](#license)
 
 
@@ -448,6 +449,13 @@ It demonstrates how `Reusable` works for:
 * `UICollectionView`'s `SupplementaryViews` (section Headers)
 * Custom `UIView` designed in a XIB (`NibOwnerLoadable`)
 
+# Talks and Articles about Reusable
+
+The concepts behind Reusable has been presented in various articles and talks:
+
+* [Using Generics to improve TableView cells](https://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/) on my blog
+* [FrenchKit'16 talk: Mixins over Inheritance](https://youtu.be/BSn4jlunn4I) (video)
+* Same talk was also given at NSSpain'16 ([slides](https://speakerdeck.com/alisoftware/mixins-over-inheritance)) and AppDevCon'17([slides](https://speakerdeck.com/alisoftware/mixins-over-inheritance-appdevcon-17))
 
 # License
 
