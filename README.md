@@ -243,7 +243,7 @@ final class NibBasedFileOwnerView: UIView, NibOwnerLoadable { /* and that's it! 
 ```
 
 > 💡 You should use the second approach if you plan to use your custom view in another XIB or Storyboard.  
-> This will allow you to just drop a UIView in a XIB/Storyboard and change its class to the class of your custom XIB-based view to use it. That custom view will then automagically load its own content from the associated XIB when instantiated by the storyboard containing it, without having to write additional code to load the content of the ustom view manually every time.
+> This will allow you to just drop a UIView in a XIB/Storyboard and change its class to the class of your custom XIB-based view to use it. That custom view will then automagically load its own content from the associated XIB when instantiated by the storyboard containing it, without having to write additional code to load the content of the custom view manually every time.
 
 ## 2. Design your view in Interface Builder
 
@@ -306,7 +306,7 @@ final class MyCustomWidget: UIView, NibOwnerLoadable {
 
 Overriding `init?(coder:)` allows your `MyCustomWidget` custom view to load its content from the associated XIB `MyCustomWidget.xib` and add it as subviews of itself.
 
-_💡 Note: it is also possible to override `init(frame:)`, in order to be able to create an instance of that view programatically and call `loadNibContent()` to fill with views if needed.
+_💡 Note: it is also possible to override `init(frame:)`, in order to be able to create an instance of that view programatically and call `loadNibContent()` to fill with views if needed._
 
 ## 3b. Instantiating a `NibLoadable` view
 
@@ -370,7 +370,7 @@ Simply call `instantiate()` on your custom class. This will automatically know w
 
 ```swift
 func presentSecondary() {
-  let vc = SecondaryVC.instantitate() // Init from the "SecondaryVC" scene of CustomVC.storyboard
+  let vc = SecondaryVC.instantiate() // Init from the "SecondaryVC" scene of CustomVC.storyboard
   self.present(vc, animated: true) {}
 }
 ```
