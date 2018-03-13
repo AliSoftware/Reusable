@@ -9,7 +9,7 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 [![CircleCI](https://circleci.com/gh/AliSoftware/Reusable/tree/master.svg?style=svg)](https://circleci.com/gh/AliSoftware/Reusable/tree/master)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 [![Version](http://cocoapod-badges.herokuapp.com/v/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
-[![Language: Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg)](https://swift.org)
+[![Language: Swift 3 & 4](https://img.shields.io/badge/Swift-3%20%26%204-orange.svg)](https://swift.org)
 
 # Requirements
 
@@ -17,6 +17,7 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 |----------------|--------------------|
 |    2.2 & 2.3   |        2.5.1       |
 |       3.0      |        3.0.0 +     |
+|       4.0      |        4.0.2 +     |
 
 # Introduction
 
