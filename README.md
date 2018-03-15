@@ -16,8 +16,10 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 |  Swift Version |  Reusable Version  |
 |----------------|--------------------|
 |    2.2 & 2.3   |        2.5.1       |
-|       3.0      |        3.0.0 +     |
+|       3.0 (†)  |        3.0.0 +     |
 |       4.0      |        4.0.2 +     |
+
+_(†) The Reusable 3.0 code also compiles with Swift 4, you'll need 4.0.2+ only if you're using Carthage for integration_
 
 # Introduction
 
