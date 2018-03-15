@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Master
+## 4.0.2
 
 * Update project to support Swift 4.  
   [@AYastrebov](https://github.com/AYastrebov)
