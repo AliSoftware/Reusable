@@ -41,15 +41,14 @@ public extension NibOwnerLoadable where Self: UIView {
     for case let view as UIView in Self.nib.instantiate(withOwner: self, options: nil) {
       view.translatesAutoresizingMaskIntoConstraints = false
       self.addSubview(view)
-      layoutAttributes.forEach { attribute in
-        self.addConstraint(NSLayoutConstraint(item: view,
-          attribute: attribute,
+      NSLayoutConstraint.activate(layoutAttributes.map { attribute in
+        NSLayoutConstraint(
+          item: view, attribute: attribute,
           relatedBy: .equal,
-          toItem: self,
-          attribute: attribute,
-          multiplier: 1,
-          constant: 0.0))
-      }
+          toItem: self, attribute: attribute,
+          multiplier: 1, constant: 0.0
+        )
+      })
     }
   }
 }
