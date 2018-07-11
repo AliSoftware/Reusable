@@ -1,5 +1,2 @@
-disabled_rules:
-  - missing_docs
-
 line_length:
   warning: 120
