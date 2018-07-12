@@ -42,7 +42,7 @@ namespace :swiftlint do
   desc "Install SwiftLint from pkg"
   task :install do
     next if system('which swiftlint >/dev/null')
-    install_pkg('https://github.com/realm/SwiftLint/releases/download/0.16.1/SwiftLint.pkg')
+    install_pkg('https://github.com/realm/SwiftLint/releases/download/0.26.0/SwiftLint.pkg')
   end
 
   desc "Run SwiftLint on the source code"

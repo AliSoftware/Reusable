@@ -1,10 +1,16 @@
 # CHANGELOG
 
+## Master
+
+* Update project to support Swift 4.2.  
+  [djbe](https://github.com/djbe)
+  [#58](https://github.com/AliSoftware/Reusable/pull/58)
+
 ## 4.0.2
 
 * Update project to support Swift 4.  
   [@AYastrebov](https://github.com/AYastrebov)
-  [#42](https://github.com/AliSoftware/Reusable/pull/54)
+  [#54](https://github.com/AliSoftware/Reusable/pull/54)
 
 * Fix typo in StoryboardBased examples.  
   [@danshevluk](https://github.com/danshevluk)
