@@ -2,6 +2,10 @@
 
 ## Master
 
+* Upgrade to CircleCI 2.  
+  [djbe](https://github.com/djbe)
+  [#60](https://github.com/AliSoftware/Reusable/pull/60)
+
 * Update project to support Swift 4.2.  
   [djbe](https://github.com/djbe)
   [#58](https://github.com/AliSoftware/Reusable/pull/58)
