@@ -1,3 +1,5 @@
+#!/usr/bin/rake
+
 ## UTILS ##
 
 def run(command, xcpretty: true)
