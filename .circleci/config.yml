@@ -40,6 +40,41 @@ defaults:
 
 version: 2
 jobs:
+  carthage-build:
+    <<: *default-config
+    steps:
+      - *prepare-storage
+      - checkout
+      - *restore-gems
+      - *install-gems
+      - *store-gems
+      - run:
+          name: Install Carthage
+          command: bundle exec rake carthage:install
+      - run:
+          name: Build
+          command: bundle exec rake carthage:build
+      - store_test_results:
+          path: /tmp/circleci-test-results
+      - *fetch-xcode-logs
+      - *store-artifacts
+
+  check-deploy:
+    <<: *default-config
+    steps:
+      - *prepare-storage
+      - checkout
+      - *restore-gems
+      - *install-gems
+      - *store-gems
+      - run:
+          name: Download podspec repo
+          command: curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+      - run:
+          name: Lint podspec
+          command: bundle exec rake pod:lint
+      - *store-artifacts
+
   lint:
     <<: *default-config
     steps:
@@ -54,6 +89,19 @@ jobs:
       - run:
           name: Lint source code
           command: bundle exec rake swiftlint:run
+      - *store-artifacts
+
+  spm-build-and-test:
+    <<: *default-config
+    steps:
+      - *prepare-storage
+      - checkout
+      - *restore-gems
+      - *install-gems
+      - *store-gems
+      - run:
+          name: Run all tests
+          command: bundle exec rake spm:test
       - *store-artifacts
 
   xcode-ios-build-and-test:
@@ -92,41 +140,6 @@ jobs:
       - store_test_results:
           path: /tmp/circleci-test-results
       - *fetch-xcode-logs
-      - *store-artifacts
-
-  carthage-build:
-    <<: *default-config
-    steps:
-      - *prepare-storage
-      - checkout
-      - *restore-gems
-      - *install-gems
-      - *store-gems
-      - run:
-          name: Install Carthage
-          command: bundle exec rake carthage:install
-      - run:
-          name: Build
-          command: bundle exec rake carthage:build
-      - store_test_results:
-          path: /tmp/circleci-test-results
-      - *fetch-xcode-logs
-      - *store-artifacts
-
-  check-deploy:
-    <<: *default-config
-    steps:
-      - *prepare-storage
-      - checkout
-      - *restore-gems
-      - *install-gems
-      - *store-gems
-      - run:
-          name: Download podspec repo
-          command: curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-      - run:
-          name: Lint podspec
-          command: bundle exec rake pod:lint
       - *store-artifacts
 
 

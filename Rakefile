@@ -40,16 +40,15 @@ namespace :carthage do
   end
 end
 
-namespace :swiftlint do
-  desc "Install SwiftLint from pkg"
-  task :install do
-    next if system('which swiftlint >/dev/null')
-    install_pkg('https://github.com/realm/SwiftLint/releases/download/0.26.0/SwiftLint.pkg')
+namespace :demo do
+  desc "Builds the ReusableDemo app for iOS using xcodebuild."
+  task :ios do |t, args|
+    xcodebuild(scheme: 'ReusableDemo iOS', sdk: 'iphonesimulator', destination: DESTINATIONS[:ios_sim])
   end
 
-  desc "Run SwiftLint on the source code"
-  task :run do
-    run('swiftlint lint --strict', xcpretty: false)
+  desc "Builds the ReusableDemo app for tvOS using xcodebuild."
+  task :tvos do |t, args|
+    xcodebuild(scheme: 'ReusableDemo tvOS', sdk: 'appletvsimulator', destination: DESTINATIONS[:tvos_sim])
   end
 end
 
@@ -65,23 +64,38 @@ namespace :fmk do
   end
 end
 
-namespace :demo do
-  desc "Builds the ReusableDemo app for iOS using xcodebuild."
-  task :ios do |t, args|
-    xcodebuild(scheme: 'ReusableDemo iOS', sdk: 'iphonesimulator', destination: DESTINATIONS[:ios_sim])
-  end
-
-  desc "Builds the ReusableDemo app for tvOS using xcodebuild."
-  task :tvos do |t, args|
-    xcodebuild(scheme: 'ReusableDemo tvOS', sdk: 'appletvsimulator', destination: DESTINATIONS[:tvos_sim])
-  end
-end
-
-# TODO: "namespace :test" once we have Unit Tests
-
 namespace :pod do
   desc "Lints the Reusable.podspec"
   task :lint do |t|
     run("pod lib lint --allow-warnings --quick", xcpretty: false)
   end
 end
+
+namespace :spm do
+  desc 'Build using SPM'
+  task :build do |task|
+    Utils.print_header 'Compile using SPM'
+    Utils.run('swift build', task, xcrun: true)
+  end
+
+  desc 'Run SPM Unit Tests'
+  task :test => :build do |task|
+    Utils.print_header 'Run the unit tests using SPM'
+    Utils.run('swift test', task, xcrun: true)
+  end
+end
+
+namespace :swiftlint do
+  desc "Install SwiftLint from pkg"
+  task :install do
+    next if system('which swiftlint >/dev/null')
+    install_pkg('https://github.com/realm/SwiftLint/releases/download/0.26.0/SwiftLint.pkg')
+  end
+
+  desc "Run SwiftLint on the source code"
+  task :run do
+    run('swiftlint lint --strict', xcpretty: false)
+  end
+end
+
+# TODO: "namespace :test" once we have Unit Tests
