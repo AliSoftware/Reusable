@@ -1,0 +1,153 @@
+defaults:
+  - &default-config
+    parallelism: 1
+    environment:
+      CIRCLE_ARTIFACTS: /tmp/circleci-artifacts
+      CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
+      BUNDLE_PATH: vendor/bundle
+    macos:
+      xcode: "9.3.0"
+    shell: /bin/bash --login -eo pipefail
+  - &prepare-storage
+    run:
+      name: Create directories for artifacts and reports
+      command: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS
+  - &restore-gems
+    restore_cache:
+      keys:
+        - gems-{{ checksum "Gemfile.lock" }}
+        - gems-
+  - &install-gems
+    run:
+      name: Bundle install
+      command: bundle check || bundle install
+      environment:
+        BUNDLE_JOBS: 4
+        BUNDLE_RETRY: 3
+  - &store-gems
+    save_cache:
+      key: gems-{{ checksum "Gemfile.lock" }}
+      paths:
+        - vendor/bundle
+  - &fetch-xcode-logs
+    run:
+      name: Getting Xcode activity logs
+      command: find $HOME/Library/Developer/Xcode/DerivedData -name '*.xcactivitylog' -exec cp {} $CIRCLE_ARTIFACTS/xcactivitylog \; || true
+  - &store-artifacts
+    store_artifacts:
+      path: /tmp/circleci-artifacts
+
+
+version: 2
+jobs:
+  lint:
+    <<: *default-config
+    steps:
+      - *prepare-storage
+      - checkout
+      - *restore-gems
+      - *install-gems
+      - *store-gems
+      - run:
+          name: Install SwiftLint
+          command: bundle exec rake swiftlint:install
+      - run:
+          name: Lint source code
+          command: bundle exec rake swiftlint:run
+      - *store-artifacts
+
+  xcode-ios-build-and-test:
+    <<: *default-config
+    steps:
+      - *prepare-storage
+      - checkout
+      - *restore-gems
+      - *install-gems
+      - *store-gems
+      - run:
+          name: Build Framework
+          command: bundle exec rake fmk:ios
+      - run:
+          name: Run Tests
+          command: bundle exec rake demo:ios
+      - store_test_results:
+          path: /tmp/circleci-test-results
+      - *fetch-xcode-logs
+      - *store-artifacts
+
+  xcode-tvos-build-and-test:
+    <<: *default-config
+    steps:
+      - *prepare-storage
+      - checkout
+      - *restore-gems
+      - *install-gems
+      - *store-gems
+      - run:
+          name: Build Framework
+          command: bundle exec rake fmk:tvos
+      - run:
+          name: Run Tests
+          command: bundle exec rake demo:tvos
+      - store_test_results:
+          path: /tmp/circleci-test-results
+      - *fetch-xcode-logs
+      - *store-artifacts
+
+  carthage-build:
+    <<: *default-config
+    steps:
+      - *prepare-storage
+      - checkout
+      - *restore-gems
+      - *install-gems
+      - *store-gems
+      - run:
+          name: Install Carthage
+          command: bundle exec rake carthage:install
+      - run:
+          name: Build
+          command: bundle exec rake carthage:build
+      - store_test_results:
+          path: /tmp/circleci-test-results
+      - *fetch-xcode-logs
+      - *store-artifacts
+
+  check-deploy:
+    <<: *default-config
+    steps:
+      - *prepare-storage
+      - checkout
+      - *restore-gems
+      - *install-gems
+      - *store-gems
+      - run:
+          name: Download podspec repo
+          command: curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+      - run:
+          name: Lint podspec
+          command: bundle exec rake pod:lint
+      - *store-artifacts
+
+
+workflows:
+  version: 2
+  lint-buildandtest-checkdeploy:
+    jobs:
+      - lint
+      - xcode-ios-build-and-test:
+          requires:
+            - lint
+      - xcode-tvos-build-and-test:
+          requires:
+            - lint
+      - carthage-build:
+          requires:
+            - lint
+            - xcode-ios-build-and-test
+            - xcode-tvos-build-and-test
+      - check-deploy:
+          requires:
+            - lint
+            - xcode-ios-build-and-test
+            - xcode-tvos-build-and-test
