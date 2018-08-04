@@ -16,29 +16,44 @@ final class TableViewController: UITableViewController {
 
     tableView.register(cellType: MySimpleColorCell.self)
     tableView.register(cellType: MyXIBTextCell.self)
-    tableView.register(cellType: MyXIBInfoCell.self)
+
+    /* Since MyXIBInfoCell is marked as conforming to AutoRegistering,
+       there's no need to register this type ahead of time */
+    // tableView.register(cellType: MyXIBInfoCell.self)
 
     /* No need to register this one, the UIStoryboard already auto-register its cells */
-//    tableView.registerReusableCell(MyStoryBoardIndexPathCell)
+    // tableView.registerReusableCell(MyStoryBoardIndexPathCell)
   }
 
   override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return MyHeaderTableView.height
+    switch section {
+    case 0:
+      return MyTableViewHeader.height
+    default:
+      return MyAutoRegisterTableViewHeader.height
+    }
   }
 
   override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    let frame = CGRect(
-      x: 0,
-      y: 0,
-      width: tableView.bounds.size.width,
-      height: self.tableView(tableView, heightForHeaderInSection: section)
-    )
-    // See the overridden `MyHeaderTableView.init(frame:)` initializer, which
-    // automatically loads the view content from its nib using loadNibContent()
-    let view = MyHeaderTableView(frame: frame)
-
-    view.fillForSection(section)
-    return view
+    switch section {
+    case 0:
+      let frame = CGRect(
+        x: 0,
+        y: 0,
+        width: tableView.bounds.size.width,
+        height: self.tableView(tableView, heightForHeaderInSection: section)
+      )
+      // See the overridden `MyHeaderTableView.init(frame:)` initializer, which
+      // automatically loads the view content from its nib using loadNibContent()
+      let view = MyTableViewHeader(frame: frame)
+      view.fillForSection(section)
+      return view
+    default:
+      // This header class is set to auto-register itself
+      let view: MyAutoRegisterTableViewHeader = tableView.dequeueReusableHeaderFooterView()
+      view.fillForSection(section)
+      return view
+    }
   }
 
   override func numberOfSections(in tableView: UITableView) -> Int {
@@ -61,6 +76,7 @@ final class TableViewController: UITableViewController {
       textCell.fill("{section \(indexPath.section), row \(indexPath.row)}")
       return textCell
     case 2:
+      // Note that auto-register is enabled here
       let infoCell = tableView.dequeueReusableCell(for: indexPath) as MyXIBInfoCell
       infoCell.fill("InfoCell #\(indexPath.row)", info: "Info #\(indexPath.row)", details: "Details #\(indexPath.row)")
       return infoCell

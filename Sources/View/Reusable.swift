@@ -23,6 +23,13 @@ public protocol Reusable: class {
 /// to be able to dequeue them in a type-safe manner
 public typealias NibReusable = Reusable & NibLoadable
 
+/// Make your `UITableViewCell`, `UITableViewHeaderFooterView`, and 'UICollectionViewCell'
+/// subclasses conform to this protocol when you want to avoid having to call
+/// register(cellType:) explicitly on your cell classes before being able
+/// to dequeue them. Cell types conforming to this will auto-register the
+/// cell if not registered already when you try to dequeue one for the first time.
+public protocol AutoRegistering {}
+
 // MARK: - Default implementation
 
 public extension Reusable {

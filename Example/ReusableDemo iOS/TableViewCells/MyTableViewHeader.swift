@@ -15,7 +15,7 @@ import Reusable
  *
  * That's why it's annotated with the `NibOwnerLoadable` protocol.
  */
-final class MyHeaderTableView: UIView, NibOwnerLoadable {
+final class MyTableViewHeader: UIView, NibOwnerLoadable {
 
   @IBOutlet private weak var titleLabel: UILabel!
   static let height: CGFloat = 55
@@ -30,6 +30,6 @@ final class MyHeaderTableView: UIView, NibOwnerLoadable {
   }
 
   func fillForSection(_ section: Int) {
-    self.titleLabel.text = "Header Section #\(section)"
+    self.titleLabel.text = "Header Section #\(section) (manual load)"
   }
 }

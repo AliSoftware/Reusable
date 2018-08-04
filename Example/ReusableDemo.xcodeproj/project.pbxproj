@@ -35,11 +35,13 @@
 		37E3FC761E55CDD8000A7436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC751E55CDD8000A7436 /* Assets.xcassets */; };
 		37E3FC7E1E55D056000A7436 /* MyCustomWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E3FC7D1E55D056000A7436 /* MyCustomWidget.swift */; };
 		37E3FC801E55D08C000A7436 /* MyCustomWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC7F1E55D08C000A7436 /* MyCustomWidget.xib */; };
-		3BC2191F1CFC259F003BE78C /* MyHeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */; };
-		3BC219201CFC259F003BE78C /* MyHeaderTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */; };
+		3BC2191F1CFC259F003BE78C /* MyTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2191D1CFC259F003BE78C /* MyTableViewHeader.swift */; };
+		3BC219201CFC259F003BE78C /* MyTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2191E1CFC259F003BE78C /* MyTableViewHeader.xib */; };
 		47EE563C1D66155100AD3E4D /* MyCustomWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */; };
 		47EE563E1D66155D00AD3E4D /* MyCustomWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */; };
 		73E86102FC28DA0699B75437 /* Pods_ReusableDemo_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2606E6E047118D562E70F0CF /* Pods_ReusableDemo_tvOS.framework */; };
+		B818B06E2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818B06C2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.swift */; };
+		B818B06F2119BE8700D0BF37 /* MyAutoRegisterTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = B818B06D2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,12 +80,14 @@
 		37E3FC771E55CDD8000A7436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37E3FC7D1E55D056000A7436 /* MyCustomWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomWidget.swift; sourceTree = "<group>"; };
 		37E3FC7F1E55D08C000A7436 /* MyCustomWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomWidget.xib; sourceTree = "<group>"; };
-		3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHeaderTableView.swift; sourceTree = "<group>"; };
-		3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyHeaderTableView.xib; sourceTree = "<group>"; };
+		3BC2191D1CFC259F003BE78C /* MyTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewHeader.swift; sourceTree = "<group>"; };
+		3BC2191E1CFC259F003BE78C /* MyTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewHeader.xib; sourceTree = "<group>"; };
 		47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomWidget.swift; sourceTree = "<group>"; };
 		47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomWidget.xib; sourceTree = "<group>"; };
 		80A8538E60254C825B7D505B /* Pods-ReusableDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		868A47776F0B74DD17857FFE /* Pods_ReusableDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B818B06C2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAutoRegisterTableViewHeader.swift; sourceTree = "<group>"; };
+		B818B06D2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAutoRegisterTableViewHeader.xib; sourceTree = "<group>"; };
 		CFC3794861C2D883C20E9AC8 /* Pods-ReusableDemo iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E7E0B2333D96C0FED6D45DD1 /* Pods-ReusableDemo tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		FB77CDB068583366F960D03D /* Pods-ReusableDemo iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,8 +175,10 @@
 		09B3461F1C4ED34F00BA041F /* TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */,
-				3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */,
+				3BC2191D1CFC259F003BE78C /* MyTableViewHeader.swift */,
+				3BC2191E1CFC259F003BE78C /* MyTableViewHeader.xib */,
+				B818B06C2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.swift */,
+				B818B06D2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.xib */,
 				09B346201C4ED39700BA041F /* MyXIBTextCell.swift */,
 				09B346211C4ED39700BA041F /* MyXIBTextCell.xib */,
 				09B346261C4ED51600BA041F /* MyXIBInfoCell.swift */,
@@ -347,9 +353,10 @@
 				47EE563E1D66155D00AD3E4D /* MyCustomWidget.xib in Resources */,
 				09441AE21D32A0390029B8A6 /* InfoViewController.storyboard in Resources */,
 				09B346141C4ED26F00BA041F /* Assets.xcassets in Resources */,
+				B818B06F2119BE8700D0BF37 /* MyAutoRegisterTableViewHeader.xib in Resources */,
 				09B346251C4ED4CE00BA041F /* Default-568h@2x.png in Resources */,
 				09B346121C4ED26F00BA041F /* Main.storyboard in Resources */,
-				3BC219201CFC259F003BE78C /* MyHeaderTableView.xib in Resources */,
+				3BC219201CFC259F003BE78C /* MyTableViewHeader.xib in Resources */,
 				09B346421C4EF71900BA041F /* MyXIBIndexSquaceCell.xib in Resources */,
 				09B346291C4ED51600BA041F /* MyXIBInfoCell.xib in Resources */,
 			);
@@ -496,13 +503,14 @@
 				09B346411C4EF71900BA041F /* MyXIBIndexSquaceCell.swift in Sources */,
 				09B346341C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift in Sources */,
 				09B346221C4ED39700BA041F /* MyXIBTextCell.swift in Sources */,
+				B818B06E2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.swift in Sources */,
 				47EE563C1D66155100AD3E4D /* MyCustomWidget.swift in Sources */,
 				09B3463C1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift in Sources */,
 				09B3463E1C4EF4A400BA041F /* CollectionViewController.swift in Sources */,
 				09B3460F1C4ED26F00BA041F /* TableViewController.swift in Sources */,
 				09441AE41D32A0700029B8A6 /* InfoDetailViewController.swift in Sources */,
 				09B3460D1C4ED26F00BA041F /* AppDelegate.swift in Sources */,
-				3BC2191F1CFC259F003BE78C /* MyHeaderTableView.swift in Sources */,
+				3BC2191F1CFC259F003BE78C /* MyTableViewHeader.swift in Sources */,
 				09441AE61D32A07D0029B8A6 /* InfoViewController.swift in Sources */,
 				09B346281C4ED51600BA041F /* MyXIBInfoCell.swift in Sources */,
 				09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */,

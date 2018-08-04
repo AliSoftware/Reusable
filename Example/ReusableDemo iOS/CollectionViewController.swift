@@ -15,8 +15,12 @@ final class CollectionViewController: UICollectionViewController {
     guard let collectionView = self.collectionView else { return }
 
     // Register cell classes
-    collectionView.register(cellType: MyColorSquareCell.self)
     collectionView.register(cellType: MyXIBIndexSquaceCell.self)
+
+    /* Since MyColorSquareCell is marked as conforming to AutoRegistering,
+     there's no need to register this type ahead of time */
+    //collectionView.register(cellType: MyColorSquareCell.self)
+
     // No need to register this one, the UIStoryboard already auto-register its cells
     //    self.collectionView.registerReusableCell(MyStoryBoardIndexPathCell)
 
