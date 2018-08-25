@@ -264,7 +264,6 @@
 				09B346061C4ED26F00BA041F /* Frameworks */,
 				09B346071C4ED26F00BA041F /* Resources */,
 				D01516303907BB14A4BDD69A /* [CP] Embed Pods Frameworks */,
-				B74A5D9CF37846C09D87FA1B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,7 +283,6 @@
 				37E3FC691E55CDD8000A7436 /* Frameworks */,
 				37E3FC6A1E55CDD8000A7436 /* Resources */,
 				EC45F6CEBD45B4A8F3B56EEA /* [CP] Embed Pods Frameworks */,
-				0F3B4F4C64FDE911B54BB04B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -383,21 +381,6 @@
 			shellScript = "if which swiftlint; then\n  swiftlint\nelse\n  echo \"warning: Install SwiftLint to ensure the coding conventions are respected on this project.\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		0F3B4F4C64FDE911B54BB04B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8D810F689ED55C59DF40EA88 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,21 +415,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B74A5D9CF37846C09D87FA1B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D01516303907BB14A4BDD69A /* [CP] Embed Pods Frameworks */ = {
