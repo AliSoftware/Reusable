@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Master
+
+* Only allowing the use of app extension API so using the library in an app extension does not produce a warning.    
+  [igorkulman](https://github.com/igorkulman)
+  [#70](https://github.com/AliSoftware/Reusable/pull/70)
+
 ## 4.0.3
 
 * Upgrade to CircleCI 2.  
