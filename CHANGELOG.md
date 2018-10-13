@@ -2,6 +2,10 @@
 
 ## 4.0.3
 
+* Only allowing the use of app extension API so using the library in an app extension does not produce a warning.    
+  [igorkulman](https://github.com/igorkulman)
+  [#70](https://github.com/AliSoftware/Reusable/pull/70)
+
 * Upgrade to CircleCI 2.  
   [djbe](https://github.com/djbe)
   [#60](https://github.com/AliSoftware/Reusable/pull/60)
