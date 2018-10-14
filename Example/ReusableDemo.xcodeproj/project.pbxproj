@@ -29,25 +29,24 @@
 		09B346421C4EF71900BA041F /* MyXIBIndexSquaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346401C4EF71900BA041F /* MyXIBIndexSquaceCell.xib */; };
 		09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */; };
 		09B346461C4EF8F600BA041F /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */; };
-		235A8B00726D55D8B0B0A6F6 /* Pods_ReusableDemo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3484E7E7CA287D354747565F /* Pods_ReusableDemo_iOS.framework */; };
 		37E3FC6F1E55CDD8000A7436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E3FC6E1E55CDD8000A7436 /* AppDelegate.swift */; };
 		37E3FC741E55CDD8000A7436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC721E55CDD8000A7436 /* Main.storyboard */; };
 		37E3FC761E55CDD8000A7436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC751E55CDD8000A7436 /* Assets.xcassets */; };
 		37E3FC7E1E55D056000A7436 /* MyCustomWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E3FC7D1E55D056000A7436 /* MyCustomWidget.swift */; };
 		37E3FC801E55D08C000A7436 /* MyCustomWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC7F1E55D08C000A7436 /* MyCustomWidget.xib */; };
-		3BC2191F1CFC259F003BE78C /* MyTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2191D1CFC259F003BE78C /* MyTableViewHeader.swift */; };
-		3BC219201CFC259F003BE78C /* MyTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2191E1CFC259F003BE78C /* MyTableViewHeader.xib */; };
+		3BC2191F1CFC259F003BE78C /* MyHeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */; };
+		3BC219201CFC259F003BE78C /* MyHeaderTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */; };
 		47EE563C1D66155100AD3E4D /* MyCustomWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */; };
 		47EE563E1D66155D00AD3E4D /* MyCustomWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */; };
-		73E86102FC28DA0699B75437 /* Pods_ReusableDemo_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2606E6E047118D562E70F0CF /* Pods_ReusableDemo_tvOS.framework */; };
-		B818B06E2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818B06C2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.swift */; };
-		B818B06F2119BE8700D0BF37 /* MyAutoRegisterTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = B818B06D2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.xib */; };
+		9FA94C08BEF301B3E3BDC872 /* Pods_ReusableDemo_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2D22CAD76679D19CD171C1 /* Pods_ReusableDemo_tvOS.framework */; };
+		E5B86DD32EF6226743A8E042 /* Pods_ReusableDemo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21AA4AB6E6CEF7985FF09B /* Pods_ReusableDemo_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09441AE11D32A0390029B8A6 /* InfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfoViewController.storyboard; sourceTree = "<group>"; };
 		09441AE31D32A0700029B8A6 /* InfoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailViewController.swift; sourceTree = "<group>"; };
 		09441AE51D32A07D0029B8A6 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		096A3A284FE1BC6262AC3EB7 /* Pods-ReusableDemo iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		09B346091C4ED26F00BA041F /* ReusableDemo iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReusableDemo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B3460C1C4ED26F00BA041F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09B3460E1C4ED26F00BA041F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -69,10 +68,6 @@
 		09B346401C4EF71900BA041F /* MyXIBIndexSquaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyXIBIndexSquaceCell.xib; sourceTree = "<group>"; };
 		09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
-		0A31F38C6BBC1AC408219D78 /* Pods-ReusableDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo.release.xcconfig"; sourceTree = "<group>"; };
-		2606E6E047118D562E70F0CF /* Pods_ReusableDemo_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F33A2EB6B444F6F51004271 /* Pods-ReusableDemo tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		3484E7E7CA287D354747565F /* Pods_ReusableDemo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E3FC6C1E55CDD8000A7436 /* ReusableDemo tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReusableDemo tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E3FC6E1E55CDD8000A7436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37E3FC731E55CDD8000A7436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,17 +75,15 @@
 		37E3FC771E55CDD8000A7436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37E3FC7D1E55D056000A7436 /* MyCustomWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomWidget.swift; sourceTree = "<group>"; };
 		37E3FC7F1E55D08C000A7436 /* MyCustomWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomWidget.xib; sourceTree = "<group>"; };
-		3BC2191D1CFC259F003BE78C /* MyTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewHeader.swift; sourceTree = "<group>"; };
-		3BC2191E1CFC259F003BE78C /* MyTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewHeader.xib; sourceTree = "<group>"; };
+		3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHeaderTableView.swift; sourceTree = "<group>"; };
+		3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyHeaderTableView.xib; sourceTree = "<group>"; };
+		4033B8B5AA57F6CB717FCF24 /* Pods-ReusableDemo iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS.release.xcconfig"; sourceTree = "<group>"; };
 		47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomWidget.swift; sourceTree = "<group>"; };
 		47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomWidget.xib; sourceTree = "<group>"; };
-		80A8538E60254C825B7D505B /* Pods-ReusableDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo/Pods-ReusableDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		868A47776F0B74DD17857FFE /* Pods_ReusableDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B818B06C2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAutoRegisterTableViewHeader.swift; sourceTree = "<group>"; };
-		B818B06D2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAutoRegisterTableViewHeader.xib; sourceTree = "<group>"; };
-		CFC3794861C2D883C20E9AC8 /* Pods-ReusableDemo iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		E7E0B2333D96C0FED6D45DD1 /* Pods-ReusableDemo tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		FB77CDB068583366F960D03D /* Pods-ReusableDemo iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS.release.xcconfig"; sourceTree = "<group>"; };
+		4F2D22CAD76679D19CD171C1 /* Pods_ReusableDemo_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F85C1AE1D6502CAE2A6E6AC /* Pods-ReusableDemo tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D8F45C0C4C06E7B1B16AC822 /* Pods-ReusableDemo tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		FF21AA4AB6E6CEF7985FF09B /* Pods_ReusableDemo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				235A8B00726D55D8B0B0A6F6 /* Pods_ReusableDemo_iOS.framework in Frameworks */,
+				E5B86DD32EF6226743A8E042 /* Pods_ReusableDemo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73E86102FC28DA0699B75437 /* Pods_ReusableDemo_tvOS.framework in Frameworks */,
+				9FA94C08BEF301B3E3BDC872 /* Pods_ReusableDemo_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,8 +122,8 @@
 				09B3460B1C4ED26F00BA041F /* ReusableDemo iOS */,
 				37E3FC6D1E55CDD8000A7436 /* ReusableDemo tvOS */,
 				09B3460A1C4ED26F00BA041F /* Products */,
-				FA987BC7BD1F7BF412BF7FC8 /* Pods */,
-				672CCEE0D6AB1F8BD11B2F97 /* Frameworks */,
+				2CBDDE0F80A0601775F539F9 /* Pods */,
+				45D5555774BEA3B5DEB34A07 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -175,10 +168,8 @@
 		09B3461F1C4ED34F00BA041F /* TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3BC2191D1CFC259F003BE78C /* MyTableViewHeader.swift */,
-				3BC2191E1CFC259F003BE78C /* MyTableViewHeader.xib */,
-				B818B06C2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.swift */,
-				B818B06D2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.xib */,
+				3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */,
+				3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */,
 				09B346201C4ED39700BA041F /* MyXIBTextCell.swift */,
 				09B346211C4ED39700BA041F /* MyXIBTextCell.xib */,
 				09B346261C4ED51600BA041F /* MyXIBInfoCell.swift */,
@@ -203,6 +194,17 @@
 			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
+		2CBDDE0F80A0601775F539F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				096A3A284FE1BC6262AC3EB7 /* Pods-ReusableDemo iOS.debug.xcconfig */,
+				4033B8B5AA57F6CB717FCF24 /* Pods-ReusableDemo iOS.release.xcconfig */,
+				4F85C1AE1D6502CAE2A6E6AC /* Pods-ReusableDemo tvOS.debug.xcconfig */,
+				D8F45C0C4C06E7B1B16AC822 /* Pods-ReusableDemo tvOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		37E3FC6D1E55CDD8000A7436 /* ReusableDemo tvOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +226,15 @@
 			name = "Custom Widget";
 			sourceTree = "<group>";
 		};
+		45D5555774BEA3B5DEB34A07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF21AA4AB6E6CEF7985FF09B /* Pods_ReusableDemo_iOS.framework */,
+				4F2D22CAD76679D19CD171C1 /* Pods_ReusableDemo_tvOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		47EE56381D6614FA00AD3E4D /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,29 +245,6 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
-		672CCEE0D6AB1F8BD11B2F97 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				868A47776F0B74DD17857FFE /* Pods_ReusableDemo.framework */,
-				2606E6E047118D562E70F0CF /* Pods_ReusableDemo_tvOS.framework */,
-				3484E7E7CA287D354747565F /* Pods_ReusableDemo_iOS.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FA987BC7BD1F7BF412BF7FC8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				80A8538E60254C825B7D505B /* Pods-ReusableDemo.debug.xcconfig */,
-				0A31F38C6BBC1AC408219D78 /* Pods-ReusableDemo.release.xcconfig */,
-				E7E0B2333D96C0FED6D45DD1 /* Pods-ReusableDemo tvOS.debug.xcconfig */,
-				2F33A2EB6B444F6F51004271 /* Pods-ReusableDemo tvOS.release.xcconfig */,
-				CFC3794861C2D883C20E9AC8 /* Pods-ReusableDemo iOS.debug.xcconfig */,
-				FB77CDB068583366F960D03D /* Pods-ReusableDemo iOS.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,13 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09B3461B1C4ED26F00BA041F /* Build configuration list for PBXNativeTarget "ReusableDemo iOS" */;
 			buildPhases = (
-				8D810F689ED55C59DF40EA88 /* [CP] Check Pods Manifest.lock */,
+				EEF03881871BAFB249B4B8A0 /* [CP] Check Pods Manifest.lock */,
 				09B346051C4ED26F00BA041F /* Sources */,
 				091AEA061C5ED6500094EA6C /* ⚠️ SwiftLint */,
 				09B346061C4ED26F00BA041F /* Frameworks */,
 				09B346071C4ED26F00BA041F /* Resources */,
-				D01516303907BB14A4BDD69A /* [CP] Embed Pods Frameworks */,
-				B74A5D9CF37846C09D87FA1B /* [CP] Copy Pods Resources */,
+				19189C1071BBDCAFA9F6F31F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,12 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37E3FC7A1E55CDD8000A7436 /* Build configuration list for PBXNativeTarget "ReusableDemo tvOS" */;
 			buildPhases = (
-				925AAB76FDDE3B5F2C79DCA4 /* [CP] Check Pods Manifest.lock */,
+				81032A0CDCE1D819A5F1DE9D /* [CP] Check Pods Manifest.lock */,
 				37E3FC681E55CDD8000A7436 /* Sources */,
 				37E3FC691E55CDD8000A7436 /* Frameworks */,
 				37E3FC6A1E55CDD8000A7436 /* Resources */,
-				EC45F6CEBD45B4A8F3B56EEA /* [CP] Embed Pods Frameworks */,
-				0F3B4F4C64FDE911B54BB04B /* [CP] Copy Pods Resources */,
+				E678DC8F1E6A6B65D56E323D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,10 +339,9 @@
 				47EE563E1D66155D00AD3E4D /* MyCustomWidget.xib in Resources */,
 				09441AE21D32A0390029B8A6 /* InfoViewController.storyboard in Resources */,
 				09B346141C4ED26F00BA041F /* Assets.xcassets in Resources */,
-				B818B06F2119BE8700D0BF37 /* MyAutoRegisterTableViewHeader.xib in Resources */,
 				09B346251C4ED4CE00BA041F /* Default-568h@2x.png in Resources */,
 				09B346121C4ED26F00BA041F /* Main.storyboard in Resources */,
-				3BC219201CFC259F003BE78C /* MyTableViewHeader.xib in Resources */,
+				3BC219201CFC259F003BE78C /* MyHeaderTableView.xib in Resources */,
 				09B346421C4EF71900BA041F /* MyXIBIndexSquaceCell.xib in Resources */,
 				09B346291C4ED51600BA041F /* MyXIBInfoCell.xib in Resources */,
 			);
@@ -390,82 +375,20 @@
 			shellScript = "if which swiftlint; then\n  swiftlint\nelse\n  echo \"warning: Install SwiftLint to ensure the coding conventions are respected on this project.\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		0F3B4F4C64FDE911B54BB04B /* [CP] Copy Pods Resources */ = {
+		19189C1071BBDCAFA9F6F31F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D810F689ED55C59DF40EA88 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ReusableDemo iOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		925AAB76FDDE3B5F2C79DCA4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ReusableDemo tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B74A5D9CF37846C09D87FA1B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D01516303907BB14A4BDD69A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Reusable-iOS/Reusable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 			);
@@ -474,22 +397,70 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EC45F6CEBD45B4A8F3B56EEA /* [CP] Embed Pods Frameworks */ = {
+		81032A0CDCE1D819A5F1DE9D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReusableDemo tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E678DC8F1E6A6B65D56E323D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Reusable-tvOS/Reusable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEF03881871BAFB249B4B8A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReusableDemo iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -503,14 +474,13 @@
 				09B346411C4EF71900BA041F /* MyXIBIndexSquaceCell.swift in Sources */,
 				09B346341C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift in Sources */,
 				09B346221C4ED39700BA041F /* MyXIBTextCell.swift in Sources */,
-				B818B06E2119BCB100D0BF37 /* MyAutoRegisterTableViewHeader.swift in Sources */,
 				47EE563C1D66155100AD3E4D /* MyCustomWidget.swift in Sources */,
 				09B3463C1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift in Sources */,
 				09B3463E1C4EF4A400BA041F /* CollectionViewController.swift in Sources */,
 				09B3460F1C4ED26F00BA041F /* TableViewController.swift in Sources */,
 				09441AE41D32A0700029B8A6 /* InfoDetailViewController.swift in Sources */,
 				09B3460D1C4ED26F00BA041F /* AppDelegate.swift in Sources */,
-				3BC2191F1CFC259F003BE78C /* MyTableViewHeader.swift in Sources */,
+				3BC2191F1CFC259F003BE78C /* MyHeaderTableView.swift in Sources */,
 				09441AE61D32A07D0029B8A6 /* InfoViewController.swift in Sources */,
 				09B346281C4ED51600BA041F /* MyXIBInfoCell.swift in Sources */,
 				09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */,
@@ -665,7 +635,7 @@
 		};
 		09B3461C1C4ED26F00BA041F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFC3794861C2D883C20E9AC8 /* Pods-ReusableDemo iOS.debug.xcconfig */;
+			baseConfigurationReference = 096A3A284FE1BC6262AC3EB7 /* Pods-ReusableDemo iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ReusableDemo iOS/Info.plist";
@@ -679,7 +649,7 @@
 		};
 		09B3461D1C4ED26F00BA041F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB77CDB068583366F960D03D /* Pods-ReusableDemo iOS.release.xcconfig */;
+			baseConfigurationReference = 4033B8B5AA57F6CB717FCF24 /* Pods-ReusableDemo iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ReusableDemo iOS/Info.plist";
@@ -693,7 +663,7 @@
 		};
 		37E3FC781E55CDD8000A7436 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7E0B2333D96C0FED6D45DD1 /* Pods-ReusableDemo tvOS.debug.xcconfig */;
+			baseConfigurationReference = 4F85C1AE1D6502CAE2A6E6AC /* Pods-ReusableDemo tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -714,7 +684,7 @@
 		};
 		37E3FC791E55CDD8000A7436 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F33A2EB6B444F6F51004271 /* Pods-ReusableDemo tvOS.release.xcconfig */;
+			baseConfigurationReference = D8F45C0C4C06E7B1B16AC822 /* Pods-ReusableDemo tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
