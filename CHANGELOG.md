@@ -2,7 +2,9 @@
 
 ## Master
 
-_No new commits since latest release yet_
+* Add support for automatic cell registration by conforming to 'AutoRegistering' (table view / collection view).  
+[@apptekstudios](https://github.com/apptekstudios)
+[#63](https://github.com/AliSoftware/Reusable/pull/63)
 
 ## 4.0.4
 
