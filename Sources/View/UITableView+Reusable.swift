@@ -214,6 +214,7 @@ public extension UITableView {
       )
   }
 
+  private
   final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(_ viewType: T.Type = T.self,
                                                                              registerClosure: (() -> Void)?) -> T
     where T: Reusable {

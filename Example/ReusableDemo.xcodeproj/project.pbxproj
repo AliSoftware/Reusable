@@ -34,11 +34,13 @@
 		37E3FC761E55CDD8000A7436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC751E55CDD8000A7436 /* Assets.xcassets */; };
 		37E3FC7E1E55D056000A7436 /* MyCustomWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E3FC7D1E55D056000A7436 /* MyCustomWidget.swift */; };
 		37E3FC801E55D08C000A7436 /* MyCustomWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC7F1E55D08C000A7436 /* MyCustomWidget.xib */; };
-		3BC2191F1CFC259F003BE78C /* MyHeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */; };
-		3BC219201CFC259F003BE78C /* MyHeaderTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */; };
 		47EE563C1D66155100AD3E4D /* MyCustomWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */; };
 		47EE563E1D66155D00AD3E4D /* MyCustomWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */; };
 		9FA94C08BEF301B3E3BDC872 /* Pods_ReusableDemo_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2D22CAD76679D19CD171C1 /* Pods_ReusableDemo_tvOS.framework */; };
+		B8CF34C82173864C0066D6BF /* MyTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CF34C62173864C0066D6BF /* MyTableViewHeader.swift */; };
+		B8CF34C92173864C0066D6BF /* MyTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF34C72173864C0066D6BF /* MyTableViewHeader.xib */; };
+		B8CF34CC217386680066D6BF /* MyTableViewHeaderAutoRegistering.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CF34CA217386680066D6BF /* MyTableViewHeaderAutoRegistering.swift */; };
+		B8CF34CD217386680066D6BF /* MyTableViewHeaderAutoRegistering.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF34CB217386680066D6BF /* MyTableViewHeaderAutoRegistering.xib */; };
 		E5B86DD32EF6226743A8E042 /* Pods_ReusableDemo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF21AA4AB6E6CEF7985FF09B /* Pods_ReusableDemo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,13 +77,15 @@
 		37E3FC771E55CDD8000A7436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37E3FC7D1E55D056000A7436 /* MyCustomWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomWidget.swift; sourceTree = "<group>"; };
 		37E3FC7F1E55D08C000A7436 /* MyCustomWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomWidget.xib; sourceTree = "<group>"; };
-		3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHeaderTableView.swift; sourceTree = "<group>"; };
-		3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyHeaderTableView.xib; sourceTree = "<group>"; };
 		4033B8B5AA57F6CB717FCF24 /* Pods-ReusableDemo iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS.release.xcconfig"; sourceTree = "<group>"; };
 		47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomWidget.swift; sourceTree = "<group>"; };
 		47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomWidget.xib; sourceTree = "<group>"; };
 		4F2D22CAD76679D19CD171C1 /* Pods_ReusableDemo_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F85C1AE1D6502CAE2A6E6AC /* Pods-ReusableDemo tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B8CF34C62173864C0066D6BF /* MyTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewHeader.swift; sourceTree = "<group>"; };
+		B8CF34C72173864C0066D6BF /* MyTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewHeader.xib; sourceTree = "<group>"; };
+		B8CF34CA217386680066D6BF /* MyTableViewHeaderAutoRegistering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewHeaderAutoRegistering.swift; sourceTree = "<group>"; };
+		B8CF34CB217386680066D6BF /* MyTableViewHeaderAutoRegistering.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewHeaderAutoRegistering.xib; sourceTree = "<group>"; };
 		D8F45C0C4C06E7B1B16AC822 /* Pods-ReusableDemo tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		FF21AA4AB6E6CEF7985FF09B /* Pods_ReusableDemo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReusableDemo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -168,8 +172,10 @@
 		09B3461F1C4ED34F00BA041F /* TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */,
-				3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */,
+				B8CF34C62173864C0066D6BF /* MyTableViewHeader.swift */,
+				B8CF34C72173864C0066D6BF /* MyTableViewHeader.xib */,
+				B8CF34CA217386680066D6BF /* MyTableViewHeaderAutoRegistering.swift */,
+				B8CF34CB217386680066D6BF /* MyTableViewHeaderAutoRegistering.xib */,
 				09B346201C4ED39700BA041F /* MyXIBTextCell.swift */,
 				09B346211C4ED39700BA041F /* MyXIBTextCell.xib */,
 				09B346261C4ED51600BA041F /* MyXIBInfoCell.swift */,
@@ -335,13 +341,14 @@
 			files = (
 				09B346231C4ED39700BA041F /* MyXIBTextCell.xib in Resources */,
 				09B346461C4EF8F600BA041F /* CollectionHeaderView.xib in Resources */,
+				B8CF34CD217386680066D6BF /* MyTableViewHeaderAutoRegistering.xib in Resources */,
 				09B346171C4ED26F00BA041F /* LaunchScreen.storyboard in Resources */,
 				47EE563E1D66155D00AD3E4D /* MyCustomWidget.xib in Resources */,
 				09441AE21D32A0390029B8A6 /* InfoViewController.storyboard in Resources */,
 				09B346141C4ED26F00BA041F /* Assets.xcassets in Resources */,
 				09B346251C4ED4CE00BA041F /* Default-568h@2x.png in Resources */,
 				09B346121C4ED26F00BA041F /* Main.storyboard in Resources */,
-				3BC219201CFC259F003BE78C /* MyHeaderTableView.xib in Resources */,
+				B8CF34C92173864C0066D6BF /* MyTableViewHeader.xib in Resources */,
 				09B346421C4EF71900BA041F /* MyXIBIndexSquaceCell.xib in Resources */,
 				09B346291C4ED51600BA041F /* MyXIBInfoCell.xib in Resources */,
 			);
@@ -474,16 +481,17 @@
 				09B346411C4EF71900BA041F /* MyXIBIndexSquaceCell.swift in Sources */,
 				09B346341C4EDC7D00BA041F /* MyStoryBoardIndexPathCell.swift in Sources */,
 				09B346221C4ED39700BA041F /* MyXIBTextCell.swift in Sources */,
+				B8CF34C82173864C0066D6BF /* MyTableViewHeader.swift in Sources */,
 				47EE563C1D66155100AD3E4D /* MyCustomWidget.swift in Sources */,
 				09B3463C1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift in Sources */,
 				09B3463E1C4EF4A400BA041F /* CollectionViewController.swift in Sources */,
 				09B3460F1C4ED26F00BA041F /* TableViewController.swift in Sources */,
 				09441AE41D32A0700029B8A6 /* InfoDetailViewController.swift in Sources */,
 				09B3460D1C4ED26F00BA041F /* AppDelegate.swift in Sources */,
-				3BC2191F1CFC259F003BE78C /* MyHeaderTableView.swift in Sources */,
 				09441AE61D32A07D0029B8A6 /* InfoViewController.swift in Sources */,
 				09B346281C4ED51600BA041F /* MyXIBInfoCell.swift in Sources */,
 				09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */,
+				B8CF34CC217386680066D6BF /* MyTableViewHeaderAutoRegistering.swift in Sources */,
 				09B3462B1C4ED6C400BA041F /* MySimpleColorCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

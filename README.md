@@ -132,6 +132,7 @@ final class NibBasedCollectionViewCell: UICollectionViewCell, NibReusable {
 </details>
 
 ## 2. Either enable AutoRegistering or manually register your cells
+
 In order to have your cells automatically registered to a TableView/CollectionView when they are first used, simply add conformance to the `AutoRegistering` protocol.
 
 ```swift

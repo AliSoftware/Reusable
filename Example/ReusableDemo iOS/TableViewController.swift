@@ -30,7 +30,7 @@ final class TableViewController: UITableViewController {
     case 0:
       return MyTableViewHeader.height
     default:
-      return MyAutoRegisterTableViewHeader.height
+      return MyTableViewHeaderAutoRegistering.height
     }
   }
 
@@ -50,7 +50,7 @@ final class TableViewController: UITableViewController {
       return view
     default:
       // This header class is set to auto-register itself
-      let view: MyAutoRegisterTableViewHeader = tableView.dequeueReusableHeaderFooterView()
+      let view: MyTableViewHeaderAutoRegistering = tableView.dequeueReusableHeaderFooterView()
       view.fillForSection(section)
       return view
     }

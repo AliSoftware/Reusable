@@ -319,7 +319,7 @@ private extension UICollectionView {
 
   final private func hasRegistered<T: UICollectionReusableView>(supplementaryViewType type: T.Type,
                                                                 ofKind elementKind: String) -> Bool where T: Reusable {
-    return (registeredCellTypes.supplementaryViewReuseIdentifiers[elementKind] == type.reuseIdentifier)
+    return registeredCellTypes.supplementaryViewReuseIdentifiers[elementKind] == type.reuseIdentifier
   }
 
   final private func setHasRegistered<T: UICollectionReusableView>(supplementaryViewType type: T.Type,
