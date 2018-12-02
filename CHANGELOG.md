@@ -2,7 +2,9 @@
 
 ## Master
 
-_No new commits since latest release yet_
+* Fix for only allowing the use of app extension API.    
+  [igorkulman](https://github.com/igorkulman)
+  [#70](https://github.com/AliSoftware/Reusable/pull/70)
 
 ## 4.0.4
 
