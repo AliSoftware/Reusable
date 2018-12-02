@@ -4,7 +4,7 @@
 
 * Fix for only allowing the use of app extension API.    
   [igorkulman](https://github.com/igorkulman)
-  [#70](https://github.com/AliSoftware/Reusable/pull/70)
+  [#73](https://github.com/AliSoftware/Reusable/pull/73)
 
 ## 4.0.4
 
