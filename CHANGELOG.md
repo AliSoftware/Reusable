@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Master
+## 4.0.5
 
 * Fix for only allowing the use of app extension API.    
   [igorkulman](https://github.com/igorkulman)
