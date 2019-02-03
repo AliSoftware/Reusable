@@ -24,7 +24,11 @@ final class InfoDetailViewController: UIViewController, StoryboardSceneBased {
     super.viewDidLoad()
     detailsLabel.text = detailsText
   }
-
+    @IBAction func openNibBasedVC(_ sender: Any) {
+      let viewController = MyNibBasedViewController.instantiate()
+      present(viewController, animated: true)
+    }
+    
   @IBAction func closeAction(_ sender: UIButton) {
     self.presentingViewController?.dismiss(animated: true, completion: nil)
   }

@@ -36,6 +36,8 @@
 		37E3FC801E55D08C000A7436 /* MyCustomWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC7F1E55D08C000A7436 /* MyCustomWidget.xib */; };
 		3BC2191F1CFC259F003BE78C /* MyHeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */; };
 		3BC219201CFC259F003BE78C /* MyHeaderTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */; };
+		4029A749220798F400520943 /* MyNibBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4029A747220798F400520943 /* MyNibBasedViewController.swift */; };
+		4029A74A220798F400520943 /* MyNibBasedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4029A748220798F400520943 /* MyNibBasedViewController.xib */; };
 		47EE563C1D66155100AD3E4D /* MyCustomWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */; };
 		47EE563E1D66155D00AD3E4D /* MyCustomWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */; };
 		9FA94C08BEF301B3E3BDC872 /* Pods_ReusableDemo_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2D22CAD76679D19CD171C1 /* Pods_ReusableDemo_tvOS.framework */; };
@@ -77,6 +79,8 @@
 		37E3FC7F1E55D08C000A7436 /* MyCustomWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomWidget.xib; sourceTree = "<group>"; };
 		3BC2191D1CFC259F003BE78C /* MyHeaderTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHeaderTableView.swift; sourceTree = "<group>"; };
 		3BC2191E1CFC259F003BE78C /* MyHeaderTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyHeaderTableView.xib; sourceTree = "<group>"; };
+		4029A747220798F400520943 /* MyNibBasedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNibBasedViewController.swift; sourceTree = "<group>"; };
+		4029A748220798F400520943 /* MyNibBasedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyNibBasedViewController.xib; sourceTree = "<group>"; };
 		4033B8B5AA57F6CB717FCF24 /* Pods-ReusableDemo iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReusableDemo iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS.release.xcconfig"; sourceTree = "<group>"; };
 		47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomWidget.swift; sourceTree = "<group>"; };
 		47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomWidget.xib; sourceTree = "<group>"; };
@@ -240,6 +244,8 @@
 			children = (
 				47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */,
 				47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */,
+				4029A747220798F400520943 /* MyNibBasedViewController.swift */,
+				4029A748220798F400520943 /* MyNibBasedViewController.xib */,
 			);
 			name = "Custom Views";
 			path = CustomViews;
@@ -335,6 +341,7 @@
 			files = (
 				09B346231C4ED39700BA041F /* MyXIBTextCell.xib in Resources */,
 				09B346461C4EF8F600BA041F /* CollectionHeaderView.xib in Resources */,
+				4029A74A220798F400520943 /* MyNibBasedViewController.xib in Resources */,
 				09B346171C4ED26F00BA041F /* LaunchScreen.storyboard in Resources */,
 				47EE563E1D66155D00AD3E4D /* MyCustomWidget.xib in Resources */,
 				09441AE21D32A0390029B8A6 /* InfoViewController.storyboard in Resources */,
@@ -476,6 +483,7 @@
 				09B346221C4ED39700BA041F /* MyXIBTextCell.swift in Sources */,
 				47EE563C1D66155100AD3E4D /* MyCustomWidget.swift in Sources */,
 				09B3463C1C4EF46100BA041F /* MyStoryboardTextSquareCell.swift in Sources */,
+				4029A749220798F400520943 /* MyNibBasedViewController.swift in Sources */,
 				09B3463E1C4EF4A400BA041F /* CollectionViewController.swift in Sources */,
 				09B3460F1C4ED26F00BA041F /* TableViewController.swift in Sources */,
 				09441AE41D32A0700029B8A6 /* InfoDetailViewController.swift in Sources */,

@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VAY-p3-M4u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VAY-p3-M4u">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Info View Controller-->
         <scene sceneID="Kad-6T-wzS">
             <objects>
-                <viewController id="VAY-p3-M4u" customClass="InfoViewController" customModule="ReusableDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VAY-p3-M4u" customClass="InfoViewController" customModule="ReusableDemo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iOo-jn-cbA"/>
                         <viewControllerLayoutGuide type="bottom" id="NCk-cL-WOq"/>
@@ -63,7 +62,7 @@
         <!--Info Detail View Controller-->
         <scene sceneID="8qn-fi-o8u">
             <objects>
-                <viewController storyboardIdentifier="InfoDetailViewController" id="xhA-Xx-FPO" customClass="InfoDetailViewController" customModule="ReusableDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoDetailViewController" id="xhA-Xx-FPO" customClass="InfoDetailViewController" customModule="ReusableDemo_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="epr-T2-LzQ"/>
                         <viewControllerLayoutGuide type="bottom" id="v7I-eg-8iS"/>
@@ -91,15 +90,24 @@
                                 <color key="textColor" red="1" green="0.73019072210000002" blue="0.3297343808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6G-Jn-biz">
+                                <rect key="frame" x="123.5" y="427" width="128" height="30"/>
+                                <state key="normal" title="Open nib based vc"/>
+                                <connections>
+                                    <action selector="openNibBasedVC:" destination="xhA-Xx-FPO" eventType="touchUpInside" id="WpO-vq-NCz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="n6G-Jn-biz" firstAttribute="centerX" secondItem="fDJ-hq-Bfm" secondAttribute="centerX" id="1u4-1e-K0o"/>
                             <constraint firstItem="ZEC-Ds-tOk" firstAttribute="top" secondItem="m5i-Vh-W1n" secondAttribute="bottom" constant="20" id="6UD-Iz-DxI"/>
                             <constraint firstItem="hLv-Ji-FHA" firstAttribute="trailing" secondItem="fDJ-hq-Bfm" secondAttribute="trailingMargin" id="Ask-qd-7Yj"/>
                             <constraint firstItem="hLv-Ji-FHA" firstAttribute="top" secondItem="epr-T2-LzQ" secondAttribute="bottom" id="BZy-mU-oaq"/>
                             <constraint firstItem="m5i-Vh-W1n" firstAttribute="centerY" secondItem="fDJ-hq-Bfm" secondAttribute="centerY" id="GcF-vy-VLS"/>
                             <constraint firstItem="ZEC-Ds-tOk" firstAttribute="centerX" secondItem="m5i-Vh-W1n" secondAttribute="centerX" id="qfz-nm-RsB"/>
                             <constraint firstItem="m5i-Vh-W1n" firstAttribute="centerX" secondItem="fDJ-hq-Bfm" secondAttribute="centerX" id="tjf-Sc-fI4"/>
+                            <constraint firstItem="n6G-Jn-biz" firstAttribute="top" secondItem="ZEC-Ds-tOk" secondAttribute="bottom" constant="42" id="y6R-Lm-We8"/>
                         </constraints>
                     </view>
                     <connections>
