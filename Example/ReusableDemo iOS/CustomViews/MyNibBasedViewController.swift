@@ -6,18 +6,17 @@
 //  Copyright © 2019 AliSoftware. All rights reserved.
 //
 
-import UIKit
 import Reusable
+import UIKit
 
 class MyNibBasedViewController: UIViewController, NibLoadable {
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // Do any additional setup after loading the view.
+  }
 
-        // Do any additional setup after loading the view.
-    }
-  
-    @IBAction func dismiss(_ sender: Any) {
-      self.presentingViewController?.dismiss(animated: true)
-    }
+  @IBAction func dismiss(_: Any) {
+    presentingViewController?.dismiss(animated: true)
+  }
 }

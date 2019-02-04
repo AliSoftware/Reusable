@@ -6,13 +6,13 @@
 //  Copyright © 2016 AliSoftware. All rights reserved.
 //
 
-import UIKit
 import Reusable
+import UIKit
 
 final class InfoDetailViewController: UIViewController, StoryboardSceneBased {
   static let sceneStoryboard = UIStoryboard(name: "InfoViewController", bundle: nil)
 
-  @IBOutlet private weak var detailsLabel: UILabel!
+  @IBOutlet private var detailsLabel: UILabel!
   private var detailsText: String?
 
   func setDetails(_ text: String) {
@@ -24,12 +24,13 @@ final class InfoDetailViewController: UIViewController, StoryboardSceneBased {
     super.viewDidLoad()
     detailsLabel.text = detailsText
   }
-    @IBAction func openNibBasedVC(_ sender: Any) {
-      let viewController = MyNibBasedViewController.instantiate()
-      present(viewController, animated: true)
-    }
-    
-  @IBAction func closeAction(_ sender: UIButton) {
-    self.presentingViewController?.dismiss(animated: true, completion: nil)
+
+  @IBAction func openNibBasedVC(_: Any) {
+    let viewController = MyNibBasedViewController.instantiate()
+    present(viewController, animated: true)
+  }
+
+  @IBAction func closeAction(_: UIButton) {
+    presentingViewController?.dismiss(animated: true, completion: nil)
   }
 }
