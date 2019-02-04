@@ -14,8 +14,6 @@
 		2C1AEE10A7948662F457B44DCE6FEA54 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B45834060175563CCF1CBCF063789FE /* UITableView+Reusable.swift */; };
 		36441B15719ED17888B6CDC8D956FB52 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D264D4244F785EB7C4672C8F079E34 /* Reusable.swift */; };
 		3A79480E7395D42BAADB96C631B3166A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D264D4244F785EB7C4672C8F079E34 /* Reusable.swift */; };
-		4029A7502207A50F00520943 /* NibBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4029A74D2207A4FD00520943 /* NibBased.swift */; };
-		4029A7512207A50F00520943 /* NibBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4029A74D2207A4FD00520943 /* NibBased.swift */; };
 		43EDB2C0F33E6984997BFC1A5B289C68 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409AF22BF14FCADAFB835B8DA7539F9 /* UICollectionView+Reusable.swift */; };
 		4F05EA6E67C65A7C4D03C540C604EA63 /* Reusable-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED6979FA83E22940E9242F74ECAFF2A /* Reusable-iOS-dummy.m */; };
 		54DB4145004D8F5AC948053F7D2353EF /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FF06E4BEF0F7688B1F724EB17FA572 /* StoryboardBased.swift */; };
@@ -68,7 +66,6 @@
 		29C11F4F52D757EB35D07F5DC9791C6F /* Pods-ReusableDemo iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReusableDemo iOS.release.xcconfig"; sourceTree = "<group>"; };
 		2B45834060175563CCF1CBCF063789FE /* UITableView+Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Reusable.swift"; path = "Sources/View/UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		2BA094E6E5229706C00EDE32CAB5E92A /* Pods-ReusableDemo iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReusableDemo iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		4029A74D2207A4FD00520943 /* NibBased.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibBased.swift; path = Sources/View/NibBased.swift; sourceTree = "<group>"; };
 		43D8258D4DF4BF5F4CB09C272109F90B /* Pods-ReusableDemo iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReusableDemo iOS-frameworks.sh"; sourceTree = "<group>"; };
 		44E83F8834E3FA0ABB1062EC79DA2B42 /* Reusable-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Reusable-iOS.xcconfig"; sourceTree = "<group>"; };
 		47A3B86478DBAB5BE3C86FDCB5191334 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Reusable-tvOS/Info.plist"; sourceTree = "<group>"; };
@@ -177,7 +174,6 @@
 				62D264D4244F785EB7C4672C8F079E34 /* Reusable.swift */,
 				8409AF22BF14FCADAFB835B8DA7539F9 /* UICollectionView+Reusable.swift */,
 				2B45834060175563CCF1CBCF063789FE /* UITableView+Reusable.swift */,
-				4029A74D2207A4FD00520943 /* NibBased.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -506,7 +502,6 @@
 				3A79480E7395D42BAADB96C631B3166A /* Reusable.swift in Sources */,
 				0CABB1AFB47073EC6F049EFAD76CC19D /* StoryboardBased.swift in Sources */,
 				EF6D5770FEA802F0A7CC91B54E8B9AE2 /* StoryboardSceneBased.swift in Sources */,
-				4029A7502207A50F00520943 /* NibBased.swift in Sources */,
 				75B220B117B560D66F21E583733FBAB5 /* UICollectionView+Reusable.swift in Sources */,
 				2C1AEE10A7948662F457B44DCE6FEA54 /* UITableView+Reusable.swift in Sources */,
 			);
@@ -538,7 +533,6 @@
 				36441B15719ED17888B6CDC8D956FB52 /* Reusable.swift in Sources */,
 				54DB4145004D8F5AC948053F7D2353EF /* StoryboardBased.swift in Sources */,
 				7624C24E998379529E904B4C8D6D8C33 /* StoryboardSceneBased.swift in Sources */,
-				4029A7512207A50F00520943 /* NibBased.swift in Sources */,
 				43EDB2C0F33E6984997BFC1A5B289C68 /* UICollectionView+Reusable.swift in Sources */,
 				8967EEBABC7E127C0A13BBF7B69101B1 /* UITableView+Reusable.swift in Sources */,
 			);

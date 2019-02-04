@@ -332,7 +332,7 @@ let view3 = NibBasedRootView.loadFromNib() // and another one
 
 `Reusable` also allows you to mark your `UIViewController` classes as `StoryboardBased`, `StoryboardSceneBased` or  `NibBased` to easily instantiate them from their associated Storyboard`/NIB in a type-safe way.
 
-## 1. Declare your `UIViewController` to conform to `StoryboardBased`, `StoryboardSceneBased` or `NibBased`
+## 1. Declare your `UIViewController` to conform to `StoryboardBased`, `StoryboardSceneBased` or `NibLoadable`
 
 In your swift source declaring your custom `UIViewController` class:
 
@@ -341,7 +341,7 @@ In your swift source declaring your custom `UIViewController` class:
 * Use the `StoryboardSceneBased` protocol if scene in your storyboard has the same `sceneIdentifier` as the name of the ViewController's class, but the `*.storyboard` file name doesn't necessary match the ViewController's class name.
   * This is typically ideal for secondary scenes in bigger storyboards
   * You'll then be required to implement the `sceneStoryboard` type property to indicate the storyboard it belongs to.
-* Use the `NibBased` protocol if your ViewController is nib-based and has set it's "File's Owner" and is the root view of the nib
+* Use the `NibLoadable` protocol if your ViewController is nib-based and has set it's "File's Owner" and is the root view of the nib
 
 <details>
 <summary>📑 Example of a ViewController being the initial ViewController of its Storyboard</summary>
@@ -373,7 +373,7 @@ final class SecondaryVC: UIViewController, StoryboardSceneBased {
 In this example, `CustomVC` is designed as the root view of a xib named `CustomVC.xib`:
 
 ```swift
-final class CustomVC: UIViewController, NibBased { /* and that's it! */ }
+final class CustomVC: UIViewController, NibLoadable { /* and that's it! */ }
 ```
 </details>
 

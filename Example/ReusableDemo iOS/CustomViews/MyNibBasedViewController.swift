@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-class MyNibBasedViewController: UIViewController, NibBased {
+class MyNibBasedViewController: UIViewController, NibLoadable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
