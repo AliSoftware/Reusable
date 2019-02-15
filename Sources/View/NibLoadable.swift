@@ -45,15 +45,3 @@ public extension NibLoadable where Self: UIView {
     return view
   }
 }
-
-public extension NibLoadable where Self: UIViewController {
-    /**
-     Returns a `UIViewController` object instantiated from nib
-     
-     - returns: A `NibLoadable`, `UIViewController` instance
-     */
-    static func instantiate() -> Self {
-        let viewController = Self.init(nibName: String(describing: self), bundle: Bundle(for: self))
-        return viewController
-    }
-}

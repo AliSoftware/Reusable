@@ -368,12 +368,12 @@ final class SecondaryVC: UIViewController, StoryboardSceneBased {
 ```
 </details>
 
-<summary>📑 Example of a ViewController being the root view of its xib</summary>
+<summary>📑 Example of a ViewController being the file's owner of its xib</summary>
 
-In this example, `CustomVC` is designed as the root view of a xib named `CustomVC.xib`:
+In this example, `CustomVC` is designed as the file's owner of a xib named `CustomVC.xib`:
 
 ```swift
-final class CustomVC: UIViewController, NibLoadable { /* and that's it! */ }
+final class CustomVC: UIViewController, NibOwnerLoadable { /* and that's it! */ }
 ```
 </details>
 

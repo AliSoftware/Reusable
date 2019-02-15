@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: Protocol Definition
 
-/// Make your UIView subclasses conform to this protocol when:
+/// Make your UIView or UIViewController subclasses conform to this protocol when:
 ///  * they *are* NIB-based, and
 ///  * this class is used as the XIB's File's Owner
 ///
@@ -59,3 +59,15 @@ private extension NSLayoutConstraint {
   typealias Attribute = NSLayoutAttribute
 }
 #endif
+
+public extension NibOwnerLoadable where Self: UIViewController {
+    /**
+     Returns a `UIViewController` object instantiated from nib
+     
+     - returns: A `NibOwnerLoadable`, `UIViewController` instance
+     */
+    static func instantiate() -> Self {
+        let viewController = Self.init(nibName: String(describing: self), bundle: Bundle(for: self))
+        return viewController
+    }
+}
