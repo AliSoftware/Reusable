@@ -1,10 +1,14 @@
 # CHANGELOG
 
-## Master
-
 * Add support for automatic cell registration by conforming to 'AutoRegistering' (table view / collection view).  
 [@apptekstudios](https://github.com/apptekstudios)
 [#63](https://github.com/AliSoftware/Reusable/pull/63)
+
+
+## 4.0.5
+* Fix for only allowing the use of app extension API.    
+  [igorkulman](https://github.com/igorkulman)
+  [#73](https://github.com/AliSoftware/Reusable/pull/73)
 
 ## 4.0.4
 
