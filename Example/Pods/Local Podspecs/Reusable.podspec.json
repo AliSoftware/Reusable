@@ -21,7 +21,7 @@
     "git": "https://github.com/AliSoftware/Reusable.git",
     "tag": "4.0.5"
   },
-  "swift_version": "4.2",
+  "swift_version": "5.0",
   "frameworks": "UIKit",
   "subspecs": [
     {

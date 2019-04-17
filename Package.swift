@@ -1,4 +1,4 @@
-// swift-tools-version:4.0
+// swift-tools-version:5.0
 import PackageDescription
 
 // Note: SPM support is broken until we can add dependency on UIKit.
@@ -15,5 +15,5 @@ let package = Package(
         sources: ["Sources"]
       )
     ],
-    swiftLanguageVersions: [3, 4]
+    swiftLanguageVersions: [3, 4, 5]
 )
