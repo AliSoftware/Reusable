@@ -15,14 +15,14 @@ import UIKit
 ///  * this class is used as the XIB's File's Owner
 ///
 /// to be able to instantiate them from the NIB in a type-safe manner
-protocol NibBased: class {
+public protocol NibBased: class {
     /// The nibName to use to load a new instance of the UIViewController designed in a XIB
     static var nibName: String { get }
 }
 
 // MARK: Default implementation
 
-extension NibBased {
+public extension NibBased {
     /// The nibName to use to load a new instance of the UIViewController designed in a XIB,
     /// By default, the nib have the same name as the name of the class
     static var nibName: String {
@@ -32,7 +32,7 @@ extension NibBased {
 
 // MARK: Support for instantiation from NIB
 
-extension NibBased where Self: UIViewController {
+public extension NibBased where Self: UIViewController {
     /**
      Returns a `UIViewController` object instantiated from nib as the XIB's File's Owner
      
