@@ -1,6 +1,6 @@
 //
 //  NibBased.swift
-//  Marvel
+//  Reusable
 //
 //  This code is under the MIT License (MIT)
 //

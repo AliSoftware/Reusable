@@ -10,8 +10,8 @@
 		0CABB1AFB47073EC6F049EFAD76CC19D /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FF06E4BEF0F7688B1F724EB17FA572 /* StoryboardBased.swift */; };
 		0D886FDFDBA93C8E67C9D85138877A24 /* Reusable-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5892AC97FA3ED1A5B9672D91235E50A0 /* Reusable-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10C983B5482E291D6D9D97181BBFA0ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0447347B9A1D4FB9213447A363F7039C /* UIKit.framework */; };
-		1603DBD522689C8E00DFC9D5 /* NibBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1603DBD422689C8E00DFC9D5 /* NibBased.swift */; };
-		1603DBD622689C8E00DFC9D5 /* NibBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1603DBD422689C8E00DFC9D5 /* NibBased.swift */; };
+		1603DBDC2268A5F400DFC9D5 /* NibBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1603DBDB2268A5F400DFC9D5 /* NibBased.swift */; };
+		1603DBDD2268A5F400DFC9D5 /* NibBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1603DBDB2268A5F400DFC9D5 /* NibBased.swift */; };
 		24DA0E08DBEAC4C90C0339A27CB2D3E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FEEBFF849983E3183C7BFE1C25E73F /* Foundation.framework */; };
 		2C1AEE10A7948662F457B44DCE6FEA54 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B45834060175563CCF1CBCF063789FE /* UITableView+Reusable.swift */; };
 		36441B15719ED17888B6CDC8D956FB52 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D264D4244F785EB7C4672C8F079E34 /* Reusable.swift */; };
@@ -62,7 +62,7 @@
 		0447347B9A1D4FB9213447A363F7039C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		0FBD092B0B485DA6C7B90BE206901D63 /* Pods-ReusableDemo tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReusableDemo tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		134568E37290F577BF1196CE3781E88A /* Reusable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reusable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1603DBD422689C8E00DFC9D5 /* NibBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibBased.swift; sourceTree = "<group>"; };
+		1603DBDB2268A5F400DFC9D5 /* NibBased.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibBased.swift; path = Sources/View/NibBased.swift; sourceTree = "<group>"; };
 		1E9CB32CE05A90E5172D6D051DD06C14 /* Pods-ReusableDemo tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ReusableDemo tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1ED6979FA83E22940E9242F74ECAFF2A /* Reusable-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Reusable-iOS-dummy.m"; sourceTree = "<group>"; };
 		2252BDFE7D9DF619FDD525C082B88752 /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NibOwnerLoadable.swift; path = Sources/View/NibOwnerLoadable.swift; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 		0BAC012DB5FFB1737A1296B9984829C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1603DBD422689C8E00DFC9D5 /* NibBased.swift */,
+				1603DBDB2268A5F400DFC9D5 /* NibBased.swift */,
 				4DA6C7AF483B806350229F9BB19F721F /* NibLoadable.swift */,
 				2252BDFE7D9DF619FDD525C082B88752 /* NibOwnerLoadable.swift */,
 				62D264D4244F785EB7C4672C8F079E34 /* Reusable.swift */,
@@ -517,7 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C794ECDB8EE409E055232E05F2406A0 /* Pods-ReusableDemo tvOS-dummy.m in Sources */,
-				1603DBD622689C8E00DFC9D5 /* NibBased.swift in Sources */,
+				1603DBDD2268A5F400DFC9D5 /* NibBased.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF7347CB04966D96DE84C18CC54B57B /* Pods-ReusableDemo iOS-dummy.m in Sources */,
-				1603DBD522689C8E00DFC9D5 /* NibBased.swift in Sources */,
+				1603DBDC2268A5F400DFC9D5 /* NibBased.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
