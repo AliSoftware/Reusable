@@ -29,6 +29,11 @@
 		09B346421C4EF71900BA041F /* MyXIBIndexSquaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346401C4EF71900BA041F /* MyXIBIndexSquaceCell.xib */; };
 		09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */; };
 		09B346461C4EF8F600BA041F /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */; };
+		1603DBE62268BB2F00DFC9D5 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1603DBE52268BB2F00DFC9D5 /* CustomViewController.swift */; };
+		1603DBEF2268BC7C00DFC9D5 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1603DBEE2268BC7C00DFC9D5 /* SimpleViewController.swift */; };
+		1603DBF02268BC7C00DFC9D5 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1603DBEE2268BC7C00DFC9D5 /* SimpleViewController.swift */; };
+		1603DBF22268BC8500DFC9D5 /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1603DBF12268BC8400DFC9D5 /* SimpleViewController.xib */; };
+		1603DBF32268BC8500DFC9D5 /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1603DBF12268BC8400DFC9D5 /* SimpleViewController.xib */; };
 		37E3FC6F1E55CDD8000A7436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E3FC6E1E55CDD8000A7436 /* AppDelegate.swift */; };
 		37E3FC741E55CDD8000A7436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC721E55CDD8000A7436 /* Main.storyboard */; };
 		37E3FC761E55CDD8000A7436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC751E55CDD8000A7436 /* Assets.xcassets */; };
@@ -68,6 +73,9 @@
 		09B346401C4EF71900BA041F /* MyXIBIndexSquaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyXIBIndexSquaceCell.xib; sourceTree = "<group>"; };
 		09B346431C4EF8B700BA041F /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		1603DBE52268BB2F00DFC9D5 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		1603DBEE2268BC7C00DFC9D5 /* SimpleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
+		1603DBF12268BC8400DFC9D5 /* SimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleViewController.xib; sourceTree = "<group>"; };
 		37E3FC6C1E55CDD8000A7436 /* ReusableDemo tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReusableDemo tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E3FC6E1E55CDD8000A7436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37E3FC731E55CDD8000A7436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -149,6 +157,7 @@
 				09B346381C4EF36D00BA041F /* CollectionViewCells */,
 				09441AE01D32A0070029B8A6 /* Storyboards */,
 				47EE56381D6614FA00AD3E4D /* Custom Views */,
+				1603DBE72268BB8600DFC9D5 /* UIViewController from XIB */,
 				09B3461E1C4ED33D00BA041F /* SupportingFiles */,
 			);
 			path = "ReusableDemo iOS";
@@ -192,6 +201,15 @@
 				09B346451C4EF8F600BA041F /* CollectionHeaderView.xib */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		1603DBE72268BB8600DFC9D5 /* UIViewController from XIB */ = {
+			isa = PBXGroup;
+			children = (
+				1603DBEE2268BC7C00DFC9D5 /* SimpleViewController.swift */,
+				1603DBF12268BC8400DFC9D5 /* SimpleViewController.xib */,
+			);
+			path = "UIViewController from XIB";
 			sourceTree = "<group>";
 		};
 		2CBDDE0F80A0601775F539F9 /* Pods */ = {
@@ -238,6 +256,7 @@
 		47EE56381D6614FA00AD3E4D /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				1603DBE52268BB2F00DFC9D5 /* CustomViewController.swift */,
 				47EE563B1D66155100AD3E4D /* MyCustomWidget.swift */,
 				47EE563D1D66155D00AD3E4D /* MyCustomWidget.xib */,
 			);
@@ -314,6 +333,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -339,6 +359,7 @@
 				47EE563E1D66155D00AD3E4D /* MyCustomWidget.xib in Resources */,
 				09441AE21D32A0390029B8A6 /* InfoViewController.storyboard in Resources */,
 				09B346141C4ED26F00BA041F /* Assets.xcassets in Resources */,
+				1603DBF22268BC8500DFC9D5 /* SimpleViewController.xib in Resources */,
 				09B346251C4ED4CE00BA041F /* Default-568h@2x.png in Resources */,
 				09B346121C4ED26F00BA041F /* Main.storyboard in Resources */,
 				3BC219201CFC259F003BE78C /* MyHeaderTableView.xib in Resources */,
@@ -353,6 +374,7 @@
 			files = (
 				37E3FC801E55D08C000A7436 /* MyCustomWidget.xib in Resources */,
 				37E3FC761E55CDD8000A7436 /* Assets.xcassets in Resources */,
+				1603DBF32268BC8500DFC9D5 /* SimpleViewController.xib in Resources */,
 				37E3FC741E55CDD8000A7436 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,8 +505,10 @@
 				3BC2191F1CFC259F003BE78C /* MyHeaderTableView.swift in Sources */,
 				09441AE61D32A07D0029B8A6 /* InfoViewController.swift in Sources */,
 				09B346281C4ED51600BA041F /* MyXIBInfoCell.swift in Sources */,
+				1603DBEF2268BC7C00DFC9D5 /* SimpleViewController.swift in Sources */,
 				09B346441C4EF8B700BA041F /* CollectionHeaderView.swift in Sources */,
 				09B3462B1C4ED6C400BA041F /* MySimpleColorCell.swift in Sources */,
+				1603DBE62268BB2F00DFC9D5 /* CustomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +518,7 @@
 			files = (
 				37E3FC7E1E55D056000A7436 /* MyCustomWidget.swift in Sources */,
 				37E3FC6F1E55CDD8000A7436 /* AppDelegate.swift in Sources */,
+				1603DBF02268BC7C00DFC9D5 /* SimpleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,7 +664,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ReusableDemo iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.ReusableDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -653,7 +678,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ReusableDemo iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.ReusableDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
