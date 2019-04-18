@@ -12,7 +12,7 @@ import UIKit
 import Reusable
 
 final class SimpleViewController: UIViewController, NibBased {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,5 +22,5 @@ final class SimpleViewController: UIViewController, NibBased {
     @IBAction func close(_ sender: UIButton) {
       self.dismiss(animated: true, completion: nil)
     }
-    
+
 }

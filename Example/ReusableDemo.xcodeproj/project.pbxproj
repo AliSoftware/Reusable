@@ -33,7 +33,6 @@
 		1603DBEF2268BC7C00DFC9D5 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1603DBEE2268BC7C00DFC9D5 /* SimpleViewController.swift */; };
 		1603DBF02268BC7C00DFC9D5 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1603DBEE2268BC7C00DFC9D5 /* SimpleViewController.swift */; };
 		1603DBF22268BC8500DFC9D5 /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1603DBF12268BC8400DFC9D5 /* SimpleViewController.xib */; };
-		1603DBF32268BC8500DFC9D5 /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1603DBF12268BC8400DFC9D5 /* SimpleViewController.xib */; };
 		37E3FC6F1E55CDD8000A7436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E3FC6E1E55CDD8000A7436 /* AppDelegate.swift */; };
 		37E3FC741E55CDD8000A7436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC721E55CDD8000A7436 /* Main.storyboard */; };
 		37E3FC761E55CDD8000A7436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E3FC751E55CDD8000A7436 /* Assets.xcassets */; };
@@ -374,7 +373,6 @@
 			files = (
 				37E3FC801E55D08C000A7436 /* MyCustomWidget.xib in Resources */,
 				37E3FC761E55CDD8000A7436 /* Assets.xcassets in Resources */,
-				1603DBF32268BC8500DFC9D5 /* SimpleViewController.xib in Resources */,
 				37E3FC741E55CDD8000A7436 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,7 +597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -649,7 +647,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

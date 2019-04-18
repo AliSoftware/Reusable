@@ -17,11 +17,10 @@ class CustomViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
   @IBAction func present(_ sender: UIButton) {
     let viewController = SimpleViewController.instantiate()
     present(viewController, animated: true, completion: nil)
   }
-  
 
 }
