@@ -2,7 +2,9 @@
 //  CustomViewController.swift
 //  ReusableDemo iOS
 //
-//  Created by Vortigo Soluções em Mobilidade on 18/04/19.
+//  This code is under the MIT License (MIT)
+//
+//  Created by Felipe Silva on 18/04/19.
 //  Copyright © 2019 AliSoftware. All rights reserved.
 //
 
