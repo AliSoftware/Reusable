@@ -382,6 +382,38 @@ func presentSecondary() {
 
 ---
 
+# Type-safe ViewControllers from XIB's 
+
+`Reusable` also allows you to mark your `UIViewController` classes as `NibBased` to easily instantiate them from their associated XIB in a type-safe way.
+
+## 1. Declare your `UIViewController` to conform to `NibBased` 
+
+In your swift source declaring your custom `UIViewController` class:
+
+* Use the `NibBased` protocol if you used a "File's Owner" of the XIB being of the class of your custom view controller.
+
+```swift
+// a XIB-based custom UIViewController, used as the XIB's "File's Owner"
+final class CustomViewController: UIViewController, NibBased { /* and that's it! */ }
+
+```
+
+## 2. Instantiate your UIViewControllers
+
+Simply call `instantiate()` on your custom class. This will automatically know the file `*.xib` to load and instantiate it.
+
+```swift
+func presentCustomViewControllerFromXib() {
+  let vc = CustomViewController.instantiate() // Init from the "CustomViewController" of CustomViewController.xib
+  self.present(vc, animated: true) {}
+}
+```
+
+
+
+---
+
+
 
 
 # Additional tips
