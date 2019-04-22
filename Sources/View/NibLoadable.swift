@@ -19,8 +19,6 @@ import UIKit
 public protocol NibLoadable: class {
   /// The nib file to use to load a new instance of the View designed in a XIB
   static var nib: UINib { get }
-  /// The nibName to use to load a new instance of the UIViewController designed in a XIB
-  static var nibName: String { get }
 }
 
 // MARK: Default implementation
@@ -30,11 +28,6 @@ public extension NibLoadable {
   /// and located in the bundle of that class
   static var nib: UINib {
     return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
-  }
-  /// By default, the nib have the same name as the name of the class,
-  /// The nibName to use to load a new instance of the UIViewController designed in a XIB
-  static var nibName: String {
-     return String(describing: self)
   }
 }
 
@@ -61,6 +54,6 @@ public extension NibLoadable where Self: UIViewController {
      - returns: A `NibLoadable`, `UIViewController` instance
      */
     static func instantiate() -> Self {
-        return Self.init(nibName: self.nibName, bundle: Bundle(for: self))
+        return Self.init(nibName: String(describing: self), bundle: Bundle(for: self))
     }
 }
