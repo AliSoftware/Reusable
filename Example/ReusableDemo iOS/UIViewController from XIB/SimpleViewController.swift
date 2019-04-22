@@ -11,7 +11,7 @@
 import UIKit
 import Reusable
 
-final class SimpleViewController: UIViewController, NibBased {
+final class SimpleViewController: UIViewController, NibLoadable {
 
     override func viewDidLoad() {
         super.viewDidLoad()

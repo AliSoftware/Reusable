@@ -14,10 +14,13 @@ import UIKit
 ///  * they *are* NIB-based, and
 ///  * this class is used as the XIB's root view
 ///
+///  * this class is used also for instante UIViewController from XIB's as the XIB's File's Owner
 /// to be able to instantiate them from the NIB in a type-safe manner
 public protocol NibLoadable: class {
   /// The nib file to use to load a new instance of the View designed in a XIB
   static var nib: UINib { get }
+  /// The nibName to use to load a new instance of the UIViewController designed in a XIB
+  static var nibName: String { get }
 }
 
 // MARK: Default implementation
@@ -27,6 +30,11 @@ public extension NibLoadable {
   /// and located in the bundle of that class
   static var nib: UINib {
     return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
+  }
+  /// By default, the nib have the same name as the name of the class,
+  /// The nibName to use to load a new instance of the UIViewController designed in a XIB
+  static var nibName: String {
+     return String(describing: self)
   }
 }
 
@@ -44,4 +52,15 @@ public extension NibLoadable where Self: UIView {
     }
     return view
   }
+}
+
+public extension NibLoadable where Self: UIViewController {
+    /**
+     Returns a `UIViewController` object instantiated from nib as the XIB's File's Owner
+     
+     - returns: A `NibLoadable`, `UIViewController` instance
+     */
+    static func instantiate() -> Self {
+        return Self.init(nibName: self.nibName, bundle: Bundle(for: self))
+    }
 }
