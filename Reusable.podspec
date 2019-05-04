@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = "9.0"
 
   s.source       = { :git => "https://github.com/AliSoftware/Reusable.git", :tag => s.version.to_s }
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 
   s.subspec 'View' do |ss|
     ss.source_files  = "Sources/View/*.swift"
