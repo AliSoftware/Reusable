@@ -131,11 +131,18 @@ final class NibBasedCollectionViewCell: UICollectionViewCell, NibReusable {
 ```
 </details>
 
-## 2. Register your cells
+## 2. Either enable AutoRegistering or manually register your cells
 
-Unless you've prototyped your cell in a Storyboard, you'll have to register the cell class or Nib by code.
+In order to have your cells automatically registered to a TableView/CollectionView when they are first used, simply add conformance to the `AutoRegistering` protocol.
 
-To do this, instead of calling `registerClass(…)` or `registerNib(…)` using a String-based `reuseIdentifier`, just call:
+```swift
+final class CustomCell: UITableViewCell, Reusable, AutoRegistering { }
+```
+
+If you've prototyped your cell in a Storyboard, there is no need to conform to 'AutoRegistering' or manually register, as this is done automatically by the Storyboard.
+
+
+Alternatively you will have to register the cell class or Nib by code. To do this, just call:
 
 ```swift
 tableView.register(cellType: theCellClass.self)

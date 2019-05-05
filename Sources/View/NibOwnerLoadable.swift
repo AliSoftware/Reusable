@@ -36,9 +36,12 @@ public extension NibOwnerLoadable where Self: UIView {
   /**
    Adds content loaded from the nib to the end of the receiver's list of subviews and adds constraints automatically.
    */
-  func loadNibContent() {
+	@discardableResult
+  func loadNibContent() -> UIView? {
     let layoutAttributes: [NSLayoutConstraint.Attribute] = [.top, .leading, .bottom, .trailing]
+		var firstView: UIView?
     for case let view as UIView in Self.nib.instantiate(withOwner: self, options: nil) {
+			if firstView == nil { firstView = view }
       view.translatesAutoresizingMaskIntoConstraints = false
       self.addSubview(view)
       NSLayoutConstraint.activate(layoutAttributes.map { attribute in
@@ -50,6 +53,7 @@ public extension NibOwnerLoadable where Self: UIView {
         )
       })
     }
+		return firstView
   }
 }
 
