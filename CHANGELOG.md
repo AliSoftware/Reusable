@@ -1,9 +1,15 @@
 # CHANGELOG
 
+## 4.1.0
+
+* Support for Swift 5.0
+  [@florentmorin](https://github.com/florentmorin)
+  [#80](https://github.com/AliSoftware/Reusable/pull/80)
+
 ## 4.0.5
 
 * Fix for only allowing the use of app extension API.    
-  [igorkulman](https://github.com/igorkulman)
+  [@igorkulman](https://github.com/igorkulman)
   [#73](https://github.com/AliSoftware/Reusable/pull/73)
 
 ## 4.0.4
@@ -15,11 +21,11 @@
 ## 4.0.3
 
 * Upgrade to CircleCI 2.  
-  [djbe](https://github.com/djbe)
+  [@djbe](https://github.com/djbe)
   [#60](https://github.com/AliSoftware/Reusable/pull/60)
 
 * Update project to support Swift 4.2.  
-  [djbe](https://github.com/djbe)
+  [@djbe](https://github.com/djbe)
   [#58](https://github.com/AliSoftware/Reusable/pull/58)
 
 ## 4.0.2
