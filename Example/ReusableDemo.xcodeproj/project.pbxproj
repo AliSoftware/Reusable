@@ -383,7 +383,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Reusable-iOS/Reusable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -394,7 +394,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		81032A0CDCE1D819A5F1DE9D /* [CP] Check Pods Manifest.lock */ = {
@@ -427,7 +427,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Reusable-tvOS/Reusable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -438,7 +438,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EEF03881871BAFB249B4B8A0 /* [CP] Check Pods Manifest.lock */ = {

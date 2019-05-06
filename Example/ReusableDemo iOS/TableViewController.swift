@@ -53,8 +53,8 @@ final class TableViewController: UITableViewController {
     switch indexPath.section {
     case 0:
       let colorCell = tableView.dequeueReusableCell(for: indexPath) as MySimpleColorCell
-      let red: CGFloat = indexPath.row == 0 ? 1.0 : 0.0
-      colorCell.fill(UIColor(red: red, green: 0.0, blue: 1-red, alpha: 1.0))
+      let redComp: CGFloat = indexPath.row == 0 ? 1.0 : 0.0
+      colorCell.fill(UIColor(red: redComp, green: 0.0, blue: 1-redComp, alpha: 1.0))
       return colorCell
     case 1:
       let textCell = tableView.dequeueReusableCell(for: indexPath) as MyXIBTextCell
