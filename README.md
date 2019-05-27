@@ -459,6 +459,7 @@ The concepts behind Reusable has been presented in various articles and talks:
 * [Using Generics to improve TableView cells](https://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/) on my blog
 * [FrenchKit'16 talk: Mixins over Inheritance](https://youtu.be/BSn4jlunn4I) (video)
 * Same talk was also given at NSSpain'16 ([slides](https://speakerdeck.com/alisoftware/mixins-over-inheritance)) and AppDevCon'17 ([slides](https://speakerdeck.com/alisoftware/mixins-over-inheritance-appdevcon-17))
+* [No more String-typed instantiations on iOS Development](https://medium.com/@zonilyjame/reusable-no-more-string-typed-instantiations-on-ios-development-aa1a4f59201c)
 
 # License
 
