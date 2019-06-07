@@ -10,6 +10,7 @@ import UIKit
 
 // MARK: Reusable support for UICollectionView
 
+@available(iOS 10.0, *)
 public extension UICollectionView {
   /**
    Register a NIB-Based `UICollectionViewCell` subclass (conforming to `Reusable` & `NibLoadable`)
