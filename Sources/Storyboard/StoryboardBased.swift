@@ -15,13 +15,14 @@ import UIKit
 ///  * this ViewController is the initialViewController of your Storyboard
 ///
 /// to be able to instantiate them from the Storyboard in a type-safe manner
+@available(iOS 10.0, *)
 public protocol StoryboardBased: class {
   /// The UIStoryboard to use when we want to instantiate this ViewController
   static var sceneStoryboard: UIStoryboard { get }
 }
 
 // MARK: Default Implementation
-
+@available(iOS 10.0, *)
 public extension StoryboardBased {
   /// By default, use the storybaord with the same name as the class
   static var sceneStoryboard: UIStoryboard {
@@ -30,7 +31,7 @@ public extension StoryboardBased {
 }
 
 // MARK: Support for instantiation from Storyboard
-
+@available(iOS 10.0, *)
 public extension StoryboardBased where Self: UIViewController {
   /**
    Create an instance of the ViewController from its associated Storyboard's initialViewController
