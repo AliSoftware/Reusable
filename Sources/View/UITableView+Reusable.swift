@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: Reusable support for UITableView
-
+@available(iOS 10.0, *)
 public extension UITableView {
   /**
    Register a NIB-Based `UITableViewCell` subclass (conforming to `Reusable` & `NibLoadable`)
