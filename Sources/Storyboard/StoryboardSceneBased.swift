@@ -17,6 +17,7 @@ import UIKit
 /// to be able to instantiate them from the Storyboard in a type-safe manner.
 ///
 /// You need to implement `sceneStoryboard` yourself to indicate the UIStoryboard this scene is from.
+@available(iOS 10.0, *)
 public protocol StoryboardSceneBased: class {
   /// The UIStoryboard to use when we want to instantiate this ViewController
   static var sceneStoryboard: UIStoryboard { get }
@@ -25,7 +26,7 @@ public protocol StoryboardSceneBased: class {
 }
 
 // MARK: Default Implementation
-
+@available(iOS 10.0, *)
 public extension StoryboardSceneBased {
   /// By default, use the `sceneIdentifier` with the same name as the class
   static var sceneIdentifier: String {
@@ -34,7 +35,7 @@ public extension StoryboardSceneBased {
 }
 
 // MARK: Support for instantiation from Storyboard
-
+@available(iOS 10.0, *)
 public extension StoryboardSceneBased where Self: UIViewController {
   /**
    Create an instance of the ViewController from its associated Storyboard and the
