@@ -6,6 +6,7 @@
  *
  *********************************************/
 
+#if canImport(UIKit)
 import UIKit
 
 // MARK: Protocol Definition
@@ -45,3 +46,4 @@ public extension StoryboardBased where Self: UIViewController {
     return typedViewController
   }
 }
+#endif
