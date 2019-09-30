@@ -1,10 +1,9 @@
 // swift-tools-version:5.0
 import PackageDescription
 
-// Note: SPM support is broken until we can add dependency on UIKit.
-
 let package = Package(
     name: "Reusable",
+    platforms: [.iOS(.v8), .tvOS(.v9)],
     products: [
         .library(name: "Reusable", targets: ["Reusable"])
     ],
@@ -15,5 +14,5 @@ let package = Package(
         sources: ["Sources"]
       )
     ],
-    swiftLanguageVersions: [3, 4, 5]
+    swiftLanguageVersions: [.v4, .v5]
 )
