@@ -9,7 +9,9 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 [![CircleCI](https://circleci.com/gh/AliSoftware/Reusable/tree/master.svg?style=svg)](https://circleci.com/gh/AliSoftware/Reusable/tree/master)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 [![Version](http://cocoapod-badges.herokuapp.com/v/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
-[![Language: Swift 3 & 4](https://img.shields.io/badge/Swift-3%20%26%204-orange.svg)](https://swift.org)
+[![Language: Swift 3](https://img.shields.io/badge/Swift-3-orange)](https://swift.org)
+[![Language: Swift 4](https://img.shields.io/badge/Swift-4-orange)](https://swift.org)
+[![Language: Swift 5](https://img.shields.io/badge/Swift-5-orange)](https://swift.org)
 
 # Requirements
 
@@ -18,8 +20,30 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 |    2.2 & 2.3   |        2.5.1       |
 |       3.0 (†)  |        3.0.0 +     |
 |       4.0      |        4.0.2 +     |
+|       5.0      |        4.1.0 +     |
 
 _(†) The Reusable 3.0 code also compiles with Swift 4, you'll need 4.0.2+ only if you're using Carthage for integration_
+
+## Setting up with Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
+
+To integrate Reusable into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```bash
+github "AliSoftware/Reusable"
+```
+
+## Setting up with Cocoapods
+
+[CocoaPods](https://cocoapods.org/) is a dependency manager for Swift and Objective-C Cocoa projects.
+
+To integrate Reusable into your Xcode project using Cocoapods, specify it in your `Podspec`:
+
+```bash
+source 'https://github.com/CocoaPods/Specs.git'
+pod 'Reusable'
+```
 
 # Introduction
 
