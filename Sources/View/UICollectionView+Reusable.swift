@@ -6,6 +6,7 @@
  *
  *********************************************/
 
+#if canImport(UIKit)
 import UIKit
 
 // MARK: Reusable support for UICollectionView
@@ -128,3 +129,4 @@ public extension UICollectionView {
       return typedView
   }
 }
+#endif

@@ -6,6 +6,7 @@
  *
  *********************************************/
 
+#if canImport(UIKit)
 import UIKit
 
 // MARK: Protocol Definition
@@ -52,6 +53,7 @@ public extension NibOwnerLoadable where Self: UIView {
     }
   }
 }
+#endif
 
 /// Swift < 4.2 support
 #if !(swift(>=4.2))
