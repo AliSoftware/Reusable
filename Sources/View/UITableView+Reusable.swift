@@ -6,6 +6,7 @@
  *
  *********************************************/
 
+#if canImport(UIKit)
 import UIKit
 
 // MARK: Reusable support for UITableView
@@ -108,3 +109,4 @@ public extension UITableView {
       return view
   }
 }
+#endif
