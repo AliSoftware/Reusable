@@ -380,15 +380,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ReusableDemo iOS/Pods-ReusableDemo iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Reusable-iOS/Reusable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 			);
@@ -424,15 +420,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Reusable-tvOS/Reusable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 			);

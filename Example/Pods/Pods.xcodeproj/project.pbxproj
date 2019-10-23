@@ -7,152 +7,143 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0388BBB14A5C3254A770F6EBC1034C5D /* Pods-ReusableDemo tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F50E29C41C27C1D9C95796545FA4D522 /* Pods-ReusableDemo tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0973B5FFB4318E6F71E86C972E80C584 /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83065A31BED029AC4FE2D091C621E9F6 /* NibOwnerLoadable.swift */; };
-		0C8DDACE201717C7DDD1B9C1EC5DFD3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AAF8895BC2A4ACC7A5B2AA1F78CC8F9 /* UIKit.framework */; };
-		1E0471B53DA4457B6D0E1A6255F38DAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17580998B7269440BF57F2E2736B4EED /* Foundation.framework */; };
-		1FA8B6E9AA0F7CCC9F99C5034FDA78B0 /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83065A31BED029AC4FE2D091C621E9F6 /* NibOwnerLoadable.swift */; };
-		3B1BE8FD3F8A8868B36B48DC666F88C3 /* Pods-ReusableDemo iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FDEBF7BE0B74814B4EF95B6F69635FE /* Pods-ReusableDemo iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C9CF1AABFA93C79173C12D3389B5CEE /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = C395A73796F4D9927EC58731ED25623A /* StoryboardBased.swift */; };
-		43A1C8AAFD1936054B82904142B272A3 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F5BCAB9A70ACB03898FE62186F34E /* Reusable.swift */; };
-		461D16B1221C0E35CE58E22DA051826B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17580998B7269440BF57F2E2736B4EED /* Foundation.framework */; };
-		4B86A73014F90F59DAEDA354F26F6613 /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = C395A73796F4D9927EC58731ED25623A /* StoryboardBased.swift */; };
-		4CE0CBC1CAF4AC111AC45FB7830D0E16 /* Reusable-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D5EAE66C767704C80E55621EAF50A4C9 /* Reusable-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		524C58FDA46E09F9BACAE545BE4050FC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F5BCAB9A70ACB03898FE62186F34E /* Reusable.swift */; };
-		6CDAD2916957CD65D466052FE20B9962 /* Pods-ReusableDemo tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBB5A38D18F3A2EFDAD1AF73A368C26 /* Pods-ReusableDemo tvOS-dummy.m */; };
-		730744ADC7B09074A2BE7F4BCF538818 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF2A9BCD31BA3F8E3F99956FBE1F2E4 /* UIKit.framework */; };
-		75F85A23AE630A04E00814C93017CC5E /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FBB4A07B603F07087059529883DA17 /* UICollectionView+Reusable.swift */; };
-		8AA726E2074ECF2A7D9686CB8F78F3B8 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FBB4A07B603F07087059529883DA17 /* UICollectionView+Reusable.swift */; };
-		905A6A2CDB084886AE9A0E101673CF8C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B34F63E98745455BAC3A4AAE8FB5C8 /* NibLoadable.swift */; };
-		94EEB2970DA4D2DFE4B7C1B1F9D38654 /* StoryboardSceneBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835E694023DDBFDA0491B0DE42DB103 /* StoryboardSceneBased.swift */; };
-		9EA3F550A66E866540520A9E134FB74A /* Reusable-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCEE63C0075F33ACBE9DABAA79DC8DC /* Reusable-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B481D7A25CA57F200CCE36C980B62165 /* Reusable-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BFD6DF3171A4BE964938287D4FD626 /* Reusable-iOS-dummy.m */; };
-		B8AF0816808A1E6B00D8A15FAFDB3C7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B5499AB1EBE369788EC320431977E4 /* Foundation.framework */; };
-		C6EFDB798A5603C988CEAC4B09CA821A /* Pods-ReusableDemo iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA790E674D398C5C21FCE30B961E2454 /* Pods-ReusableDemo iOS-dummy.m */; };
-		CC3D99EC861B2E1F6A27413BBA5FD330 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2AA2D3AE5C875FB4B0D5A04B2DAC59 /* UITableView+Reusable.swift */; };
-		CD561CBF7BCF097E4A98616A9E1C5A3E /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2AA2D3AE5C875FB4B0D5A04B2DAC59 /* UITableView+Reusable.swift */; };
-		E22EC3BD46EE5FBC712D2298E1ADFA54 /* Reusable-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD335604E87EFDAD94374D6AA74FE6 /* Reusable-tvOS-dummy.m */; };
-		E47854A8FF29991E48ABDEFFE68BAD32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B5499AB1EBE369788EC320431977E4 /* Foundation.framework */; };
-		E6055AE8E66803AF6B3389C3D53B1E64 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B34F63E98745455BAC3A4AAE8FB5C8 /* NibLoadable.swift */; };
-		E8388C41A2933FB0DAC409C37E34AB88 /* StoryboardSceneBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835E694023DDBFDA0491B0DE42DB103 /* StoryboardSceneBased.swift */; };
+		00FB389BAEF752C3379ECAE86539EFFF /* Reusable-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 315FC5890D52AA8E3AEA6899FAC211F0 /* Reusable-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EC77D80825ECBC0562B63685AADCE16 /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449A0BEF03C4BCBE3E688825F37208F /* NibOwnerLoadable.swift */; };
+		1A95822F6E94E50E1FAC98BCC258BFC1 /* Pods-ReusableDemo iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05563169DADAC018DAC8C47C0A28319F /* Pods-ReusableDemo iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EC6F5426B95FB5ABC14458DB8262270 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D205357C129827F66030FC4A9BB95 /* Reusable.swift */; };
+		22F24CCF51CABB64EFF449A70D77F456 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C02902C45345E22CD0B969822F6DECF /* UITableView+Reusable.swift */; };
+		276926752A433995D023E56D6BAB715C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AAF8895BC2A4ACC7A5B2AA1F78CC8F9 /* UIKit.framework */; };
+		277B0ABA7CBE8C829BD479768FEDD982 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700767BA88CFC6741E9F2F58DAB84F33 /* NibLoadable.swift */; };
+		2DDD941F642BAFE42BC59A7238410275 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D205357C129827F66030FC4A9BB95 /* Reusable.swift */; };
+		4D80E76C7FD4E1AD214A624AE350F1B2 /* Reusable-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F01C64608E610A556FC5CC5472406B50 /* Reusable-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FE892071375477A47FF38B9949A6686 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9449D4F8133CF6EF5B70BE7F974896 /* UICollectionView+Reusable.swift */; };
+		5717332B0A4931BD1C4B04B9C62FB0D2 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9449D4F8133CF6EF5B70BE7F974896 /* UICollectionView+Reusable.swift */; };
+		6262615835FA8FA550C4455E3286B82C /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B5D0EF2914F9702B1D25E38DF92B29 /* StoryboardBased.swift */; };
+		640AB5AC3D7B09BF4D8745D0E2999AD3 /* Pods-ReusableDemo iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3281318B7BC8371AE487827AB5365395 /* Pods-ReusableDemo iOS-dummy.m */; };
+		66CB5E5218878EC21D89E17A374FF48C /* StoryboardSceneBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A3A9D7A779306CE519FC8A3AE7248E /* StoryboardSceneBased.swift */; };
+		7048421A42604066FC79934F5668BF6B /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B5D0EF2914F9702B1D25E38DF92B29 /* StoryboardBased.swift */; };
+		921D3F32416F81213EC05E4E8D4AAD1F /* Pods-ReusableDemo tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3E606CF5AC0A9E4F651F4CF2EF4BD3D /* Pods-ReusableDemo tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		979CED18FA554A2F13E49376EDAC74DD /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700767BA88CFC6741E9F2F58DAB84F33 /* NibLoadable.swift */; };
+		97A70EE840A09E9D2A8346F54E95F53E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B5499AB1EBE369788EC320431977E4 /* Foundation.framework */; };
+		9C1075367813DDE5F8DFC26CB81E439A /* Reusable-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E213D9D3B55925BC6E54276F37CF0F72 /* Reusable-iOS-dummy.m */; };
+		9C3C5D174F00C6FFD23A5B140A320A5A /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449A0BEF03C4BCBE3E688825F37208F /* NibOwnerLoadable.swift */; };
+		A3B94C9471CD7C8C1B6E960AE489E387 /* StoryboardSceneBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A3A9D7A779306CE519FC8A3AE7248E /* StoryboardSceneBased.swift */; };
+		AE6AC0D1661454AB328835868B4595D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17580998B7269440BF57F2E2736B4EED /* Foundation.framework */; };
+		B6135F0966A50325B41F4259AB9B3E35 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C02902C45345E22CD0B969822F6DECF /* UITableView+Reusable.swift */; };
+		B9F44625E7AD4A367A40122DB66B1CD2 /* Pods-ReusableDemo tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D735DF71FCB8ABBFAE3640101A407832 /* Pods-ReusableDemo tvOS-dummy.m */; };
+		D0C59326797466183A54F98B3CA765E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17580998B7269440BF57F2E2736B4EED /* Foundation.framework */; };
+		DEBC4EDFE55B627D37CCFDF5ACEE972D /* Reusable-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A36B27980F2030A691EF1D36AFF101 /* Reusable-tvOS-dummy.m */; };
+		F976BBDD68272F53C8F4637C938F33EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF2A9BCD31BA3F8E3F99956FBE1F2E4 /* UIKit.framework */; };
+		F99CAA0F70891D99A34C61BD5857E6D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B5499AB1EBE369788EC320431977E4 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2C0B64E983566711558BD04E8D35C387 /* PBXContainerItemProxy */ = {
+		12F63F9FF8DC624BA5073CED5773EF4C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A025A5DEE3B46F2FAA8A3376A0B0DFC2;
-			remoteInfo = "Reusable-tvOS";
-		};
-		481E7AD840482FF1688923FE7F583AA3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8BCCEADCAE99191AC5809AB8CE44DC55;
+			remoteGlobalIDString = 5B17BD52D480B5C801102C36AE584EFC;
 			remoteInfo = "Reusable-iOS";
+		};
+		661F3C1ECEEF85B31CCEC7673047ACDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB512E6F4CF1839C61449FFF7639197E;
+			remoteInfo = "Reusable-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02935A961C892D31E2B2DA00D3BAC67C /* Pods-ReusableDemo tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReusableDemo tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		0B2AA2D3AE5C875FB4B0D5A04B2DAC59 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Reusable.swift"; path = "Sources/View/UITableView+Reusable.swift"; sourceTree = "<group>"; };
-		0B631B62A2FD87FD3CC68A591F459E12 /* Pods-ReusableDemo iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReusableDemo iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		0C7253BE60AF8C18556778C897FD5FCC /* Pods_ReusableDemo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ReusableDemo_iOS.framework; path = "Pods-ReusableDemo iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05563169DADAC018DAC8C47C0A28319F /* Pods-ReusableDemo iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ReusableDemo iOS-umbrella.h"; sourceTree = "<group>"; };
+		080A03A9616CB8F003769F910C0F873B /* Reusable-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Reusable-tvOS.xcconfig"; path = "../Reusable-tvOS/Reusable-tvOS.xcconfig"; sourceTree = "<group>"; };
+		09191999E9810C9C3893F9FB97DCB69C /* Pods-ReusableDemo tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReusableDemo tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		12D38603E02E247F62298B168410FE4E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		13B5D0EF2914F9702B1D25E38DF92B29 /* StoryboardBased.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardBased.swift; path = Sources/Storyboard/StoryboardBased.swift; sourceTree = "<group>"; };
 		17580998B7269440BF57F2E2736B4EED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		1CBB5A38D18F3A2EFDAD1AF73A368C26 /* Pods-ReusableDemo tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ReusableDemo tvOS-dummy.m"; sourceTree = "<group>"; };
-		2586A2651A2971FF265F244D36147D4C /* Reusable-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Reusable-tvOS.modulemap"; path = "../Reusable-tvOS/Reusable-tvOS.modulemap"; sourceTree = "<group>"; };
-		2A76C6C0857DE29EAA4F2E2B51BEF705 /* Reusable-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Reusable-tvOS.xcconfig"; path = "../Reusable-tvOS/Reusable-tvOS.xcconfig"; sourceTree = "<group>"; };
-		2F1457B5D13F05363DFE2715D342915A /* Reusable.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Reusable.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		3C283D3855045DA9AEFAE65B7745422D /* Reusable-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Reusable-iOS-Info.plist"; sourceTree = "<group>"; };
-		3D52401293EA2B51AC6DCB09D031E4C8 /* Pods-ReusableDemo iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReusableDemo iOS-frameworks.sh"; sourceTree = "<group>"; };
-		43C520737CE6FB3B530BEB0A23E25B88 /* Reusable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Reusable.framework; path = "Reusable-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		194544F6DB8473C9AC0B356557BF10F9 /* Pods-ReusableDemo iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReusableDemo iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		1FCD317B673774D77E5BB05FD425BB30 /* Reusable-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Reusable-iOS-Info.plist"; sourceTree = "<group>"; };
+		2662AE7D7A2CC9CD798783BFBEE81DB9 /* Reusable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Reusable.framework; path = "Reusable-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29BC824DB679C32E8A3C976518F5A79F /* Reusable-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Reusable-tvOS-prefix.pch"; path = "../Reusable-tvOS/Reusable-tvOS-prefix.pch"; sourceTree = "<group>"; };
+		315FC5890D52AA8E3AEA6899FAC211F0 /* Reusable-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reusable-iOS-umbrella.h"; sourceTree = "<group>"; };
+		3281318B7BC8371AE487827AB5365395 /* Pods-ReusableDemo iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ReusableDemo iOS-dummy.m"; sourceTree = "<group>"; };
+		3867CC990A1B21FE0FD3330A3C2C8484 /* Reusable.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Reusable.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		38FB14722EFC63670DCFD642A1F433B4 /* Pods-ReusableDemo tvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReusableDemo tvOS-Info.plist"; sourceTree = "<group>"; };
+		42C803AFCB18642EA9CE002B06A59943 /* Pods_ReusableDemo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ReusableDemo_iOS.framework; path = "Pods-ReusableDemo iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47C65ED1E1FFC7096A69FFD51FAA1D3D /* Pods-ReusableDemo iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ReusableDemo iOS.modulemap"; sourceTree = "<group>"; };
 		4BF2A9BCD31BA3F8E3F99956FBE1F2E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		59831E8B4924FF5A5E90AE2541799987 /* Pods-ReusableDemo tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReusableDemo tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		62DD335604E87EFDAD94374D6AA74FE6 /* Reusable-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Reusable-tvOS-dummy.m"; path = "../Reusable-tvOS/Reusable-tvOS-dummy.m"; sourceTree = "<group>"; };
-		6FDEBF7BE0B74814B4EF95B6F69635FE /* Pods-ReusableDemo iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ReusableDemo iOS-umbrella.h"; sourceTree = "<group>"; };
-		7331F391EAA4404E11236CC09AEED259 /* Reusable-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Reusable-iOS.modulemap"; sourceTree = "<group>"; };
-		75B34F63E98745455BAC3A4AAE8FB5C8 /* NibLoadable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NibLoadable.swift; path = Sources/View/NibLoadable.swift; sourceTree = "<group>"; };
-		7835E694023DDBFDA0491B0DE42DB103 /* StoryboardSceneBased.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardSceneBased.swift; path = Sources/Storyboard/StoryboardSceneBased.swift; sourceTree = "<group>"; };
+		4ED6871CA98E69032399F416BC988DBD /* Pods-ReusableDemo iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReusableDemo iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		5154F448376A5DC3123584BF82E0EBC4 /* Reusable-tvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Reusable-tvOS-Info.plist"; path = "../Reusable-tvOS/Reusable-tvOS-Info.plist"; sourceTree = "<group>"; };
+		5668A35DE24EFF2FF7DDB2247EE0FC2F /* Pods-ReusableDemo tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ReusableDemo tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5B9449D4F8133CF6EF5B70BE7F974896 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Reusable.swift"; path = "Sources/View/UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		5F95A22540D1045CACC4B09CCCEA5127 /* Pods-ReusableDemo iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReusableDemo iOS-frameworks.sh"; sourceTree = "<group>"; };
+		5FF460DDAD2269541A3F2B425AD5A5C8 /* Pods-ReusableDemo iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReusableDemo iOS.release.xcconfig"; sourceTree = "<group>"; };
+		677F50DC2DE6906C3C2E7C534D6EAD75 /* Pods-ReusableDemo tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReusableDemo tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		6BD3512BBD6CD0B49D077A5F0AA6788F /* Pods-ReusableDemo tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ReusableDemo tvOS.modulemap"; sourceTree = "<group>"; };
+		700767BA88CFC6741E9F2F58DAB84F33 /* NibLoadable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NibLoadable.swift; path = Sources/View/NibLoadable.swift; sourceTree = "<group>"; };
 		7AAF8895BC2A4ACC7A5B2AA1F78CC8F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		82A6AC3FFBF5E57C26691D331EED6F4E /* Reusable-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Reusable-iOS.xcconfig"; sourceTree = "<group>"; };
-		83065A31BED029AC4FE2D091C621E9F6 /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NibOwnerLoadable.swift; path = Sources/View/NibOwnerLoadable.swift; sourceTree = "<group>"; };
-		832D51E040EC5CBFA45BBE7C3083BAC0 /* Pods_ReusableDemo_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ReusableDemo_tvOS.framework; path = "Pods-ReusableDemo tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		848FD08D6CA7459C31E09DA2EC1B30DD /* Pods-ReusableDemo iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReusableDemo iOS.release.xcconfig"; sourceTree = "<group>"; };
-		8675E3E43E0949B24D3457BD28D29CD9 /* Pods-ReusableDemo iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReusableDemo iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		880C7603A2697FA8275B4A1B16079F7F /* Pods-ReusableDemo iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ReusableDemo iOS.modulemap"; sourceTree = "<group>"; };
-		8E712559AD2E180B51DEFBB0FBE8732E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		8E9F3056F6797F2B231AB65B2D6DE0D5 /* Pods-ReusableDemo tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ReusableDemo tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		99819B670E2000F92536AC477D39F6E3 /* Pods-ReusableDemo iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ReusableDemo iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7DA67DD47FE45B93B13D6CCCD59EC578 /* Pods-ReusableDemo iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReusableDemo iOS-Info.plist"; sourceTree = "<group>"; };
+		7E0220E452D37669D260C22EC01BF6EC /* Reusable-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Reusable-iOS.xcconfig"; sourceTree = "<group>"; };
+		7E73E647B0D7DFBB4B6B6A0ABFE16505 /* Pods-ReusableDemo tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReusableDemo tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		83A36B27980F2030A691EF1D36AFF101 /* Reusable-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Reusable-tvOS-dummy.m"; path = "../Reusable-tvOS/Reusable-tvOS-dummy.m"; sourceTree = "<group>"; };
+		8C02902C45345E22CD0B969822F6DECF /* UITableView+Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Reusable.swift"; path = "Sources/View/UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		8E8D205357C129827F66030FC4A9BB95 /* Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = Sources/View/Reusable.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A5611DEE6B510D6C38C28C18685BFF15 /* Reusable-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Reusable-tvOS-prefix.pch"; path = "../Reusable-tvOS/Reusable-tvOS-prefix.pch"; sourceTree = "<group>"; };
-		A9BE331C42BF495FB0E4FCAA805B8C19 /* Pods-ReusableDemo tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReusableDemo tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		A9BFD6DF3171A4BE964938287D4FD626 /* Reusable-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Reusable-iOS-dummy.m"; sourceTree = "<group>"; };
-		AB0088B9B77218AC96D2CFFCF12037D2 /* Reusable-tvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Reusable-tvOS-Info.plist"; path = "../Reusable-tvOS/Reusable-tvOS-Info.plist"; sourceTree = "<group>"; };
-		ACDC7B6BFCE6F4F32228855538159FEC /* Reusable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Reusable.framework; path = "Reusable-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C01F5BCAB9A70ACB03898FE62186F34E /* Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = Sources/View/Reusable.swift; sourceTree = "<group>"; };
-		C2FBB4A07B603F07087059529883DA17 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Reusable.swift"; path = "Sources/View/UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
-		C395A73796F4D9927EC58731ED25623A /* StoryboardBased.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardBased.swift; path = Sources/Storyboard/StoryboardBased.swift; sourceTree = "<group>"; };
-		CFCEE63C0075F33ACBE9DABAA79DC8DC /* Reusable-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Reusable-tvOS-umbrella.h"; path = "../Reusable-tvOS/Reusable-tvOS-umbrella.h"; sourceTree = "<group>"; };
-		D18A563CC5EB6DBFA38E7C57433BB2A1 /* Pods-ReusableDemo tvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReusableDemo tvOS-Info.plist"; sourceTree = "<group>"; };
-		D2C8B27891C6DEB5EDF96DC429B8D0B9 /* Pods-ReusableDemo tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ReusableDemo tvOS.modulemap"; sourceTree = "<group>"; };
-		D3082C8B8F45C7849C7F3509B9F8005B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9F98279E10963E4CAE9C9D485726917D /* Reusable-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Reusable-tvOS.modulemap"; path = "../Reusable-tvOS/Reusable-tvOS.modulemap"; sourceTree = "<group>"; };
+		A3E606CF5AC0A9E4F651F4CF2EF4BD3D /* Pods-ReusableDemo tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ReusableDemo tvOS-umbrella.h"; sourceTree = "<group>"; };
+		A449A0BEF03C4BCBE3E688825F37208F /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NibOwnerLoadable.swift; path = Sources/View/NibOwnerLoadable.swift; sourceTree = "<group>"; };
+		A9A3A9D7A779306CE519FC8A3AE7248E /* StoryboardSceneBased.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardSceneBased.swift; path = Sources/Storyboard/StoryboardSceneBased.swift; sourceTree = "<group>"; };
+		C2F389995DE86899F7534AB7850D1E13 /* Reusable-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Reusable-iOS.modulemap"; sourceTree = "<group>"; };
+		CE36487AAC2DE854F71347EFA51632A6 /* Pods_ReusableDemo_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ReusableDemo_tvOS.framework; path = "Pods-ReusableDemo tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B5499AB1EBE369788EC320431977E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D5EAE66C767704C80E55621EAF50A4C9 /* Reusable-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reusable-iOS-umbrella.h"; sourceTree = "<group>"; };
-		D6CB587F5A1A1E01976D0E1CF405EC83 /* Pods-ReusableDemo tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReusableDemo tvOS-frameworks.sh"; sourceTree = "<group>"; };
-		E3C9298CF88114C797A152CB492C353F /* Pods-ReusableDemo iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReusableDemo iOS-Info.plist"; sourceTree = "<group>"; };
-		F50E29C41C27C1D9C95796545FA4D522 /* Pods-ReusableDemo tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ReusableDemo tvOS-umbrella.h"; sourceTree = "<group>"; };
-		FA790E674D398C5C21FCE30B961E2454 /* Pods-ReusableDemo iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ReusableDemo iOS-dummy.m"; sourceTree = "<group>"; };
-		FF0A0E7367D6A2112D338C35C209E866 /* Reusable-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reusable-iOS-prefix.pch"; sourceTree = "<group>"; };
+		D643F6CC053BC7206F607AB6CC95D678 /* Reusable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Reusable.framework; path = "Reusable-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D735DF71FCB8ABBFAE3640101A407832 /* Pods-ReusableDemo tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ReusableDemo tvOS-dummy.m"; sourceTree = "<group>"; };
+		D75B627F0FA22EF1AD6AF683C11170BB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		DB816F3B568786B8EE351C20D8BD0717 /* Pods-ReusableDemo tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReusableDemo tvOS-frameworks.sh"; sourceTree = "<group>"; };
+		E213D9D3B55925BC6E54276F37CF0F72 /* Reusable-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Reusable-iOS-dummy.m"; sourceTree = "<group>"; };
+		F01C64608E610A556FC5CC5472406B50 /* Reusable-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Reusable-tvOS-umbrella.h"; path = "../Reusable-tvOS/Reusable-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		F962C98723FA2982FC6582BC27F58D3D /* Pods-ReusableDemo iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ReusableDemo iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FF983F1E61E4CDB377808E3C58A95915 /* Reusable-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reusable-iOS-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0EF7B1A3247E291028382F89200A7371 /* Frameworks */ = {
+		1738D55411DE78FE4628838BCB8AFEE6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				461D16B1221C0E35CE58E22DA051826B /* Foundation.framework in Frameworks */,
+				F99CAA0F70891D99A34C61BD5857E6D4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		11145ECE8506A29449FE0D86BA8CE060 /* Frameworks */ = {
+		C1D8C25CA474CE17B69289AA9F535A09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8AF0816808A1E6B00D8A15FAFDB3C7C /* Foundation.framework in Frameworks */,
+				AE6AC0D1661454AB328835868B4595D2 /* Foundation.framework in Frameworks */,
+				F976BBDD68272F53C8F4637C938F33EF /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37D2D27B19380C5E9729398B64032BF0 /* Frameworks */ = {
+		C1EEECC4DE323D680E922E2C93875EFB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E47854A8FF29991E48ABDEFFE68BAD32 /* Foundation.framework in Frameworks */,
-				0C8DDACE201717C7DDD1B9C1EC5DFD3E /* UIKit.framework in Frameworks */,
+				D0C59326797466183A54F98B3CA765E4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9C58277CC9D5275979F13F7D5C24312 /* Frameworks */ = {
+		F7EC5887E1E240248A0DD319F1DA8094 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E0471B53DA4457B6D0E1A6255F38DAE /* Foundation.framework in Frameworks */,
-				730744ADC7B09074A2BE7F4BCF538818 /* UIKit.framework in Frameworks */,
+				97A70EE840A09E9D2A8346F54E95F53E /* Foundation.framework in Frameworks */,
+				276926752A433995D023E56D6BAB715C /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03C3B64AF1408DF6941B795E244663AA /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				C395A73796F4D9927EC58731ED25623A /* StoryboardBased.swift */,
-				7835E694023DDBFDA0491B0DE42DB103 /* StoryboardSceneBased.swift */,
-			);
-			name = Storyboard;
-			sourceTree = "<group>";
-		};
 		27E08C0A424F8E3B5F0D55C1FCCFB83D /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,80 +162,90 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		3EFD761C3698679705D74BC682A55777 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42C803AFCB18642EA9CE002B06A59943 /* Pods_ReusableDemo_iOS.framework */,
+				CE36487AAC2DE854F71347EFA51632A6 /* Pods_ReusableDemo_tvOS.framework */,
+				2662AE7D7A2CC9CD798783BFBEE81DB9 /* Reusable.framework */,
+				D643F6CC053BC7206F607AB6CC95D678 /* Reusable.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4C2EEEC7253CD0A56D0D71985A9336D1 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				57DD7DCEE9202BBE7C5938BC936F7627 /* Reusable */,
+				AEA1BBC1D82949969D576E390403BD75 /* Reusable */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		54F42F8F8576A0FEB366DDF0AEB88D6B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7331F391EAA4404E11236CC09AEED259 /* Reusable-iOS.modulemap */,
-				82A6AC3FFBF5E57C26691D331EED6F4E /* Reusable-iOS.xcconfig */,
-				A9BFD6DF3171A4BE964938287D4FD626 /* Reusable-iOS-dummy.m */,
-				3C283D3855045DA9AEFAE65B7745422D /* Reusable-iOS-Info.plist */,
-				FF0A0E7367D6A2112D338C35C209E866 /* Reusable-iOS-prefix.pch */,
-				D5EAE66C767704C80E55621EAF50A4C9 /* Reusable-iOS-umbrella.h */,
-				2586A2651A2971FF265F244D36147D4C /* Reusable-tvOS.modulemap */,
-				2A76C6C0857DE29EAA4F2E2B51BEF705 /* Reusable-tvOS.xcconfig */,
-				62DD335604E87EFDAD94374D6AA74FE6 /* Reusable-tvOS-dummy.m */,
-				AB0088B9B77218AC96D2CFFCF12037D2 /* Reusable-tvOS-Info.plist */,
-				A5611DEE6B510D6C38C28C18685BFF15 /* Reusable-tvOS-prefix.pch */,
-				CFCEE63C0075F33ACBE9DABAA79DC8DC /* Reusable-tvOS-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Reusable-iOS";
 			sourceTree = "<group>";
 		};
 		55D30D3FEC1CB1D84689FB090585C8F6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				76708C3B848A99EFD73B81DB4F337312 /* Pods-ReusableDemo iOS */,
-				DA27F39777C3E238EB7F763EF22951C9 /* Pods-ReusableDemo tvOS */,
+				AA77AEDFDE4D786ABBBF0594281A5CBD /* Pods-ReusableDemo iOS */,
+				ED228D6295FF209E1CD434EE75FC2AC9 /* Pods-ReusableDemo tvOS */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		57DD7DCEE9202BBE7C5938BC936F7627 /* Reusable */ = {
+		6952FDF2BFC802B13E6C8BEA19BF4FEF /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				A5A8BCC01C9193F1057D54F832EE78DC /* Pod */,
-				03C3B64AF1408DF6941B795E244663AA /* Storyboard */,
-				54F42F8F8576A0FEB366DDF0AEB88D6B /* Support Files */,
-				F7C663BA979702AAD9916841F4BC9FBB /* View */,
+				13B5D0EF2914F9702B1D25E38DF92B29 /* StoryboardBased.swift */,
+				A9A3A9D7A779306CE519FC8A3AE7248E /* StoryboardSceneBased.swift */,
 			);
-			name = Reusable;
-			path = ../..;
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
-		76708C3B848A99EFD73B81DB4F337312 /* Pods-ReusableDemo iOS */ = {
+		6BDA1C1801F48CD773C1F2792DFE74C5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				880C7603A2697FA8275B4A1B16079F7F /* Pods-ReusableDemo iOS.modulemap */,
-				99819B670E2000F92536AC477D39F6E3 /* Pods-ReusableDemo iOS-acknowledgements.markdown */,
-				8675E3E43E0949B24D3457BD28D29CD9 /* Pods-ReusableDemo iOS-acknowledgements.plist */,
-				FA790E674D398C5C21FCE30B961E2454 /* Pods-ReusableDemo iOS-dummy.m */,
-				3D52401293EA2B51AC6DCB09D031E4C8 /* Pods-ReusableDemo iOS-frameworks.sh */,
-				E3C9298CF88114C797A152CB492C353F /* Pods-ReusableDemo iOS-Info.plist */,
-				6FDEBF7BE0B74814B4EF95B6F69635FE /* Pods-ReusableDemo iOS-umbrella.h */,
-				0B631B62A2FD87FD3CC68A591F459E12 /* Pods-ReusableDemo iOS.debug.xcconfig */,
-				848FD08D6CA7459C31E09DA2EC1B30DD /* Pods-ReusableDemo iOS.release.xcconfig */,
+				C2F389995DE86899F7534AB7850D1E13 /* Reusable-iOS.modulemap */,
+				7E0220E452D37669D260C22EC01BF6EC /* Reusable-iOS.xcconfig */,
+				E213D9D3B55925BC6E54276F37CF0F72 /* Reusable-iOS-dummy.m */,
+				1FCD317B673774D77E5BB05FD425BB30 /* Reusable-iOS-Info.plist */,
+				FF983F1E61E4CDB377808E3C58A95915 /* Reusable-iOS-prefix.pch */,
+				315FC5890D52AA8E3AEA6899FAC211F0 /* Reusable-iOS-umbrella.h */,
+				9F98279E10963E4CAE9C9D485726917D /* Reusable-tvOS.modulemap */,
+				080A03A9616CB8F003769F910C0F873B /* Reusable-tvOS.xcconfig */,
+				83A36B27980F2030A691EF1D36AFF101 /* Reusable-tvOS-dummy.m */,
+				5154F448376A5DC3123584BF82E0EBC4 /* Reusable-tvOS-Info.plist */,
+				29BC824DB679C32E8A3C976518F5A79F /* Reusable-tvOS-prefix.pch */,
+				F01C64608E610A556FC5CC5472406B50 /* Reusable-tvOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Reusable-iOS";
+			sourceTree = "<group>";
+		};
+		937EE5FC91A0CF8106547B2CC78E1C5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				700767BA88CFC6741E9F2F58DAB84F33 /* NibLoadable.swift */,
+				A449A0BEF03C4BCBE3E688825F37208F /* NibOwnerLoadable.swift */,
+				8E8D205357C129827F66030FC4A9BB95 /* Reusable.swift */,
+				5B9449D4F8133CF6EF5B70BE7F974896 /* UICollectionView+Reusable.swift */,
+				8C02902C45345E22CD0B969822F6DECF /* UITableView+Reusable.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AA77AEDFDE4D786ABBBF0594281A5CBD /* Pods-ReusableDemo iOS */ = {
+			isa = PBXGroup;
+			children = (
+				47C65ED1E1FFC7096A69FFD51FAA1D3D /* Pods-ReusableDemo iOS.modulemap */,
+				F962C98723FA2982FC6582BC27F58D3D /* Pods-ReusableDemo iOS-acknowledgements.markdown */,
+				4ED6871CA98E69032399F416BC988DBD /* Pods-ReusableDemo iOS-acknowledgements.plist */,
+				3281318B7BC8371AE487827AB5365395 /* Pods-ReusableDemo iOS-dummy.m */,
+				5F95A22540D1045CACC4B09CCCEA5127 /* Pods-ReusableDemo iOS-frameworks.sh */,
+				7DA67DD47FE45B93B13D6CCCD59EC578 /* Pods-ReusableDemo iOS-Info.plist */,
+				05563169DADAC018DAC8C47C0A28319F /* Pods-ReusableDemo iOS-umbrella.h */,
+				194544F6DB8473C9AC0B356557BF10F9 /* Pods-ReusableDemo iOS.debug.xcconfig */,
+				5FF460DDAD2269541A3F2B425AD5A5C8 /* Pods-ReusableDemo iOS.release.xcconfig */,
 			);
 			name = "Pods-ReusableDemo iOS";
 			path = "Target Support Files/Pods-ReusableDemo iOS";
-			sourceTree = "<group>";
-		};
-		A5A8BCC01C9193F1057D54F832EE78DC /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				8E712559AD2E180B51DEFBB0FBE8732E /* LICENSE */,
-				D3082C8B8F45C7849C7F3509B9F8005B /* README.md */,
-				2F1457B5D13F05363DFE2715D342915A /* Reusable.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		AD5425924FE10000CF4FF255ECA3C3EE /* Frameworks */ = {
@@ -256,15 +257,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CA184FF3B8761A74E75172D3F9C4B7BD /* Products */ = {
+		AEA1BBC1D82949969D576E390403BD75 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
-				0C7253BE60AF8C18556778C897FD5FCC /* Pods_ReusableDemo_iOS.framework */,
-				832D51E040EC5CBFA45BBE7C3083BAC0 /* Pods_ReusableDemo_tvOS.framework */,
-				43C520737CE6FB3B530BEB0A23E25B88 /* Reusable.framework */,
-				ACDC7B6BFCE6F4F32228855538159FEC /* Reusable.framework */,
+				C0C523B9E794AFB55741DEE04387A60A /* Pod */,
+				6952FDF2BFC802B13E6C8BEA19BF4FEF /* Storyboard */,
+				6BDA1C1801F48CD773C1F2792DFE74C5 /* Support Files */,
+				937EE5FC91A0CF8106547B2CC78E1C5C /* View */,
 			);
-			name = Products;
+			name = Reusable;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C0C523B9E794AFB55741DEE04387A60A /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				12D38603E02E247F62298B168410FE4E /* LICENSE */,
+				D75B627F0FA22EF1AD6AF683C11170BB /* README.md */,
+				3867CC990A1B21FE0FD3330A3C2C8484 /* Reusable.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -273,105 +285,74 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				4C2EEEC7253CD0A56D0D71985A9336D1 /* Development Pods */,
 				AD5425924FE10000CF4FF255ECA3C3EE /* Frameworks */,
-				CA184FF3B8761A74E75172D3F9C4B7BD /* Products */,
+				3EFD761C3698679705D74BC682A55777 /* Products */,
 				55D30D3FEC1CB1D84689FB090585C8F6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		DA27F39777C3E238EB7F763EF22951C9 /* Pods-ReusableDemo tvOS */ = {
+		ED228D6295FF209E1CD434EE75FC2AC9 /* Pods-ReusableDemo tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				D2C8B27891C6DEB5EDF96DC429B8D0B9 /* Pods-ReusableDemo tvOS.modulemap */,
-				8E9F3056F6797F2B231AB65B2D6DE0D5 /* Pods-ReusableDemo tvOS-acknowledgements.markdown */,
-				59831E8B4924FF5A5E90AE2541799987 /* Pods-ReusableDemo tvOS-acknowledgements.plist */,
-				1CBB5A38D18F3A2EFDAD1AF73A368C26 /* Pods-ReusableDemo tvOS-dummy.m */,
-				D6CB587F5A1A1E01976D0E1CF405EC83 /* Pods-ReusableDemo tvOS-frameworks.sh */,
-				D18A563CC5EB6DBFA38E7C57433BB2A1 /* Pods-ReusableDemo tvOS-Info.plist */,
-				F50E29C41C27C1D9C95796545FA4D522 /* Pods-ReusableDemo tvOS-umbrella.h */,
-				02935A961C892D31E2B2DA00D3BAC67C /* Pods-ReusableDemo tvOS.debug.xcconfig */,
-				A9BE331C42BF495FB0E4FCAA805B8C19 /* Pods-ReusableDemo tvOS.release.xcconfig */,
+				6BD3512BBD6CD0B49D077A5F0AA6788F /* Pods-ReusableDemo tvOS.modulemap */,
+				5668A35DE24EFF2FF7DDB2247EE0FC2F /* Pods-ReusableDemo tvOS-acknowledgements.markdown */,
+				09191999E9810C9C3893F9FB97DCB69C /* Pods-ReusableDemo tvOS-acknowledgements.plist */,
+				D735DF71FCB8ABBFAE3640101A407832 /* Pods-ReusableDemo tvOS-dummy.m */,
+				DB816F3B568786B8EE351C20D8BD0717 /* Pods-ReusableDemo tvOS-frameworks.sh */,
+				38FB14722EFC63670DCFD642A1F433B4 /* Pods-ReusableDemo tvOS-Info.plist */,
+				A3E606CF5AC0A9E4F651F4CF2EF4BD3D /* Pods-ReusableDemo tvOS-umbrella.h */,
+				7E73E647B0D7DFBB4B6B6A0ABFE16505 /* Pods-ReusableDemo tvOS.debug.xcconfig */,
+				677F50DC2DE6906C3C2E7C534D6EAD75 /* Pods-ReusableDemo tvOS.release.xcconfig */,
 			);
 			name = "Pods-ReusableDemo tvOS";
 			path = "Target Support Files/Pods-ReusableDemo tvOS";
 			sourceTree = "<group>";
 		};
-		F7C663BA979702AAD9916841F4BC9FBB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				75B34F63E98745455BAC3A4AAE8FB5C8 /* NibLoadable.swift */,
-				83065A31BED029AC4FE2D091C621E9F6 /* NibOwnerLoadable.swift */,
-				C01F5BCAB9A70ACB03898FE62186F34E /* Reusable.swift */,
-				C2FBB4A07B603F07087059529883DA17 /* UICollectionView+Reusable.swift */,
-				0B2AA2D3AE5C875FB4B0D5A04B2DAC59 /* UITableView+Reusable.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		483FFF54DB5990CCC75D6B44FF6C33BB /* Headers */ = {
+		6AD1BBF1FF0B9B4E0518E85A961AA35D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CE0CBC1CAF4AC111AC45FB7830D0E16 /* Reusable-iOS-umbrella.h in Headers */,
+				1A95822F6E94E50E1FAC98BCC258BFC1 /* Pods-ReusableDemo iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A60CADDF010645C355FBFB40C1723A8 /* Headers */ = {
+		7750B777C7EC19DCBCB9B7488FC2D781 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B1BE8FD3F8A8868B36B48DC666F88C3 /* Pods-ReusableDemo iOS-umbrella.h in Headers */,
+				00FB389BAEF752C3379ECAE86539EFFF /* Reusable-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C6319BDC7956501EA61233EADCF1C85 /* Headers */ = {
+		B5893073FFD6955C7D1D011DE5899549 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EA3F550A66E866540520A9E134FB74A /* Reusable-tvOS-umbrella.h in Headers */,
+				921D3F32416F81213EC05E4E8D4AAD1F /* Pods-ReusableDemo tvOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C683D453F5214BD7CFEDE3285A428BA2 /* Headers */ = {
+		F7F4D5DBDAE7250034454C223AFE2971 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0388BBB14A5C3254A770F6EBC1034C5D /* Pods-ReusableDemo tvOS-umbrella.h in Headers */,
+				4D80E76C7FD4E1AD214A624AE350F1B2 /* Reusable-tvOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4DCF7C8F9E7B565EBC0B94319315DE66 /* Pods-ReusableDemo tvOS */ = {
+		5B17BD52D480B5C801102C36AE584EFC /* Reusable-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C80DBBDB298546D3AC7832B4C01F43BB /* Build configuration list for PBXNativeTarget "Pods-ReusableDemo tvOS" */;
+			buildConfigurationList = 4C5201B463E361DFA30A2DE196681ACB /* Build configuration list for PBXNativeTarget "Reusable-iOS" */;
 			buildPhases = (
-				C683D453F5214BD7CFEDE3285A428BA2 /* Headers */,
-				65BA2C636EA885BF6FC8C2A1142D69F4 /* Sources */,
-				11145ECE8506A29449FE0D86BA8CE060 /* Frameworks */,
-				BAA7A2C7EC69417E4A8EE1949199F5F3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				77106F958461198E9FCDA27062D80517 /* PBXTargetDependency */,
-			);
-			name = "Pods-ReusableDemo tvOS";
-			productName = "Pods-ReusableDemo tvOS";
-			productReference = 832D51E040EC5CBFA45BBE7C3083BAC0 /* Pods_ReusableDemo_tvOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		8BCCEADCAE99191AC5809AB8CE44DC55 /* Reusable-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5E1B88465B29C34BD934CF850AAC5AA8 /* Build configuration list for PBXNativeTarget "Reusable-iOS" */;
-			buildPhases = (
-				483FFF54DB5990CCC75D6B44FF6C33BB /* Headers */,
-				8D806B8CD1E235BF2FD28D3CB6F8290B /* Sources */,
-				C9C58277CC9D5275979F13F7D5C24312 /* Frameworks */,
-				7405C609E30445EEC1E1860333444F40 /* Resources */,
+				7750B777C7EC19DCBCB9B7488FC2D781 /* Headers */,
+				8D89694A9713CEBA5B0C2857291D709B /* Sources */,
+				C1D8C25CA474CE17B69289AA9F535A09 /* Frameworks */,
+				0100F0C9514AC6E19852BF7E8B0AD5FC /* Resources */,
 			);
 			buildRules = (
 			);
@@ -379,17 +360,55 @@
 			);
 			name = "Reusable-iOS";
 			productName = "Reusable-iOS";
-			productReference = 43C520737CE6FB3B530BEB0A23E25B88 /* Reusable.framework */;
+			productReference = 2662AE7D7A2CC9CD798783BFBEE81DB9 /* Reusable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A025A5DEE3B46F2FAA8A3376A0B0DFC2 /* Reusable-tvOS */ = {
+		5D941AB1BB505573FFFD682FBF2064A5 /* Pods-ReusableDemo tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6EC4ECEC79303FE1EEC1D82FCF9F54D4 /* Build configuration list for PBXNativeTarget "Reusable-tvOS" */;
+			buildConfigurationList = CE133F8C674B1390CC0DC982714708CE /* Build configuration list for PBXNativeTarget "Pods-ReusableDemo tvOS" */;
 			buildPhases = (
-				9C6319BDC7956501EA61233EADCF1C85 /* Headers */,
-				9C46FD9098EB27EB48A1E8FCE5A90CA0 /* Sources */,
-				37D2D27B19380C5E9729398B64032BF0 /* Frameworks */,
-				42EE52A5BFD8BFDA1ADB6B8A95B2C428 /* Resources */,
+				B5893073FFD6955C7D1D011DE5899549 /* Headers */,
+				CE343C7DA36C11D060DF62CDFEDFE3F9 /* Sources */,
+				1738D55411DE78FE4628838BCB8AFEE6 /* Frameworks */,
+				28036D3529A2442D2E06C9E224D81397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BB7672B0892E90F79145B3F8B895A0B /* PBXTargetDependency */,
+			);
+			name = "Pods-ReusableDemo tvOS";
+			productName = "Pods-ReusableDemo tvOS";
+			productReference = CE36487AAC2DE854F71347EFA51632A6 /* Pods_ReusableDemo_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A038C352F4DD91DC3B8F32842CF5F001 /* Pods-ReusableDemo iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E558DF7B0EA65A033EA576DD5A79EDCE /* Build configuration list for PBXNativeTarget "Pods-ReusableDemo iOS" */;
+			buildPhases = (
+				6AD1BBF1FF0B9B4E0518E85A961AA35D /* Headers */,
+				A483A9338833F632E2137F6A06968106 /* Sources */,
+				C1EEECC4DE323D680E922E2C93875EFB /* Frameworks */,
+				C49AFC7CA2AB950C587453615CBA129B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA0123B44F73D66E5D4595ACF2472810 /* PBXTargetDependency */,
+			);
+			name = "Pods-ReusableDemo iOS";
+			productName = "Pods-ReusableDemo iOS";
+			productReference = 42C803AFCB18642EA9CE002B06A59943 /* Pods_ReusableDemo_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BB512E6F4CF1839C61449FFF7639197E /* Reusable-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26F1ACD9B9E7B560809742872B41B474 /* Build configuration list for PBXNativeTarget "Reusable-tvOS" */;
+			buildPhases = (
+				F7F4D5DBDAE7250034454C223AFE2971 /* Headers */,
+				616FB82A1F9FB4008F58574385F91A00 /* Sources */,
+				F7EC5887E1E240248A0DD319F1DA8094 /* Frameworks */,
+				1727CC9B233E131C280A3F73A8F71DDA /* Resources */,
 			);
 			buildRules = (
 			);
@@ -397,26 +416,7 @@
 			);
 			name = "Reusable-tvOS";
 			productName = "Reusable-tvOS";
-			productReference = ACDC7B6BFCE6F4F32228855538159FEC /* Reusable.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		CFEA1EE9BDB01FFC71FDE1E0ABC3CA0B /* Pods-ReusableDemo iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3B8F7CF82C1E68AB08DA168F3B5ACDAA /* Build configuration list for PBXNativeTarget "Pods-ReusableDemo iOS" */;
-			buildPhases = (
-				6A60CADDF010645C355FBFB40C1723A8 /* Headers */,
-				510903F010B58DC5042796BFA6FBE16F /* Sources */,
-				0EF7B1A3247E291028382F89200A7371 /* Frameworks */,
-				66BEB956534069F35A3EB8484E803CF1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D57DB3132C457627D584DA414E7CB2B2 /* PBXTargetDependency */,
-			);
-			name = "Pods-ReusableDemo iOS";
-			productName = "Pods-ReusableDemo iOS";
-			productReference = 0C7253BE60AF8C18556778C897FD5FCC /* Pods_ReusableDemo_iOS.framework */;
+			productReference = D643F6CC053BC7206F607AB6CC95D678 /* Reusable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -425,8 +425,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -434,43 +434,44 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = CA184FF3B8761A74E75172D3F9C4B7BD /* Products */;
+			productRefGroup = 3EFD761C3698679705D74BC682A55777 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CFEA1EE9BDB01FFC71FDE1E0ABC3CA0B /* Pods-ReusableDemo iOS */,
-				4DCF7C8F9E7B565EBC0B94319315DE66 /* Pods-ReusableDemo tvOS */,
-				8BCCEADCAE99191AC5809AB8CE44DC55 /* Reusable-iOS */,
-				A025A5DEE3B46F2FAA8A3376A0B0DFC2 /* Reusable-tvOS */,
+				A038C352F4DD91DC3B8F32842CF5F001 /* Pods-ReusableDemo iOS */,
+				5D941AB1BB505573FFFD682FBF2064A5 /* Pods-ReusableDemo tvOS */,
+				5B17BD52D480B5C801102C36AE584EFC /* Reusable-iOS */,
+				BB512E6F4CF1839C61449FFF7639197E /* Reusable-tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		42EE52A5BFD8BFDA1ADB6B8A95B2C428 /* Resources */ = {
+		0100F0C9514AC6E19852BF7E8B0AD5FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66BEB956534069F35A3EB8484E803CF1 /* Resources */ = {
+		1727CC9B233E131C280A3F73A8F71DDA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7405C609E30445EEC1E1860333444F40 /* Resources */ = {
+		28036D3529A2442D2E06C9E224D81397 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAA7A2C7EC69417E4A8EE1949199F5F3 /* Resources */ = {
+		C49AFC7CA2AB950C587453615CBA129B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -480,70 +481,165 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		510903F010B58DC5042796BFA6FBE16F /* Sources */ = {
+		616FB82A1F9FB4008F58574385F91A00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6EFDB798A5603C988CEAC4B09CA821A /* Pods-ReusableDemo iOS-dummy.m in Sources */,
+				979CED18FA554A2F13E49376EDAC74DD /* NibLoadable.swift in Sources */,
+				9C3C5D174F00C6FFD23A5B140A320A5A /* NibOwnerLoadable.swift in Sources */,
+				DEBC4EDFE55B627D37CCFDF5ACEE972D /* Reusable-tvOS-dummy.m in Sources */,
+				1EC6F5426B95FB5ABC14458DB8262270 /* Reusable.swift in Sources */,
+				7048421A42604066FC79934F5668BF6B /* StoryboardBased.swift in Sources */,
+				66CB5E5218878EC21D89E17A374FF48C /* StoryboardSceneBased.swift in Sources */,
+				5717332B0A4931BD1C4B04B9C62FB0D2 /* UICollectionView+Reusable.swift in Sources */,
+				B6135F0966A50325B41F4259AB9B3E35 /* UITableView+Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65BA2C636EA885BF6FC8C2A1142D69F4 /* Sources */ = {
+		8D89694A9713CEBA5B0C2857291D709B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CDAD2916957CD65D466052FE20B9962 /* Pods-ReusableDemo tvOS-dummy.m in Sources */,
+				277B0ABA7CBE8C829BD479768FEDD982 /* NibLoadable.swift in Sources */,
+				0EC77D80825ECBC0562B63685AADCE16 /* NibOwnerLoadable.swift in Sources */,
+				9C1075367813DDE5F8DFC26CB81E439A /* Reusable-iOS-dummy.m in Sources */,
+				2DDD941F642BAFE42BC59A7238410275 /* Reusable.swift in Sources */,
+				6262615835FA8FA550C4455E3286B82C /* StoryboardBased.swift in Sources */,
+				A3B94C9471CD7C8C1B6E960AE489E387 /* StoryboardSceneBased.swift in Sources */,
+				4FE892071375477A47FF38B9949A6686 /* UICollectionView+Reusable.swift in Sources */,
+				22F24CCF51CABB64EFF449A70D77F456 /* UITableView+Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D806B8CD1E235BF2FD28D3CB6F8290B /* Sources */ = {
+		A483A9338833F632E2137F6A06968106 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				905A6A2CDB084886AE9A0E101673CF8C /* NibLoadable.swift in Sources */,
-				0973B5FFB4318E6F71E86C972E80C584 /* NibOwnerLoadable.swift in Sources */,
-				B481D7A25CA57F200CCE36C980B62165 /* Reusable-iOS-dummy.m in Sources */,
-				43A1C8AAFD1936054B82904142B272A3 /* Reusable.swift in Sources */,
-				4B86A73014F90F59DAEDA354F26F6613 /* StoryboardBased.swift in Sources */,
-				E8388C41A2933FB0DAC409C37E34AB88 /* StoryboardSceneBased.swift in Sources */,
-				8AA726E2074ECF2A7D9686CB8F78F3B8 /* UICollectionView+Reusable.swift in Sources */,
-				CD561CBF7BCF097E4A98616A9E1C5A3E /* UITableView+Reusable.swift in Sources */,
+				640AB5AC3D7B09BF4D8745D0E2999AD3 /* Pods-ReusableDemo iOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C46FD9098EB27EB48A1E8FCE5A90CA0 /* Sources */ = {
+		CE343C7DA36C11D060DF62CDFEDFE3F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6055AE8E66803AF6B3389C3D53B1E64 /* NibLoadable.swift in Sources */,
-				1FA8B6E9AA0F7CCC9F99C5034FDA78B0 /* NibOwnerLoadable.swift in Sources */,
-				E22EC3BD46EE5FBC712D2298E1ADFA54 /* Reusable-tvOS-dummy.m in Sources */,
-				524C58FDA46E09F9BACAE545BE4050FC /* Reusable.swift in Sources */,
-				3C9CF1AABFA93C79173C12D3389B5CEE /* StoryboardBased.swift in Sources */,
-				94EEB2970DA4D2DFE4B7C1B1F9D38654 /* StoryboardSceneBased.swift in Sources */,
-				75F85A23AE630A04E00814C93017CC5E /* UICollectionView+Reusable.swift in Sources */,
-				CC3D99EC861B2E1F6A27413BBA5FD330 /* UITableView+Reusable.swift in Sources */,
+				B9F44625E7AD4A367A40122DB66B1CD2 /* Pods-ReusableDemo tvOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		77106F958461198E9FCDA27062D80517 /* PBXTargetDependency */ = {
+		0BB7672B0892E90F79145B3F8B895A0B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Reusable-tvOS";
-			target = A025A5DEE3B46F2FAA8A3376A0B0DFC2 /* Reusable-tvOS */;
-			targetProxy = 2C0B64E983566711558BD04E8D35C387 /* PBXContainerItemProxy */;
+			target = BB512E6F4CF1839C61449FFF7639197E /* Reusable-tvOS */;
+			targetProxy = 661F3C1ECEEF85B31CCEC7673047ACDC /* PBXContainerItemProxy */;
 		};
-		D57DB3132C457627D584DA414E7CB2B2 /* PBXTargetDependency */ = {
+		DA0123B44F73D66E5D4595ACF2472810 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Reusable-iOS";
-			target = 8BCCEADCAE99191AC5809AB8CE44DC55 /* Reusable-iOS */;
-			targetProxy = 481E7AD840482FF1688923FE7F583AA3 /* PBXContainerItemProxy */;
+			target = 5B17BD52D480B5C801102C36AE584EFC /* Reusable-iOS */;
+			targetProxy = 12F63F9FF8DC624BA5073CED5773EF4C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1762BF39B7A08FE5FAE2713EC357AA30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 080A03A9616CB8F003769F910C0F873B /* Reusable-tvOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Reusable-tvOS/Reusable-tvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Reusable-tvOS/Reusable-tvOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Reusable-tvOS/Reusable-tvOS.modulemap";
+				PRODUCT_MODULE_NAME = Reusable;
+				PRODUCT_NAME = Reusable;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		24B2AC15B8FBC3CA9FBEF808134AF145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E0220E452D37669D260C22EC01BF6EC /* Reusable-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Reusable-iOS/Reusable-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Reusable-iOS/Reusable-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Reusable-iOS/Reusable-iOS.modulemap";
+				PRODUCT_MODULE_NAME = Reusable;
+				PRODUCT_NAME = Reusable;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		270983374B5567E308D0CB05694B2E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E73E647B0D7DFBB4B6B6A0ABFE16505 /* Pods-ReusableDemo tvOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		2EDCC58BE386897EEC127BDD0D413BD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -604,69 +700,6 @@
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
-		};
-		4FB5AE0B190832050F4DE733E7453AEB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82A6AC3FFBF5E57C26691D331EED6F4E /* Reusable-iOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Reusable-iOS/Reusable-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Reusable-iOS/Reusable-iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Reusable-iOS/Reusable-iOS.modulemap";
-				PRODUCT_MODULE_NAME = Reusable;
-				PRODUCT_NAME = Reusable;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		739604EC23E40E129F3CB969F89B63E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A76C6C0857DE29EAA4F2E2B51BEF705 /* Reusable-tvOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Reusable-tvOS/Reusable-tvOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Reusable-tvOS/Reusable-tvOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Reusable-tvOS/Reusable-tvOS.modulemap";
-				PRODUCT_MODULE_NAME = Reusable;
-				PRODUCT_NAME = Reusable;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		7D91118FE72B6228C6580F26FB60F1E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -733,9 +766,75 @@
 			};
 			name = Debug;
 		};
-		9C9E45264619273459F2B8C594565797 /* Debug */ = {
+		853093E8E850211E8235DCF4A765D3A3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B631B62A2FD87FD3CC68A591F459E12 /* Pods-ReusableDemo iOS.debug.xcconfig */;
+			baseConfigurationReference = 7E0220E452D37669D260C22EC01BF6EC /* Reusable-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Reusable-iOS/Reusable-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Reusable-iOS/Reusable-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Reusable-iOS/Reusable-iOS.modulemap";
+				PRODUCT_MODULE_NAME = Reusable;
+				PRODUCT_NAME = Reusable;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8851F1BE424D1DA3A4FE327110EE3A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 677F50DC2DE6906C3C2E7C534D6EAD75 /* Pods-ReusableDemo tvOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		99A2CF1525AC04E3DFB205BBB57D9A3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 194544F6DB8473C9AC0B356557BF10F9 /* Pods-ReusableDemo iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -766,42 +865,9 @@
 			};
 			name = Debug;
 		};
-		AC1A9C969E71F9E72B677C58BDF99F08 /* Debug */ = {
+		A41C665BED4B9D72873A71E1549F5B37 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02935A961C892D31E2B2DA00D3BAC67C /* Pods-ReusableDemo tvOS.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B61093D0835E0E00ACC42633F8214487 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A76C6C0857DE29EAA4F2E2B51BEF705 /* Reusable-tvOS.xcconfig */;
+			baseConfigurationReference = 080A03A9616CB8F003769F910C0F873B /* Reusable-tvOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -831,74 +897,9 @@
 			};
 			name = Release;
 		};
-		B61229072AA0D33213499FA30E595DE9 /* Release */ = {
+		D1E67959CDFAE7CB1BB6C6D5441F2AE6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9BE331C42BF495FB0E4FCAA805B8C19 /* Pods-ReusableDemo tvOS.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ReusableDemo tvOS/Pods-ReusableDemo tvOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D8F9D15AD680794C0EBBBFBC701D47AB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82A6AC3FFBF5E57C26691D331EED6F4E /* Reusable-iOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Reusable-iOS/Reusable-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Reusable-iOS/Reusable-iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Reusable-iOS/Reusable-iOS.modulemap";
-				PRODUCT_MODULE_NAME = Reusable;
-				PRODUCT_NAME = Reusable;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FC6BDB3BEDEA411C7028F141CAF83201 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 848FD08D6CA7459C31E09DA2EC1B30DD /* Pods-ReusableDemo iOS.release.xcconfig */;
+			baseConfigurationReference = 5FF460DDAD2269541A3F2B425AD5A5C8 /* Pods-ReusableDemo iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -933,11 +934,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B8F7CF82C1E68AB08DA168F3B5ACDAA /* Build configuration list for PBXNativeTarget "Pods-ReusableDemo iOS" */ = {
+		26F1ACD9B9E7B560809742872B41B474 /* Build configuration list for PBXNativeTarget "Reusable-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C9E45264619273459F2B8C594565797 /* Debug */,
-				FC6BDB3BEDEA411C7028F141CAF83201 /* Release */,
+				1762BF39B7A08FE5FAE2713EC357AA30 /* Debug */,
+				A41C665BED4B9D72873A71E1549F5B37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -951,29 +952,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E1B88465B29C34BD934CF850AAC5AA8 /* Build configuration list for PBXNativeTarget "Reusable-iOS" */ = {
+		4C5201B463E361DFA30A2DE196681ACB /* Build configuration list for PBXNativeTarget "Reusable-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8F9D15AD680794C0EBBBFBC701D47AB /* Debug */,
-				4FB5AE0B190832050F4DE733E7453AEB /* Release */,
+				24B2AC15B8FBC3CA9FBEF808134AF145 /* Debug */,
+				853093E8E850211E8235DCF4A765D3A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6EC4ECEC79303FE1EEC1D82FCF9F54D4 /* Build configuration list for PBXNativeTarget "Reusable-tvOS" */ = {
+		CE133F8C674B1390CC0DC982714708CE /* Build configuration list for PBXNativeTarget "Pods-ReusableDemo tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				739604EC23E40E129F3CB969F89B63E9 /* Debug */,
-				B61093D0835E0E00ACC42633F8214487 /* Release */,
+				270983374B5567E308D0CB05694B2E18 /* Debug */,
+				8851F1BE424D1DA3A4FE327110EE3A93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C80DBBDB298546D3AC7832B4C01F43BB /* Build configuration list for PBXNativeTarget "Pods-ReusableDemo tvOS" */ = {
+		E558DF7B0EA65A033EA576DD5A79EDCE /* Build configuration list for PBXNativeTarget "Pods-ReusableDemo iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AC1A9C969E71F9E72B677C58BDF99F08 /* Debug */,
-				B61229072AA0D33213499FA30E595DE9 /* Release */,
+				99A2CF1525AC04E3DFB205BBB57D9A3F /* Debug */,
+				D1E67959CDFAE7CB1BB6C6D5441F2AE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
