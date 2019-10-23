@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+* Update the README with up-to-date Swift versions and Installation Instructions.  
+  [@kuyazee](https://github.com/kuyazee)
+  [@AliSoftware](https://github.com/AliSoftware)
+  [#95](https://github.com/AliSoftware/Reusable/pull/95)
+
 * Set `APPLICATION_EXTENSION_API_ONLY` build setting on built frameworks.  
   [@AliSoftware](https://github.com/AliSoftware)
   [#98](https://github.com/AliSoftware/Reusable/pull/98)
