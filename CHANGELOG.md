@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+* Update tools used by the project (Xcode, CocoaPods, CI, Carthage).  
+  Also SPM builds are now tested by CI.  
+  [@AliSoftware](https://github.com/AliSoftware)
+  [#97](https://github.com/AliSoftware/Reusable/pull/97)
+
 * Update SPM `Package.swift` to mention supported platforms.  
   [@MortyMerr](https://github.com/MortyMerr)
   [#89](https://github.com/AliSoftware/Reusable/pull/89)
