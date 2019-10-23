@@ -39,7 +39,7 @@ public extension NibOwnerLoadable where Self: UIView {
    */
   func loadNibContent() {
     let layoutAttributes: [NSLayoutConstraint.Attribute] = [.top, .leading, .bottom, .trailing]
-    for case let view as UIView in Self.nib.instantiate(withOwner: self, options: nil) {
+    for case let view as UIView in type(of: self).nib.instantiate(withOwner: self, options: nil) {
       view.translatesAutoresizingMaskIntoConstraints = false
       self.addSubview(view)
       NSLayoutConstraint.activate(layoutAttributes.map { attribute in
