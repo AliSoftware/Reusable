@@ -13,7 +13,9 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 [![Language: Swift 4](https://img.shields.io/badge/Swift-4-orange)](https://swift.org)
 [![Language: Swift 5](https://img.shields.io/badge/Swift-5-orange)](https://swift.org)
 
-# Requirements
+# Installation
+
+<details><summary><b>Requirements</b>: which Reusable version to use for each Swift Version?</summary>
 
 |  Swift Version |  Reusable Version  |
 |----------------|--------------------|
@@ -24,9 +26,34 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 
 _(†) The Reusable 3.0 code also compiles with Swift 4, you'll need 4.0.2+ only if you're using Carthage for integration_
 
-## Setting up with Carthage
+</details>
 
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
+Reusable can be integrated to your Xcode projects using one of the following options:
+
+<details><summary>Installation instructions for <b>Swift Package Manager (SPM)</b></summary>
+
+[Swift Package Manager](https://swift.org/package-manager/) is Apple's decentralized dependency manager to integrate libraries to your Swift projects. It is now fully integrated with Xcode 11
+
+To integrate Reusable into your project using SPM, specify it in your `Package.swift` file:
+
+```swift
+let package = Package(
+    …
+    dependencies: [
+        .package(url: "https://github.com/AliSoftware/Reusable.git", from: "4.1.0"),
+    ],
+    targets: [
+        .target(name: "YourTarget", dependencies: ["Reusable", …])
+        …
+    ]
+)
+```
+
+</details>
+
+<details><summary>Installation instructions for <b>Carthage</b></summary>
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager to add pre-built frameworks to your Cocoa application.
 
 To integrate Reusable into your Xcode project using Carthage, specify it in your `Cartfile`:
 
@@ -34,16 +61,19 @@ To integrate Reusable into your Xcode project using Carthage, specify it in your
 github "AliSoftware/Reusable"
 ```
 
-## Setting up with Cocoapods
+</details>
 
-[CocoaPods](https://cocoapods.org/) is a dependency manager for Swift and Objective-C Cocoa projects.
+<details><summary>Installation instructions for <b>CocoaPods</b></summary>
+
+[CocoaPods](https://cocoapods.org/) is a dependency manager to automate integration of frameworks to your Swift and Objective-C Cocoa projects.
 
 To integrate Reusable into your Xcode project using Cocoapods, specify it in your `Podspec`:
 
 ```bash
-source 'https://github.com/CocoaPods/Specs.git'
 pod 'Reusable'
 ```
+
+</details>
 
 # Introduction
 
