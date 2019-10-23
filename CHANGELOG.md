@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Unreleased
+
+* Dynamic dispatch of nib name lookup
+  [@calmez](https://github.com/calmez)
+  [#96](https://github.com/AliSoftware/Reusable/pull/96)
+
 ## 4.1.0
 
 * Support for Swift 5.0
