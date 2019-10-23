@@ -40,38 +40,6 @@ defaults:
 
 version: 2
 jobs:
-  carthage-build:
-    <<: *default-config
-    steps:
-      - *prepare-storage
-      - checkout
-      - *restore-gems
-      - *install-gems
-      - *store-gems
-      - run:
-          name: Install Carthage
-          command: bundle exec rake carthage:install
-      - run:
-          name: Build
-          command: bundle exec rake carthage:build
-      - store_test_results:
-          path: /tmp/circleci-test-results
-      - *fetch-xcode-logs
-      - *store-artifacts
-
-  check-deploy:
-    <<: *default-config
-    steps:
-      - *prepare-storage
-      - checkout
-      - *restore-gems
-      - *install-gems
-      - *store-gems
-      - run:
-          name: Lint podspec
-          command: bundle exec rake pod:lint
-      - *store-artifacts
-
   lint:
     <<: *default-config
     steps:
@@ -139,6 +107,37 @@ jobs:
       - *fetch-xcode-logs
       - *store-artifacts
 
+  pod-lint:
+    <<: *default-config
+    steps:
+      - *prepare-storage
+      - checkout
+      - *restore-gems
+      - *install-gems
+      - *store-gems
+      - run:
+          name: Lint podspec
+          command: bundle exec rake pod:lint
+      - *store-artifacts
+
+  carthage-build:
+    <<: *default-config
+    steps:
+      - *prepare-storage
+      - checkout
+      - *restore-gems
+      - *install-gems
+      - *store-gems
+      - run:
+          name: Install Carthage
+          command: bundle exec rake carthage:install
+      - run:
+          name: Build
+          command: bundle exec rake carthage:build
+      - store_test_results:
+          path: /tmp/circleci-test-results
+      - *fetch-xcode-logs
+      - *store-artifacts
 
 workflows:
   version: 2
@@ -151,13 +150,15 @@ workflows:
       - xcode-tvos-build-and-test:
           requires:
             - lint
+      - spm-build-and-test:
+          requires:
+            - lint
       - carthage-build:
           requires:
-            - lint
             - xcode-ios-build-and-test
             - xcode-tvos-build-and-test
-      - check-deploy:
+      - pod-lint:
           requires:
-            - lint
+            - spm-build-and-test
             - xcode-ios-build-and-test
             - xcode-tvos-build-and-test
