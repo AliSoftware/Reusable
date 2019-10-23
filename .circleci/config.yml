@@ -56,7 +56,7 @@ jobs:
           command: bundle exec rake swiftlint:run
       - *store-artifacts
 
-  spm-build-and-test:
+  spm-build:
     <<: *default-config
     steps:
       - *prepare-storage
@@ -65,11 +65,11 @@ jobs:
       - *install-gems
       - *store-gems
       - run:
-          name: Run all tests
-          command: bundle exec rake spm:test
+          name: SPM Build
+          command: bundle exec rake spm:build
       - *store-artifacts
 
-  xcode-ios-build-and-test:
+  xcode-ios-build:
     <<: *default-config
     steps:
       - *prepare-storage
@@ -78,17 +78,17 @@ jobs:
       - *install-gems
       - *store-gems
       - run:
-          name: Build Framework
+          name: Build iOS Framework
           command: bundle exec rake fmk:ios
       - run:
-          name: Run Tests
+          name: Build iOS Demo
           command: bundle exec rake demo:ios
       - store_test_results:
           path: /tmp/circleci-test-results
       - *fetch-xcode-logs
       - *store-artifacts
 
-  xcode-tvos-build-and-test:
+  xcode-tvos-build:
     <<: *default-config
     steps:
       - *prepare-storage
@@ -97,10 +97,10 @@ jobs:
       - *install-gems
       - *store-gems
       - run:
-          name: Build Framework
+          name: Build tvOS Framework
           command: bundle exec rake fmk:tvos
       - run:
-          name: Run Tests
+          name: Build tvOS Demo
           command: bundle exec rake demo:tvos
       - store_test_results:
           path: /tmp/circleci-test-results
@@ -132,7 +132,7 @@ jobs:
           name: Install Carthage
           command: bundle exec rake carthage:install
       - run:
-          name: Build
+          name: Carthage Build
           command: bundle exec rake carthage:build
       - store_test_results:
           path: /tmp/circleci-test-results
@@ -141,24 +141,24 @@ jobs:
 
 workflows:
   version: 2
-  lint-buildandtest-checkdeploy:
+  check_all_builds:
     jobs:
       - lint
-      - xcode-ios-build-and-test:
+      - xcode-ios-build:
           requires:
             - lint
-      - xcode-tvos-build-and-test:
+      - xcode-tvos-build:
           requires:
             - lint
-      - spm-build-and-test:
+      - spm-build:
           requires:
             - lint
       - carthage-build:
           requires:
-            - xcode-ios-build-and-test
-            - xcode-tvos-build-and-test
+            - xcode-ios-build
+            - xcode-tvos-build
       - pod-lint:
           requires:
-            - spm-build-and-test
-            - xcode-ios-build-and-test
-            - xcode-tvos-build-and-test
+            - spm-build
+            - xcode-ios-build
+            - xcode-tvos-build
