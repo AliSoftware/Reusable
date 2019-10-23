@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+* Update SPM `Package.swift` to mention supported platforms.  
+  [@MortyMerr](https://github.com/MortyMerr)
+  [#89](https://github.com/AliSoftware/Reusable/pull/89)
+  [@pahnev](https://github.com/pahnev)
+  [#93](https://github.com/AliSoftware/Reusable/pull/93)
+  [@mackoj](https://github.com/mackoj)
+  [#85](https://github.com/AliSoftware/Reusable/pull/85)
+
 * Fix nib name lookup when using subclassing.  
   [@calmez](https://github.com/calmez)
   [#96](https://github.com/AliSoftware/Reusable/pull/96)
