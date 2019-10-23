@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+* Set `APPLICATION_EXTENSION_API_ONLY` build setting on built frameworks.  
+  [@AliSoftware](https://github.com/AliSoftware)
+  [#98](https://github.com/AliSoftware/Reusable/pull/98)
+  [@nahung89](https://github.com/nahung89)
+  [#88](https://github.com/AliSoftware/Reusable/pull/88)
+
 * Update tools used by the project (Xcode, CocoaPods, CI, Carthage).  
   Also SPM builds are now tested by CI.  
   [@AliSoftware](https://github.com/AliSoftware)
