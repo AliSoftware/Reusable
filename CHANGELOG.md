@@ -2,19 +2,19 @@
 
 ## Unreleased
 
-* Dynamic dispatch of nib name lookup
+* Fix nib name lookup when using subclassing.  
   [@calmez](https://github.com/calmez)
   [#96](https://github.com/AliSoftware/Reusable/pull/96)
 
 ## 4.1.0
 
-* Support for Swift 5.0
+* Support for Swift 5.0  
   [@florentmorin](https://github.com/florentmorin)
   [#80](https://github.com/AliSoftware/Reusable/pull/80)
 
 ## 4.0.5
 
-* Fix for only allowing the use of app extension API.    
+* Fix for only allowing the use of app extension API.  
   [@igorkulman](https://github.com/igorkulman)
   [#73](https://github.com/AliSoftware/Reusable/pull/73)
 
