@@ -21,7 +21,7 @@
     "git": "https://github.com/AliSoftware/Reusable.git",
     "tag": "4.1.0"
   },
-  "swift_version": "5.0",
+  "swift_versions": "5.0",
   "frameworks": "UIKit",
   "subspecs": [
     {
@@ -32,5 +32,6 @@
       "name": "Storyboard",
       "source_files": "Sources/Storyboard/*.swift"
     }
-  ]
+  ],
+  "swift_version": "5.0"
 }
