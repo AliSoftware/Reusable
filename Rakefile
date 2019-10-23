@@ -31,7 +31,7 @@ namespace :carthage do
   desc "Install Carthage from pkg"
   task :install do
     next if system('which carthage >/dev/null')
-    install_pkg('https://github.com/Carthage/Carthage/releases/download/0.20.0/Carthage.pkg')
+    install_pkg('https://github.com/Carthage/Carthage/releases/download/0.33.0/Carthage.pkg')
   end
 
   desc "Builds the Reusable framework using Carthage"
