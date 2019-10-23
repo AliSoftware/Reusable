@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 4.1.1
 
 * Update the README with up-to-date Swift versions and Installation Instructions.  
   [@kuyazee](https://github.com/kuyazee)
