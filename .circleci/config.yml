@@ -68,9 +68,6 @@ jobs:
       - *install-gems
       - *store-gems
       - run:
-          name: Download podspec repo
-          command: curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-      - run:
           name: Lint podspec
           command: bundle exec rake pod:lint
       - *store-artifacts
