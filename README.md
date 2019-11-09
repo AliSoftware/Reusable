@@ -9,17 +9,71 @@ A Swift mixin to use `UITableViewCells`, `UICollectionViewCells` and `UIViewCont
 [![CircleCI](https://circleci.com/gh/AliSoftware/Reusable/tree/master.svg?style=svg)](https://circleci.com/gh/AliSoftware/Reusable/tree/master)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
 [![Version](http://cocoapod-badges.herokuapp.com/v/Reusable/badge.png)](http://cocoadocs.org/docsets/Reusable)
-[![Language: Swift 3 & 4](https://img.shields.io/badge/Swift-3%20%26%204-orange.svg)](https://swift.org)
+[![Language: Swift 3](https://img.shields.io/badge/Swift-3-orange)](https://swift.org)
+[![Language: Swift 4](https://img.shields.io/badge/Swift-4-orange)](https://swift.org)
+[![Language: Swift 5](https://img.shields.io/badge/Swift-5-orange)](https://swift.org)
 
-# Requirements
+# Installation
+
+<details><summary><b>Requirements</b>: which Reusable version to use for each Swift Version?</summary>
 
 |  Swift Version |  Reusable Version  |
 |----------------|--------------------|
 |    2.2 & 2.3   |        2.5.1       |
 |       3.0 (†)  |        3.0.0 +     |
 |       4.0      |        4.0.2 +     |
+|       5.0      |        4.1.0 +     |
 
 _(†) The Reusable 3.0 code also compiles with Swift 4, you'll need 4.0.2+ only if you're using Carthage for integration_
+
+</details>
+
+Reusable can be integrated to your Xcode projects using one of the following options:
+
+<details><summary>Installation instructions for <b>Swift Package Manager (SPM)</b></summary>
+
+[Swift Package Manager](https://swift.org/package-manager/) is Apple's decentralized dependency manager to integrate libraries to your Swift projects. It is now fully integrated with Xcode 11
+
+To integrate Reusable into your project using SPM, specify it in your `Package.swift` file:
+
+```swift
+let package = Package(
+    …
+    dependencies: [
+        .package(url: "https://github.com/AliSoftware/Reusable.git", from: "4.1.0"),
+    ],
+    targets: [
+        .target(name: "YourTarget", dependencies: ["Reusable", …])
+        …
+    ]
+)
+```
+
+</details>
+
+<details><summary>Installation instructions for <b>Carthage</b></summary>
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager to add pre-built frameworks to your Cocoa application.
+
+To integrate Reusable into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```bash
+github "AliSoftware/Reusable"
+```
+
+</details>
+
+<details><summary>Installation instructions for <b>CocoaPods</b></summary>
+
+[CocoaPods](https://cocoapods.org/) is a dependency manager to automate integration of frameworks to your Swift and Objective-C Cocoa projects.
+
+To integrate Reusable into your Xcode project using Cocoapods, specify it in your `Podspec`:
+
+```bash
+pod 'Reusable'
+```
+
+</details>
 
 # Introduction
 
@@ -459,6 +513,7 @@ The concepts behind Reusable has been presented in various articles and talks:
 * [Using Generics to improve TableView cells](https://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/) on my blog
 * [FrenchKit'16 talk: Mixins over Inheritance](https://youtu.be/BSn4jlunn4I) (video)
 * Same talk was also given at NSSpain'16 ([slides](https://speakerdeck.com/alisoftware/mixins-over-inheritance)) and AppDevCon'17 ([slides](https://speakerdeck.com/alisoftware/mixins-over-inheritance-appdevcon-17))
+* [No more String-typed instantiations on iOS Development](https://medium.com/@zonilyjame/reusable-no-more-string-typed-instantiations-on-ios-development-aa1a4f59201c)
 
 # License
 
