@@ -62,7 +62,7 @@ GEM
     nanaimo (0.2.6)
     nap (1.1.0)
     netrc (0.11.0)
-    rake (10.5.0)
+    rake (12.3.3)
     rouge (2.0.7)
     ruby-macho (1.4.0)
     thread_safe (0.3.6)
@@ -82,7 +82,7 @@ PLATFORMS
 
 DEPENDENCIES
   cocoapods (~> 1.8)
-  rake (~> 10.5)
+  rake (~> 12.3)
   xcpretty
 
 BUNDLED WITH
