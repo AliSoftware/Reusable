@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 # The bare minimum for building, e.g. in Homebrew
 group :build do
-	gem 'rake', '~> 10.5'
+	gem 'rake', '~> 12.3'
 	gem 'xcpretty'
 end
 
