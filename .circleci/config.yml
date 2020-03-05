@@ -11,6 +11,10 @@ defaults:
     run:
       name: Create directories for artifacts and reports
       command: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS
+  - &set-ruby-version
+    run:
+      name: Set Ruby Version
+      command: echo 'chruby ruby-2.6.4' >> ~/.bash_profile
   - &restore-gems
     restore_cache:
       keys:
@@ -44,6 +48,7 @@ jobs:
     steps:
       - *prepare-storage
       - checkout
+      - *set-ruby-version
       - *restore-gems
       - *install-gems
       - *store-gems
@@ -60,6 +65,7 @@ jobs:
     steps:
       - *prepare-storage
       - checkout
+      - *set-ruby-version
       - *restore-gems
       - *install-gems
       - *store-gems
@@ -73,6 +79,7 @@ jobs:
     steps:
       - *prepare-storage
       - checkout
+      - *set-ruby-version
       - *restore-gems
       - *install-gems
       - *store-gems
@@ -92,6 +99,7 @@ jobs:
     steps:
       - *prepare-storage
       - checkout
+      - *set-ruby-version
       - *restore-gems
       - *install-gems
       - *store-gems
@@ -111,6 +119,7 @@ jobs:
     steps:
       - *prepare-storage
       - checkout
+      - *set-ruby-version
       - *restore-gems
       - *install-gems
       - *store-gems
@@ -124,6 +133,7 @@ jobs:
     steps:
       - *prepare-storage
       - checkout
+      - *set-ruby-version
       - *restore-gems
       - *install-gems
       - *store-gems
