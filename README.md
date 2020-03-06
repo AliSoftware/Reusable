@@ -119,7 +119,7 @@ final class CustomCell: UITableViewCell, Reusable { /* And that's it! */ }
 
 > ✍️ **Notes**
 > 
-> * For cells embedded in a Storyboard's tableView, either one of those two protocols will work (as you won't register the cell them manually anyway)
+> * For cells embedded in a Storyboard's tableView, either one of those two protocols will work (as you won't need to register the cell manually anyway, since registration is handled by the storyboard automatically)
 > * If you create a XIB-based cell, don't forget to set its _Reuse Identifier_ field in Interface Builder to the same string as the name of the cell class itself.
 > * 💡 `NibReusable` is a typealias, so you could still use two protocols conformance `Reusable, NibLoadable` instead of `NibReusable`.
 
