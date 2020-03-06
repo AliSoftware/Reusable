@@ -226,7 +226,7 @@ let cell = tableView.dequeueReusableCell(for: indexPath) as MyCustomCell
 let cell: MyCustomCell = tableView.dequeueReusableCell(for: indexPath)
 ```
 
-As long as **Swift can use type-inference to understand that you'll want a cell of type `MyCustomCell`** (either using `as MyCystomCell` or explicitly typing the receiving variable `cell: MyCustomCell`), it will magically infer both the cell class to use and thus its `reuseIdentifier` needed to dequeue the cell, and which exact type to return to save you a type-cast.
+As long as **Swift can use type-inference to understand that you'll want a cell of type `MyCustomCell`** (either using `as MyCustomCell` or explicitly typing the receiving variable `cell: MyCustomCell`), it will magically infer both the cell class to use and thus its `reuseIdentifier` needed to dequeue the cell, and which exact type to return to save you a type-cast.
 
 * No need for you to manipulate `reuseIdentifiers` Strings manually anymore!
 * No need to force-cast the returned `UITableViewCell` instance down to your `MyCustomCell` class either!
@@ -255,7 +255,7 @@ extension MyViewController: UITableViewDataSource {
 
 Now all you have is **a beautiful code and type-safe cells**, with compile-type checking, and no more String-based API!
 
-> 💡 If the cell class is computed at runtime in a variable, you won't be able to use `as theVariable` or `let cell: theVariable` obviously… but instead you can use the optional parameter `cellType` (which otherwise gets infered by the return type and is thus not necessary to provide explicitly)
+> 💡 If the cell class you want to dequeue is computed at runtime and stored in a variable, you won't be able to use `as theVariable` or `let cell: theVariable` obviously. Instead, you can use the optional parameter `cellType` (which otherwise gets infered by the return type and is thus not necessary to provide explicitly)
 > 
 > <details>
 > <summary>📑 Example with a cell type determined at runtime</summary>
@@ -266,7 +266,7 @@ Now all you have is **a beautiful code and type-safe cells**, with compile-type 
 > class Child2Cell: ParentCell {}
 > 
 > func cellType(for indexPath: NSIndexPath) -> ParentCell.Type {
->   return (indexPath.row % 2 == 0) ? Child1Cell.self : Child2Cell.self
+>   return indexPath.row.isMultiple(of: 2) ? Child1Cell.self : Child2Cell.self
 > }
 > 
 > func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -274,7 +274,9 @@ Now all you have is **a beautiful code and type-safe cells**, with compile-type 
 >   // As `self.cellType(for:)` always returns a `ParentCell` (sub-)class, the type
 >   // of the variable `cell` below is infered to be `ParentCell` too. So only methods
 >   // declared in the parent `ParentCell` class will be accessible on the `cell` variable.
+>   // But this code will still dequeue the proper type of cell (Child1Cell or Child2Cell).
 >   let cell = tableView.dequeueReusableCell(for: indexPath, cellType: cellClass)
+>   // Then fill the content of your cell (using methods/properties from `ParentCell` type)
 >   return cell  
 > }
 > ```
@@ -286,7 +288,7 @@ Now all you have is **a beautiful code and type-safe cells**, with compile-type 
 
 # Type-safe XIB-based reusable views
 
-`Reusable` also allows you to create reusable custom views designed in Interface Builder to reuse them in other XIBs or by code, like creating custom UI widgets used in multiple places in your app.
+`Reusable` also allows you to create reusable custom views designed in Interface Builder to reuse them in other XIBs or Storyboards, or by code. This allows you to treat those views like custom UI widgets that can be used in multiple places in your app.
 
 ## 1. Declare your views to conform to `NibLoadable` or `NibOwnerLoadable`
 
@@ -304,7 +306,7 @@ final class NibBasedFileOwnerView: UIView, NibOwnerLoadable { /* and that's it! 
 ```
 
 > 💡 You should use the second approach if you plan to use your custom view in another XIB or Storyboard.  
-> This will allow you to just drop a UIView in a XIB/Storyboard and change its class to the class of your custom XIB-based view to use it. That custom view will then automagically load its own content from the associated XIB when instantiated by the storyboard containing it, without having to write additional code to load the content of the custom view manually every time.
+> This will allow you to just drop a UIView in a XIB/Storyboard and change its class in IB's inspector to the class of your custom XIB-based view to use it. That custom view will then automagically load its own content from the associated XIB when instantiated by the storyboard containing it, without having to write additional code to load the content of the custom view manually every time.
 
 ## 2. Design your view in Interface Builder
 
@@ -339,21 +341,21 @@ final class MyCustomWidget: UIView, NibOwnerLoadable {
 ```
 </details>
 
-Then that widget can be integrated in a Storyboard Scene (or any other XIB) by simply dropping a `UIView` on the Storyboard, and changing its class to `MyCustomWidget`.
+Then that widget can be integrated in a Storyboard Scene (or any other XIB) by simply dropping a `UIView` on the Storyboard, and changing its class to `MyCustomWidget` in IB's inspector.
 
 <details>
 <summary>🖼 Example of a `NibOwnerLoadable` custom view once integrated in another Storyboard</summary>
 
 * In the capture below, all blue square views have a custom class of `MyCustomWidget` set in Interface Builder.
-* When selecting one of this custom class, you have direct access to all `@IBOutlet` that this `MyCustomWidget` exposes, which allows you to connect them to other views of the Storyboard if needed
-* When selecting one of this custom class, you also have access to all the `@IBInspectable` properties. For example, in the capture below, you can see the "Rect color" and "Text" inspectable properties on the right panel, that you can change right from the Storyboard integrating your custom widget.
+* When selecting one of these custom views, you have direct access to all `@IBOutlet` that this `MyCustomWidget` exposes, which allows you to connect them to other views of the Storyboard if needed
+* When selecting one of these custom views, you also have access to all the `@IBInspectable` properties. For example, in the capture below, you can see the "Rect color" and "Text" inspectable properties on the right panel, that you can change right from the Storyboard integrating your custom widget.
 
 ![NibOwnerLoadable integrated in a Storyboard](NibOwnerLoadable-InStoryboard.png)
 </details>
 
 ## 3a. Auto-loading the content of a `NibOwnerLoadable` view
 
-If you used `NibOwnerLoadable` and made your custom view the File's Owner of your XIB, you should then override `init?(coder:)` so that it load it's associated XIB as subviews and add constraints automatically:
+If you used `NibOwnerLoadable` and made your custom view the File's Owner of your XIB, you should then override `init?(coder:)` so that it loads it's associated XIB as subviews and add constraints automatically:
 
 ```swift
 final class MyCustomWidget: UIView, NibOwnerLoadable {
@@ -365,9 +367,11 @@ final class MyCustomWidget: UIView, NibOwnerLoadable {
 }
 ```
 
-Overriding `init?(coder:)` allows your `MyCustomWidget` custom view to load its content from the associated XIB `MyCustomWidget.xib` and add it as subviews of itself.
+`self.loadNibContent()` is a method provided by the `NibOwnerLoadable` mixin. It basically loads the content from the associated `MyCustomWidget.xib`, then add all the root views in that XIB as subviews of your `MyCustomWidget`, with appropriate layout constraints to make them the same size as your `MyCustomWidget` container view.
 
-_💡 Note: it is also possible to override `init(frame:)`, in order to be able to create an instance of that view programatically and call `loadNibContent()` to fill with views if needed._
+Overriding `init?(coder:)` and calling `self.loadNibContent()` thus allows you to have that content automatically loaded by the system when that `MyCustomWidget` in included in another XIB or in a Storyboard (as `init?(coder:)` is the `init` that is called by iOS to create those instances in a XIB or Storyboard)
+
+_💡 Note: it is also possible to override `init(frame:)` similarly, in order to be able to also create an instance of that view manually via code if needed._
 
 ## 3b. Instantiating a `NibLoadable` view
 
