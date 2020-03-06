@@ -67,7 +67,7 @@ github "AliSoftware/Reusable"
 
 [CocoaPods](https://cocoapods.org/) is a dependency manager to automate integration of frameworks to your Swift and Objective-C Cocoa projects.
 
-To integrate Reusable into your Xcode project using Cocoapods, specify it in your `Podspec`:
+To integrate Reusable into your Xcode project using Cocoapods, specify it in your `Podfile`:
 
 ```bash
 pod 'Reusable'
