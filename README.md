@@ -130,7 +130,7 @@ final class CustomCell: UITableViewCell, Reusable { /* And that's it! */ }
 ```swift
 final class CodeBasedCustomCell: UITableViewCell, Reusable {
   // By default this cell will have a reuseIdentifier of "CodeBasedCustomCell"
-  // unless you provide an alternative implementation of `var reuseIdentifier`
+  // unless you provide an alternative implementation of `static var reuseIdentifier`
   
   // No need to add anything to conform to Reusable. You can just keep your normal cell code
   @IBOutlet private weak var label: UILabel!
@@ -148,7 +148,7 @@ final class NibBasedCustomCell: UITableViewCell, NibReusable {
 // final class NibBasedCustomCell: UITableViewCell, Reusable, NibLoadable {
   
   // Here we provide a nib for this cell class (which, if we don't override the protocol's
-  // default implementation of `nib`, will use a XIB of the same name as the class)
+  // default implementation of `static var nib: UINib`, will use a XIB of the same name as the class)
   
   // No need to add anything to conform to Reusable. You can just keep your normal cell code
   @IBOutlet private weak var pictureView: UIImageView!
@@ -204,8 +204,12 @@ class MyViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    tableView.register(cellType: CodeBasedCustomCell.self) // This will register using the class without using a UINib
-    tableView.register(cellType: NibBasedCustomCell.self) // This will register using NibBasedCustomCell.xib
+    // This will register using the class (via `register(AnyClass?, forCellReuseIdentifier: String)`)
+    // because the CodeBasedCustomCell type conforms to Reusable, but not NibLoadable (nor the NibReusable typealias)
+    tableView.register(cellType: CodeBasedCustomCell.self)
+    // This will register using NibBasedCustomCell.xib (via `register(UINib?, forCellReuseIdentifier: String)`)
+    // because the NibBasedCustomCell type conforms to NibLoadable (via the NibReusable typealias)
+    tableView.register(cellType: NibBasedCustomCell.self)
   }
 }
 ```
