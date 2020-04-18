@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7fF-Ae-xTS">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7fF-Ae-xTS">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tw8-mE-1pZ" id="06x-cI-AjP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRp-NR-1CZ">
@@ -132,7 +130,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnw-gc-OgB" customClass="MyCustomWidget" customModule="ReusableDemo_iOS" customModuleProvider="target">
-                                <rect key="frame" x="197.5" y="40" width="157.5" height="269"/>
+                                <rect key="frame" x="197.5" y="20" width="157.5" height="279"/>
                                 <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Top Right"/>
@@ -142,7 +140,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7m-0U-p9d" customClass="MyCustomWidget" customModule="ReusableDemo_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="40" width="157.5" height="269"/>
+                                <rect key="frame" x="20" y="20" width="157.5" height="279"/>
                                 <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Top Left"/>
@@ -152,7 +150,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKT-T1-jUw" customClass="MyCustomWidget" customModule="ReusableDemo_iOS" customModuleProvider="target">
-                                <rect key="frame" x="197.5" y="329" width="157.5" height="269"/>
+                                <rect key="frame" x="197.5" y="319" width="157.5" height="279"/>
                                 <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Bottom Right"/>
@@ -161,8 +159,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXD-BO-hZ6" customClass="MyCustomWidget" customModule="ReusableDemo_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="329" width="157.5" height="269"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXD-BO-hZ6" customClass="MyCustomView" customModule="ReusableDemo_iOS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="319" width="157.5" height="279"/>
                                 <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Bottom Left"/>

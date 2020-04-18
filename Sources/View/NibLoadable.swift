@@ -36,7 +36,7 @@ public extension NibLoadable {
 public extension NibLoadable where Self: UIView {
   /**
    Returns a `UIView` object instantiated from nib
-
+   
    - returns: A `NibLoadable`, `UIView` instance
    */
   static func loadFromNib() -> Self {
@@ -44,6 +44,47 @@ public extension NibLoadable where Self: UIView {
       fatalError("The nib \(nib) expected its root view to be of type \(self)")
     }
     return view
+  }
+
+  func awakeAfterUsingSurrogate() -> Self {
+    guard subviews.isEmpty else {
+      return self
+    }
+    let surrogateView = Self.loadFromNib()
+    surrogateView.frame = frame
+    surrogateView.isHidden = isHidden
+    surrogateView.tag = tag
+    surrogateView.translatesAutoresizingMaskIntoConstraints = translatesAutoresizingMaskIntoConstraints
+    surrogateView.injectIntoCopiedConstrainst(from: self)
+    return surrogateView
+  }
+}
+
+private extension UIView {
+
+  func injectIntoCopiedConstrainst(from view: UIView) {
+    for constraint in view.constraints {
+      guard let firstItem = constraint.firstItem === view ? self : constraint.firstItem else { continue }
+      let secondItem = constraint.secondItem === view ? self : constraint.secondItem
+      let surrogateConstraint = constraint.replacing(firstItem: firstItem, andSecondItem: secondItem)
+      self.addConstraint(surrogateConstraint)
+    }
+  }
+}
+
+private extension NSLayoutConstraint {
+
+  func replacing(firstItem: Any, andSecondItem secondItem: Any?) -> NSLayoutConstraint {
+    let copy = NSLayoutConstraint(
+      item: firstItem, attribute: firstAttribute,
+      relatedBy: relation,
+      toItem: secondItem, attribute: secondAttribute,
+      multiplier: multiplier, constant: constant
+    )
+    copy.identifier = identifier
+    copy.priority = priority
+    copy.shouldBeArchived = shouldBeArchived
+    return copy
   }
 }
 #endif

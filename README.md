@@ -305,10 +305,53 @@ final class NibBasedRootView: UIView, NibLoadable { /* and that's it! */ }
 final class NibBasedFileOwnerView: UIView, NibOwnerLoadable { /* and that's it! */ }
 ```
 
-> 💡 You should use the second approach if you plan to use your custom view in another XIB or Storyboard.  
+> 💡 You can use both approaches if you plan to use your custom view in another XIB or Storyboard. The difference is that the former does not create an unnecessary UIView instance - meaning your views are nested one level less and the whole design is more straightforward. The latter, however, does not break any constraint outlets you set in your Storyboard or XIB on the placeholder view your custom view will load into. This is because `NibOwnerLoadable` adds its content as a subview while `NibLoadable` substitutes the placeholder view with itself as it is the root view of your custom XIB. Thus any constraint outlets created in the Storyboard or XIB will break (any outlets in your custom view XIB are still safe and work as intended!), in this case it is better to handle them directly in code.
 > This will allow you to just drop a UIView in a XIB/Storyboard and change its class in IB's inspector to the class of your custom XIB-based view to use it. That custom view will then automagically load its own content from the associated XIB when instantiated by the storyboard containing it, without having to write additional code to load the content of the custom view manually every time.
 
 ## 2. Design your view in Interface Builder
+
+For example if you named your class `MyCustomView` and made it `NibLoadable`:
+
+* Set the _Custom Class_ of the root view of that XIB to `MyCustomView`
+* Design the content of the view via the root view of that XIB and its subviews
+* Connect any `@IBOutlets` and `@IBActions` between the root view (the `MyCustomView`) and its content
+
+<details>
+<summary>🖼📑 A view configured to be `NibLoadable`</summary>
+
+![NibLoadable view in Interface Builder](NibLoadable.png)
+
+```swift
+final class MyCustomView: UIView, NibLoadable {
+  @IBInspectable var rectColor: UIColor? {
+    didSet {
+      self.rectView.backgroundColor = self.rectColor
+    }
+  }
+  @IBInspectable var text: String? {
+    didSet {
+      self.textLabel.text = self.text
+    }
+  }
+  
+  @IBOutlet private weak var rectView: UIView!
+  @IBOutlet private weak var textLabel: UILabel!
+…
+}
+```
+</details>
+
+Then that view can be integrated in a Storyboard Scene (or any other XIB) by simply dropping a `UIView` on the Storyboard, and changing its class to `MyCustomView` in IB's inspector.
+
+<details>
+<summary>🖼 Example of a `NibLoadable` custom view once integrated in another Storyboard</summary>
+
+* In the capture below, the selected square view has a custom class of `MyCustomView` set in Interface Builder.
+* When selecting it, you have a direct access to all `@IBOutlet` that this `MyCustomView` exposes, but do **not** connect them to other views of the Storyboard
+* When selecting it, you also have an access to all the `@IBInspectable` properties. For example, in the capture below, you can see the "Rect color" and "Text" inspectable properties on the right panel, that you **can** change right from the Storyboard integrating your custom view.
+
+![NibLoadable integrated in a Storyboard](NibLoadable-InStoryboard.png)
+</details>
 
 For example if you named your class `MyCustomWidget` and made it `NibOwnerLoadable`:
 
@@ -373,11 +416,26 @@ Overriding `init?(coder:)` and calling `self.loadNibContent()` thus allows you t
 
 _💡 Note: it is also possible to override `init(frame:)` similarly, in order to be able to also create an instance of that view manually via code if needed._
 
-## 3b. Instantiating a `NibLoadable` view
+## 3b. Auto-loading the content of a `NibLoadable` view
 
-If you used `NibLoadable` and made your custom view the root view of your XIB (not using the File's Owner at all), these are not designed to be used in other Storyboards or XIBs like `NibOwnerLoadable` is, as they won't be able to auto-load their content.
+If you used `NibLoadable` and made your custom view the root view of your XIB, you should then override `awakeAfter(using:)` so that it loads itself from the XIB and substitutes the placeholder (view from another Storyboard or XIB) and copies all constraints automatically to position itself exactly the same:
 
-Instead, you will instantiate those `NibLoadable` views by code, which is as simple as calling `loadFromNib()` on your custom class:
+```swift
+final class MyCustomView: UIView, NibLoadable {
+  …
+  override func awakeAfter(using coder: NSCoder) -> Any? {
+    return self.awakeAfterUsingSurrogate()
+  }
+}
+```
+
+`self.awakeAfterUsingSurrogate()` is a method provided by the `NibLoadable` mixin. It basically loads the content from the associated `MyCustomView.xib`, then uses a root view in that XIB (which is your `MyCustomView`), with copied layout constraints to display it exactly as your `MyCustomView` placeholder view.
+
+Overriding `awakeAfter(using:)` and calling `self.awakeAfterUsingSurrogate()` allows you to have that content automatically loaded by the system when the `MyCustomView` is included in another XIB or a Storyboard as the `awakeAfter(using:)` is called by iOS to allow you to return _another object to take the place of the object that was decoded and subsequently received this message_.  `awakeAfter(using:)` is called before `awakeFromNib` so it is safe to do a setup in the latter.
+
+## 3c. Instantiating a `NibLoadable` view
+
+If you used `NibLoadable` and made your custom view the root view of your XIB (not using the File's Owner at all) you can instantiate these `NibLoadable` views by code, which is as simple as calling `loadFromNib()` on your custom class:
 
 ```swift
 let view1 = NibBasedRootView.loadFromNib() // Create one instance
