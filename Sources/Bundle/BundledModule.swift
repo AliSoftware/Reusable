@@ -12,7 +12,7 @@ import Foundation
 /// This provides a default implementation that uses the bundle associated
 ///  with a Swift Package Manager Bundle (`Bundle.module`).
 ///
-/// Exanple:
+/// Example:
 /// ```
 /// final class CustomCell: UITableViewCell, Reusable, BundledModule { ... And that's it! ... }
 /// ```
