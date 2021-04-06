@@ -25,11 +25,28 @@
   "frameworks": "UIKit",
   "subspecs": [
     {
+      "name": "Bundled",
+      "source_files": [
+        "Sources/Bundle/Bundled.swift",
+        "Sources/Bundle/BundledSelf.swift"
+      ]
+    },
+    {
       "name": "View",
+      "dependencies": {
+        "Reusable/Bundled": [
+
+        ]
+      },
       "source_files": "Sources/View/*.swift"
     },
     {
       "name": "Storyboard",
+      "dependencies": {
+        "Reusable/Bundled": [
+
+        ]
+      },
       "source_files": "Sources/Storyboard/*.swift"
     }
   ],

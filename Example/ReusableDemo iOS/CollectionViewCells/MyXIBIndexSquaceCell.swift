@@ -20,7 +20,7 @@ import Reusable
  * Which in fact is just a typealias that combines
  * `NibLoadable` & `Reusable` protocols.
  */
-final class MyXIBIndexSquaceCell: UICollectionViewCell, NibReusable {
+final class MyXIBIndexSquaceCell: UICollectionViewCell, NibReusable, BundledSelf {
   @IBOutlet private weak var sectionLabel: UILabel!
   @IBOutlet private weak var rowLabel: UILabel!
 

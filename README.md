@@ -104,6 +104,51 @@ This concept, called a [Mixin](http://alisoftware.github.io/swift/protocol/2015/
 
 
 
+# `Bundled` nib and storyboard resources
+> ✍️ A few of the protocols'  (i.e. `StoryboardBased`, `NibLoadable` and `NibOwnerLoadable`  described below) default implementations attempt to load resources from the bundle containing the resource. It does this through the `Bundled` protocol. Each time you declare conformance to `StoryboardBased`, `NibLoadable` or `NibOwnerLoadable`, you will have to provide access to the appropriate bundle. This can be achieved through one of the following methods...
+
+## 1. For Cocoapod frameworks or main app bundles.
+
+Declare your `Reusable` based classes to conform to `BundledSelf`. This provides a default implementation that uses the bundle associated with the class (`Bundle(for: self)`). In previous versions of the framework this was the default.
+
+```swift
+final class CustomCell: UITableViewCell, Reusable, BundledSelf { /* And that's it! */ }
+```
+
+## 2. For Swift Package Manager bundles.
+
+Declare your `Reusable` based classes to conform to `BundledModule`. This provides a default implementation that uses the bundle associated with a Swift Package Manager Bundle (`Bundle.module`).
+
+```swift
+final class CustomCell: UITableViewCell, Reusable, BundledModule { /* And that's it! */ }
+```
+
+So that the resource is loaded from the bundle of your package, you will also need to add the following extension somewhere in your package framework...
+
+```swift
+public extension BundledModule {
+    static var bundle: Bundle {
+        Bundle.module
+    }
+}
+```
+
+## 3. For other uses.
+
+Provide you own implementation of the `static var bundle: Bundle` property directly in your `Reusable` based class.
+
+```swift
+final class CustomCell: UITableViewCell, Reusable { 
+  static var bundle: Bundle {
+    return Bundle.myCustomBundle()
+  }
+}
+```
+
+
+---
+
+
 # Type-safe `UITableViewCell` / `UICollectionViewCell`
 
 > ✍️ Examples and explanations below use `UITableView` and `UITableViewCell`, but the exact same examples and explanations apply for `UICollectionView` and `UICollectionViewCell`.

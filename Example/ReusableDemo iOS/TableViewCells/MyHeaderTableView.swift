@@ -15,7 +15,7 @@ import Reusable
  *
  * That's why it's annotated with the `NibOwnerLoadable` protocol.
  */
-final class MyHeaderTableView: UIView, NibOwnerLoadable {
+final class MyHeaderTableView: UIView, NibOwnerLoadable, BundledSelf {
 
   @IBOutlet private weak var titleLabel: UILabel!
   static let height: CGFloat = 55
