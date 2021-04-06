@@ -9,8 +9,9 @@
 import Foundation
 
 /// A few of the protocols'  (i.e. `StoryboardBased`, `NibLoadable` and `NibOwnerLoadable`  described below) default
-/// implementations attempt to load resources from the bundle containing the resource. It does this through the `Bundled`
-/// protocol. Each time you declare conformance to `StoryboardBased`, `NibLoadable` or `NibOwnerLoadable`, you will have
+/// implementations attempt to load resources from the bundle containing the resource.
+/// It does this through the `Bundled` protocol. Each time you declare conformance to
+/// `StoryboardBased`, `NibLoadable` or `NibOwnerLoadable`, you will have
 /// to provide access to the appropriate bundle.
 ///
 /// This can be achieved through one of the following methods...
