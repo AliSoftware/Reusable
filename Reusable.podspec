@@ -34,10 +34,17 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/AliSoftware/Reusable.git", :tag => s.version.to_s }
   s.swift_version = '5.0'
 
+  s.subspec 'Bundled' do |ss|
+    ss.source_files = "Sources/Bundle/Bundled.swift", "Sources/Bundle/BundledSelf.swift"
+  end
+  
   s.subspec 'View' do |ss|
+    ss.dependency 'Reusable/Bundled'
     ss.source_files  = "Sources/View/*.swift"
   end
+  
   s.subspec 'Storyboard' do |ss|
+    ss.dependency 'Reusable/Bundled'
     ss.source_files  = "Sources/Storyboard/*.swift"
   end
 

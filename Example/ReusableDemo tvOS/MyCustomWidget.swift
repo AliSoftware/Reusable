@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-class MyCustomWidget: UIView, NibOwnerLoadable {
+class MyCustomWidget: UIView, NibOwnerLoadable, BundledSelf {
   @IBInspectable var rectColor: UIColor? {
     didSet {
       self.rectView.backgroundColor = self.rectColor

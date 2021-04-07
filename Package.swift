@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "Reusable",
-    platforms: [.iOS(.v8), .tvOS(.v9)],
+    platforms: [.iOS(.v9), .tvOS(.v9)],
     products: [
         .library(name: "Reusable", targets: ["Reusable"])
     ],

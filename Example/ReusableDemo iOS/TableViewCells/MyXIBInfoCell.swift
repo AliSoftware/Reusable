@@ -20,7 +20,7 @@ import Reusable
  * Which in fact is just a convenience typealias that combines
  * `NibLoadable` & `Reusable` protocols.
  */
-final class MyXIBInfoCell: UITableViewCell, NibReusable {
+final class MyXIBInfoCell: UITableViewCell, NibReusable, BundledSelf {
 
   @IBOutlet private weak var titleLabel: UILabel!
   private var info: String = "<Info?>"

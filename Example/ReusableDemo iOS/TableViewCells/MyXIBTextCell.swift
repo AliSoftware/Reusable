@@ -20,7 +20,7 @@ import Reusable
  * Which in fact is just a convenience typealias that combines
  * `NibLoadable` & `Reusable` protocols.
  */
-final class MyXIBTextCell: UITableViewCell, NibReusable {
+final class MyXIBTextCell: UITableViewCell, NibReusable, BundledSelf {
 
   @IBOutlet private weak var titleLabel: UILabel!
 

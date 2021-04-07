@@ -20,7 +20,7 @@ import Reusable
  * Which in fact is just a convenience typealias that combines
  * `NibLoadable` & `Reusable` protocols.
  */
-final class CollectionHeaderView: UICollectionReusableView, NibReusable {
+final class CollectionHeaderView: UICollectionReusableView, BundledSelf, NibReusable {
   @IBOutlet private weak var titleLabel: UILabel! {
     didSet { update() }
   }
