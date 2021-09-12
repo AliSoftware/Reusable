@@ -1,13 +1,17 @@
 {
   "images" : [
     {
-      "idiom" : "tv",
       "filename" : "AppleTV-small.png",
+      "idiom" : "tv",
       "scale" : "1x"
+    },
+    {
+      "idiom" : "tv",
+      "scale" : "2x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

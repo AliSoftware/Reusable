@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7fF-Ae-xTS">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7fF-Ae-xTS">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,10 +17,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyStoryBoardIndexPathCell" id="Tw8-mE-1pZ" customClass="MyStoryBoardIndexPathCell" customModule="ReusableDemo_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="24.5" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tw8-mE-1pZ" id="06x-cI-AjP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRp-NR-1CZ">
@@ -94,7 +92,7 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" title="TableView" id="C3o-Lt-Bjj"/>
+                    <tabBarItem key="tabBarItem" title="TableView" image="list.dash" catalog="system" id="C3o-Lt-Bjj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEN-tN-mKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,7 +130,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnw-gc-OgB" customClass="MyCustomWidget" customModule="ReusableDemo_iOS" customModuleProvider="target">
-                                <rect key="frame" x="197.5" y="40" width="157.5" height="269"/>
+                                <rect key="frame" x="197.5" y="20" width="157.5" height="279"/>
                                 <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Top Right"/>
@@ -142,7 +140,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7m-0U-p9d" customClass="MyCustomWidget" customModule="ReusableDemo_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="40" width="157.5" height="269"/>
+                                <rect key="frame" x="20" y="20" width="157.5" height="279"/>
                                 <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Top Left"/>
@@ -151,21 +149,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKT-T1-jUw" customClass="MyCustomWidget" customModule="ReusableDemo_iOS" customModuleProvider="target">
-                                <rect key="frame" x="197.5" y="329" width="157.5" height="269"/>
-                                <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Bottom Right"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="rectColor">
-                                        <color key="value" red="0.19395312109999999" green="0.27580727269999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXD-BO-hZ6" customClass="MyCustomWidget" customModule="ReusableDemo_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="329" width="157.5" height="269"/>
+                                <rect key="frame" x="20" y="319" width="335" height="279"/>
                                 <color key="backgroundColor" red="0.84867460279999996" green="0.97256087079999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Bottom Left"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Bottom"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="rectColor">
                                         <color key="value" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
@@ -174,29 +162,25 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fnw-gc-OgB" firstAttribute="height" secondItem="cKT-T1-jUw" secondAttribute="height" id="1Si-8K-2Jx"/>
                             <constraint firstItem="EXD-BO-hZ6" firstAttribute="leading" secondItem="6Ku-UX-Jef" secondAttribute="leading" constant="20" id="9aP-3q-qmp"/>
                             <constraint firstItem="R7m-0U-p9d" firstAttribute="top" secondItem="eP0-7L-O6F" secondAttribute="bottom" constant="20" id="Eqx-vi-doU"/>
                             <constraint firstAttribute="trailing" secondItem="fnw-gc-OgB" secondAttribute="trailing" constant="20" id="Ihj-b2-GaD"/>
-                            <constraint firstItem="dRd-uT-ZnN" firstAttribute="top" secondItem="cKT-T1-jUw" secondAttribute="bottom" constant="20" id="Swj-5b-ttT"/>
-                            <constraint firstItem="fnw-gc-OgB" firstAttribute="width" secondItem="cKT-T1-jUw" secondAttribute="width" id="TCz-8L-Xjt"/>
-                            <constraint firstItem="cKT-T1-jUw" firstAttribute="height" secondItem="EXD-BO-hZ6" secondAttribute="height" id="ULS-no-WhF"/>
-                            <constraint firstAttribute="trailing" secondItem="cKT-T1-jUw" secondAttribute="trailing" constant="20" id="Wwb-K4-bIb"/>
+                            <constraint firstItem="fnw-gc-OgB" firstAttribute="top" secondItem="eP0-7L-O6F" secondAttribute="bottom" constant="20" id="YBS-It-he6"/>
                             <constraint firstItem="R7m-0U-p9d" firstAttribute="leading" secondItem="6Ku-UX-Jef" secondAttribute="leading" constant="20" id="aYp-Rh-QAQ"/>
-                            <constraint firstItem="cKT-T1-jUw" firstAttribute="top" secondItem="fnw-gc-OgB" secondAttribute="bottom" constant="20" id="ghV-1A-8Rc"/>
-                            <constraint firstItem="R7m-0U-p9d" firstAttribute="width" secondItem="EXD-BO-hZ6" secondAttribute="width" id="hBc-qC-obq"/>
-                            <constraint firstItem="fnw-gc-OgB" firstAttribute="height" secondItem="R7m-0U-p9d" secondAttribute="height" id="k4x-nu-acW"/>
+                            <constraint firstItem="EXD-BO-hZ6" firstAttribute="top" secondItem="fnw-gc-OgB" secondAttribute="bottom" constant="20" id="dyJ-9U-SHR"/>
+                            <constraint firstAttribute="trailing" secondItem="EXD-BO-hZ6" secondAttribute="trailing" constant="20" symbolic="YES" id="mNP-bE-bQP"/>
+                            <constraint firstItem="EXD-BO-hZ6" firstAttribute="top" secondItem="R7m-0U-p9d" secondAttribute="bottom" constant="20" id="mX9-VC-TRb"/>
                             <constraint firstItem="fnw-gc-OgB" firstAttribute="leading" secondItem="R7m-0U-p9d" secondAttribute="trailing" constant="20" id="q5Z-6V-pTx"/>
                             <constraint firstItem="R7m-0U-p9d" firstAttribute="width" secondItem="fnw-gc-OgB" secondAttribute="width" id="tfx-qO-IHP"/>
-                            <constraint firstItem="EXD-BO-hZ6" firstAttribute="top" secondItem="R7m-0U-p9d" secondAttribute="bottom" constant="20" id="wVO-JO-4VT"/>
+                            <constraint firstItem="EXD-BO-hZ6" firstAttribute="height" secondItem="R7m-0U-p9d" secondAttribute="height" id="vfN-XQ-Wt2"/>
                             <constraint firstItem="dRd-uT-ZnN" firstAttribute="top" secondItem="EXD-BO-hZ6" secondAttribute="bottom" constant="20" id="z3v-xW-ftc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Custom View" id="YFV-D2-URw"/>
+                    <tabBarItem key="tabBarItem" title="Custom View" image="square.and.pencil" catalog="system" id="YFV-D2-URw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Krl-eK-k3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="1272"/>
+            <point key="canvasLocation" x="82.400000000000006" y="1271.5142428785607"/>
         </scene>
         <!--CollectionView-->
         <scene sceneID="19r-RC-Ju4">
@@ -243,11 +227,16 @@
                             <outlet property="delegate" destination="Oo7-g3-hUO" id="fZ2-AG-ebA"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="CollectionView" id="xhW-ku-31U"/>
+                    <tabBarItem key="tabBarItem" title="CollectionView" image="square.grid.3x2" catalog="system" id="xhW-ku-31U"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEd-rY-W78" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="903" y="840"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <image name="square.grid.3x2" catalog="system" width="128" height="80"/>
+    </resources>
 </document>
