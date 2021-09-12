@@ -14,7 +14,7 @@ defaults:
   - &set-ruby-version
     run:
       name: Set Ruby Version
-      command: echo 'chruby ruby-2.6.4' >> ~/.bash_profile
+      command: echo 'chruby ruby-2.7.3' >> ~/.bash_profile
   - &restore-gems
     restore_cache:
       keys:
