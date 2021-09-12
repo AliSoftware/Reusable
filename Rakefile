@@ -4,6 +4,8 @@ DESTINATIONS = {
   :ios_sim => "OS=14.5,name=iPhone 11,platform=iOS Simulator",
   :tvos_sim => "OS=14.5,name=Apple TV,platform=tvOS Simulator",
 }
+
+CARTHAGE_VERSION = '0.38.0'
 SWIFTLINT_VERSION = '0.44.0'
 
 ## UTILS ##
@@ -21,9 +23,12 @@ def xcodebuild(scheme: '', sdk: '', destination: '', action: 'build')
 end
 
 def install_pkg(pkg_url)
-  tmppath = '/tmp/' + File.basename(pkg_url)
-  sh("curl -Lo #{tmppath} #{pkg_url}")
-  sh("sudo installer -pkg #{tmppath} -target /")
+  require 'tmpdir'
+  Dir.mktmpdir do |dir|
+    tmppath = File.join(dir, File.basename(pkg_url))
+    sh("curl -Lo #{tmppath} #{pkg_url}")
+    sh("sudo installer -pkg #{tmppath} -target /")
+  end
 end
 
 ## TASKS ##
@@ -32,11 +37,11 @@ namespace :carthage do
   desc "Install Carthage from pkg"
   task :install do
     next if system('which carthage >/dev/null')
-    install_pkg('https://github.com/Carthage/Carthage/releases/download/0.33.0/Carthage.pkg')
+    install_pkg("https://github.com/Carthage/Carthage/releases/download/#{CARTHAGE_VERSION}/Carthage.pkg")
   end
 
   desc "Builds the Reusable framework using Carthage"
-  task :build do
+  task :build => :install do
     run "carthage build --no-skip-current --verbose"
   end
 end
