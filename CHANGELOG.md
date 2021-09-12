@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## main branch
+## 4.1.2
 
 * Update `Package.swift` and `.podspec` to use newer min iOS version supported by Xcode 12+.  
   [@AliSoftware](https://github.com/AliSoftware)
