@@ -16,7 +16,7 @@ import UIKit
 ///  * this class is used as the XIB's File's Owner
 ///
 /// to be able to instantiate them from the NIB in a type-safe manner
-public protocol NibOwnerLoadable: class {
+public protocol NibOwnerLoadable: AnyObject {
   /// The nib file to use to load a new instance of the View designed in a XIB
   static var nib: UINib { get }
 }
