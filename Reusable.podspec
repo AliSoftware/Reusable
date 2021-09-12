@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.cocoapods_version = '~> 1.4'
 
   s.name         = "Reusable"
-  s.version      = "4.1.1"
+  s.version      = "4.1.2"
   s.summary      = "A Swift Mixin to deal with reusable UITableView & UICollectionView cells and XIB-based views"
 
   s.description  = <<-DESC
