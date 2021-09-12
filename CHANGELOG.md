@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## main branch
+
+_No pending changes to be released yet!_
+
 ## 4.1.2
 
 * Update `Package.swift` and `.podspec` to use newer min iOS version supported by Xcode 12+.  

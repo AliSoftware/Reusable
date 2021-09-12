@@ -61,6 +61,8 @@ To integrate Reusable into your Xcode project using Carthage, specify it in your
 github "AliSoftware/Reusable"
 ```
 
+Then run `carthage update --use-xcframeworks`
+
 </details>
 
 <details><summary>Installation instructions for <b>CocoaPods</b></summary>
