@@ -1,5 +1,9 @@
 #!/usr/bin/rake
 
+DESTINATIONS = {
+  :ios_sim => "OS=14.5,name=iPhone 11,platform=iOS Simulator",
+  :tvos_sim => "OS=14.5,name=Apple TV,platform=tvOS Simulator",
+}
 ## UTILS ##
 
 def run(command, xcpretty: true)
@@ -13,11 +17,6 @@ end
 def xcodebuild(scheme: '', sdk: '', destination: '', action: 'build')
   run %Q(xcodebuild -workspace Example/ReusableDemo.xcworkspace -scheme "#{scheme}" -sdk #{sdk} -destination="#{destination}" ONLY_ACTIVE_ARCH=NO #{action})
 end
-
-DESTINATIONS = {
-  :ios_sim => "OS=9.3,name=iPhone 6,platform=iOS Simulator",
-  :tvos_sim => "OS=10.1,name=Apple TV 1080p,platform=tvOS Simulator",
-}
 
 def install_pkg(pkg_url)
   tmppath = '/tmp/' + File.basename(pkg_url)
