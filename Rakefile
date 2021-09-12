@@ -36,7 +36,7 @@ end
 namespace :carthage do
   desc "Install Carthage from pkg"
   task :install do
-    next if system('which carthage >/dev/null')
+    next if system('which carthage >/dev/null') && Gem::Version.new(`carthage version`.chomp) >= Gem::Version.new(CARTHAGE_VERSION)
     install_pkg("https://github.com/Carthage/Carthage/releases/download/#{CARTHAGE_VERSION}/Carthage.pkg")
   end
 
