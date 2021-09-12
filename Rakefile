@@ -42,7 +42,7 @@ namespace :carthage do
 
   desc "Builds the Reusable framework using Carthage"
   task :build => :install do
-    run "carthage build --no-skip-current --verbose"
+    run "carthage build --no-skip-current --use-xcframeworks --verbose"
   end
 end
 
