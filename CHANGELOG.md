@@ -2,9 +2,12 @@
 
 ## main branch
 
-* Fix Xcode 12.5 warnings about the class keyword for protocol inheritance that is deprecated.    
-  [@johnarn](https://github.com/johnarn)
+* Update `Package.swift` and `.podspec` to use newer min iOS version supported by Xcode 12+.  
   [@AliSoftware](https://github.com/AliSoftware)
+  [#115](https://github.com/AliSoftware/Reusable/pull/115)
+
+* Fix Xcode 12.5 warnings about the class keyword for protocol inheritance that is deprecated.  
+  [@johnarn](https://github.com/johnarn)
   [#113](https://github.com/AliSoftware/Reusable/pull/113)
 
 ## 4.1.1
