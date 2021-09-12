@@ -1,6 +1,7 @@
-# CHANGELOG 
+# CHANGELOG
 
-## WIP
+## main branch
+
 * Fix Xcode 12.5 warnings about the class keyword for protocol inheritance that is deprecated.    
   [@johnarn](https://github.com/johnarn)
   [@AliSoftware](https://github.com/AliSoftware)
