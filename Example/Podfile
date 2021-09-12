@@ -1,12 +1,12 @@
 use_frameworks!
 
 target 'ReusableDemo iOS' do
-  platform :ios, '8.0'
+  platform :ios, '12.0'
   pod 'Reusable', :path => '../'
 end
 
 target 'ReusableDemo tvOS' do
-  platform :tvos, '9.0'
+  platform :tvos, '12.0'
   pod 'Reusable', :path => '../'
 end
 
