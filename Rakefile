@@ -1,5 +1,13 @@
 #!/usr/bin/rake
 
+DESTINATIONS = {
+  :ios_sim => "OS=14.5,name=iPhone 11,platform=iOS Simulator",
+  :tvos_sim => "OS=14.5,name=Apple TV,platform=tvOS Simulator",
+}
+
+CARTHAGE_VERSION = '0.38.0'
+SWIFTLINT_VERSION = '0.44.0'
+
 ## UTILS ##
 
 def run(command, xcpretty: true)
@@ -14,15 +22,13 @@ def xcodebuild(scheme: '', sdk: '', destination: '', action: 'build')
   run %Q(xcodebuild -workspace Example/ReusableDemo.xcworkspace -scheme "#{scheme}" -sdk #{sdk} -destination="#{destination}" ONLY_ACTIVE_ARCH=NO #{action})
 end
 
-DESTINATIONS = {
-  :ios_sim => "OS=9.3,name=iPhone 6,platform=iOS Simulator",
-  :tvos_sim => "OS=10.1,name=Apple TV 1080p,platform=tvOS Simulator",
-}
-
 def install_pkg(pkg_url)
-  tmppath = '/tmp/' + File.basename(pkg_url)
-  sh("curl -Lo #{tmppath} #{pkg_url}")
-  sh("sudo installer -pkg #{tmppath} -target /")
+  require 'tmpdir'
+  Dir.mktmpdir do |dir|
+    tmppath = File.join(dir, File.basename(pkg_url))
+    sh("curl -Lo #{tmppath} #{pkg_url}")
+    sh("sudo installer -pkg #{tmppath} -target /")
+  end
 end
 
 ## TASKS ##
@@ -30,13 +36,13 @@ end
 namespace :carthage do
   desc "Install Carthage from pkg"
   task :install do
-    next if system('which carthage >/dev/null')
-    install_pkg('https://github.com/Carthage/Carthage/releases/download/0.33.0/Carthage.pkg')
+    next if system('which carthage >/dev/null') && Gem::Version.new(`carthage version`.chomp) >= Gem::Version.new(CARTHAGE_VERSION)
+    install_pkg("https://github.com/Carthage/Carthage/releases/download/#{CARTHAGE_VERSION}/Carthage.pkg")
   end
 
   desc "Builds the Reusable framework using Carthage"
-  task :build do
-    run "carthage build --no-skip-current --verbose"
+  task :build => :install do
+    run "carthage build --no-skip-current --use-xcframeworks --verbose"
   end
 end
 
@@ -82,12 +88,12 @@ end
 namespace :swiftlint do
   desc "Install SwiftLint from pkg"
   task :install do
-    next if system('which swiftlint >/dev/null')
-    install_pkg('https://github.com/realm/SwiftLint/releases/download/0.26.0/SwiftLint.pkg')
+    next if system('which swiftlint >/dev/null') && Gem::Version.new(`swiftlint version`.chomp) >= Gem::Version.new(SWIFTLINT_VERSION)
+    install_pkg("https://github.com/realm/SwiftLint/releases/download/#{SWIFTLINT_VERSION}/SwiftLint.pkg")
   end
 
   desc "Run SwiftLint on the source code"
-  task :run do
+  task :run => :install do
     run('swiftlint lint --strict', xcpretty: false)
   end
 end

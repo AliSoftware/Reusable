@@ -68,7 +68,7 @@ final class CollectionViewController: UICollectionViewController {
   }
 }
 
-/// Swift < 4.2 support
+// Swift < 4.2 support
 #if !(swift(>=4.2))
 private extension UICollectionView {
   static let elementKindSectionHeader = UICollectionElementKindSectionHeader

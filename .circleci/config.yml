@@ -1,7 +1,7 @@
 defaults:
   - &default-config
     macos:
-      xcode: 11.1.0
+      xcode: 12.5.1
     shell: /bin/bash --login -eo pipefail
     environment:
       CIRCLE_ARTIFACTS: /tmp/circleci-artifacts
@@ -14,7 +14,7 @@ defaults:
   - &set-ruby-version
     run:
       name: Set Ruby Version
-      command: echo 'chruby ruby-2.6.4' >> ~/.bash_profile
+      command: echo 'chruby ruby-2.7.3' >> ~/.bash_profile
   - &restore-gems
     restore_cache:
       keys:
