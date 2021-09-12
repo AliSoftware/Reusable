@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 }
 
-/// Swift < 4.2 support
+// Swift < 4.2 support
 #if !(swift(>=4.2))
 extension UIApplication {
   typealias LaunchOptionsKey = UIApplicationLaunchOptionsKey

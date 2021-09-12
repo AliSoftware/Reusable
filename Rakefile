@@ -4,6 +4,8 @@ DESTINATIONS = {
   :ios_sim => "OS=14.5,name=iPhone 11,platform=iOS Simulator",
   :tvos_sim => "OS=14.5,name=Apple TV,platform=tvOS Simulator",
 }
+SWIFTLINT_VERSION = '0.44.0'
+
 ## UTILS ##
 
 def run(command, xcpretty: true)
@@ -81,12 +83,12 @@ end
 namespace :swiftlint do
   desc "Install SwiftLint from pkg"
   task :install do
-    next if system('which swiftlint >/dev/null')
-    install_pkg('https://github.com/realm/SwiftLint/releases/download/0.26.0/SwiftLint.pkg')
+    next if system('which swiftlint >/dev/null') && Gem::Version.new(`swiftlint version`.chomp) >= Gem::Version.new(SWIFTLINT_VERSION)
+    install_pkg("https://github.com/realm/SwiftLint/releases/download/#{SWIFTLINT_VERSION}/SwiftLint.pkg")
   end
 
   desc "Run SwiftLint on the source code"
-  task :run do
+  task :run => :install do
     run('swiftlint lint --strict', xcpretty: false)
   end
 end
