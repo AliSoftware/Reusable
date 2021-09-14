@@ -59,6 +59,29 @@ public extension UITableView {
       }
       return cell
   }
+  
+  
+  /**
+   Returns a reusable `UITableViewCell` object for the class inferred by the return-type
+   
+   - parameter cellType: The cell class to dequeue
+   - returns: A `Reusable`, `UITableViewCell` instance
+   
+   - note: It's the old way to dequeueCell and it's used when you insert cell at the end of tableview.
+   - seealso: `dequeueReusableCell(withIdentifier:)`
+   */
+  final func dequeueReusableCell<T: UITableViewCell>(cellType: T.Type = T.self) -> T where T: Reusable {
+    guard let cell = self.dequeueReusableCell(withIdentifier: cellType.reuseIdentifier) as? T else {
+      fatalError(
+        "Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) matching type \(cellType.self). "
+          + "Check that the reuseIdentifier is set properly in your XIB/Storyboard "
+          + "and that you registered the cell beforehand"
+      )
+    }
+    return cell
+  }
+  
+  
 
   /**
    Register a NIB-Based `UITableViewHeaderFooterView` subclass (conforming to `Reusable` & `NibLoadable`)
