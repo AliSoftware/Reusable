@@ -30,7 +30,7 @@ public protocol StoryboardSceneBased: AnyObject {
 public extension StoryboardSceneBased {
   /// By default, use the `sceneIdentifier` with the same name as the class
   static var sceneIdentifier: String {
-    return String(describing: self)
+    return String(reflecting: self)
   }
 }
 
